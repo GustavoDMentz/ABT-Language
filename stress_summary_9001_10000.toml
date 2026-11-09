@@ -1,0 +1,7 @@
+seconds = 46.0
+executed = 1000
+failures = 0
+seed = "179769742"
+
+[categories]
+julia_bridge = 1000

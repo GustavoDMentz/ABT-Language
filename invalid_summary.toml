@@ -1,0 +1,14 @@
+rejected = 1000
+accepted = 0
+executed = 1000
+seed = "12243224"
+
+[categories]
+missing_terminal = 125
+unclosed_block = 125
+bad_character = 125
+tab_indent = 125
+trailing_terminal = 125
+unknown_step = 125
+missing_delimiter = 125
+indent = 125

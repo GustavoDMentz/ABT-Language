@@ -1,0 +1,13 @@
+PASS pequeno interpretador min 1 0:01.02 311972
+PASS pequeno interpretador min 2 0:01.25 311808
+PASS pequeno interpretador min 3 0:01.04 312228
+PASS pequeno interpretador all 1 0:07.02 384724
+PASS pequeno interpretador all 2 0:06.77 384312
+PASS pequeno interpretador all 3 0:06.66 384556
+PASS pequeno gerado min 1 0:00.57 296764
+PASS pequeno gerado min 2 0:00.70 296660
+PASS pequeno gerado min 3 0:00.68 296808
+PASS pequeno gerado all 1 0:02.02 324196
+PASS pequeno gerado all 2 0:01.92 324296
+PASS pequeno gerado all 3 0:02.04 323996
+PASS medio interpretador min 1 0:24.08 334292

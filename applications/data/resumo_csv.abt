@@ -1,0 +1,12 @@
+# Esquema explícito; CSV.jl valida aspas, linhas e campos sem inferir tipos.
+caminho = ambiente("ABT_CSV_PATH", "applications/data/sample.csv")
+colunas = esquema("nome", "texto", "grupo", "texto", "valor", "real")
+dados = ler_csv(caminho, colunas, "erro")
+grupo_a = filtrar_tabela(dados, "grupo", "==", "A")
+selecionados = filtrar_tabela(grupo_a, "valor", ">=", 10.0)
+total = resumir_coluna(dados, "valor")
+resumo = resumir_coluna(selecionados, "valor")
+resultado = registro("registros", total.quantidade,
+                     "selecionados_grupo_A_valor_maior_igual_10", resumo.quantidade,
+                     "soma", resumo.soma, "media", resumo.media)
+mostrar resultado

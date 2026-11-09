@@ -1,0 +1,4 @@
+PASS arquivo_inexistente interpretador
+PASS arquivo_inexistente gerado_sem_otimizacao
+PASS arquivo_inexistente gerado_otimizado
+Resumo: {'PASS': 3, 'FAIL': 0}

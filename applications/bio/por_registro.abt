@@ -1,0 +1,3 @@
+arquivo = ambiente("ABT_FASTA_PATH", "applications/bio/amostras_multiplas.fasta")
+sequencias = ler_fasta(arquivo, "DNA", "rejeitar", "normalizar")
+mostrar registros_fasta(sequencias)

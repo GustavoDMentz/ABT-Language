@@ -1,0 +1,3 @@
+applications/science/visualizacao.abt: Erro ABT[E000] — erro de compilação ou execução
+
+ABT salvar_figura: caminho deve terminar em .png ou .svg

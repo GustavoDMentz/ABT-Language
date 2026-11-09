@@ -1,0 +1,9 @@
+numeros = [10, 20, 30, 40, 50]
+mostrar media de numeros onde valor é maior que 20
+mostrar soma de numeros onde valor é maior que 20
+se 10 é menor que 20 {
+    mostrar "Funcionou!"
+}
+para cada numero em numeros {
+    se numero é maior que 40 { mostrar numero }
+}

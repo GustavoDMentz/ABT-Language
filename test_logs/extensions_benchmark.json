@@ -1,0 +1,440 @@
+{
+  "repetitions": 5,
+  "results": [
+    {
+      "scenario": "julia_minima",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.08,
+      "system_seconds": 0.07,
+      "max_rss_kb": 164840,
+      "wall_seconds": 0.16
+    },
+    {
+      "scenario": "julia_minima",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.08,
+      "system_seconds": 0.07,
+      "max_rss_kb": 164844,
+      "wall_seconds": 0.15
+    },
+    {
+      "scenario": "julia_minima",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.08,
+      "system_seconds": 0.06,
+      "max_rss_kb": 164992,
+      "wall_seconds": 0.15
+    },
+    {
+      "scenario": "julia_minima",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.08,
+      "system_seconds": 0.07,
+      "max_rss_kb": 164828,
+      "wall_seconds": 0.15
+    },
+    {
+      "scenario": "julia_minima",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.08,
+      "system_seconds": 0.06,
+      "max_rss_kb": 164948,
+      "wall_seconds": 0.15
+    },
+    {
+      "scenario": "julia_json",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "import JSON"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.26,
+      "system_seconds": 0.09,
+      "max_rss_kb": 218564,
+      "wall_seconds": 0.26
+    },
+    {
+      "scenario": "julia_json",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "import JSON"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.27,
+      "system_seconds": 0.08,
+      "max_rss_kb": 218376,
+      "wall_seconds": 0.26
+    },
+    {
+      "scenario": "julia_json",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "import JSON"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.27,
+      "system_seconds": 0.07,
+      "max_rss_kb": 218372,
+      "wall_seconds": 0.26
+    },
+    {
+      "scenario": "julia_json",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "import JSON"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.25,
+      "system_seconds": 0.09,
+      "max_rss_kb": 218456,
+      "wall_seconds": 0.26
+    },
+    {
+      "scenario": "julia_json",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "import JSON"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.26,
+      "system_seconds": 0.09,
+      "max_rss_kb": 218404,
+      "wall_seconds": 0.26
+    },
+    {
+      "scenario": "abt_carregamento",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "include(\"src/ABT.jl\")"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.51,
+      "system_seconds": 0.08,
+      "max_rss_kb": 247648,
+      "wall_seconds": 0.51
+    },
+    {
+      "scenario": "abt_carregamento",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "include(\"src/ABT.jl\")"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.51,
+      "system_seconds": 0.08,
+      "max_rss_kb": 247656,
+      "wall_seconds": 0.5
+    },
+    {
+      "scenario": "abt_carregamento",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "include(\"src/ABT.jl\")"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.53,
+      "system_seconds": 0.09,
+      "max_rss_kb": 247912,
+      "wall_seconds": 0.53
+    },
+    {
+      "scenario": "abt_carregamento",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "include(\"src/ABT.jl\")"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.52,
+      "system_seconds": 0.09,
+      "max_rss_kb": 247960,
+      "wall_seconds": 0.52
+    },
+    {
+      "scenario": "abt_carregamento",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "include(\"src/ABT.jl\")"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "user_seconds": 0.52,
+      "system_seconds": 0.09,
+      "max_rss_kb": 247964,
+      "wall_seconds": 0.54
+    },
+    {
+      "scenario": "abt_csv_grupos_json",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "user_seconds": 1.08,
+      "system_seconds": 0.15,
+      "max_rss_kb": 349964,
+      "wall_seconds": 1.14
+    },
+    {
+      "scenario": "abt_csv_grupos_json",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "user_seconds": 1.08,
+      "system_seconds": 0.16,
+      "max_rss_kb": 352660,
+      "wall_seconds": 1.16
+    },
+    {
+      "scenario": "abt_csv_grupos_json",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "user_seconds": 1.09,
+      "system_seconds": 0.16,
+      "max_rss_kb": 349360,
+      "wall_seconds": 1.17
+    },
+    {
+      "scenario": "abt_csv_grupos_json",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "user_seconds": 1.08,
+      "system_seconds": 0.15,
+      "max_rss_kb": 349336,
+      "wall_seconds": 1.15
+    },
+    {
+      "scenario": "abt_csv_grupos_json",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "user_seconds": 1.09,
+      "system_seconds": 0.14,
+      "max_rss_kb": 349496,
+      "wall_seconds": 1.14
+    }
+  ],
+  "summary": {
+    "julia_minima": {
+      "wall_seconds": {
+        "median": 0.15,
+        "minimum": 0.15,
+        "maximum": 0.16
+      },
+      "user_seconds": {
+        "median": 0.08,
+        "minimum": 0.08,
+        "maximum": 0.08
+      },
+      "system_seconds": {
+        "median": 0.07,
+        "minimum": 0.06,
+        "maximum": 0.07
+      },
+      "max_rss_kb": {
+        "median": 164844,
+        "minimum": 164828,
+        "maximum": 164992
+      }
+    },
+    "julia_json": {
+      "wall_seconds": {
+        "median": 0.26,
+        "minimum": 0.26,
+        "maximum": 0.26
+      },
+      "user_seconds": {
+        "median": 0.26,
+        "minimum": 0.25,
+        "maximum": 0.27
+      },
+      "system_seconds": {
+        "median": 0.09,
+        "minimum": 0.07,
+        "maximum": 0.09
+      },
+      "max_rss_kb": {
+        "median": 218404,
+        "minimum": 218372,
+        "maximum": 218564
+      }
+    },
+    "abt_carregamento": {
+      "wall_seconds": {
+        "median": 0.52,
+        "minimum": 0.5,
+        "maximum": 0.54
+      },
+      "user_seconds": {
+        "median": 0.52,
+        "minimum": 0.51,
+        "maximum": 0.53
+      },
+      "system_seconds": {
+        "median": 0.09,
+        "minimum": 0.08,
+        "maximum": 0.09
+      },
+      "max_rss_kb": {
+        "median": 247912,
+        "minimum": 247648,
+        "maximum": 247964
+      }
+    },
+    "abt_csv_grupos_json": {
+      "wall_seconds": {
+        "median": 1.15,
+        "minimum": 1.14,
+        "maximum": 1.17
+      },
+      "user_seconds": {
+        "median": 1.08,
+        "minimum": 1.08,
+        "maximum": 1.09
+      },
+      "system_seconds": {
+        "median": 0.15,
+        "minimum": 0.14,
+        "maximum": 0.16
+      },
+      "max_rss_kb": {
+        "median": 349496,
+        "minimum": 349336,
+        "maximum": 352660
+      }
+    }
+  }
+}

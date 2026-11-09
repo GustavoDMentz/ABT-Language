@@ -1,0 +1,13 @@
+PASS multilinha interpretador
+PASS multilinha gerado_sem_otimizacao
+PASS multilinha gerado_otimizado
+PASS gc_zero interpretador
+PASS gc_zero gerado_sem_otimizacao
+PASS gc_zero gerado_otimizado
+PASS gc_cem interpretador
+PASS gc_cem gerado_sem_otimizacao
+PASS gc_cem gerado_otimizado
+PASS arquivo_vazio interpretador
+PASS arquivo_vazio gerado_sem_otimizacao
+PASS arquivo_vazio gerado_otimizado
+Resumo: {'PASS': 12, 'FAIL': 0}

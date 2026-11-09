@@ -1,0 +1,5 @@
+usar Julia.Statistics
+
+dados = [10, 20, 30, 40]
+resultado = Julia.Statistics.mean(dados)
+mostrar resultado

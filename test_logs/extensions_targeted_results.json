@@ -1,0 +1,203 @@
+[
+  {
+    "case": "ausente_ignorar",
+    "backend": "interpretador",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(resumir_grupos(dados, \"grupo\", \"valor\", \"ignorar_linha\"), \"erro\")\n",
+    "expected": {
+      "grupos": [
+        {
+          "grupo": "A",
+          "quantidade": 2,
+          "soma": 4,
+          "media": 2.0,
+          "minimo": 1,
+          "maximo": 3
+        }
+      ],
+      "linhas_lidas": 3,
+      "linhas_ignoradas": 1
+    },
+    "error": null,
+    "returncode": 0,
+    "stdout": "{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":2,\"soma\":4,\"media\":2.0,\"minimo\":1,\"maximo\":3}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-extensions-7i8iidbc/ausente_ignorar.abt"
+    ]
+  },
+  {
+    "case": "ausente_ignorar",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(resumir_grupos(dados, \"grupo\", \"valor\", \"ignorar_linha\"), \"erro\")\n",
+    "expected": {
+      "grupos": [
+        {
+          "grupo": "A",
+          "quantidade": 2,
+          "soma": 4,
+          "media": 2.0,
+          "minimo": 1,
+          "maximo": 3
+        }
+      ],
+      "linhas_lidas": 3,
+      "linhas_ignoradas": 1
+    },
+    "error": null,
+    "returncode": 0,
+    "stdout": "{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":2,\"soma\":4,\"media\":2.0,\"minimo\":1,\"maximo\":3}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-extensions-7i8iidbc/ausente_ignorar_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "ausente_ignorar",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(resumir_grupos(dados, \"grupo\", \"valor\", \"ignorar_linha\"), \"erro\")\n",
+    "expected": {
+      "grupos": [
+        {
+          "grupo": "A",
+          "quantidade": 2,
+          "soma": 4,
+          "media": 2.0,
+          "minimo": 1,
+          "maximo": 3
+        }
+      ],
+      "linhas_lidas": 3,
+      "linhas_ignoradas": 1
+    },
+    "error": null,
+    "returncode": 0,
+    "stdout": "{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":2,\"soma\":4,\"media\":2.0,\"minimo\":1,\"maximo\":3}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-extensions-7i8iidbc/ausente_ignorar_gerado_otimizado.jl"
+    ]
+  },
+  {
+    "case": "vazia",
+    "backend": "interpretador",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/vazia.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(resumir_grupos(dados, \"grupo\", \"valor\", \"erro\"), \"erro\")\n",
+    "expected": {
+      "grupos": [],
+      "linhas_lidas": 0,
+      "linhas_ignoradas": 0
+    },
+    "error": null,
+    "returncode": 0,
+    "stdout": "{\"grupos\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-extensions-7i8iidbc/vazia.abt"
+    ]
+  },
+  {
+    "case": "vazia",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/vazia.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(resumir_grupos(dados, \"grupo\", \"valor\", \"erro\"), \"erro\")\n",
+    "expected": {
+      "grupos": [],
+      "linhas_lidas": 0,
+      "linhas_ignoradas": 0
+    },
+    "error": null,
+    "returncode": 0,
+    "stdout": "{\"grupos\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-extensions-7i8iidbc/vazia_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "vazia",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/vazia.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(resumir_grupos(dados, \"grupo\", \"valor\", \"erro\"), \"erro\")\n",
+    "expected": {
+      "grupos": [],
+      "linhas_lidas": 0,
+      "linhas_ignoradas": 0
+    },
+    "error": null,
+    "returncode": 0,
+    "stdout": "{\"grupos\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-extensions-7i8iidbc/vazia_gerado_otimizado.jl"
+    ]
+  },
+  {
+    "case": "overflow",
+    "backend": "interpretador",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/overflow.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar resumir_grupos(dados, \"grupo\", \"valor\", \"erro\")\n",
+    "expected": null,
+    "error": "soma excede Int64",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-extensions-7i8iidbc/overflow.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\n",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-extensions-7i8iidbc/overflow.abt"
+    ]
+  },
+  {
+    "case": "overflow",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/overflow.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar resumir_grupos(dados, \"grupo\", \"valor\", \"erro\")\n",
+    "expected": null,
+    "error": "soma excede Int64",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:8\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:342\n [3] abt_invoke\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:389 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:396\n [5] top-level scope\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:398\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:2\n\ncaused by: ABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:332\n [3] abt_invoke\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:389 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:396\n [5] top-level scope\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:398\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\n\ncaused by: OverflowError: 9223372036854775807 + 1 overflowed for type Int64\nStacktrace:\n [1] throw_overflowerr_binaryop(op::Symbol, x::Int64, y::Int64)\n   @ Base.Checked ./checked.jl:164\n [2] checked_add(x::Int64, y::Int64)\n   @ Base.Checked ./checked.jl:176\n [3] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:329\n [4] abt_invoke\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:389 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:396\n [6] top-level scope\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl:398\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\n",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-extensions-7i8iidbc/overflow_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "overflow",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "source": "dados = ler_csv(\"/tmp/abt-extensions-7i8iidbc/overflow.csv\", esquema(\"grupo\", \"texto\", \"valor\", \"inteiro\"), \"permitir\")\nmostrar resumir_grupos(dados, \"grupo\", \"valor\", \"erro\")\n",
+    "expected": null,
+    "error": "soma excede Int64",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:8\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:342\n [3] abt_invoke\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:389 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:396\n [5] top-level scope\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:398\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:2\n\ncaused by: ABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:332\n [3] abt_invoke\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:389 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:396\n [5] top-level scope\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:398\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\n\ncaused by: OverflowError: 9223372036854775807 + 1 overflowed for type Int64\nStacktrace:\n [1] throw_overflowerr_binaryop(op::Symbol, x::Int64, y::Int64)\n   @ Base.Checked ./checked.jl:164\n [2] checked_add(x::Int64, y::Int64)\n   @ Base.Checked ./checked.jl:176\n [3] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:329\n [4] abt_invoke\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:389 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:396\n [6] top-level scope\n   @ /tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl:398\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\n",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-extensions-7i8iidbc/overflow_gerado_otimizado.jl"
+    ]
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "case": "multilinha",
+    "backend": "interpretador",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-bio-jopephvu/multilinha.abt"
+    ]
+  },
+  {
+    "case": "multilinha",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-jopephvu/multilinha_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "multilinha",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-jopephvu/multilinha_gerado_otimizado.jl"
+    ]
+  },
+  {
+    "case": "gc_zero",
+    "backend": "interpretador",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 4, C = 0, G = 0, T = 0, N = 0, GC_percentual = 0.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-bio-jopephvu/gc_zero.abt"
+    ]
+  },
+  {
+    "case": "gc_zero",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 4, C = 0, G = 0, T = 0, N = 0, GC_percentual = 0.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-jopephvu/gc_zero_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "gc_zero",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 4, C = 0, G = 0, T = 0, N = 0, GC_percentual = 0.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-jopephvu/gc_zero_gerado_otimizado.jl"
+    ]
+  },
+  {
+    "case": "gc_cem",
+    "backend": "interpretador",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 0, C = 0, G = 4, T = 0, N = 0, GC_percentual = 100.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-bio-jopephvu/gc_cem.abt"
+    ]
+  },
+  {
+    "case": "gc_cem",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 0, C = 0, G = 4, T = 0, N = 0, GC_percentual = 100.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-jopephvu/gc_cem_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "gc_cem",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 0, C = 0, G = 4, T = 0, N = 0, GC_percentual = 100.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-jopephvu/gc_cem_gerado_otimizado.jl"
+    ]
+  },
+  {
+    "case": "arquivo_vazio",
+    "backend": "interpretador",
+    "status": "PASS",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-bio-jopephvu/arquivo_vazio.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-jopephvu/data.fasta': nenhum registro\n",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-bio-jopephvu/arquivo_vazio.abt"
+    ]
+  },
+  {
+    "case": "arquivo_vazio",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-jopephvu/data.fasta': nenhum registro\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_sem_otimizacao.jl:375\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_sem_otimizacao.jl:2\n",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-jopephvu/arquivo_vazio_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "arquivo_vazio",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-jopephvu/data.fasta': nenhum registro\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_otimizado.jl:375\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-jopephvu/arquivo_vazio_gerado_otimizado.jl:2\n",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-jopephvu/arquivo_vazio_gerado_otimizado.jl"
+    ]
+  }
+]

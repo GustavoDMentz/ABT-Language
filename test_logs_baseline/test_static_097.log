@@ -1,0 +1,11 @@
+ERROR: LoadError: AssertionError: occursin("    Python = ABTPythonNamespace()", code)
+Stacktrace:
+ [1] top-level scope
+   @ ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_static_097.jl:24
+ [2] include(mod::Module, _path::String)
+   @ Base ./Base.jl:309
+ [3] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:344
+ [4] _start()
+   @ Base ./client.jl:577
+in expression starting at /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_static_097.jl:24

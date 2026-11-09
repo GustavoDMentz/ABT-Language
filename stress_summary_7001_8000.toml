@@ -1,0 +1,7 @@
+seconds = 42.85
+executed = 1000
+failures = 0
+seed = "179769742"
+
+[categories]
+nested_scope = 1000

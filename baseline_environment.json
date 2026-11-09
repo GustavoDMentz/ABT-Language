@@ -1,0 +1,13 @@
+{
+  "julia": "1.13.3",
+  "os": "Linux-7.0.0-42-generic-x86_64-with-glibc2.39",
+  "cpu": "Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz",
+  "memory": "8185679872",
+  "baseline_results": {
+    "PASS": 36,
+    "PROBE": 2,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "TIMEOUT": 0
+  }
+}

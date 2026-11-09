@@ -1,0 +1,7 @@
+# Indicadores descritivos de uma amostra numérica.
+usar Julia.Base
+dados = [12, 15, 18, 21, 24, 30]
+resumo = descrever(dados)
+altos = filtrar dados onde valor >= 18
+resultado = registro("resumo", resumo, "quantidade_maior_igual_18", Julia.Base.length(altos))
+mostrar resultado

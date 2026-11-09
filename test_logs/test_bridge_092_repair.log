@@ -1,0 +1,6 @@
+Test Summary:                                    | Pass  Total  Time
+ABT 0.9.2 — namespace adversarial without Python |    8      8  0.8s
+Test Summary:                               | Pass  Total  Time
+ABT 0.9.2 — generated bridge and validation |   24     24  3.2s
+Test Summary:                                          | Pass  Total   Time
+ABT 0.9.2 — Python differential mandatory if requested |    6      6  20.4s

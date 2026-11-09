@@ -1,0 +1,4 @@
+PASS registros interpretador
+PASS registros gerado_sem_otimizacao
+PASS registros gerado_otimizado
+Resumo: {'PASS': 3, 'FAIL': 0}

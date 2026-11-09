@@ -1,0 +1,5 @@
+Test Summary:                      | Pass  Total  Time
+ABT 0.9 — contrato estático Python |   11     11  7.3s
+[ Info: Teste de runtime Python ignorado: PythonCall.jl ou NumPy indisponível
+Test Summary:                          | Broken  Total  Time
+ABT 0.9 — integração Python (opcional) |      1      1  0.1s

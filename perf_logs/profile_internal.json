@@ -1,0 +1,32 @@
+[
+  {
+    "wall_s": 5.080387936999614,
+    "returncode": 0,
+    "stdout": "Olá, mundo!\n",
+    "stderr": "ABT_PROFILE include 1.021438995\nABT_PROFILE read 0.000367732\nABT_PROFILE tokenize 1.114031016\nABT_PROFILE parse 0.252011588\nABT_PROFILE lower 0.256802377\nABT_PROFILE validate 1.461612767\nABT_PROFILE execute 0.684043029\nABT_PROFILE print 0.011163599\n"
+  },
+  {
+    "wall_s": 5.006542765999711,
+    "returncode": 0,
+    "stdout": "Olá, mundo!\n",
+    "stderr": "ABT_PROFILE include 0.965958846\nABT_PROFILE read 0.000457712\nABT_PROFILE tokenize 1.171708039\nABT_PROFILE parse 0.225257783\nABT_PROFILE lower 0.263501364\nABT_PROFILE validate 1.443417507\nABT_PROFILE execute 0.65227483\nABT_PROFILE print 0.010781778\n"
+  },
+  {
+    "wall_s": 4.916255077999722,
+    "returncode": 0,
+    "stdout": "Olá, mundo!\n",
+    "stderr": "ABT_PROFILE include 1.037648223\nABT_PROFILE read 0.000383739\nABT_PROFILE tokenize 1.122152196\nABT_PROFILE parse 0.225986528\nABT_PROFILE lower 0.248215118\nABT_PROFILE validate 1.357776009\nABT_PROFILE execute 0.63077862\nABT_PROFILE print 0.009015373\n"
+  },
+  {
+    "wall_s": 4.725515461999748,
+    "returncode": 0,
+    "stdout": "Olá, mundo!\n",
+    "stderr": "ABT_PROFILE include 0.941679019\nABT_PROFILE read 0.00037273\nABT_PROFILE tokenize 1.055313721\nABT_PROFILE parse 0.221153463\nABT_PROFILE lower 0.244720927\nABT_PROFILE validate 1.333127709\nABT_PROFILE execute 0.653604215\nABT_PROFILE print 0.010703641\n"
+  },
+  {
+    "wall_s": 4.7665719000001445,
+    "returncode": 0,
+    "stdout": "Olá, mundo!\n",
+    "stderr": "ABT_PROFILE include 0.975892946\nABT_PROFILE read 0.000369325\nABT_PROFILE tokenize 1.058337483\nABT_PROFILE parse 0.225430037\nABT_PROFILE lower 0.252777164\nABT_PROFILE validate 1.342472226\nABT_PROFILE execute 0.634195619\nABT_PROFILE print 0.008520052\n"
+  }
+]

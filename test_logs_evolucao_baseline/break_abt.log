@@ -1,0 +1,25 @@
+ABT 0.6 adversarial differential test
+[MATCH] basic
+[MATCH] parentheses
+[MATCH] float
+[MATCH] negative
+[MATCH] large_integer
+[MATCH] divide_by_zero
+[MATCH] zero_div_zero
+[MATCH] empty_sum
+[EXPECTED_ERROR] empty_average
+[MATCH] false_branch
+[MATCH] nested_branch
+[MATCH] empty_loop
+[EXPECTED_ERROR] loop_scope
+[EXPECTED_ERROR] branch_scope
+[MATCH] reassignment
+[MATCH] boolean
+[MATCH] logical_short_circuit
+[MATCH] unicode
+[MATCH] string_escape
+[MATCH] precedence
+[MATCH] numeric_comparison
+[MATCH] filtered_sum
+[MATCH] filtered_avg
+Cases: 23; expected errors: 3; investigate: 0

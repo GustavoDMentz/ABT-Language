@@ -1,0 +1,11 @@
+completed=9100 failures=0 elapsed=8.0s
+completed=9200 failures=0 elapsed=12.4s
+completed=9300 failures=0 elapsed=16.5s
+completed=9400 failures=0 elapsed=20.6s
+completed=9500 failures=0 elapsed=24.7s
+completed=9600 failures=0 elapsed=28.7s
+completed=9700 failures=0 elapsed=33.0s
+completed=9800 failures=0 elapsed=37.1s
+completed=9900 failures=0 elapsed=41.4s
+completed=10000 failures=0 elapsed=46.0s
+STRESS RESULT executed=1000 failures=0

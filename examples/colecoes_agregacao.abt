@@ -1,0 +1,3 @@
+medidas = [10, 20, 30, 40]
+selecionadas = filtrar medidas onde valor >= 20
+mostrar média de (transformar selecionadas com valor * 2)

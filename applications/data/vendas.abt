@@ -1,0 +1,9 @@
+# Tabela tipada, filtro e transformação preguiçosos, resumo estruturado.
+caminho = ambiente("ABT_VENDAS_PATH", "applications/data/vendas.csv")
+colunas = esquema("produto", "texto", "regiao", "texto", "unidades", "inteiro", "preco", "real")
+vendas = ler_csv(caminho, colunas, "erro")
+sul = filtrar_tabela(vendas, "regiao", "==", "Sul")
+dobro = transformar_tabela(sul, "unidades", "unidades_dobradas", "*", 2, "inteiro")
+resumo = resumir_coluna(dobro, "unidades_dobradas")
+resultado = registro("regiao", "Sul", "resumo", resumo, "produtos", coluna(dobro, "produto"))
+mostrar resultado

@@ -1,0 +1,6 @@
+caminho = ambiente("ABT_VENDAS_PATH", "applications/data/vendas.csv")
+colunas = esquema("produto", "texto", "regiao", "texto", "unidades", "inteiro", "preco", "real")
+vendas = ler_csv(caminho, colunas, "erro")
+frequencias = contar_categorias(vendas, "regiao", "erro")
+relatorio = registro("fonte", "vendas", "dimensao", "regiao", "distribuicao", frequencias)
+mostrar codificar_json(relatorio, "erro")

@@ -1,0 +1,118 @@
+{
+  "julia_version": "1.13.3",
+  "historical": {
+    "passed": 38,
+    "probes": 2,
+    "partial": 0,
+    "failed": 0,
+    "timeout": 0,
+    "log": "perf_logs/final_full.log"
+  },
+  "installer_cli": {
+    "passed": 8,
+    "failed": 0,
+    "log": "perf_logs/install_cli_tests.log"
+  },
+  "performance_semantics": {
+    "passed": 5,
+    "failed": 0,
+    "log": "perf_logs/perf_semantics_tests.log"
+  },
+  "differential_compile_min": {
+    "passed": 1000,
+    "failed": 0,
+    "log": "perf_logs/differential_compile_min.log"
+  },
+  "cli_identity_recheck": {
+    "passed": 20,
+    "failed": 0,
+    "log": "perf_logs/final_cli_identity.log"
+  },
+  "benchmarks": {
+    "launcher_only": {
+      "before_median_s": 0.004619009999714763,
+      "after_median_s": 0.0042712100002972875,
+      "before_p95_s": 0.004839905299922976,
+      "after_p95_s": 0.00537567229966953,
+      "before_max_rss_kb": 1844,
+      "after_max_rss_kb": 1844
+    },
+    "julia_start": {
+      "before_median_s": 0.15473422949980886,
+      "after_median_s": 0.16601289549953435,
+      "before_p95_s": 0.16839314820044818,
+      "after_p95_s": 0.172310720650421,
+      "before_max_rss_kb": 165508,
+      "after_max_rss_kb": 165488
+    },
+    "version": {
+      "before_median_s": 0.2599725144996228,
+      "after_median_s": 0.18007019299966487,
+      "before_p95_s": 0.2694885824501398,
+      "after_p95_s": 0.1854543202003242,
+      "before_max_rss_kb": 207580,
+      "after_max_rss_kb": 171856
+    },
+    "doctor": {
+      "before_median_s": 0.016328146000432753,
+      "after_median_s": 0.01691430099981517,
+      "before_p95_s": 0.016486846350244378,
+      "after_p95_s": 0.017844791799780067,
+      "before_max_rss_kb": 30136,
+      "after_max_rss_kb": 30140
+    },
+    "check_hello": {
+      "before_median_s": 4.971171144999516,
+      "after_median_s": 0.3356350280000697,
+      "before_p95_s": 5.897613862450407,
+      "after_p95_s": 0.3645735313001296,
+      "before_max_rss_kb": 377304,
+      "after_max_rss_kb": 239636
+    },
+    "run_hello": {
+      "before_median_s": 4.923238167500131,
+      "after_median_s": 0.3436656789999688,
+      "before_p95_s": 5.105039806899958,
+      "after_p95_s": 0.36305276329962904,
+      "before_max_rss_kb": 376480,
+      "after_max_rss_kb": 239984
+    },
+    "pipeline": {
+      "before_median_s": 5.4030458420002105,
+      "after_median_s": 0.7363025895001556,
+      "before_p95_s": 5.8022442695499645,
+      "after_p95_s": 0.774015245350074,
+      "before_max_rss_kb": 376396,
+      "after_max_rss_kb": 297352
+    },
+    "math": {
+      "before_median_s": 5.334635608500321,
+      "after_median_s": 0.745114876000116,
+      "before_p95_s": 5.559736589799695,
+      "after_p95_s": 0.7761374209997939,
+      "before_max_rss_kb": 377404,
+      "after_max_rss_kb": 296972
+    },
+    "representative": {
+      "before_median_s": 5.27422914699946,
+      "after_median_s": 0.7102155320003476,
+      "before_p95_s": 5.529467930450346,
+      "after_p95_s": 0.8364134504502543,
+      "before_max_rss_kb": 380368,
+      "after_max_rss_kb": 298420
+    },
+    "large_1000": {
+      "before_median_s": 5.18294905599987,
+      "after_median_s": 1.991914040499978,
+      "before_p95_s": 5.271090158700372,
+      "after_p95_s": 2.084520677349792,
+      "before_max_rss_kb": 377592,
+      "after_max_rss_kb": 270148
+    }
+  },
+  "limitations": [
+    "OS page cache was not cleared",
+    "Two exploratory probes are not functional PASS",
+    "Default compile=min slower on 10000-statement workload; use ABT_JULIA_COMPILE=all"
+  ]
+}

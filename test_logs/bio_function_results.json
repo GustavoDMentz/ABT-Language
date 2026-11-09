@@ -1,0 +1,43 @@
+[
+  {
+    "case": "funcao",
+    "backend": "interpretador",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-bio-bysr6mi8/funcao.abt"
+    ]
+  },
+  {
+    "case": "funcao",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-bysr6mi8/funcao_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "funcao",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "returncode": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-bysr6mi8/funcao_gerado_otimizado.jl"
+    ]
+  }
+]

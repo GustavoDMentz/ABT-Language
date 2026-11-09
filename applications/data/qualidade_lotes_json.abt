@@ -1,0 +1,6 @@
+caminho = ambiente("ABT_LOTES_PATH", "applications/data/qualidade_lotes.csv")
+colunas = esquema("lote", "texto", "classe", "texto", "medida", "real")
+dados = ler_csv(caminho, colunas, "permitir")
+resumo = resumir_grupos(dados, "classe", "medida", "ignorar_linha")
+relatorio = registro("fonte", "qualidade_lotes", "politica_ausentes", "ignorar_linha", "resumo", resumo)
+mostrar codificar_json(relatorio, "erro")

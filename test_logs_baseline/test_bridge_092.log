@@ -1,0 +1,23 @@
+
+ABT 0.9.2 — namespace adversarial without Python: Error During Test at /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_bridge_092.jl:15
+  Test threw exception
+  Expression: (B.abt_external_field(B.abt_external_field(B.abt_external_field(ns, "numpy"), "linalg"), "norm"))([3, 4]) == 5
+  KeyError: key "linalg" not found
+  Stacktrace:
+   [1] getindex(h::Dict{String, typeof(sum)}, key::String)
+     @ Base ./dict.jl:479
+   [2] abt_external_field(obj::Dict{String, typeof(sum)}, field::String)
+     @ Main.Pseudo ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/bridge_runtime.jl:33
+   [3] top-level scope
+     @ ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_bridge_092.jl:9
+   [4] macro expansion
+     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/Test/src/Test.jl:1967 [inlined]
+   [5] macro expansion
+     @ ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_bridge_092.jl:15 [inlined]
+   [6] macro expansion
+     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/Test/src/Test.jl:755 [inlined]
+Test Summary:                                    | Pass  Error  Total  Time
+ABT 0.9.2 — namespace adversarial without Python |    7      1      8  3.0s
+RNG of the outermost testset: Random.Xoshiro(0xfc85e5949689a935, 0x6aba457feef066ec, 0x6a51bcbe580f41ae, 0x587087fa761044a3, 0xbb611da5561906d4)
+ERROR: LoadError: Some tests did not pass: 7 passed, 0 failed, 1 errored, 0 broken.
+in expression starting at /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_bridge_092.jl:8

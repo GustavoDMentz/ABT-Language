@@ -1,0 +1,27 @@
+PASS unario_precedencia interpretador
+PASS unario_precedencia gerado_sem_otimizacao
+PASS unario_precedencia gerado_otimizado
+PASS logica_precedencia interpretador
+PASS logica_precedencia gerado_sem_otimizacao
+PASS logica_precedencia gerado_otimizado
+PASS unario_invalido interpretador
+PASS potencia_invalida interpretador
+PASS normal_invalida interpretador
+PASS normal_invalida gerado_sem_otimizacao
+PASS normal_invalida gerado_otimizado
+PASS grafico_spec interpretador
+PASS grafico_spec gerado_sem_otimizacao
+PASS grafico_spec gerado_otimizado
+PASS categoria_invalida interpretador
+PASS categoria_invalida gerado_sem_otimizacao
+PASS categoria_invalida gerado_otimizado
+PASS grupo_invalido interpretador
+PASS grupo_invalido gerado_sem_otimizacao
+PASS grupo_invalido gerado_otimizado
+PASS estatistica interpretador
+PASS estatistica gerado_sem_otimizacao
+PASS estatistica gerado_otimizado
+PASS bio interpretador
+PASS bio gerado_sem_otimizacao
+PASS bio gerado_otimizado
+Resumo {'PASS': 30, 'FAIL': 0}

@@ -1,0 +1,9 @@
+$ julia pseudo.jl examples/pipeline_basico.abt
+[30, 40]
+exit 0
+$ julia pseudo.jl examples/pipeline_efeitos.abt
+1
+2
+3
+[2, 4, 6]
+exit 0

@@ -1,0 +1,4 @@
+PASS dna_registros_amostra interpretador
+PASS dna_registros_amostra julia_sem_otimizacao
+PASS dna_registros_amostra julia_otimizada
+Resumo: {'PASS': 3, 'FAIL': 0, 'TIMEOUT': 0}

@@ -1,0 +1,4 @@
+function dobro(x) { mostrar x; retornar x * 2 }
+[1, 2, 3]
+    transformar com dobro(valor)
+    mostrar

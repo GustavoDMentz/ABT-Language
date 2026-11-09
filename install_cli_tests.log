@@ -1,0 +1,10 @@
+test_conflicts_preserved (__main__.InstalledCLI.test_conflicts_preserved) ... ok
+test_install_reinstall_update_and_uninstall (__main__.InstalledCLI.test_install_reinstall_update_and_uninstall) ... ok
+test_installed_commands_unicode_paths_and_errors (__main__.InstalledCLI.test_installed_commands_unicode_paths_and_errors) ... ok
+test_missing_and_incompatible_julia (__main__.InstalledCLI.test_missing_and_incompatible_julia) ... ok
+test_vscode_tasks_use_installed_command (__main__.InstalledCLI.test_vscode_tasks_use_installed_command) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 71.696s
+
+OK

@@ -1,0 +1,5 @@
+coeficientes = [[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]]
+correntes = [1.0, 1.0]
+resultado = resolver_sistema_spd(coeficientes, correntes)
+relatorio = registro("modelo", "rede_condutancias", "tensoes", resultado.solucao, "residuo_norma", resultado.residuo_norma)
+mostrar codificar_json(relatorio, "erro")

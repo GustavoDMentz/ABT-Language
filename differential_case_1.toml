@@ -1,0 +1,9 @@
+failed = 0
+executed = 1
+passed = 1
+failures = []
+seed = 11235606
+julia_version = "1.13.3"
+
+[categories]
+arithmetic = 1

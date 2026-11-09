@@ -1,0 +1,38 @@
+#!/bin/sh
+ABT_SCRIPT=$(readlink -f -- "$0") || exit 2
+ABT_ROOT=$(dirname -- "$(dirname -- "$ABT_SCRIPT")") || exit 2
+ABT_RUNTIME=${ABT_JULIA:-julia}
+if [ "${1:-}" = doctor ] && [ "$#" -eq 1 ]; then
+    printf 'ABT: %s\n' "$ABT_ROOT"
+    if [ ! -f "$ABT_ROOT/src/CLI.jl" ] || [ ! -f "$ABT_ROOT/src/ABT.jl" ] || [ ! -f "$ABT_ROOT/ABT.packages.toml" ] || [ ! -f "$ABT_ROOT/Project.toml" ]; then
+        printf '%s\n' 'ABT: instalação incompleta (arquivos essenciais ausentes).' >&2
+        exit 2
+    fi
+    if ! command -v "$ABT_RUNTIME" >/dev/null 2>&1; then
+        printf 'ABT: Julia não encontrada. Instale Julia 1.13.3 ou defina ABT_JULIA.\n' >&2
+        exit 2
+    fi
+    ABT_JULIA_VERSION=$("$ABT_RUNTIME" --version 2>&1) || exit 2
+    printf 'Julia: %s\n' "$ABT_JULIA_VERSION"
+    if [ "$ABT_JULIA_VERSION" != 'julia version 1.13.3' ]; then
+        printf '%s\n' 'ABT: versão não homologada; requer Julia 1.13.3.' >&2
+        exit 2
+    fi
+    printf '%s\n' 'ABT: arquivos essenciais e runtime disponíveis.'
+    exit 0
+fi
+if ! command -v "$ABT_RUNTIME" >/dev/null 2>&1; then
+    printf '%s\n' 'ABT: Julia não encontrada. Execute abt doctor para detalhes.' >&2
+    exit 2
+fi
+ABT_JULIA_VERSION=$("$ABT_RUNTIME" --version 2>&1) || exit 2
+if [ "$ABT_JULIA_VERSION" != 'julia version 1.13.3' ]; then
+    printf 'ABT: Julia 1.13.3 necessária; encontrado: %s\n' "$ABT_JULIA_VERSION" >&2
+    exit 2
+fi
+ABT_COMPILE=${ABT_JULIA_COMPILE:-min}
+case "$ABT_COMPILE" in
+    min|all|no) ;;
+    *) printf '%s\n' 'ABT: ABT_JULIA_COMPILE deve ser min, all ou no.' >&2; exit 2 ;;
+esac
+exec "$ABT_RUNTIME" --startup-file=no --compile="$ABT_COMPILE" --project="$ABT_ROOT" "$ABT_ROOT/src/CLI.jl" "$@"

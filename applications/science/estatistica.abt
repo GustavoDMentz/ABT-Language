@@ -1,0 +1,7 @@
+caminho = ambiente("ABT_EXPERIMENTO_PATH", "applications/science/experimento.csv")
+dados = ler_csv(caminho, esquema("tratamento", "texto", "resposta", "real", "tempo", "inteiro"), "erro")
+grupos = agrupar_dados(dados, "tratamento", "resposta", "erro")
+teste = testar_grupos(grupos, "controle", "ativo", "welch")
+distribuicao = categorias(dados, "tratamento", ["controle", "ativo"], "erro")
+limite = probabilidade_normal(0.0, 1.0, 1.96)
+mostrar codificar_json(registro("teste", teste, "categorias", distribuicao, "referencia_normal", limite), "erro")

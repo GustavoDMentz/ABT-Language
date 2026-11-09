@@ -1,0 +1,9 @@
+numbers = [10, 20, 30, 40, 50]
+show average of numbers where value is above 20
+show sum of numbers where value is above 20
+if 10 is below 20 {
+    show "It works!"
+}
+for each number in numbers {
+    if number is above 40 { show number }
+}

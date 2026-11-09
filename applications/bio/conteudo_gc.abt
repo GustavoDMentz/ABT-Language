@@ -1,0 +1,4 @@
+arquivo = ambiente("ABT_FASTA_PATH", "applications/bio/sample.fasta")
+sequencias = ler_fasta(arquivo, "DNA", "rejeitar", "normalizar")
+resultado = descrever_sequencias(sequencias)
+mostrar resultado

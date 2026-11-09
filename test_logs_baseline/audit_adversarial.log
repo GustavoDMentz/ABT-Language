@@ -1,0 +1,62 @@
+
+=== Nested Python import: generated namespace mapping ===
+COMPILES; generated relevant lines:
+          Core.eval(deps, :(import PythonCall))
+          error("Interop Python indisponível: verifique PythonCall.jl. Causa: " * sprint(showerror, err))
+      cache[] = getfield(deps, :PythonCall)
+      obj isa AbstractDict ? obj[field] : getproperty(obj, Symbol(field))
+      __abt_pythoncall_cache__ = Ref{Any}(nothing)
+      abt_import_python!(Python, "Bio.Seq", abt_load_pythoncall!(__abt_pythoncall_cache__).pyimport)
+
+=== Python module root collision ===
+COMPILES; generated relevant lines:
+          Core.eval(deps, :(import PythonCall))
+          error("Interop Python indisponível: verifique PythonCall.jl. Causa: " * sprint(showerror, err))
+      cache[] = getfield(deps, :PythonCall)
+      obj isa AbstractDict ? obj[field] : getproperty(obj, Symbol(field))
+      __abt_pythoncall_cache__ = Ref{Any}(nothing)
+      abt_import_python!(Python, "numpy", abt_load_pythoncall!(__abt_pythoncall_cache__).pyimport)
+      abt_import_python!(Python, "numpy.linalg", abt_load_pythoncall!(__abt_pythoncall_cache__).pyimport)
+
+=== Indirect function reference ===
+COMPILES; generated relevant lines:
+          Core.eval(deps, :(import PythonCall))
+          error("Interop Python indisponível: verifique PythonCall.jl. Causa: " * sprint(showerror, err))
+      cache[] = getfield(deps, :PythonCall)
+      obj isa AbstractDict ? obj[field] : getproperty(obj, Symbol(field))
+      __abt_pythoncall_cache__ = Ref{Any}(nothing)
+      abt_import_python!(Python, "numpy", abt_load_pythoncall!(__abt_pythoncall_cache__).pyimport)
+
+=== External object method ===
+COMPILES; generated relevant lines:
+          Core.eval(deps, :(import PythonCall))
+          error("Interop Python indisponível: verifique PythonCall.jl. Causa: " * sprint(showerror, err))
+      cache[] = getfield(deps, :PythonCall)
+      obj isa AbstractDict ? obj[field] : getproperty(obj, Symbol(field))
+      __abt_pythoncall_cache__ = Ref{Any}(nothing)
+      abt_import_python!(Python, "numpy", abt_load_pythoncall!(__abt_pythoncall_cache__).pyimport)
+
+=== Rebinding reserved namespace ===
+REJECTED: Semantic error: reserved namespace 'Python'
+
+=== Private attribute via dynamic lookup ===
+COMPILES; generated relevant lines:
+          Core.eval(deps, :(import PythonCall))
+          error("Interop Python indisponível: verifique PythonCall.jl. Causa: " * sprint(showerror, err))
+      cache[] = getfield(deps, :PythonCall)
+      obj isa AbstractDict ? obj[field] : getproperty(obj, Symbol(field))
+      __abt_pythoncall_cache__ = Ref{Any}(nothing)
+      abt_import_python!(Python, "builtins", abt_load_pythoncall!(__abt_pythoncall_cache__).pyimport)
+FINDING: accepted code that should be rejected by a strict boundary
+
+=== Arbitrary code via generic import ===
+COMPILES; generated relevant lines:
+          Core.eval(deps, :(import PythonCall))
+          error("Interop Python indisponível: verifique PythonCall.jl. Causa: " * sprint(showerror, err))
+      cache[] = getfield(deps, :PythonCall)
+      obj isa AbstractDict ? obj[field] : getproperty(obj, Symbol(field))
+      __abt_pythoncall_cache__ = Ref{Any}(nothing)
+      abt_import_python!(Python, "os", abt_load_pythoncall!(__abt_pythoncall_cache__).pyimport)
+FINDING: accepted code that should be rejected by a strict boundary
+
+NOTE: This is an audit probe, not a passing regression suite. Inspect findings and run optional runtime comparisons.

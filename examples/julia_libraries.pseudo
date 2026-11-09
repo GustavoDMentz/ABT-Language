@@ -1,0 +1,13 @@
+usar Julia.Statistics
+usar Julia.LinearAlgebra
+usar Julia.Base
+
+numeros = [3, 1, 2, 2]
+mostrar Julia.Base.sort(numeros)
+mostrar Julia.Base.unique(numeros)
+mostrar Julia.Base.sum(numeros)
+mostrar Julia.Statistics.mean(numeros)
+mostrar Julia.Statistics.median(numeros)
+mostrar Julia.LinearAlgebra.norm([3, 4])
+mostrar Julia.LinearAlgebra.dot([1, 2], [3, 4])
+mostrar Julia.Statistics.cor([1, 2, 3], [2, 4, 6])

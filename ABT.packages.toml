@@ -1,0 +1,10 @@
+# Optional Julia API declarations. Julia's Project/Manifest manage installation.
+[julia.Dates]
+uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
+version = "1.11.0"
+functions = { Date = 1, year = 1 }
+
+[julia.PythonCall]
+uuid = "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
+version = "0.9.37"
+functions = { pyconvert = 2 }

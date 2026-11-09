@@ -1,0 +1,7 @@
+seconds = 30.02
+executed = 1000
+failures = 0
+seed = "179769742"
+
+[categories]
+branch = 1000

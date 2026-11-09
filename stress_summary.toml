@@ -1,0 +1,7 @@
+seconds = 3.22
+executed = 10
+failures = 0
+seed = "179769742"
+
+[categories]
+arithmetic = 10

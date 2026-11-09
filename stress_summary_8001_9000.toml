@@ -1,0 +1,7 @@
+seconds = 30.75
+executed = 1000
+failures = 0
+seed = "179769742"
+
+[categories]
+boolean = 1000

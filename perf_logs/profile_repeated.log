@@ -1,0 +1,2 @@
+pass=1 tokenize=2.5511e-5 parse=4.899e-6 lower=7.08e-7 validate=2.213201258 execute=5.8143e-5 output=["Olá, mundo!"]
+pass=2 tokenize=1.5743e-5 parse=5.678e-6 lower=9.6e-7 validate=4.5452e-5 execute=1.7519e-5 output=["Olá, mundo!"]

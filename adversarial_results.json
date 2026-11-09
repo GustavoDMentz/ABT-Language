@@ -1,0 +1,114 @@
+[
+  {
+    "name": "unicode_name",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 8.665,
+    "output": "EQUIVALENT\n"
+  },
+  {
+    "name": "comments_blank",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 7.057,
+    "output": "EQUIVALENT\n"
+  },
+  {
+    "name": "short_circuit",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 7.003,
+    "output": "EQUIVALENT\n"
+  },
+  {
+    "name": "shadow_scope",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 9.265,
+    "output": "EQUIVALENT\n"
+  },
+  {
+    "name": "zero_division",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 7.488,
+    "output": "EQUIVALENT\n"
+  },
+  {
+    "name": "heterogeneous",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 7.583,
+    "output": "EQUIVALENT\n"
+  },
+  {
+    "name": "pipeline_nested",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 7.902,
+    "output": "EQUIVALENT\n"
+  },
+  {
+    "name": "tabs",
+    "mode": "invalid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 3.276,
+    "output": "REJECTED: ErrorException: Pipeline error at 2:2: tabs in pipeline indentation are unsupported\n"
+  },
+  {
+    "name": "unknown_step",
+    "mode": "invalid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 3.319,
+    "output": "REJECTED: ErrorException: Pipeline error at 2:5: unknown pipeline step 'inventar'\n"
+  },
+  {
+    "name": "after_terminal",
+    "mode": "invalid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 3.27,
+    "output": "REJECTED: ErrorException: Expected =, got \"a\" at 3:13\n"
+  },
+  {
+    "name": "incomplete_expression",
+    "mode": "invalid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 3.073,
+    "output": "REJECTED: ErrorException: Unexpected token \"\" at 1:12\n"
+  },
+  {
+    "name": "invalid_character",
+    "mode": "invalid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 2.851,
+    "output": "REJECTED: ErrorException: Unexpected character '@' at 1:11\n"
+  },
+  {
+    "name": "huge_identifier",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 8.366,
+    "output": "EQUIVALENT\n"
+  },
+  {
+    "name": "deep_expression",
+    "mode": "valid",
+    "status": "PASS",
+    "exit_code": 0,
+    "seconds": 9.432,
+    "output": "EQUIVALENT\n"
+  }
+]

@@ -1,0 +1,707 @@
+{
+  "repetitions": 5,
+  "sources": {
+    "abt_minimo": "mostrar 1\n",
+    "statsbase_isolada": "dados = ler_csv(\"applications/data/vendas.csv\", esquema(\"produto\", \"texto\", \"regiao\", \"texto\", \"unidades\", \"inteiro\", \"preco\", \"real\"), \"erro\")\nmostrar contar_categorias(dados, \"regiao\", \"erro\")\n",
+    "algebra_isolada": "mostrar resolver_sistema_spd([[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]], [1.0, 1.0])\n",
+    "statsbase_algebra": "dados = ler_csv(\"applications/data/vendas.csv\", esquema(\"produto\", \"texto\", \"regiao\", \"texto\", \"unidades\", \"inteiro\", \"preco\", \"real\"), \"erro\")\ncontagens = contar_categorias(dados, \"regiao\", \"erro\")\nsolucao = resolver_sistema_spd([[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]], [1.0, 1.0])\nmostrar contagens\nmostrar solucao\n"
+  },
+  "rows": [
+    {
+      "scenario": "julia_minima",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "wall_seconds": 0.15,
+      "user_seconds": 0.07,
+      "system_seconds": 0.07,
+      "max_rss_kb": 164980
+    },
+    {
+      "scenario": "julia_minima",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "wall_seconds": 0.15,
+      "user_seconds": 0.09,
+      "system_seconds": 0.06,
+      "max_rss_kb": 164988
+    },
+    {
+      "scenario": "julia_minima",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "wall_seconds": 0.15,
+      "user_seconds": 0.08,
+      "system_seconds": 0.06,
+      "max_rss_kb": 165108
+    },
+    {
+      "scenario": "julia_minima",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "wall_seconds": 0.15,
+      "user_seconds": 0.08,
+      "system_seconds": 0.07,
+      "max_rss_kb": 164916
+    },
+    {
+      "scenario": "julia_minima",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "--startup-file=no",
+        "--compile=min",
+        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "-e",
+        "nothing"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "wall_seconds": 0.15,
+      "user_seconds": 0.08,
+      "system_seconds": 0.07,
+      "max_rss_kb": 165108
+    },
+    {
+      "scenario": "abt_minimo",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "1\n",
+      "wall_seconds": 0.32,
+      "user_seconds": 0.31,
+      "system_seconds": 0.09,
+      "max_rss_kb": 241612
+    },
+    {
+      "scenario": "abt_minimo",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "1\n",
+      "wall_seconds": 0.31,
+      "user_seconds": 0.31,
+      "system_seconds": 0.09,
+      "max_rss_kb": 241292
+    },
+    {
+      "scenario": "abt_minimo",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "1\n",
+      "wall_seconds": 0.31,
+      "user_seconds": 0.31,
+      "system_seconds": 0.08,
+      "max_rss_kb": 241524
+    },
+    {
+      "scenario": "abt_minimo",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "1\n",
+      "wall_seconds": 0.31,
+      "user_seconds": 0.32,
+      "system_seconds": 0.08,
+      "max_rss_kb": 241224
+    },
+    {
+      "scenario": "abt_minimo",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "1\n",
+      "wall_seconds": 0.31,
+      "user_seconds": 0.31,
+      "system_seconds": 0.08,
+      "max_rss_kb": 241268
+    },
+    {
+      "scenario": "statsbase_isolada",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n",
+      "wall_seconds": 1.46,
+      "user_seconds": 1.35,
+      "system_seconds": 0.17,
+      "max_rss_kb": 368084
+    },
+    {
+      "scenario": "statsbase_isolada",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n",
+      "wall_seconds": 1.43,
+      "user_seconds": 1.35,
+      "system_seconds": 0.17,
+      "max_rss_kb": 372932
+    },
+    {
+      "scenario": "statsbase_isolada",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n",
+      "wall_seconds": 1.41,
+      "user_seconds": 1.32,
+      "system_seconds": 0.18,
+      "max_rss_kb": 372624
+    },
+    {
+      "scenario": "statsbase_isolada",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n",
+      "wall_seconds": 1.4,
+      "user_seconds": 1.31,
+      "system_seconds": 0.18,
+      "max_rss_kb": 368064
+    },
+    {
+      "scenario": "statsbase_isolada",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n",
+      "wall_seconds": 1.45,
+      "user_seconds": 1.37,
+      "system_seconds": 0.17,
+      "max_rss_kb": 368056
+    },
+    {
+      "scenario": "algebra_isolada",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 0.92,
+      "user_seconds": 0.89,
+      "system_seconds": 0.12,
+      "max_rss_kb": 309024
+    },
+    {
+      "scenario": "algebra_isolada",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 0.93,
+      "user_seconds": 0.9,
+      "system_seconds": 0.11,
+      "max_rss_kb": 309020
+    },
+    {
+      "scenario": "algebra_isolada",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 0.92,
+      "user_seconds": 0.88,
+      "system_seconds": 0.13,
+      "max_rss_kb": 309012
+    },
+    {
+      "scenario": "algebra_isolada",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 0.92,
+      "user_seconds": 0.87,
+      "system_seconds": 0.13,
+      "max_rss_kb": 310108
+    },
+    {
+      "scenario": "algebra_isolada",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 0.91,
+      "user_seconds": 0.88,
+      "system_seconds": 0.12,
+      "max_rss_kb": 308956
+    },
+    {
+      "scenario": "statsbase_algebra",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 1.57,
+      "user_seconds": 1.47,
+      "system_seconds": 0.19,
+      "max_rss_kb": 369212
+    },
+    {
+      "scenario": "statsbase_algebra",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 1.56,
+      "user_seconds": 1.46,
+      "system_seconds": 0.19,
+      "max_rss_kb": 374760
+    },
+    {
+      "scenario": "statsbase_algebra",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 1.56,
+      "user_seconds": 1.48,
+      "system_seconds": 0.17,
+      "max_rss_kb": 368840
+    },
+    {
+      "scenario": "statsbase_algebra",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 1.57,
+      "user_seconds": 1.47,
+      "system_seconds": 0.18,
+      "max_rss_kb": 369168
+    },
+    {
+      "scenario": "statsbase_algebra",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "(categorias = [(categoria = \"Sul\", quantidade = 3, proporcao = 0.75), (categoria = \"Norte\", quantidade = 1, proporcao = 0.25)], linhas_lidas = 4, linhas_ignoradas = 0)\n(solucao = [0.9999999999999998, 1.0000000000000002], residuo_norma = 9.42055475210265e-16)\n",
+      "wall_seconds": 1.56,
+      "user_seconds": 1.47,
+      "system_seconds": 0.18,
+      "max_rss_kb": 369340
+    },
+    {
+      "scenario": "app_estatistica_json",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "wall_seconds": 1.48,
+      "user_seconds": 1.38,
+      "system_seconds": 0.18,
+      "max_rss_kb": 369260
+    },
+    {
+      "scenario": "app_estatistica_json",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "wall_seconds": 1.48,
+      "user_seconds": 1.39,
+      "system_seconds": 0.18,
+      "max_rss_kb": 368068
+    },
+    {
+      "scenario": "app_estatistica_json",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "wall_seconds": 1.49,
+      "user_seconds": 1.41,
+      "system_seconds": 0.16,
+      "max_rss_kb": 369192
+    },
+    {
+      "scenario": "app_estatistica_json",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "wall_seconds": 1.48,
+      "user_seconds": 1.39,
+      "system_seconds": 0.17,
+      "max_rss_kb": 369440
+    },
+    {
+      "scenario": "app_estatistica_json",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+      "wall_seconds": 1.48,
+      "user_seconds": 1.39,
+      "system_seconds": 0.18,
+      "max_rss_kb": 369316
+    },
+    {
+      "scenario": "app_algebra_json",
+      "repetition": 1,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
+      "wall_seconds": 1.05,
+      "user_seconds": 1.0,
+      "system_seconds": 0.14,
+      "max_rss_kb": 324720
+    },
+    {
+      "scenario": "app_algebra_json",
+      "repetition": 2,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
+      "wall_seconds": 1.04,
+      "user_seconds": 1.0,
+      "system_seconds": 0.13,
+      "max_rss_kb": 324432
+    },
+    {
+      "scenario": "app_algebra_json",
+      "repetition": 3,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
+      "wall_seconds": 1.04,
+      "user_seconds": 0.99,
+      "system_seconds": 0.13,
+      "max_rss_kb": 323188
+    },
+    {
+      "scenario": "app_algebra_json",
+      "repetition": 4,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
+      "wall_seconds": 1.03,
+      "user_seconds": 1.0,
+      "system_seconds": 0.12,
+      "max_rss_kb": 324428
+    },
+    {
+      "scenario": "app_algebra_json",
+      "repetition": 5,
+      "command": [
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "run",
+        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
+      "wall_seconds": 1.05,
+      "user_seconds": 1.0,
+      "system_seconds": 0.13,
+      "max_rss_kb": 323184
+    }
+  ],
+  "summary": {
+    "julia_minima": {
+      "wall_seconds": {
+        "median": 0.15,
+        "minimum": 0.15,
+        "maximum": 0.15
+      },
+      "user_seconds": {
+        "median": 0.08,
+        "minimum": 0.07,
+        "maximum": 0.09
+      },
+      "system_seconds": {
+        "median": 0.07,
+        "minimum": 0.06,
+        "maximum": 0.07
+      },
+      "max_rss_kb": {
+        "median": 164988,
+        "minimum": 164916,
+        "maximum": 165108
+      }
+    },
+    "abt_minimo": {
+      "wall_seconds": {
+        "median": 0.31,
+        "minimum": 0.31,
+        "maximum": 0.32
+      },
+      "user_seconds": {
+        "median": 0.31,
+        "minimum": 0.31,
+        "maximum": 0.32
+      },
+      "system_seconds": {
+        "median": 0.08,
+        "minimum": 0.08,
+        "maximum": 0.09
+      },
+      "max_rss_kb": {
+        "median": 241292,
+        "minimum": 241224,
+        "maximum": 241612
+      }
+    },
+    "statsbase_isolada": {
+      "wall_seconds": {
+        "median": 1.43,
+        "minimum": 1.4,
+        "maximum": 1.46
+      },
+      "user_seconds": {
+        "median": 1.35,
+        "minimum": 1.31,
+        "maximum": 1.37
+      },
+      "system_seconds": {
+        "median": 0.17,
+        "minimum": 0.17,
+        "maximum": 0.18
+      },
+      "max_rss_kb": {
+        "median": 368084,
+        "minimum": 368056,
+        "maximum": 372932
+      }
+    },
+    "algebra_isolada": {
+      "wall_seconds": {
+        "median": 0.92,
+        "minimum": 0.91,
+        "maximum": 0.93
+      },
+      "user_seconds": {
+        "median": 0.88,
+        "minimum": 0.87,
+        "maximum": 0.9
+      },
+      "system_seconds": {
+        "median": 0.12,
+        "minimum": 0.11,
+        "maximum": 0.13
+      },
+      "max_rss_kb": {
+        "median": 309020,
+        "minimum": 308956,
+        "maximum": 310108
+      }
+    },
+    "statsbase_algebra": {
+      "wall_seconds": {
+        "median": 1.56,
+        "minimum": 1.56,
+        "maximum": 1.57
+      },
+      "user_seconds": {
+        "median": 1.47,
+        "minimum": 1.46,
+        "maximum": 1.48
+      },
+      "system_seconds": {
+        "median": 0.18,
+        "minimum": 0.17,
+        "maximum": 0.19
+      },
+      "max_rss_kb": {
+        "median": 369212,
+        "minimum": 368840,
+        "maximum": 374760
+      }
+    },
+    "app_estatistica_json": {
+      "wall_seconds": {
+        "median": 1.48,
+        "minimum": 1.48,
+        "maximum": 1.49
+      },
+      "user_seconds": {
+        "median": 1.39,
+        "minimum": 1.38,
+        "maximum": 1.41
+      },
+      "system_seconds": {
+        "median": 0.18,
+        "minimum": 0.16,
+        "maximum": 0.18
+      },
+      "max_rss_kb": {
+        "median": 369260,
+        "minimum": 368068,
+        "maximum": 369440
+      }
+    },
+    "app_algebra_json": {
+      "wall_seconds": {
+        "median": 1.04,
+        "minimum": 1.03,
+        "maximum": 1.05
+      },
+      "user_seconds": {
+        "median": 1.0,
+        "minimum": 0.99,
+        "maximum": 1.0
+      },
+      "system_seconds": {
+        "median": 0.13,
+        "minimum": 0.12,
+        "maximum": 0.14
+      },
+      "max_rss_kb": {
+        "median": 324428,
+        "minimum": 323184,
+        "maximum": 324720
+      }
+    }
+  }
+}

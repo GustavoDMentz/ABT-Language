@@ -1,0 +1,4 @@
+caminho = ambiente("ABT_FASTA_PATH", "applications/science/amostras.fasta")
+sequencias = ler_fasta(caminho, "DNA", "rejeitar", "exigir_maiusculas")
+alinhamento = alinhar_sequencias(sequencias, "amostra_a", "amostra_b", "global", 2, -1, -3, -1)
+mostrar codificar_json(registro("resumo", descrever_sequencias(sequencias), "alinhamento", alinhamento), "erro")

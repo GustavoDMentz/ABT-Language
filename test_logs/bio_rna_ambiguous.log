@@ -1,0 +1,4 @@
+PASS rna_ambiguo interpretador
+PASS rna_ambiguo gerado_sem_otimizacao
+PASS rna_ambiguo gerado_otimizado
+Resumo: {'PASS': 3, 'FAIL': 0}

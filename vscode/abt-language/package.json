@@ -1,0 +1,17 @@
+{
+  "name": "abt-language",
+  "displayName": "ABT Language",
+  "description": "Reconhecimento e realce básicos da linguagem ABT",
+  "version": "0.1.0",
+  "publisher": "abt-local",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      { "id": "abt", "aliases": ["ABT", "abt"], "extensions": [".abt"], "configuration": "./language-configuration.json" }
+    ],
+    "grammars": [
+      { "language": "abt", "scopeName": "source.abt", "path": "./syntaxes/abt.tmLanguage.json" }
+    ]
+  }
+}

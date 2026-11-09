@@ -1,0 +1,4 @@
+usar Julia.Dates
+data = Julia.Dates.Date("2026-11-06")
+mostrar data
+mostrar Julia.Dates.year(data)

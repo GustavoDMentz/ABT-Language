@@ -1,0 +1,242 @@
+{
+  "min_hello": [
+    {
+      "wall_s": 0.7867506550001053,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 0.5619511190002413,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 0.5671663049997733,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": ""
+    }
+  ],
+  "min_pipeline": [
+    {
+      "wall_s": 1.012742215000344,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 0.9386893570003849,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 0.9704597669997383,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    }
+  ],
+  "min_math": [
+    {
+      "wall_s": 0.9747920080003496,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 0.9778938060003384,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 0.89483284500011,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": ""
+    }
+  ],
+  "min_representative": [
+    {
+      "wall_s": 0.8904963269997097,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 0.946875086000091,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 0.903046727000401,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": ""
+    }
+  ],
+  "no_hello": [
+    {
+      "wall_s": 0.526143250000132,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    },
+    {
+      "wall_s": 0.5373129419999714,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    },
+    {
+      "wall_s": 0.5306116429997019,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    }
+  ],
+  "no_pipeline": [
+    {
+      "wall_s": 0.8824790520002352,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    },
+    {
+      "wall_s": 0.9182678249999299,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    },
+    {
+      "wall_s": 0.8979313679997176,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    }
+  ],
+  "no_math": [
+    {
+      "wall_s": 0.8988546529999439,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    },
+    {
+      "wall_s": 0.8886629710000307,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    },
+    {
+      "wall_s": 0.9006486440002845,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    }
+  ],
+  "no_representative": [
+    {
+      "wall_s": 0.93175836599994,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    },
+    {
+      "wall_s": 0.9106911229996513,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    },
+    {
+      "wall_s": 0.8947637249998479,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": "No compiled code available for memset(Ptr{Nothing}, UInt8, UInt64) from memset(Ptr{T} where T, Any, Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for create_match_data(Ptr{Nothing}) from create_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for free_match_data(Ptr{Nothing}) from free_match_data(Any) : sysimg may not have been built with --compile=all\nNo compiled code available for _string_n(Int64) from _string_n(Integer) : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Token, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, Array{ABT.Token, 1}, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.Node, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for unsafe_copyto!(GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, ABT.IR, Core.AddrSpace{Core}(0x00)}, Int64) from unsafe_copyto!(GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, GenericMemoryRef{:not_atomic, T, Core.AddrSpace{Core}(0x00)}, Any) where {T} : sysimg may not have been built with --compile=all\nNo compiled code available for get(Base.IdDict{Any, Bool}, Any, Any) from get(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for setindex!(Base.IdDict{Any, Bool}, Any, Any) from setindex!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\nNo compiled code available for pop!(Base.IdDict{Any, Bool}, Any, Any) from pop!(Base.IdDict{K, V}, Any, Any) where {K, V} : sysimg may not have been built with --compile=all\n"
+    }
+  ],
+  "all_hello": [
+    {
+      "wall_s": 5.155338862000008,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 5.188489750999906,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 5.343646840000019,
+      "returncode": 0,
+      "stdout": "Olá, mundo!\n",
+      "stderr": ""
+    }
+  ],
+  "all_pipeline": [
+    {
+      "wall_s": 5.160577656999976,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 5.175829791000069,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 5.481744112999877,
+      "returncode": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    }
+  ],
+  "all_math": [
+    {
+      "wall_s": 5.691622465999899,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 6.500543755000308,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 6.495453333000114,
+      "returncode": 0,
+      "stdout": "60.0\n",
+      "stderr": ""
+    }
+  ],
+  "all_representative": [
+    {
+      "wall_s": 5.757499668000037,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 5.233030623000104,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 5.232359714999802,
+      "returncode": 0,
+      "stdout": "40.0\n120\nFuncionou!\n50\n",
+      "stderr": ""
+    }
+  ]
+}

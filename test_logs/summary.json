@@ -1,0 +1,269 @@
+{
+  "results": [
+    {
+      "file": "test_adversarial_093.jl",
+      "status": "PASS",
+      "seconds": 1.43,
+      "log": "test_logs/test_adversarial_093.log"
+    },
+    {
+      "file": "test_bridge_092.jl",
+      "status": "PASS",
+      "seconds": 8.88,
+      "log": "test_logs/test_bridge_092.log"
+    },
+    {
+      "file": "test_cli_identity.jl",
+      "status": "PASS",
+      "seconds": 28.55,
+      "log": "test_logs/test_cli_identity.log"
+    },
+    {
+      "file": "test_collections_117.jl",
+      "status": "PASS",
+      "seconds": 34.65,
+      "log": "test_logs/test_collections_117.log"
+    },
+    {
+      "file": "test_diagnostics.jl",
+      "status": "PASS",
+      "seconds": 0.78,
+      "log": "test_logs/test_diagnostics.log"
+    },
+    {
+      "file": "test_differential_1000.jl",
+      "status": "PASS",
+      "seconds": 124.63,
+      "log": "test_logs/test_differential_1000.log"
+    },
+    {
+      "file": "test_extension_registry.jl",
+      "status": "PASS",
+      "seconds": 0.89,
+      "log": "test_logs/test_extension_registry.log"
+    },
+    {
+      "file": "test_extensions_internal.jl",
+      "status": "PASS",
+      "seconds": 1.0,
+      "log": "test_logs/test_extensions_internal.log"
+    },
+    {
+      "file": "test_interop.jl",
+      "status": "PASS",
+      "seconds": 1.56,
+      "log": "test_logs/test_interop.log"
+    },
+    {
+      "file": "test_interop_extended.jl",
+      "status": "PASS",
+      "seconds": 1.68,
+      "log": "test_logs/test_interop_extended.log"
+    },
+    {
+      "file": "test_packages_foundation.jl",
+      "status": "PASS",
+      "seconds": 1.67,
+      "log": "test_logs/test_packages_foundation.log"
+    },
+    {
+      "file": "test_pipelines_118.jl",
+      "status": "PASS",
+      "seconds": 12.57,
+      "log": "test_logs/test_pipelines_118.log"
+    },
+    {
+      "file": "test_python_bridge.jl",
+      "status": "PASS",
+      "seconds": 2.41,
+      "log": "test_logs/test_python_bridge.log"
+    },
+    {
+      "file": "test_regression_091.jl",
+      "status": "PASS",
+      "seconds": 7.13,
+      "log": "test_logs/test_regression_091.log"
+    },
+    {
+      "file": "test_semantic_adversarial.jl",
+      "status": "PASS",
+      "seconds": 4.16,
+      "log": "test_logs/test_semantic_adversarial.log"
+    },
+    {
+      "file": "test_static_093.jl",
+      "status": "PASS",
+      "seconds": 1.37,
+      "log": "test_logs/test_static_093.log"
+    },
+    {
+      "file": "test_static_094.jl",
+      "status": "PASS",
+      "seconds": 1.46,
+      "log": "test_logs/test_static_094.log"
+    },
+    {
+      "file": "test_static_095.jl",
+      "status": "PASS",
+      "seconds": 1.45,
+      "log": "test_logs/test_static_095.log"
+    },
+    {
+      "file": "test_static_096.jl",
+      "status": "PASS",
+      "seconds": 1.18,
+      "log": "test_logs/test_static_096.log"
+    },
+    {
+      "file": "test_static_097.jl",
+      "status": "PASS",
+      "seconds": 1.67,
+      "log": "test_logs/test_static_097.log"
+    },
+    {
+      "file": "test_static_098.jl",
+      "status": "PASS",
+      "seconds": 1.51,
+      "log": "test_logs/test_static_098.log"
+    },
+    {
+      "file": "test_static_099.jl",
+      "status": "PASS",
+      "seconds": 1.41,
+      "log": "test_logs/test_static_099.log"
+    },
+    {
+      "file": "test_static_100.jl",
+      "status": "PASS",
+      "seconds": 0.82,
+      "log": "test_logs/test_static_100.log"
+    },
+    {
+      "file": "test_static_101.jl",
+      "status": "PASS",
+      "seconds": 1.46,
+      "log": "test_logs/test_static_101.log"
+    },
+    {
+      "file": "test_static_102.jl",
+      "status": "PASS",
+      "seconds": 0.83,
+      "log": "test_logs/test_static_102.log"
+    },
+    {
+      "file": "test_static_103.jl",
+      "status": "PASS",
+      "seconds": 1.4,
+      "log": "test_logs/test_static_103.log"
+    },
+    {
+      "file": "test_static_104.jl",
+      "status": "PASS",
+      "seconds": 1.46,
+      "log": "test_logs/test_static_104.log"
+    },
+    {
+      "file": "test_static_105.jl",
+      "status": "PASS",
+      "seconds": 1.39,
+      "log": "test_logs/test_static_105.log"
+    },
+    {
+      "file": "test_static_106.jl",
+      "status": "PASS",
+      "seconds": 1.48,
+      "log": "test_logs/test_static_106.log"
+    },
+    {
+      "file": "test_static_107.jl",
+      "status": "PASS",
+      "seconds": 1.43,
+      "log": "test_logs/test_static_107.log"
+    },
+    {
+      "file": "test_static_108.jl",
+      "status": "PASS",
+      "seconds": 1.5,
+      "log": "test_logs/test_static_108.log"
+    },
+    {
+      "file": "test_static_109.jl",
+      "status": "PASS",
+      "seconds": 0.65,
+      "log": "test_logs/test_static_109.log"
+    },
+    {
+      "file": "test_static_110.jl",
+      "status": "PASS",
+      "seconds": 0.85,
+      "log": "test_logs/test_static_110.log"
+    },
+    {
+      "file": "test_static_111.jl",
+      "status": "PASS",
+      "seconds": 0.72,
+      "log": "test_logs/test_static_111.log"
+    },
+    {
+      "file": "test_static_112.jl",
+      "status": "PASS",
+      "seconds": 0.71,
+      "log": "test_logs/test_static_112.log"
+    },
+    {
+      "file": "test_static_113.jl",
+      "status": "PASS",
+      "seconds": 0.69,
+      "log": "test_logs/test_static_113.log"
+    },
+    {
+      "file": "test_static_114.jl",
+      "status": "PASS",
+      "seconds": 0.67,
+      "log": "test_logs/test_static_114.log"
+    },
+    {
+      "file": "test_static_115.jl",
+      "status": "PASS",
+      "seconds": 0.67,
+      "log": "test_logs/test_static_115.log"
+    },
+    {
+      "file": "test_static_116.jl",
+      "status": "PASS",
+      "seconds": 58.22,
+      "log": "test_logs/test_static_116.log"
+    },
+    {
+      "file": "test_tables_large.jl",
+      "status": "PASS",
+      "seconds": 58.37,
+      "log": "test_logs/test_tables_large.log"
+    },
+    {
+      "file": "runtests.jl",
+      "status": "PASS",
+      "seconds": 27.54,
+      "log": "test_logs/runtests.log"
+    },
+    {
+      "file": "break_abt.jl",
+      "status": "PROBE",
+      "seconds": 10.42,
+      "log": "test_logs/break_abt.log"
+    },
+    {
+      "file": "audit_adversarial.jl",
+      "status": "PROBE",
+      "seconds": 1.34,
+      "log": "test_logs/audit_adversarial.log"
+    }
+  ],
+  "included_tests": [
+    "runtests_legacy.jl (via runtests.jl)"
+  ],
+  "probe_only": [
+    "audit_adversarial.jl",
+    "break_abt.jl"
+  ]
+}

@@ -1,0 +1,4 @@
+PASS funcao interpretador
+PASS funcao gerado_sem_otimizacao
+PASS funcao gerado_otimizado
+Resumo: {'PASS': 3, 'FAIL': 0}

@@ -1,0 +1,7 @@
+seconds = 142.34
+executed = 1000
+failures = 0
+seed = "179769742"
+
+[categories]
+collection = 1000

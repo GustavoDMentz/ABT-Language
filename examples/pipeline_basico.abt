@@ -1,0 +1,7 @@
+dados = [1, 2, 3, 4, 5]
+
+dados
+    filtrar onde valor > 2
+    transformar com valor * 10
+    limitar a 2
+    mostrar

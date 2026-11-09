@@ -1,0 +1,24 @@
+Test Summary:      | Pass  Total  Time
+ABT 0.7 — baseline |   28     28  6.6s
+Test Summary:                  | Pass  Total  Time
+ABT — generated Julia behavior |    8      8  2.3s
+Test Summary:                                | Pass  Total  Time
+ABT 0.7 — 600 deterministic arithmetic cases | 1200   1200  0.1s
+Test Summary:                            | Pass  Total  Time
+ABT 0.7 — 120 language equivalence cases |  120    120  0.0s
+Test Summary:                          | Pass  Total  Time
+ABT 0.7 — 100 invalid-name diagnostics |  100    100  0.0s
+Test Summary:                                    | Pass  Total  Time
+ABT 0.7 — 200 branch optimizer equivalence cases |  400    400  0.0s
+Test Summary:                 | Pass  Total  Time
+ABT 0.7 — optimization guards |    5      5  0.0s
+Test Summary:         | Pass  Total  Time
+ABT 0.6 — regressions |    9      9  0.1s
+Test Summary:       | Pass  Total  Time
+ABT 0.7 — functions |   35     35  0.1s
+Test Summary:                                | Pass  Total  Time
+ABT 0.7.1 — contextual aggregate identifiers |    4      4  0.2s
+Test Summary:           | Pass  Total  Time
+ABT 0.7.1 — diagnostics |    5      5  0.2s
+Test Summary:                             | Pass  Total  Time
+ABT 0.7.1 — CLI humor argument regression |    2      2  0.0s

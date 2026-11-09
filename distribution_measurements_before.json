@@ -1,0 +1,125 @@
+{
+  "version": {
+    "samples": [
+      {
+        "seconds": 4.0,
+        "maxrss_kb": 368636,
+        "exit": 0,
+        "stdout": "ABT 0.11.8\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 3.76,
+        "maxrss_kb": 363972,
+        "exit": 0,
+        "stdout": "ABT 0.11.8\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 3.73,
+        "maxrss_kb": 369396,
+        "exit": 0,
+        "stdout": "ABT 0.11.8\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 3.73,
+        "maxrss_kb": 368976,
+        "exit": 0,
+        "stdout": "ABT 0.11.8\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 4.12,
+        "maxrss_kb": 365324,
+        "exit": 0,
+        "stdout": "ABT 0.11.8\n",
+        "stderr": ""
+      }
+    ],
+    "median_seconds": 3.76,
+    "median_maxrss_kb": 368636
+  },
+  "verify": {
+    "samples": [
+      {
+        "seconds": 5.24,
+        "maxrss_kb": 372792,
+        "exit": 0,
+        "stdout": "Programa ABT válido.\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 5.39,
+        "maxrss_kb": 373796,
+        "exit": 0,
+        "stdout": "Programa ABT válido.\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 5.38,
+        "maxrss_kb": 373304,
+        "exit": 0,
+        "stdout": "Programa ABT válido.\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 5.26,
+        "maxrss_kb": 373432,
+        "exit": 0,
+        "stdout": "Programa ABT válido.\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 5.61,
+        "maxrss_kb": 374808,
+        "exit": 0,
+        "stdout": "Programa ABT válido.\n",
+        "stderr": ""
+      }
+    ],
+    "median_seconds": 5.38,
+    "median_maxrss_kb": 373432
+  },
+  "execute": {
+    "samples": [
+      {
+        "seconds": 5.58,
+        "maxrss_kb": 373120,
+        "exit": 0,
+        "stdout": "[30, 40]\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 5.73,
+        "maxrss_kb": 373840,
+        "exit": 0,
+        "stdout": "[30, 40]\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 5.82,
+        "maxrss_kb": 375264,
+        "exit": 0,
+        "stdout": "[30, 40]\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 5.74,
+        "maxrss_kb": 375020,
+        "exit": 0,
+        "stdout": "[30, 40]\n",
+        "stderr": ""
+      },
+      {
+        "seconds": 5.29,
+        "maxrss_kb": 372956,
+        "exit": 0,
+        "stdout": "[30, 40]\n",
+        "stderr": ""
+      }
+    ],
+    "median_seconds": 5.73,
+    "median_maxrss_kb": 373840
+  }
+}

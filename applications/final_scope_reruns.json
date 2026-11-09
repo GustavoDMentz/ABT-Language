@@ -1,0 +1,20 @@
+[
+  {
+    "file": "test_adversarial_093.jl",
+    "status": "PASS",
+    "seconds": 9.41,
+    "returncode": 0
+  },
+  {
+    "file": "test_bridge_092.jl",
+    "status": "PASS",
+    "seconds": 31.96,
+    "returncode": 0
+  },
+  {
+    "file": "test_cli_identity.jl",
+    "status": "PASS",
+    "seconds": 15.12,
+    "returncode": 0
+  }
+]

@@ -1,0 +1,6 @@
+caminho = ambiente("ABT_EXPERIMENTO_PATH", "applications/science/experimento.csv")
+saida = ambiente("ABT_FIGURA_PATH", "applications/science/resposta.png")
+dados = ler_csv(caminho, esquema("tratamento", "texto", "resposta", "real", "tempo", "inteiro"), "erro")
+serie = filtrar_tabela(dados, "tratamento", "==", "controle")
+figura = grafico(serie, "tempo", "resposta", "linha")
+mostrar salvar_figura(figura, saida)

@@ -1,0 +1,4 @@
+file,median_ms,min_ms,max_ms,samples,exit_codes
+examples/pipeline_basico.abt,5215.291202,5026.702301,7506.626745,9,0;0;0;0;0;0;0;0;0
+examples/colecoes_agregacao.abt,6395.283768,5559.663104,7314.959325,9,0;0;0;0;0;0;0;0;0
+examples/funcoes.pseudo,7196.136716,5621.266272,10360.108732,9,0;0;0;0;0;0;0;0;0

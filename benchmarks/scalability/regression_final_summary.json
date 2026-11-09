@@ -1,0 +1,251 @@
+{
+  "results": [
+    {
+      "file": "test_adversarial_093.jl",
+      "status": "PASS",
+      "seconds": 8.13,
+      "log": "test_logs/test_adversarial_093.log"
+    },
+    {
+      "file": "test_bridge_092.jl",
+      "status": "PASS",
+      "seconds": 28.54,
+      "log": "test_logs/test_bridge_092.log"
+    },
+    {
+      "file": "test_cli_identity.jl",
+      "status": "PASS",
+      "seconds": 13.14,
+      "log": "test_logs/test_cli_identity.log"
+    },
+    {
+      "file": "test_collections_117.jl",
+      "status": "PASS",
+      "seconds": 48.0,
+      "log": "test_logs/test_collections_117.log"
+    },
+    {
+      "file": "test_diagnostics.jl",
+      "status": "PASS",
+      "seconds": 2.69,
+      "log": "test_logs/test_diagnostics.log"
+    },
+    {
+      "file": "test_differential_1000.jl",
+      "status": "PASS",
+      "seconds": 50.01,
+      "log": "test_logs/test_differential_1000.log"
+    },
+    {
+      "file": "test_interop.jl",
+      "status": "PASS",
+      "seconds": 8.44,
+      "log": "test_logs/test_interop.log"
+    },
+    {
+      "file": "test_interop_extended.jl",
+      "status": "PASS",
+      "seconds": 10.12,
+      "log": "test_logs/test_interop_extended.log"
+    },
+    {
+      "file": "test_packages_foundation.jl",
+      "status": "PASS",
+      "seconds": 9.47,
+      "log": "test_logs/test_packages_foundation.log"
+    },
+    {
+      "file": "test_pipelines_118.jl",
+      "status": "PASS",
+      "seconds": 23.63,
+      "log": "test_logs/test_pipelines_118.log"
+    },
+    {
+      "file": "test_python_bridge.jl",
+      "status": "PASS",
+      "seconds": 11.1,
+      "log": "test_logs/test_python_bridge.log"
+    },
+    {
+      "file": "test_regression_091.jl",
+      "status": "PASS",
+      "seconds": 22.6,
+      "log": "test_logs/test_regression_091.log"
+    },
+    {
+      "file": "test_semantic_adversarial.jl",
+      "status": "PASS",
+      "seconds": 14.42,
+      "log": "test_logs/test_semantic_adversarial.log"
+    },
+    {
+      "file": "test_static_093.jl",
+      "status": "PASS",
+      "seconds": 7.82,
+      "log": "test_logs/test_static_093.log"
+    },
+    {
+      "file": "test_static_094.jl",
+      "status": "PASS",
+      "seconds": 7.99,
+      "log": "test_logs/test_static_094.log"
+    },
+    {
+      "file": "test_static_095.jl",
+      "status": "PASS",
+      "seconds": 6.51,
+      "log": "test_logs/test_static_095.log"
+    },
+    {
+      "file": "test_static_096.jl",
+      "status": "PASS",
+      "seconds": 7.21,
+      "log": "test_logs/test_static_096.log"
+    },
+    {
+      "file": "test_static_097.jl",
+      "status": "PASS",
+      "seconds": 7.5,
+      "log": "test_logs/test_static_097.log"
+    },
+    {
+      "file": "test_static_098.jl",
+      "status": "PASS",
+      "seconds": 6.66,
+      "log": "test_logs/test_static_098.log"
+    },
+    {
+      "file": "test_static_099.jl",
+      "status": "PASS",
+      "seconds": 6.52,
+      "log": "test_logs/test_static_099.log"
+    },
+    {
+      "file": "test_static_100.jl",
+      "status": "PASS",
+      "seconds": 6.86,
+      "log": "test_logs/test_static_100.log"
+    },
+    {
+      "file": "test_static_101.jl",
+      "status": "PASS",
+      "seconds": 6.56,
+      "log": "test_logs/test_static_101.log"
+    },
+    {
+      "file": "test_static_102.jl",
+      "status": "PASS",
+      "seconds": 7.15,
+      "log": "test_logs/test_static_102.log"
+    },
+    {
+      "file": "test_static_103.jl",
+      "status": "PASS",
+      "seconds": 6.46,
+      "log": "test_logs/test_static_103.log"
+    },
+    {
+      "file": "test_static_104.jl",
+      "status": "PASS",
+      "seconds": 6.27,
+      "log": "test_logs/test_static_104.log"
+    },
+    {
+      "file": "test_static_105.jl",
+      "status": "PASS",
+      "seconds": 6.78,
+      "log": "test_logs/test_static_105.log"
+    },
+    {
+      "file": "test_static_106.jl",
+      "status": "PASS",
+      "seconds": 7.01,
+      "log": "test_logs/test_static_106.log"
+    },
+    {
+      "file": "test_static_107.jl",
+      "status": "PASS",
+      "seconds": 6.34,
+      "log": "test_logs/test_static_107.log"
+    },
+    {
+      "file": "test_static_108.jl",
+      "status": "PASS",
+      "seconds": 7.17,
+      "log": "test_logs/test_static_108.log"
+    },
+    {
+      "file": "test_static_109.jl",
+      "status": "PASS",
+      "seconds": 3.05,
+      "log": "test_logs/test_static_109.log"
+    },
+    {
+      "file": "test_static_110.jl",
+      "status": "PASS",
+      "seconds": 4.68,
+      "log": "test_logs/test_static_110.log"
+    },
+    {
+      "file": "test_static_111.jl",
+      "status": "PASS",
+      "seconds": 5.52,
+      "log": "test_logs/test_static_111.log"
+    },
+    {
+      "file": "test_static_112.jl",
+      "status": "PASS",
+      "seconds": 4.89,
+      "log": "test_logs/test_static_112.log"
+    },
+    {
+      "file": "test_static_113.jl",
+      "status": "PASS",
+      "seconds": 3.03,
+      "log": "test_logs/test_static_113.log"
+    },
+    {
+      "file": "test_static_114.jl",
+      "status": "PASS",
+      "seconds": 3.4,
+      "log": "test_logs/test_static_114.log"
+    },
+    {
+      "file": "test_static_115.jl",
+      "status": "PASS",
+      "seconds": 3.43,
+      "log": "test_logs/test_static_115.log"
+    },
+    {
+      "file": "test_static_116.jl",
+      "status": "PASS",
+      "seconds": 3.81,
+      "log": "test_logs/test_static_116.log"
+    },
+    {
+      "file": "runtests.jl",
+      "status": "PASS",
+      "seconds": 12.08,
+      "log": "test_logs/runtests.log"
+    },
+    {
+      "file": "break_abt.jl",
+      "status": "PROBE",
+      "seconds": 21.8,
+      "log": "test_logs/break_abt.log"
+    },
+    {
+      "file": "audit_adversarial.jl",
+      "status": "PROBE",
+      "seconds": 7.17,
+      "log": "test_logs/audit_adversarial.log"
+    }
+  ],
+  "included_tests": [
+    "runtests_legacy.jl (via runtests.jl)"
+  ],
+  "probe_only": [
+    "audit_adversarial.jl",
+    "break_abt.jl"
+  ]
+}

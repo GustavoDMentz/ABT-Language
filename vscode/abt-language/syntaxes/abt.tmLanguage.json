@@ -1,0 +1,13 @@
+{
+  "name": "ABT",
+  "scopeName": "source.abt",
+  "patterns": [
+    { "name": "comment.line.number-sign.abt", "match": "#.*$" },
+    { "name": "string.quoted.double.abt", "begin": "\"", "end": "\"", "patterns": [{ "name": "constant.character.escape.abt", "match": "\\\\." }] },
+    { "name": "constant.numeric.abt", "match": "\\b[0-9]+(?:\\.[0-9]+)?\\b" },
+    { "name": "constant.language.abt", "match": "\\b(?:verdadeiro|falso|true|false)\\b" },
+    { "name": "keyword.control.abt", "match": "\\b(?:se|senao|senão|if|else|para|cada|em|for|each|função|funcao|function|retornar|return|usar|mostrar|show)\\b" },
+    { "name": "keyword.operator.collection.abt", "match": "\\b(?:filtrar|transformar|limitar|onde|where|com|valor|value|soma|sum|media|média|average|de|of)\\b" },
+    { "name": "support.class.abt", "match": "\\b(?:Julia|Python)\\b" }
+  ]
+}

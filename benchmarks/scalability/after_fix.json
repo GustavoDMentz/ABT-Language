@@ -1,0 +1,113 @@
+[
+  {
+    "n": 10000,
+    "mode": "min",
+    "status": "pass",
+    "code": 0,
+    "real_s": 16.821265737999965,
+    "stdout": "10000\n",
+    "timeout_s": 300,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+    ],
+    "user_s": 16.62,
+    "system_s": 0.15,
+    "rss_kb": 292540
+  },
+  {
+    "n": 10000,
+    "mode": "all",
+    "status": "pass",
+    "code": 0,
+    "real_s": 4.418055475000074,
+    "stdout": "10000\n",
+    "timeout_s": 300,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+    ],
+    "user_s": 4.3,
+    "system_s": 0.19,
+    "rss_kb": 395888
+  },
+  {
+    "n": 100000,
+    "mode": "min",
+    "status": "pass",
+    "code": 0,
+    "real_s": 166.17665425799987,
+    "stdout": "100000\n",
+    "timeout_s": 300,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100000.abt"
+    ],
+    "user_s": 164.99,
+    "system_s": 0.44,
+    "rss_kb": 479048
+  },
+  {
+    "n": 100000,
+    "mode": "all",
+    "status": "pass",
+    "code": 0,
+    "real_s": 6.346507181000561,
+    "stdout": "100000\n",
+    "timeout_s": 300,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100000.abt"
+    ],
+    "user_s": 5.86,
+    "system_s": 0.34,
+    "rss_kb": 506252
+  },
+  {
+    "n": 1000000,
+    "mode": "all",
+    "status": "pass",
+    "code": 0,
+    "real_s": 36.01473558900034,
+    "stdout": "1000000\n",
+    "timeout_s": 180,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000000.abt"
+    ],
+    "user_s": 28.12,
+    "system_s": 3.0,
+    "rss_kb": 2280864
+  },
+  {
+    "n": 1000000,
+    "mode": "min",
+    "status": "timeout",
+    "code": null,
+    "real_s": 180.10054391999984,
+    "stdout": "",
+    "timeout_s": 180,
+    "command": [
+      "/usr/bin/time",
+      "-v",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000000.abt"
+    ]
+  }
+]

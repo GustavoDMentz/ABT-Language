@@ -1,0 +1,42 @@
+{
+  "min": [
+    {
+      "wall_s": 16.090663820999907,
+      "returncode": 0,
+      "stdout": "10000\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 16.696121826999843,
+      "returncode": 0,
+      "stdout": "10000\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 16.37857856499977,
+      "returncode": 0,
+      "stdout": "10000\n",
+      "stderr": ""
+    }
+  ],
+  "all": [
+    {
+      "wall_s": 4.322891393000646,
+      "returncode": 0,
+      "stdout": "10000\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 4.342227082000136,
+      "returncode": 0,
+      "stdout": "10000\n",
+      "stderr": ""
+    },
+    {
+      "wall_s": 4.3071920330003195,
+      "returncode": 0,
+      "stdout": "10000\n",
+      "stderr": ""
+    }
+  ]
+}

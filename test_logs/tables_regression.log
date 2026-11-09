@@ -1,0 +1,8 @@
+PASS       9.76s  test_adversarial_093.jl
+TIMEOUT  120.13s  test_bridge_092.jl
+PASS      16.88s  test_cli_identity.jl
+TIMEOUT  120.08s  test_collections_117.jl
+PASS       3.02s  test_diagnostics.jl
+TIMEOUT  120.06s  test_differential_1000.jl
+PASS       9.64s  test_interop.jl
+PASS      11.36s  test_interop_extended.jl

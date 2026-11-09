@@ -1,0 +1,4 @@
+função maiores_dobrados(xs, limite) {
+  retornar limitar (transformar (filtrar xs onde valor > 2) com valor * 2) a limite
+}
+mostrar maiores_dobrados([1, 2, 3, 4], 2)

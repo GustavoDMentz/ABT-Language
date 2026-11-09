@@ -1,0 +1,2 @@
+dados = [1, 2, 3, 4, 5]
+mostrar limitar (transformar (filtrar dados onde valor > 2) com valor * 10) a 2

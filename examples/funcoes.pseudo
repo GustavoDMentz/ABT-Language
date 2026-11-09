@@ -1,0 +1,9 @@
+função quadrado(x) {
+    retornar x * x
+}
+
+função somar(a, b) {
+    retornar a + b
+}
+
+mostrar somar(quadrado(3), quadrado(4))

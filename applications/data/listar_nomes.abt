@@ -1,0 +1,6 @@
+# Demonstra acesso a registros da tabela sem expor o iterador do CSV.jl.
+colunas = esquema("nome", "texto", "grupo", "texto", "valor", "real")
+dados = ler_csv("applications/data/sample.csv", colunas, "erro")
+para cada linha em linhas_tabela(dados) {
+  mostrar linha.nome
+}

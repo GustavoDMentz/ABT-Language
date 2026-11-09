@@ -1,0 +1,10 @@
+launcher_only: median 0.005s, p95 0.008s
+julia_start: median 0.176s, p95 0.198s
+version: median 0.196s, p95 0.208s
+doctor: median 0.019s, p95 0.021s
+check_hello: median 0.334s, p95 0.372s
+run_hello: median 0.308s, p95 0.352s
+pipeline: median 0.657s, p95 0.675s
+math: median 0.728s, p95 0.812s
+representative: median 0.669s, p95 0.750s
+large_1000: median 1.882s, p95 2.069s

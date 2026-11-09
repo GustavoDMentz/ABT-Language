@@ -1,0 +1,892 @@
+{
+  "environment": {
+    "julia": "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+    "launcher_root": "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli",
+    "julia_depot_path": "/tmp/abt-perf-final-depot:/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot",
+    "compile_mode": "min",
+    "repeats": 10,
+    "os_cache_cleared": false
+  },
+  "cases": {
+    "launcher_only": {
+      "samples": [
+        {
+          "wall_s": 0.004874170999755734,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.004640575999474095,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.004798025000127382,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.004576710000037565,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.004597443999955431,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.004295767000257911,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.004665443999329,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.004703145999883418,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.004561300999739615,
+          "time_s": 0.0,
+          "rss_kb": 1844,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.00454260000060458,
+          "time_s": 0.0,
+          "rss_kb": 1840,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "median_s": 0.004619009999714763,
+      "p95_s": 0.004839905299922976,
+      "stdev_s": 0.00015717620134785717,
+      "max_rss_kb": 1844
+    },
+    "julia_start": {
+      "samples": [
+        {
+          "wall_s": 0.15580097300062334,
+          "time_s": 0.15,
+          "rss_kb": 165484,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.1556366929999058,
+          "time_s": 0.15,
+          "rss_kb": 165496,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.15484775599998102,
+          "time_s": 0.15,
+          "rss_kb": 165508,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.1546207029996367,
+          "time_s": 0.15,
+          "rss_kb": 165348,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.15208383699973638,
+          "time_s": 0.15,
+          "rss_kb": 165436,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.15088531499986857,
+          "time_s": 0.14,
+          "rss_kb": 165332,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.15500000399970304,
+          "time_s": 0.15,
+          "rss_kb": 165348,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.15045865200045228,
+          "time_s": 0.14,
+          "rss_kb": 165476,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.1515976929995304,
+          "time_s": 0.15,
+          "rss_kb": 165372,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.1786958370003049,
+          "time_s": 0.17,
+          "rss_kb": 165464,
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "median_s": 0.15473422949980886,
+      "p95_s": 0.16839314820044818,
+      "stdev_s": 0.008239957125094968,
+      "max_rss_kb": 165508
+    },
+    "version": {
+      "samples": [
+        {
+          "wall_s": 0.2589886489995479,
+          "time_s": 0.25,
+          "rss_kb": 207552,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.264669856999717,
+          "time_s": 0.26,
+          "rss_kb": 207488,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.2734311760004857,
+          "time_s": 0.27,
+          "rss_kb": 207580,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.2609563799996977,
+          "time_s": 0.25,
+          "rss_kb": 207408,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.26374593899981846,
+          "time_s": 0.26,
+          "rss_kb": 207324,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.2612380939999639,
+          "time_s": 0.25,
+          "rss_kb": 207572,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.22046953500012023,
+          "time_s": 0.21,
+          "rss_kb": 207524,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.22656281200033845,
+          "time_s": 0.22,
+          "rss_kb": 207332,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.21338622199982638,
+          "time_s": 0.21,
+          "rss_kb": 207444,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.21801108500039845,
+          "time_s": 0.21,
+          "rss_kb": 207348,
+          "returncode": 0,
+          "stdout": "ABT 0.11.8\n",
+          "stderr": ""
+        }
+      ],
+      "median_s": 0.2599725144996228,
+      "p95_s": 0.2694885824501398,
+      "stdev_s": 0.023373733725546762,
+      "max_rss_kb": 207580
+    },
+    "doctor": {
+      "samples": [
+        {
+          "wall_s": 0.01637122400006774,
+          "time_s": 0.01,
+          "rss_kb": 30124,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.016363286999876436,
+          "time_s": 0.01,
+          "rss_kb": 30060,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.01624321399958717,
+          "time_s": 0.01,
+          "rss_kb": 30136,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.016315532000589883,
+          "time_s": 0.01,
+          "rss_kb": 30048,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.016340760000275623,
+          "time_s": 0.01,
+          "rss_kb": 29896,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.01646900600007939,
+          "time_s": 0.01,
+          "rss_kb": 30108,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.016501443000379368,
+          "time_s": 0.01,
+          "rss_kb": 30116,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.01625624499956757,
+          "time_s": 0.01,
+          "rss_kb": 30060,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.016170543999578513,
+          "time_s": 0.01,
+          "rss_kb": 30096,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 0.01616220500000054,
+          "time_s": 0.01,
+          "rss_kb": 30024,
+          "returncode": 0,
+          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_install_cli\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stderr": ""
+        }
+      ],
+      "median_s": 0.016328146000432753,
+      "p95_s": 0.016486846350244378,
+      "stdev_s": 0.0001141469931876826,
+      "max_rss_kb": 30136
+    },
+    "check_hello": {
+      "samples": [
+        {
+          "wall_s": 5.021929045999968,
+          "time_s": 5.02,
+          "rss_kb": 376284,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.8517044350001015,
+          "time_s": 4.85,
+          "rss_kb": 374436,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.984340702999361,
+          "time_s": 4.98,
+          "rss_kb": 374020,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.958001586999671,
+          "time_s": 4.95,
+          "rss_kb": 373304,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 6.0334431850005785,
+          "time_s": 6.03,
+          "rss_kb": 376868,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.731600246000198,
+          "time_s": 5.73,
+          "rss_kb": 375968,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.390392610000163,
+          "time_s": 5.38,
+          "rss_kb": 377304,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.83068432500022,
+          "time_s": 4.82,
+          "rss_kb": 374708,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.919918886000232,
+          "time_s": 4.91,
+          "rss_kb": 372836,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.858532776000175,
+          "time_s": 4.85,
+          "rss_kb": 376776,
+          "returncode": 0,
+          "stdout": "Programa ABT válido.\n",
+          "stderr": ""
+        }
+      ],
+      "median_s": 4.971171144999516,
+      "p95_s": 5.897613862450407,
+      "stdev_s": 0.4197105203513413,
+      "max_rss_kb": 377304
+    },
+    "run_hello": {
+      "samples": [
+        {
+          "wall_s": 4.878215987000658,
+          "time_s": 4.87,
+          "rss_kb": 375492,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.826218264999625,
+          "time_s": 4.82,
+          "rss_kb": 374648,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.825507031000598,
+          "time_s": 4.82,
+          "rss_kb": 374716,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.784118515000046,
+          "time_s": 4.78,
+          "rss_kb": 374060,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.988219759999993,
+          "time_s": 4.98,
+          "rss_kb": 375008,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.968260347999603,
+          "time_s": 4.96,
+          "rss_kb": 376480,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 4.793498820999957,
+          "time_s": 4.79,
+          "rss_kb": 373660,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.1527619549997326,
+          "time_s": 5.15,
+          "rss_kb": 374464,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.0467127370002345,
+          "time_s": 5.04,
+          "rss_kb": 376372,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.002836305000528,
+          "time_s": 5.0,
+          "rss_kb": 374384,
+          "returncode": 0,
+          "stdout": "Olá, mundo!\n",
+          "stderr": ""
+        }
+      ],
+      "median_s": 4.923238167500131,
+      "p95_s": 5.105039806899958,
+      "stdev_s": 0.12363702794068565,
+      "max_rss_kb": 376480
+    },
+    "pipeline": {
+      "samples": [
+        {
+          "wall_s": 5.075732160000371,
+          "time_s": 5.07,
+          "rss_kb": 375196,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.065304945999742,
+          "time_s": 5.06,
+          "rss_kb": 375196,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.0670741570002065,
+          "time_s": 5.06,
+          "rss_kb": 374788,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.831087974000184,
+          "time_s": 5.83,
+          "rss_kb": 376176,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.445153541999389,
+          "time_s": 5.44,
+          "rss_kb": 376396,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.766990852999697,
+          "time_s": 5.76,
+          "rss_kb": 375952,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.483013904000472,
+          "time_s": 5.48,
+          "rss_kb": 375688,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.42726995799967,
+          "time_s": 5.42,
+          "rss_kb": 376224,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.375431607999417,
+          "time_s": 5.37,
+          "rss_kb": 375612,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.378821726000751,
+          "time_s": 5.37,
+          "rss_kb": 375300,
+          "returncode": 0,
+          "stdout": "[30, 40]\n",
+          "stderr": ""
+        }
+      ],
+      "median_s": 5.4030458420002105,
+      "p95_s": 5.8022442695499645,
+      "stdev_s": 0.27050312764005974,
+      "max_rss_kb": 376396
+    },
+    "math": {
+      "samples": [
+        {
+          "wall_s": 5.334689206000803,
+          "time_s": 5.33,
+          "rss_kb": 375440,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.4682580289991165,
+          "time_s": 5.46,
+          "rss_kb": 374480,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.634582685000169,
+          "time_s": 5.63,
+          "rss_kb": 376756,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.283210089000022,
+          "time_s": 5.28,
+          "rss_kb": 375896,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.3208016779999525,
+          "time_s": 5.31,
+          "rss_kb": 375356,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.286479800000052,
+          "time_s": 5.28,
+          "rss_kb": 376088,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.3153429699996195,
+          "time_s": 5.31,
+          "rss_kb": 374964,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.3345820109998385,
+          "time_s": 5.33,
+          "rss_kb": 376832,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.427762002000236,
+          "time_s": 5.42,
+          "rss_kb": 377404,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.350121141999807,
+          "time_s": 5.34,
+          "rss_kb": 375136,
+          "returncode": 0,
+          "stdout": "60.0\n",
+          "stderr": ""
+        }
+      ],
+      "median_s": 5.334635608500321,
+      "p95_s": 5.559736589799695,
+      "stdev_s": 0.10826706956550727,
+      "max_rss_kb": 377404
+    },
+    "representative": {
+      "samples": [
+        {
+          "wall_s": 5.2718908889992235,
+          "time_s": 5.27,
+          "rss_kb": 375324,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.281662774999859,
+          "time_s": 5.28,
+          "rss_kb": 375796,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.240449809999518,
+          "time_s": 5.23,
+          "rss_kb": 376096,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.332834747000561,
+          "time_s": 5.33,
+          "rss_kb": 376776,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.271667793000233,
+          "time_s": 5.27,
+          "rss_kb": 375740,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.69034962600017,
+          "time_s": 5.68,
+          "rss_kb": 380368,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.276567404999696,
+          "time_s": 5.27,
+          "rss_kb": 376584,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.25073950100068,
+          "time_s": 5.24,
+          "rss_kb": 377280,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.323950648000391,
+          "time_s": 5.32,
+          "rss_kb": 375112,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.25510937800027,
+          "time_s": 5.25,
+          "rss_kb": 374812,
+          "returncode": 0,
+          "stdout": "40.0\n120\nFuncionou!\n50\n",
+          "stderr": ""
+        }
+      ],
+      "median_s": 5.27422914699946,
+      "p95_s": 5.529467930450346,
+      "stdev_s": 0.13361618566501632,
+      "max_rss_kb": 380368
+    },
+    "large_1000": {
+      "samples": [
+        {
+          "wall_s": 5.131672057000287,
+          "time_s": 5.13,
+          "rss_kb": 375740,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.208353484999861,
+          "time_s": 5.2,
+          "rss_kb": 374196,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.2211776869999085,
+          "time_s": 5.22,
+          "rss_kb": 376172,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.139274667999416,
+          "time_s": 5.13,
+          "rss_kb": 375684,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.277072906000285,
+          "time_s": 5.27,
+          "rss_kb": 375252,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.157544626999879,
+          "time_s": 5.15,
+          "rss_kb": 375008,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.139574026999981,
+          "time_s": 5.13,
+          "rss_kb": 375528,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.218000441000186,
+          "time_s": 5.21,
+          "rss_kb": 374776,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.263777912000478,
+          "time_s": 5.26,
+          "rss_kb": 377592,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        },
+        {
+          "wall_s": 5.132078581000314,
+          "time_s": 5.13,
+          "rss_kb": 373884,
+          "returncode": 0,
+          "stdout": "1000\n",
+          "stderr": ""
+        }
+      ],
+      "median_s": 5.18294905599987,
+      "p95_s": 5.271090158700372,
+      "stdev_s": 0.055808063109501475,
+      "max_rss_kb": 377592
+    }
+  }
+}

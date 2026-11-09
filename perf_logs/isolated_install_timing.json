@@ -1,0 +1,26 @@
+{
+  "install": {
+    "wall_s": 7.773421116000009,
+    "returncode": 0,
+    "stdout": "ABT instalado em /tmp/abt-perf-install-xon8ecck/home/.local/share/abt\n",
+    "stderr": ""
+  },
+  "first_run": {
+    "wall_s": 0.327043605000199,
+    "returncode": 0,
+    "stdout": "Olá, mundo!\n",
+    "stderr": ""
+  },
+  "second_run": {
+    "wall_s": 0.32216468200022064,
+    "returncode": 0,
+    "stdout": "Olá, mundo!\n",
+    "stderr": ""
+  },
+  "uninstall": {
+    "wall_s": 0.06008683199979714,
+    "returncode": 0,
+    "stdout": "ABT desinstalado.\n",
+    "stderr": ""
+  }
+}

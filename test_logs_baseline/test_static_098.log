@@ -1,0 +1,31 @@
+ERROR: LoadError: Semantic error: Julia references require module and function
+Stacktrace:
+  [1] error(s::String)
+    @ Base ./error.jl:44
+  [2] (::Main.Pseudo.var"#infer#42"{Set{String}, Dict{String, Int64}})(n::Main.Pseudo.IR, names::Dict{String, Symbol})
+    @ Main.Pseudo ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:737
+  [3] (::Main.Pseudo.var"#infer#42"{Set{String}, Dict{String, Int64}})(n::Main.Pseudo.IR, names::Dict{String, Symbol})
+    @ Main.Pseudo ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:685
+  [4] (::Main.Pseudo.var"#check#57"{Main.Pseudo.var"#check#34#58"{Tuple{String, String}, Set{String}, Dict{String, Int64}}})(items::Vector{Main.Pseudo.IR}, names::Dict{String, Symbol}; in_function::Bool, nested::Bool)
+    @ Main.Pseudo ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:799
+  [5] (::Main.Pseudo.var"#check#57"{Main.Pseudo.var"#check#34#58"{Tuple{String, String}, Set{String}, Dict{String, Int64}}})(items::Vector{Main.Pseudo.IR}, names::Dict{String, Symbol})
+    @ Main.Pseudo ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:782
+  [6] validate_ir(program::Vector{Main.Pseudo.IR}; initial_names::Dict{String, Symbol})
+    @ Main.Pseudo ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:849
+  [7] validate_ir
+    @ ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:641 [inlined]
+  [8] generate(program::Vector{Main.Pseudo.IR}; optimize::Bool)
+    @ Main.Pseudo ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:1084
+  [9] generate
+    @ ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:1083 [inlined]
+ [10] generate(program::Vector{Main.Pseudo.Node})
+    @ Main.Pseudo ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/pseudo.jl:1087
+ [11] top-level scope
+    @ ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_static_098.jl:21
+ [12] include(mod::Module, _path::String)
+    @ Base ./Base.jl:309
+ [13] exec_options(opts::Base.JLOptions)
+    @ Base ./client.jl:344
+ [14] _start()
+    @ Base ./client.jl:577
+in expression starting at /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_static_098.jl:21

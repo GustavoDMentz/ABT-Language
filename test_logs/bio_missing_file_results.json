@@ -1,0 +1,43 @@
+[
+  {
+    "case": "arquivo_inexistente",
+    "backend": "interpretador",
+    "status": "PASS",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-bio-hd8k9f_r/arquivo_inexistente.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_fasta: arquivo '/tmp/abt-bio-hd8k9f_r/data.fasta' não existe\n",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "run",
+      "/tmp/abt-bio-hd8k9f_r/arquivo_inexistente.abt"
+    ]
+  },
+  {
+    "case": "arquivo_inexistente",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT ler_fasta: arquivo '/tmp/abt-bio-hd8k9f_r/data.fasta' não existe\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_fasta#abt_std_fasta##0\")(path::String, alphabet::String, ambiguity::String, case_policy::String)\n   @ Main /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_sem_otimizacao.jl:304\n [3] abt_invoke\n   @ /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_sem_otimizacao.jl:427 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n   @ Main /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_sem_otimizacao.jl:433\n [5] top-level scope\n   @ /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_sem_otimizacao.jl:436\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_sem_otimizacao.jl:2\n",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "arquivo_inexistente",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT ler_fasta: arquivo '/tmp/abt-bio-hd8k9f_r/data.fasta' não existe\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_fasta#abt_std_fasta##0\")(path::String, alphabet::String, ambiguity::String, case_policy::String)\n   @ Main /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_otimizado.jl:304\n [3] abt_invoke\n   @ /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_otimizado.jl:427 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n   @ Main /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_otimizado.jl:433\n [5] top-level scope\n   @ /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_otimizado.jl:436\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_otimizado.jl:2\n",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "/tmp/abt-bio-hd8k9f_r/arquivo_inexistente_gerado_otimizado.jl"
+    ]
+  }
+]

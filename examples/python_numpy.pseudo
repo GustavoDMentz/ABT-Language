@@ -1,0 +1,4 @@
+usar Python.numpy
+valores = Python.numpy.array([1, 2, 3, 4])
+mostrar Python.numpy.sum(valores)
+mostrar Python.numpy.mean(valores)

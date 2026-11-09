@@ -1,0 +1,86 @@
+[
+  {
+    "file": "colecoes_agregacao.abt",
+    "status": "PASS",
+    "public": {
+      "exit": 0,
+      "stdout": "60.0\n",
+      "stderr": ""
+    },
+    "legacy": {
+      "exit": 0,
+      "stdout": "60.0\n",
+      "stderr": ""
+    }
+  },
+  {
+    "file": "colecoes_funcao.abt",
+    "status": "PASS",
+    "public": {
+      "exit": 0,
+      "stdout": "[6, 8]\n",
+      "stderr": ""
+    },
+    "legacy": {
+      "exit": 0,
+      "stdout": "[6, 8]\n",
+      "stderr": ""
+    }
+  },
+  {
+    "file": "colecoes_pipeline.abt",
+    "status": "PASS",
+    "public": {
+      "exit": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    },
+    "legacy": {
+      "exit": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    }
+  },
+  {
+    "file": "pacote_dates.abt",
+    "status": "PASS",
+    "public": {
+      "exit": 0,
+      "stdout": "2026-11-06\n2026\n",
+      "stderr": ""
+    },
+    "legacy": {
+      "exit": 0,
+      "stdout": "2026-11-06\n2026\n",
+      "stderr": ""
+    }
+  },
+  {
+    "file": "pipeline_basico.abt",
+    "status": "PASS",
+    "public": {
+      "exit": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    },
+    "legacy": {
+      "exit": 0,
+      "stdout": "[30, 40]\n",
+      "stderr": ""
+    }
+  },
+  {
+    "file": "pipeline_efeitos.abt",
+    "status": "PASS",
+    "public": {
+      "exit": 0,
+      "stdout": "1\n2\n3\n[2, 4, 6]\n",
+      "stderr": ""
+    },
+    "legacy": {
+      "exit": 0,
+      "stdout": "1\n2\n3\n[2, 4, 6]\n",
+      "stderr": ""
+    }
+  }
+]

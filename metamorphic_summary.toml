@@ -1,0 +1,9 @@
+executed = 601
+failures = 0
+seed = "179806488"
+
+[categories]
+filter_true = 200
+limit_size = 200
+identity = 200
+single_evaluation = 1
