@@ -1,0 +1,4 @@
+Test Summary:                       | Pass  Total  Time
+ABT 0.9.1 — static bridge contracts |   11     11  4.9s
+Test Summary:                                      | Pass  Total   Time
+ABT 0.9.1 — differential Python runtime (optional) |    4      4  30.5s

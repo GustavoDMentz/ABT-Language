@@ -1,0 +1,6 @@
+test_interrupt_and_next_run (__main__.CompileModeSemantics.test_interrupt_and_next_run) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.858s
+
+OK

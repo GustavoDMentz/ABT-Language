@@ -35,12 +35,12 @@ Ambas usam as mesmas operações reutilizáveis e aceitam FASTA real, sem parser
 julia --project=. -e 'using Pkg; Pkg.instantiate()'
 ABT_JULIA=julia bin/abt run applications/bio/conteudo_gc.abt
 ABT_JULIA=julia bin/abt run applications/bio/por_registro.abt
-ABT_JULIA=julia python3 test_bio.py --julia julia
-python3 audit_bio_results.py
-ABT_JULIA=julia python3 test_applications.py --julia julia
+ABT_JULIA=julia python3 tests/test_bio.py --julia julia
+python3 tools/audit_bio_results.py
+ABT_JULIA=julia python3 tests/test_applications.py --julia julia
 JULIA_CONDAPKG_BACKEND=Null JULIA_PYTHONCALL_EXE=/usr/bin/python3 ABT_REQUIRE_PYTHON=1 \
-  python3 run_all_tests.py --julia julia --timeout 300
-python3 benchmark_bio.py --julia julia --repetitions 3
+  python3 tests/run_all_tests.py --julia julia --timeout 300
+python3 benchmarks/benchmark_bio.py --julia julia --repetitions 3
 ```
 
 O comando de regressão com Python requer PythonCall.jl no depot Julia e NumPy no Python indicado. Sem eles, as suítes opcionais devem ser registradas como não executadas ou parciais, nunca como aprovadas. O teste da nova API biológica não depende de PythonCall.
@@ -51,13 +51,13 @@ Esta camada não aceita aminoácidos, FASTQ nem todos os códigos IUPAC; requer 
 
 ## Validação executada
 
-Ambiente: Ubuntu Linux, Julia 1.13.3, FASTX.jl 2.2.0, BioSequences.jl 3.5.2, Python do sistema com NumPy para os testes legados opcionais. O `test_bio.py` final executou 21 casos em três modos (interpretador, Julia gerada sem otimização e Julia gerada otimizada): **63 PASS, 0 FAIL**. As saídas bem-sucedidas coincidiram exatamente; `audit_bio_results.py` comparou a linha de diagnóstico ABT dos erros e encontrou **0 divergências**. O aplicativo por registro, com três amostras, passou nos mesmos três modos. `test_applications.py` executou **109 PASS, 0 FAIL, 0 TIMEOUT** antes da inclusão do caso da segunda aplicação, que foi executado separadamente (**3 PASS**). A regressão histórica final, com PythonCall ligado ao Python local, terminou em **39 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT**. As duas sondas exploratórias não são declarações de aprovação. Resultados completos: `test_logs/bio_results.json`, `test_logs/bio_parity_audit.json`, `applications/test_results.json`, `applications/bio_app_results.json` e `test_logs/summary.json`.
+Ambiente: Ubuntu Linux, Julia 1.13.3, FASTX.jl 2.2.0, BioSequences.jl 3.5.2, Python do sistema com NumPy para os testes legados opcionais. O `tests/test_bio.py` final executou 21 casos em três modos (interpretador, Julia gerada sem otimização e Julia gerada otimizada): **63 PASS, 0 FAIL**. As saídas bem-sucedidas coincidiram exatamente; `tools/audit_bio_results.py` comparou a linha de diagnóstico ABT dos erros e encontrou **0 divergências**. O aplicativo por registro, com três amostras, passou nos mesmos três modos. `tests/test_applications.py` executou **109 PASS, 0 FAIL, 0 TIMEOUT** antes da inclusão do caso da segunda aplicação, que foi executado separadamente (**3 PASS**). A regressão histórica final, com PythonCall ligado ao Python local, terminou em **39 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT**. As duas sondas exploratórias não são declarações de aprovação. Resultados completos: `logs/test_logs/bio_results.json`, `logs/test_logs/bio_parity_audit.json`, `applications/test_results.json`, `applications/bio_app_results.json` e `logs/test_logs/summary.json`.
 
-A primeira regressão histórica havia produzido 35 PASS, 2 PROBE, 3 PARTIAL e 1 FAIL porque PythonCall tentou resolver um ambiente Conda sem acesso à rede. `test_logs/bio_historical_initial.log` e `test_logs/bio_historical_initial_summary.json` preservam esse resultado. A repetição com `JULIA_CONDAPKG_BACKEND=Null` e `JULIA_PYTHONCALL_EXE=/usr/bin/python3` passou integralmente; isso foi uma correção de ambiente, não do ABT.
+A primeira regressão histórica havia produzido 35 PASS, 2 PROBE, 3 PARTIAL e 1 FAIL porque PythonCall tentou resolver um ambiente Conda sem acesso à rede. `logs/test_logs/bio_historical_initial.log` e `logs/test_logs/bio_historical_initial_summary.json` preservam esse resultado. A repetição com `JULIA_CONDAPKG_BACKEND=Null` e `JULIA_PYTHONCALL_EXE=/usr/bin/python3` passou integralmente; isso foi uma correção de ambiente, não do ABT.
 
 ## Desempenho e memória
 
-`benchmark_bio.py` criou FASTA determinísticos de 100, 100.000 e 1.000.000 de bases, distribuídos respectivamente por 1, 10 e 100 registros. Cada combinação de tamanho, backend e `--compile` foi executada em **três processos independentes**, totalizando **36 PASS, 0 FAIL**. O código Julia gerado foi emitido antes do cronômetro; usa a otimização padrão do gerador. `/usr/bin/time -v` mediu o processo inteiro. A tabela mostra mediana de tempo real, faixa mínimo–máximo, medianas de CPU usuário/sistema e mediana do pico de RSS. Arquivo bruto: `test_logs/bio_benchmark.json`; comando e saída: `test_logs/bio_benchmark_final.log`.
+`benchmarks/benchmark_bio.py` criou FASTA determinísticos de 100, 100.000 e 1.000.000 de bases, distribuídos respectivamente por 1, 10 e 100 registros. Cada combinação de tamanho, backend e `--compile` foi executada em **três processos independentes**, totalizando **36 PASS, 0 FAIL**. O código Julia gerado foi emitido antes do cronômetro; usa a otimização padrão do gerador. `/usr/bin/time -v` mediu o processo inteiro. A tabela mostra mediana de tempo real, faixa mínimo–máximo, medianas de CPU usuário/sistema e mediana do pico de RSS. Arquivo bruto: `logs/test_logs/bio_benchmark.json`; comando e saída: `logs/test_logs/bio_benchmark_final.log`.
 
 | Bases | Backend | Compile | Real mediana [mín–máx] (s) | CPU usuário/sistema (s) | RSS pico mediano (MiB) |
 |---:|---|---|---:|---:|---:|
@@ -74,6 +74,6 @@ A primeira regressão histórica havia produzido 35 PASS, 2 PROBE, 3 PARTIAL e 1
 | 1.000.000 | Julia gerada | min | 20,33 [19,82–20,45] | 20,13 / 0,13 | 297,4 |
 | 1.000.000 | Julia gerada | all | 1,89 [1,88–1,91] | 1,85 / 0,13 | 313,3 |
 
-O tempo inclui inicialização de Julia, carregamento tardio dos pacotes, abertura, leitura FASTA, validação e contagem; **não é tempo de I/O isolado**. O RSS é do processo inteiro, não o tamanho da estrutura ABT nem alocação interna Julia. Uma sonda inicial com 1 milhão de bases competia com outras suítes e foi interrompida; seu log está em `test_logs/bio_benchmark_exploratory.log` e não entra na tabela. A repetição acima ocorreu depois do término das outras suítes.
+O tempo inclui inicialização de Julia, carregamento tardio dos pacotes, abertura, leitura FASTA, validação e contagem; **não é tempo de I/O isolado**. O RSS é do processo inteiro, não o tamanho da estrutura ABT nem alocação interna Julia. Uma sonda inicial com 1 milhão de bases competia com outras suítes e foi interrompida; seu log está em `logs/test_logs/bio_benchmark_exploratory.log` e não entra na tabela. A repetição acima ocorreu depois do término das outras suítes.
 
 `all` compensa no código gerado já em 100.000 bases e no interpretador em 1 milhão; para 100 bases o custo de compilação domina. O resumo percorre o arquivo sem materializar todos os registros: entre 100.000 e 1.000.000 de bases, o RSS mediano do Julia gerado com `all` mudou de 313,1 para 313,3 MiB, mas isso **não prova memória constante**. O maior registro e o conjunto de identificadores ainda consomem memória; `registros_fasta` materializa todos os resultados. Uma segunda análise relê o arquivo, evitando cache implícito e preservando o contrato preguiçoso.

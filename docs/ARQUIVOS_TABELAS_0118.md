@@ -47,18 +47,18 @@ export ABT_JULIA=/caminho/julia-1.13.3/bin/julia
 bin/abt run applications/data/resumo_csv.abt
 bin/abt run applications/bio/conteudo_gc.abt
 bin/abt run applications/data/vendas.abt
-python3 test_applications.py --julia "$ABT_JULIA"
-python3 run_all_tests.py --julia "$ABT_JULIA" --timeout 120
-/usr/bin/time -v "$ABT_JULIA" --project=. test_tables_large.jl
+python3 tests/test_applications.py --julia "$ABT_JULIA"
+python3 tests/run_all_tests.py --julia "$ABT_JULIA" --timeout 120
+/usr/bin/time -v "$ABT_JULIA" --project=. tests/test_tables_large.jl
 ```
 
 Os testes de interoperabilidade históricos ainda exigem PythonCall no depot Julia. Os testes de CSV e DNA novos não exigem PythonCall.
 
-A sonda `test_tables_large.jl` gerou **100.000 registros**, verificou `quantidade=100000` e `soma=5000050000`, e registrou `table_bytes=3366808` por `Base.summarysize` e pico de **368420 KiB RSS** em `/usr/bin/time -v` (`applications/test_tables_large.log`). `summarysize` mede a estrutura Julia alcançável pela tabela, inclusive buffers do CSV.jl; RSS mede o processo Julia inteiro, com compilador e pacotes. Esses números não são intercambiáveis nem demonstram memória constante. O teste confirma que o resumo percorre o iterador sem criar um vetor de linhas convertidas.
+A sonda `tests/test_tables_large.jl` gerou **100.000 registros**, verificou `quantidade=100000` e `soma=5000050000`, e registrou `table_bytes=3366808` por `Base.summarysize` e pico de **368420 KiB RSS** em `/usr/bin/time -v` (`applications/test_tables_large.log`). `summarysize` mede a estrutura Julia alcançável pela tabela, inclusive buffers do CSV.jl; RSS mede o processo Julia inteiro, com compilador e pacotes. Esses números não são intercambiáveis nem demonstram memória constante. O teste confirma que o resumo percorre o iterador sem criar um vetor de linhas convertidas.
 
-A bateria `test_applications.py` terminou com **109 PASS, 0 FAIL, 0 TIMEOUT**: 51 execuções no interpretador, 29 na Julia gerada sem otimização e 29 na Julia gerada com otimização. Os casos incluem aplicações completas, acesso a registros, CSV malformado, Unicode, delimitador explícito, ausentes, rejeição de ordem booleana e comparação entre backends. Evidência: `applications/test_results.json` e `applications/test_run_0118_tables_final.log`.
+A bateria `tests/test_applications.py` terminou com **109 PASS, 0 FAIL, 0 TIMEOUT**: 51 execuções no interpretador, 29 na Julia gerada sem otimização e 29 na Julia gerada com otimização. Os casos incluem aplicações completas, acesso a registros, CSV malformado, Unicode, delimitador explícito, ausentes, rejeição de ordem booleana e comparação entre backends. Evidência: `applications/test_results.json` e `applications/test_run_0118_tables_final.log`.
 
-A regressão histórica completa terminou com **39 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT** (`test_logs/summary.json`, `test_logs/tables_regression_final.log`). `PROBE` designa sondas exploratórias, sem aprovação formal de suas hipóteses. O executor ativa `--project` para carregar CSV.jl/Tables.jl do manifesto. O teste diferencial de 1.000 casos e os arquivos `test_static_*.jl` fazem parte dessa rodada.
+A regressão histórica completa terminou com **39 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT** (`logs/test_logs/summary.json`, `logs/test_logs/tables_regression_final.log`). `PROBE` designa sondas exploratórias, sem aprovação formal de suas hipóteses. O executor ativa `--project` para carregar CSV.jl/Tables.jl do manifesto. O teste diferencial de 1.000 casos e os arquivos `test_static_*.jl` fazem parte dessa rodada.
 
 Durante a auditoria, a apresentação nova revelou uma regressão real com objetos Python carregados tardiamente: `string` era chamada em um mundo Julia anterior ao método de PythonCall e mostrava um ponteiro. O formatador agora usa `Base.invokelatest(string, valor)` no ramo genérico. O teste diferencial da ponte Python passou após a correção. Três testes estáticos e duas asserções legadas procuravam a grafia antiga de `mostrar` no Julia gerado; foram atualizados para verificar o valor apresentado e a ordem relativa aos imports, sem remover suas verificações. A sonda de tabela grande passou a rodar com o projeto Julia ativo no executor histórico.
 

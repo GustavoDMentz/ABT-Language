@@ -48,8 +48,8 @@ Na raiz deste projeto, com Julia 1.13.3 instalada e `/usr/bin/time` disponível:
 ```bash
 export ABT_JULIA=/caminho/para/julia-1.13.3/bin/julia
 export JULIA_DEPOT_PATH=/caminho/para/depot-com-ABT-precompilado
-python3 bench_scalability.py --repetitions 10 --timeout-100k 120
-python3 plot_scalability.py
+python3 benchmarks/bench_scalability.py --repetitions 10 --timeout-100k 120
+python3 benchmarks/plot_scalability.py
 ```
 
 Para reproduzir exatamente o ambiente desta medição, o depot foi definido como `/tmp/abt-perf-final-depot:/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot` e `ABT_JULIA` como `/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia`. O script gera entradas determinísticas em `benchmarks/scalability/incrementos_*.abt` e grava cada tentativa imediatamente em `benchmarks/scalability/results.json`, mais stdout e saída integral de `/usr/bin/time -v` em `benchmarks/scalability/raw/`. Ele pula tentativas já registradas; para uma rodada inteiramente nova, use uma cópia limpa do diretório de resultados. Cada arquivo de entrada pode ser executado diretamente, por exemplo:

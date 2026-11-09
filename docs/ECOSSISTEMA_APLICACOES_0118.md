@@ -32,9 +32,9 @@ O programa CSV usa o módulo `csv` da biblioteca padrão Python porque `CSV.jl` 
 
 ## Testes e limites
 
-Execução: `python3 test_applications.py --julia "$ABT_JULIA"`, com `JULIA_CONDAPKG_BACKEND=Null`, `JULIA_PYTHONCALL_EXE=/usr/bin/python3` e o depot local configurados. A primeira rodada, antes das funções `descrever` e `registro`, teve **25 PASS, 0 FAIL, 0 TIMEOUT**. O arquivo `applications/test_results.json` é atualizado pela rodada mais recente e deve ser consultado para os resultados atuais.
+Execução: `python3 tests/test_applications.py --julia "$ABT_JULIA"`, com `JULIA_CONDAPKG_BACKEND=Null`, `JULIA_PYTHONCALL_EXE=/usr/bin/python3` e o depot local configurados. A primeira rodada, antes das funções `descrever` e `registro`, teve **25 PASS, 0 FAIL, 0 TIMEOUT**. O arquivo `applications/test_results.json` é atualizado pela rodada mais recente e deve ser consultado para os resultados atuais.
 
-A suíte histórica foi executada com `python3 run_all_tests.py --julia "$ABT_JULIA" --timeout 180`: **38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT**. Inclui o diferencial determinístico de 1.000 casos. As duas `PROBE` são sondas exploratórias, não provas de ausência de defeitos. O resumo estruturado e os logs individuais estão em `test_logs/`.
+A suíte histórica foi executada com `python3 tests/run_all_tests.py --julia "$ABT_JULIA" --timeout 180`: **38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT**. Inclui o diferencial determinístico de 1.000 casos. As duas `PROBE` são sondas exploratórias, não provas de ausência de defeitos. O resumo estruturado e os logs individuais estão em `logs/test_logs/`.
 
 Limitações demonstradas: a CLI pode mostrar `PyException` sem texto amigável da causa Python; não há gerenciamento de arquivo com escopo no ABT, então as aplicações fecham arquivos explicitamente após materializá-los; o CSV inteiro é carregado em memória; listas ABT não oferecem append/índice; o programa de estatística tem amostra literal; o parser FASTA desta aplicação aceita apenas A/C/G/T e não tenta cobrir toda a especificação FASTA.
 

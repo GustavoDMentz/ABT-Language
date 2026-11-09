@@ -32,7 +32,7 @@ JULIA_DEPOT_PATH=/caminho/para/depot julia --project=. --startup-file=no src/CLI
 JULIA_DEPOT_PATH=/caminho/para/depot julia --project=. --startup-file=no src/CLI.jl applications/science/alinhamento.abt
 ```
 
-`test_batch_118.py` executa casos consolidados nos três backends. Os resultados estruturados ficam em `test_logs/batch_118_results.json`. A suíte histórica é `run_all_tests.py`.
+`tests/test_batch_118.py` executa casos consolidados nos três backends. Os resultados estruturados ficam em `logs/test_logs/batch_118_results.json`. A suíte histórica é `tests/run_all_tests.py`.
 
 ## Limites
 

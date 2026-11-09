@@ -8,10 +8,10 @@ Ambiente: Linux x86-64, Julia 1.13.3; execução local com `JULIA_DEPOT_PATH=/tm
 
 | Execução | Resultado | Evidência |
 |---|---:|---|
-| Contratos novos, interpretador e Julia gerada com/sem otimização | 45 PASS, 0 FAIL | `test_logs/extensions_execution.log`, `test_logs/extensions_results.json` |
-| Contratos internos: ciclo, NaN/Inf, ausência explícita | 6 PASS, 0 FAIL | `test_logs/extensions_internal.log` |
-| Histórico completo | 39 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT | `test_logs/historical_extensions_final.log`, `test_logs/summary.json` |
-| Aplicações existentes | 112 PASS, 0 FAIL, 0 TIMEOUT | `test_logs/applications_extensions_final.log`, `applications/test_results.json` |
+| Contratos novos, interpretador e Julia gerada com/sem otimização | 45 PASS, 0 FAIL | `logs/test_logs/extensions_execution.log`, `logs/test_logs/extensions_results.json` |
+| Contratos internos: ciclo, NaN/Inf, ausência explícita | 6 PASS, 0 FAIL | `logs/test_logs/extensions_internal.log` |
+| Histórico completo | 39 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT | `logs/test_logs/historical_extensions_final.log`, `logs/test_logs/summary.json` |
+| Aplicações existentes | 112 PASS, 0 FAIL, 0 TIMEOUT | `logs/test_logs/applications_extensions_final.log`, `applications/test_results.json` |
 
 As duas sondas históricas são exploratórias; seu estado `PROBE` não equivale a aprovação sem findings. A comparação diferencial nova confere todos os campos do JSON e igualdade literal de stdout entre os três modos nos casos válidos; nos casos inválidos, confere falha e a causa diagnóstica esperada. Os 1.000 casos da suíte diferencial histórica passaram dentro da regressão.
 
@@ -25,7 +25,7 @@ Não foram medidos tempo de instalação, inicialização ou RSS de DataFrames.j
 
 ## Medição por processo
 
-O script `benchmark_extensions.py` usa `/usr/bin/time -v`, cinco repetições independentes por cenário, `--compile=min` em todos os processos e guarda cada medição bruta em `test_logs/extensions_benchmark.json`. Medianas abaixo; os intervalos entre parênteses são mínimo–máximo. Tempo de usuário e sistema são tempos de CPU do processo inteiro.
+O script `benchmarks/benchmark_extensions.py` usa `/usr/bin/time -v`, cinco repetições independentes por cenário, `--compile=min` em todos os processos e guarda cada medição bruta em `logs/test_logs/extensions_benchmark.json`. Medianas abaixo; os intervalos entre parênteses são mínimo–máximo. Tempo de usuário e sistema são tempos de CPU do processo inteiro.
 
 | Cenário | Tempo real (s) | CPU usuário (s) | CPU sistema (s) | Pico RSS (KiB) |
 |---|---:|---:|---:|---:|
@@ -40,11 +40,11 @@ Reprodução no Ubuntu, na raiz do projeto, após `Pkg.instantiate()`:
 
 ```sh
 export ABT_JULIA=/caminho/julia-1.13.3/bin/julia
-python3 benchmark_extensions.py --julia "$ABT_JULIA" --repetitions 5
-python3 test_extensions.py --julia "$ABT_JULIA"
-"$ABT_JULIA" --startup-file=no --project=. test_extensions_internal.jl
-python3 test_applications.py --julia "$ABT_JULIA"
-python3 run_all_tests.py --julia "$ABT_JULIA"
+python3 benchmarks/benchmark_extensions.py --julia "$ABT_JULIA" --repetitions 5
+python3 tests/test_extensions.py --julia "$ABT_JULIA"
+"$ABT_JULIA" --startup-file=no --project=. tests/test_extensions_internal.jl
+python3 tests/test_applications.py --julia "$ABT_JULIA"
+python3 tests/run_all_tests.py --julia "$ABT_JULIA"
 ```
 
 ## Correções e limites

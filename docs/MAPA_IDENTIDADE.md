@@ -12,7 +12,7 @@ O ABT estava implementado principalmente em `pseudo.jl`, no módulo `Pseudo`. `b
 | `pseudo_sum`, `pseudo_average` no código gerado | Interna | Nomes de helpers locais mantidos para preservar testes e código gerado; não aparecem no CLI público. |
 | Arquivos `.pseudo` antigos | Compatibilidade legada | Exemplos e testes preservados; `.abt` é a extensão pública no VS Code. |
 | Documentos `STATIC_REVIEW_*` e changelog | Histórica | Mantidos sem reescrever o registro técnico. |
-| `run_cli_examples.py`, benchmarks e scripts de teste | Interna | Podem usar o adaptador para testar geração antiga; não constituem interface de usuário. |
+| `tools/run_cli_examples.py`, benchmarks e scripts de teste | Interna | Podem usar o adaptador para testar geração antiga; não constituem interface de usuário. |
 
 ## Novos caminhos
 

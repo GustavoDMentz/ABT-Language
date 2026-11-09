@@ -1,0 +1,6 @@
+Test Summary:                         | Pass  Total  Time
+ABT adversarial semantic differential |   15     15  7.5s
+Test Summary:                | Pass  Total  Time
+ABT invalid input boundaries |   24     24  0.0s
+Test Summary:                     | Pass  Total  Time
+ABT Python imports and attributes |    4      4  6.1s

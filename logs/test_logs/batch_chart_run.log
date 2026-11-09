@@ -1,0 +1,4 @@
+PASS interpretador 21125
+PASS gerado_sem_otimizacao 21125
+PASS gerado_otimizado 21125
+parity True

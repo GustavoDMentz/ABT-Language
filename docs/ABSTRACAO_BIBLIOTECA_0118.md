@@ -53,14 +53,14 @@ As três aplicações usam agora `registro` para compor saídas completas; a est
 
 ## Validação
 
-`test_applications.py` verificou **58 PASS, 0 FAIL, 0 TIMEOUT**: as três aplicações no interpretador e na Julia gerada com/sem otimização, acesso a campos, aninhamento de registros, uso da biblioteca em função, sombreamento por função do usuário, preservação da regra de não captura e rejeição de aridades, nomes, tipos, coleção pequena, valor ausente, NaN, infinito e overflow. Os casos de CSV e DNA continuam cobrindo entradas válidas, inválidas e extremas. Resultados estruturados: `applications/test_results.json`. A regressão histórica e diferencial registrou **38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT** em `test_logs/summary.json`; os três testes históricos iniciados antes do último ajuste foram repetidos e passaram, com resultados em `applications/final_scope_reruns.json`. `PROBE` identifica sondas exploratórias, não suítes aprovadas.
+`tests/test_applications.py` verificou **58 PASS, 0 FAIL, 0 TIMEOUT**: as três aplicações no interpretador e na Julia gerada com/sem otimização, acesso a campos, aninhamento de registros, uso da biblioteca em função, sombreamento por função do usuário, preservação da regra de não captura e rejeição de aridades, nomes, tipos, coleção pequena, valor ausente, NaN, infinito e overflow. Os casos de CSV e DNA continuam cobrindo entradas válidas, inválidas e extremas. Resultados estruturados: `applications/test_results.json`. A regressão histórica e diferencial registrou **38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT** em `logs/test_logs/summary.json`; os três testes históricos iniciados antes do último ajuste foram repetidos e passaram, com resultados em `applications/final_scope_reruns.json`. `PROBE` identifica sondas exploratórias, não suítes aprovadas.
 
 Reprodução no diretório do projeto, com Julia 1.13.3 e as dependências opcionais de interoperabilidade já instaladas:
 
 ```sh
 export ABT_JULIA=/caminho/para/julia-1.13.3/bin/julia
-python3 test_applications.py
-python3 run_all_tests.py --julia "$ABT_JULIA" --timeout 120
+python3 tests/test_applications.py
+python3 tests/run_all_tests.py --julia "$ABT_JULIA" --timeout 120
 ```
 
 ## Próximas camadas propostas — não implementadas

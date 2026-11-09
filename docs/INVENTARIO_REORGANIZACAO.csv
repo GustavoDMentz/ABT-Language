@@ -1,0 +1,208 @@
+caminho_anterior,caminho_atual,proposito
+ABT.packages.toml,ABT.packages.toml,configuração/compatibilidade
+ACTIVE_TEST_FIXES.md,docs/ACTIVE_TEST_FIXES.md,documentação
+ADVERSARIAL_REVIEW.md,docs/ADVERSARIAL_REVIEW.md,documentação
+ARQUITETURA_PACOTES_FUNDACAO.md,docs/ARQUITETURA_PACOTES_FUNDACAO.md,documentação
+AUDIT.md,docs/AUDIT.md,documentação
+CHANGELOG_ABT.md,docs/CHANGELOG_ABT.md,documentação
+DECISOES_ARQUITETURAIS_117.md,docs/DECISOES_ARQUITETURAIS_117.md,documentação
+ESPECIFICACAO_COLECOES_117.md,docs/ESPECIFICACAO_COLECOES_117.md,documentação
+ESPECIFICACAO_PIPELINES_118.md,docs/ESPECIFICACAO_PIPELINES_118.md,documentação
+HOTFIX_PARSE_116.md,docs/HOTFIX_PARSE_116.md,documentação
+Manifest.toml,Manifest.toml,configuração/compatibilidade
+Project.toml,Project.toml,configuração/compatibilidade
+README.md,README.md,configuração/compatibilidade
+RELATORIO_AUDITORIA_SEMANTICA_116.md,docs/RELATORIO_AUDITORIA_SEMANTICA_116.md,documentação
+RELATORIO_BENCHMARK_AUDITORIA_118.md,docs/RELATORIO_BENCHMARK_AUDITORIA_118.md,documentação
+RELATORIO_EVOLUCAO_117.md,docs/RELATORIO_EVOLUCAO_117.md,documentação
+RELATORIO_FINAL_TESTES_116.md,docs/RELATORIO_FINAL_TESTES_116.md,documentação
+RELATORIO_FUNDACAO_PACOTES.md,docs/RELATORIO_FUNDACAO_PACOTES.md,documentação
+RELATORIO_PIPELINES_118.md,docs/RELATORIO_PIPELINES_118.md,documentação
+REVIEW_092.md,docs/REVIEW_092.md,documentação
+REVIEW_ALL_TESTS_116.md,docs/REVIEW_ALL_TESTS_116.md,documentação
+STATIC_REVIEW_093.md,docs/STATIC_REVIEW_093.md,documentação
+STATIC_REVIEW_094.md,docs/STATIC_REVIEW_094.md,documentação
+STATIC_REVIEW_095.md,docs/STATIC_REVIEW_095.md,documentação
+STATIC_REVIEW_096.md,docs/STATIC_REVIEW_096.md,documentação
+STATIC_REVIEW_097.md,docs/STATIC_REVIEW_097.md,documentação
+STATIC_REVIEW_098.md,docs/STATIC_REVIEW_098.md,documentação
+STATIC_REVIEW_099.md,docs/STATIC_REVIEW_099.md,documentação
+STATIC_REVIEW_100.md,docs/STATIC_REVIEW_100.md,documentação
+STATIC_REVIEW_101.md,docs/STATIC_REVIEW_101.md,documentação
+STATIC_REVIEW_102.md,docs/STATIC_REVIEW_102.md,documentação
+STATIC_REVIEW_103.md,docs/STATIC_REVIEW_103.md,documentação
+STATIC_REVIEW_104.md,docs/STATIC_REVIEW_104.md,documentação
+STATIC_REVIEW_105.md,docs/STATIC_REVIEW_105.md,documentação
+STATIC_REVIEW_106.md,docs/STATIC_REVIEW_106.md,documentação
+STATIC_REVIEW_107.md,docs/STATIC_REVIEW_107.md,documentação
+STATIC_REVIEW_108.md,docs/STATIC_REVIEW_108.md,documentação
+STATIC_REVIEW_109.md,docs/STATIC_REVIEW_109.md,documentação
+STATIC_REVIEW_110.md,docs/STATIC_REVIEW_110.md,documentação
+STATIC_REVIEW_111.md,docs/STATIC_REVIEW_111.md,documentação
+STATIC_REVIEW_112.md,docs/STATIC_REVIEW_112.md,documentação
+STATIC_REVIEW_113.md,docs/STATIC_REVIEW_113.md,documentação
+STATIC_REVIEW_114.md,docs/STATIC_REVIEW_114.md,documentação
+STATIC_REVIEW_115.md,docs/STATIC_REVIEW_115.md,documentação
+STATIC_REVIEW_116.md,docs/STATIC_REVIEW_116.md,documentação
+adversarial_case_118.jl,tests/adversarial_case_118.jl,teste/sonda
+adversarial_isolated_118.py,tests/adversarial_isolated_118.py,teste/sonda
+adversarial_isolated_run.log,logs/historical/adversarial_isolated_run.log,evidência de execução
+adversarial_results.json,logs/historical/adversarial_results.json,evidência de execução
+audit_adversarial.jl,tests/audit_adversarial.jl,teste/sonda
+audit_bio_results.py,tools/audit_bio_results.py,ferramenta
+audit_summary.json,logs/historical/audit_summary.json,evidência de execução
+baseline_118_run.log,logs/historical/baseline_118_run.log,evidência de execução
+baseline_environment.json,logs/historical/baseline_environment.json,evidência de execução
+baseline_evolucao.log,logs/historical/baseline_evolucao.log,evidência de execução
+bench_long_modes.py,benchmarks/bench_long_modes.py,benchmark
+bench_scalability.py,benchmarks/bench_scalability.py,benchmark
+bench_startup.py,benchmarks/bench_startup.py,benchmark
+benchmark_118.jl,benchmarks/benchmark_118.jl,benchmark
+benchmark_allocations.png,benchmarks/results/benchmark_allocations.png,benchmark
+benchmark_batch_118.py,benchmarks/benchmark_batch_118.py,benchmark
+benchmark_bio.py,benchmarks/benchmark_bio.py,benchmark
+benchmark_cli.csv,benchmarks/results/benchmark_cli.csv,benchmark
+benchmark_cli.log,benchmarks/results/benchmark_cli.log,benchmark
+benchmark_cli_118.py,benchmarks/benchmark_cli_118.py,benchmark
+benchmark_equivalence.log,benchmarks/results/benchmark_equivalence.log,benchmark
+benchmark_extensions.py,benchmarks/benchmark_extensions.py,benchmark
+benchmark_latency.png,benchmarks/results/benchmark_latency.png,benchmark
+benchmark_modular_extensions.py,benchmarks/benchmark_modular_extensions.py,benchmark
+benchmark_results.csv,benchmarks/results/benchmark_results.csv,benchmark
+benchmark_run.log,benchmarks/results/benchmark_run.log,benchmark
+benchmark_throughput.png,benchmarks/results/benchmark_throughput.png,benchmark
+break_abt.jl,tests/break_abt.jl,teste/sonda
+bridge_runtime.jl,bridge_runtime.jl,configuração/compatibilidade
+cli_examples_identity.json,logs/historical/cli_examples_identity.json,evidência de execução
+cli_examples_identity.log,logs/historical/cli_examples_identity.log,evidência de execução
+cli_examples_results.json,logs/historical/cli_examples_results.json,evidência de execução
+cli_examples_run.log,logs/historical/cli_examples_run.log,evidência de execução
+cli_identity_test.log,logs/historical/cli_identity_test.log,evidência de execução
+collections_117_run.log,logs/historical/collections_117_run.log,evidência de execução
+consolidate_118.py,tools/consolidate_118.py,ferramenta
+differential_case_1.toml,logs/historical/differential_case_1.toml,evidência de execução
+differential_results.toml,logs/historical/differential_results.toml,evidência de execução
+differential_run.log,logs/historical/differential_run.log,evidência de execução
+distribution_measurements.json,benchmarks/results/distribution_measurements.json,benchmark
+distribution_measurements.log,benchmarks/results/distribution_measurements.log,benchmark
+distribution_measurements_before.json,benchmarks/results/distribution_measurements_before.json,benchmark
+distribution_measurements_before.log,benchmarks/results/distribution_measurements_before.log,benchmark
+final_full_run.log,logs/historical/final_full_run.log,evidência de execução
+foundation_baseline.log,logs/historical/foundation_baseline.log,evidência de execução
+foundation_final_full.log,logs/historical/foundation_final_full.log,evidência de execução
+full_evolucao_final.log,logs/historical/full_evolucao_final.log,evidência de execução
+full_semantic_run.log,logs/historical/full_semantic_run.log,evidência de execução
+full_semantic_run_final.log,logs/historical/full_semantic_run_final.log,evidência de execução
+identity_baseline.log,logs/historical/identity_baseline.log,evidência de execução
+identity_final_full.log,logs/historical/identity_final_full.log,evidência de execução
+identity_generated_examples.log,logs/historical/identity_generated_examples.log,evidência de execução
+install.py,tools/install.py,ferramenta
+install_baseline.log,logs/historical/install_baseline.log,evidência de execução
+install_cli_tests.log,logs/historical/install_cli_tests.log,evidência de execução
+install_final_full.log,logs/historical/install_final_full.log,evidência de execução
+invalid_accepted.log,logs/historical/invalid_accepted.log,evidência de execução
+invalid_campaign_118.jl,tests/invalid_campaign_118.jl,teste/sonda
+invalid_summary.toml,logs/historical/invalid_summary.toml,evidência de execução
+measure_cli_distribution.py,benchmarks/measure_cli_distribution.py,benchmark
+measure_process_phases.py,benchmarks/measure_process_phases.py,benchmark
+metamorphic_118.jl,tests/metamorphic_118.jl,teste/sonda
+metamorphic_failures.log,logs/historical/metamorphic_failures.log,evidência de execução
+metamorphic_run.log,logs/historical/metamorphic_run.log,evidência de execução
+metamorphic_summary.toml,logs/historical/metamorphic_summary.toml,evidência de execução
+package_example_run.log,logs/historical/package_example_run.log,evidência de execução
+packages_foundation_test.log,logs/historical/packages_foundation_test.log,evidência de execução
+pipeline_cli.log,logs/historical/pipeline_cli.log,evidência de execução
+plot_benchmarks_118.R,benchmarks/plot_benchmarks_118.R,benchmark
+plot_scalability.py,benchmarks/plot_scalability.py,benchmark
+pseudo.jl,pseudo.jl,configuração/compatibilidade
+run_all_tests.py,tests/run_all_tests.py,teste/sonda
+run_cli_examples.py,tools/run_cli_examples.py,ferramenta
+runtests.jl,tests/runtests.jl,teste/sonda
+runtests_legacy.jl,tests/runtests_legacy.jl,teste/sonda
+semantic_adversarial.log,logs/historical/semantic_adversarial.log,evidência de execução
+semantic_adversarial_depwarn.log,logs/historical/semantic_adversarial_depwarn.log,evidência de execução
+stress_1001_2000.log,logs/historical/stress_1001_2000.log,evidência de execução
+stress_1_1000.log,logs/historical/stress_1_1000.log,evidência de execução
+stress_2001_3000.log,logs/historical/stress_2001_3000.log,evidência de execução
+stress_3001_4000.log,logs/historical/stress_3001_4000.log,evidência de execução
+stress_4001_5000.log,logs/historical/stress_4001_5000.log,evidência de execução
+stress_5001_6000.log,logs/historical/stress_5001_6000.log,evidência de execução
+stress_6001_7000.log,logs/historical/stress_6001_7000.log,evidência de execução
+stress_7001_8000.log,logs/historical/stress_7001_8000.log,evidência de execução
+stress_8001_9000.log,logs/historical/stress_8001_9000.log,evidência de execução
+stress_9001_10000.log,logs/historical/stress_9001_10000.log,evidência de execução
+stress_failures.tsv,logs/historical/stress_failures.tsv,evidência de execução
+stress_failures_1001_2000.tsv,logs/historical/stress_failures_1001_2000.tsv,evidência de execução
+stress_failures_1_1000.tsv,logs/historical/stress_failures_1_1000.tsv,evidência de execução
+stress_failures_2001_3000.tsv,logs/historical/stress_failures_2001_3000.tsv,evidência de execução
+stress_failures_3001_4000.tsv,logs/historical/stress_failures_3001_4000.tsv,evidência de execução
+stress_failures_4001_5000.tsv,logs/historical/stress_failures_4001_5000.tsv,evidência de execução
+stress_failures_5001_6000.tsv,logs/historical/stress_failures_5001_6000.tsv,evidência de execução
+stress_failures_6001_7000.tsv,logs/historical/stress_failures_6001_7000.tsv,evidência de execução
+stress_failures_7001_8000.tsv,logs/historical/stress_failures_7001_8000.tsv,evidência de execução
+stress_failures_8001_9000.tsv,logs/historical/stress_failures_8001_9000.tsv,evidência de execução
+stress_failures_9001_10000.tsv,logs/historical/stress_failures_9001_10000.tsv,evidência de execução
+stress_full.log,logs/historical/stress_full.log,evidência de execução
+stress_generator_118.jl,tests/stress_generator_118.jl,teste/sonda
+stress_summary.toml,logs/historical/stress_summary.toml,evidência de execução
+stress_summary_1001_2000.toml,logs/historical/stress_summary_1001_2000.toml,evidência de execução
+stress_summary_1_1000.toml,logs/historical/stress_summary_1_1000.toml,evidência de execução
+stress_summary_2001_3000.toml,logs/historical/stress_summary_2001_3000.toml,evidência de execução
+stress_summary_3001_4000.toml,logs/historical/stress_summary_3001_4000.toml,evidência de execução
+stress_summary_4001_5000.toml,logs/historical/stress_summary_4001_5000.toml,evidência de execução
+stress_summary_5001_6000.toml,logs/historical/stress_summary_5001_6000.toml,evidência de execução
+stress_summary_6001_7000.toml,logs/historical/stress_summary_6001_7000.toml,evidência de execução
+stress_summary_7001_8000.toml,logs/historical/stress_summary_7001_8000.toml,evidência de execução
+stress_summary_8001_9000.toml,logs/historical/stress_summary_8001_9000.toml,evidência de execução
+stress_summary_9001_10000.toml,logs/historical/stress_summary_9001_10000.toml,evidência de execução
+test_adversarial_093.jl,tests/test_adversarial_093.jl,teste/sonda
+test_applications.py,tests/test_applications.py,teste/sonda
+test_batch_118.py,tests/test_batch_118.py,teste/sonda
+test_bio.py,tests/test_bio.py,teste/sonda
+test_bridge_092.jl,tests/test_bridge_092.jl,teste/sonda
+test_chart_118.py,tests/test_chart_118.py,teste/sonda
+test_cli_identity.jl,tests/test_cli_identity.jl,teste/sonda
+test_collections_117.jl,tests/test_collections_117.jl,teste/sonda
+test_diagnostics.jl,tests/test_diagnostics.jl,teste/sonda
+test_differential_1000.jl,tests/test_differential_1000.jl,teste/sonda
+test_extension_registry.jl,tests/test_extension_registry.jl,teste/sonda
+test_extensions.py,tests/test_extensions.py,teste/sonda
+test_extensions_internal.jl,tests/test_extensions_internal.jl,teste/sonda
+test_install_cli.py,tests/test_install_cli.py,teste/sonda
+test_interop.jl,tests/test_interop.jl,teste/sonda
+test_interop_extended.jl,tests/test_interop_extended.jl,teste/sonda
+test_modular_extensions.py,tests/test_modular_extensions.py,teste/sonda
+test_packages_foundation.jl,tests/test_packages_foundation.jl,teste/sonda
+test_perf_semantics.py,tests/test_perf_semantics.py,teste/sonda
+test_pipelines_118.jl,tests/test_pipelines_118.jl,teste/sonda
+test_python_bridge.jl,tests/test_python_bridge.jl,teste/sonda
+test_regression_091.jl,tests/test_regression_091.jl,teste/sonda
+test_semantic_adversarial.jl,tests/test_semantic_adversarial.jl,teste/sonda
+test_static_093.jl,tests/test_static_093.jl,teste/sonda
+test_static_094.jl,tests/test_static_094.jl,teste/sonda
+test_static_095.jl,tests/test_static_095.jl,teste/sonda
+test_static_096.jl,tests/test_static_096.jl,teste/sonda
+test_static_097.jl,tests/test_static_097.jl,teste/sonda
+test_static_098.jl,tests/test_static_098.jl,teste/sonda
+test_static_099.jl,tests/test_static_099.jl,teste/sonda
+test_static_100.jl,tests/test_static_100.jl,teste/sonda
+test_static_101.jl,tests/test_static_101.jl,teste/sonda
+test_static_102.jl,tests/test_static_102.jl,teste/sonda
+test_static_103.jl,tests/test_static_103.jl,teste/sonda
+test_static_104.jl,tests/test_static_104.jl,teste/sonda
+test_static_105.jl,tests/test_static_105.jl,teste/sonda
+test_static_106.jl,tests/test_static_106.jl,teste/sonda
+test_static_107.jl,tests/test_static_107.jl,teste/sonda
+test_static_108.jl,tests/test_static_108.jl,teste/sonda
+test_static_109.jl,tests/test_static_109.jl,teste/sonda
+test_static_110.jl,tests/test_static_110.jl,teste/sonda
+test_static_111.jl,tests/test_static_111.jl,teste/sonda
+test_static_112.jl,tests/test_static_112.jl,teste/sonda
+test_static_113.jl,tests/test_static_113.jl,teste/sonda
+test_static_114.jl,tests/test_static_114.jl,teste/sonda
+test_static_115.jl,tests/test_static_115.jl,teste/sonda
+test_static_116.jl,tests/test_static_116.jl,teste/sonda
+test_tables_large.jl,tests/test_tables_large.jl,teste/sonda
+uninstall.py,tools/uninstall.py,ferramenta
+verify_benchmark_equivalence_118.jl,benchmarks/verify_benchmark_equivalence_118.jl,benchmark
+verify_cli_examples.py,tools/verify_cli_examples.py,ferramenta

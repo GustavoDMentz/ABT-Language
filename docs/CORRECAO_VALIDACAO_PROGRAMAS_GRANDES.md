@@ -8,7 +8,7 @@
 
 O orçamento de expansão agora é reiniciado em cada **expressão raiz** de um comando. As chamadas recursivas dentro da mesma expressão continuam compartilhando o contador, portanto o caso adversarial de DAG com expansão exponencial ainda é rejeitado. A passagem prévia de detecção de ciclos, o limite de aninhamento, a validação de opcodes/operandos e a análise semântica permanecem ativas. Comandos sequenciais deixam de competir por um orçamento global. A mudança não afeta parser, IR, execução, sintaxe ou semântica ABT.
 
-`test_static_116.jl` agora verifica os dois lados: um DAG compartilhado malformado continua excedendo o orçamento; 100.000 atribuições IR planas passam pela validação. O programa executável de 100.000 linhas também retornou `100000` nos dois modos de compilação.
+`tests/test_static_116.jl` agora verifica os dois lados: um DAG compartilhado malformado continua excedendo o orçamento; 100.000 atribuições IR planas passam pela validação. O programa executável de 100.000 linhas também retornou `100000` nos dois modos de compilação.
 
 ## Medições locais antes e depois
 
@@ -31,20 +31,20 @@ Os dados estruturados estão em `benchmarks/scalability/results.json` (antes) e 
 export ABT_JULIA=/caminho/para/julia-1.13.3/bin/julia
 export JULIA_DEPOT_PATH=/caminho/para/depot-julia-com-abt
 python3 benchmarks/scalability/measure_validation_fix.py
-python3 run_all_tests.py --julia "$ABT_JULIA" --timeout 180
+python3 tests/run_all_tests.py --julia "$ABT_JULIA" --timeout 180
 ```
 
 Para testes Python opcionais sem instalação Conda pela rede, esta rodada também usou `JULIA_CONDAPKG_BACKEND=Null` e `JULIA_PYTHONCALL_EXE=/usr/bin/python3`, onde PythonCall e NumPy já estavam disponíveis. O teste adversarial sem essa configuração falhou por tentativa de acesso à rede do CondaPkg; isso não é regressão da validação IR.
 
 ## Regressão final
 
-A suíte completa `run_all_tests.py` foi executada após a alteração: **38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT**. Isso inclui `test_static_116.jl`, o teste diferencial determinístico de 1.000 casos, testes de interoperabilidade, pipelines, legados e adversariais. `PROBE` identifica duas sondas exploratórias; não equivale a prova de ausência de problemas. O resumo estruturado está em `benchmarks/scalability/regression_final_summary.json`, e os logs individuais em `test_logs/`.
+A suíte completa `tests/run_all_tests.py` foi executada após a alteração: **38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT**. Isso inclui `tests/test_static_116.jl`, o teste diferencial determinístico de 1.000 casos, testes de interoperabilidade, pipelines, legados e adversariais. `PROBE` identifica duas sondas exploratórias; não equivale a prova de ausência de problemas. O resumo estruturado está em `benchmarks/scalability/regression_final_summary.json`, e os logs individuais em `logs/test_logs/`.
 
 Uma primeira rodada, sem configuração do Python local, teve 34 PASS, 3 PARTIAL, 1 FAIL e 2 PROBE. A falha ocorreu porque CondaPkg tentou obter metadados pela rede bloqueada. O resumo e o log dessa ocorrência foram preservados em `benchmarks/scalability/regression_initial_summary.json` e `regression_initial_semantic_adversarial.log`. A segunda rodada usou:
 
 ```bash
 JULIA_CONDAPKG_BACKEND=Null JULIA_PYTHONCALL_EXE=/usr/bin/python3 \
-  python3 run_all_tests.py --julia "$ABT_JULIA" --timeout 180
+  python3 tests/run_all_tests.py --julia "$ABT_JULIA" --timeout 180
 ```
 
 ## Limites remanescentes

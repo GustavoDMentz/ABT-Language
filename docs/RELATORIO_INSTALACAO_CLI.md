@@ -13,26 +13,26 @@ Ponto de entrada: `bin/abt` resolve seu próprio caminho e chama Julia para `src
 Comando executado antes das mudanças, dentro desta árvore:
 
 ```bash
-ABT_REQUIRE_PYTHON=1 JULIA_DEPOT_PATH=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot JULIA_PYTHONCALL_EXE=/usr/bin/python3 python3 run_all_tests.py --julia /home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia --timeout 180 > install_baseline.log 2>&1
+ABT_REQUIRE_PYTHON=1 JULIA_DEPOT_PATH=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot JULIA_PYTHONCALL_EXE=/usr/bin/python3 python3 tests/run_all_tests.py --julia /home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia --timeout 180 > logs/historical/install_baseline.log 2>&1
 ```
 
-Resultado: 38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT. As duas sondas são exploratórias e não equivalem a aprovação funcional. Os detalhes por suíte estão em `install_baseline.log` e `test_logs/summary.json` (o último é substituído pela execução final).
+Resultado: 38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT. As duas sondas são exploratórias e não equivalem a aprovação funcional. Os detalhes por suíte estão em `logs/historical/install_baseline.log` e `logs/test_logs/summary.json` (o último é substituído pela execução final).
 
 ## Alterações
 
 - `run`/`check`, `--version`/`--help` somados aos comandos e aliases anteriores. `doctor` verifica arquivos essenciais e Julia 1.13.3, inclusive quando Julia está ausente. Comandos reservados sem argumento retornam código 2.
-- `install.py` instala por usuário em `~/.local/share/abt`, com link `~/.local/bin/abt`, sem `sudo` ou edição de configuração do shell. A instalação guarda um manifesto de hashes; atualização e desinstalação recusam arquivos alterados, extras, ausentes ou link conflitante. A troca da árvore na atualização usa preparação em diretório temporário e restauração se a troca falhar.
-- `uninstall.py` remove apenas uma instalação verificada. A segunda desinstalação é inofensiva.
+- `tools/install.py` instala por usuário em `~/.local/share/abt`, com link `~/.local/bin/abt`, sem `sudo` ou edição de configuração do shell. A instalação guarda um manifesto de hashes; atualização e desinstalação recusam arquivos alterados, extras, ausentes ou link conflitante. A troca da árvore na atualização usa preparação em diretório temporário e restauração se a troca falhar.
+- `tools/uninstall.py` remove apenas uma instalação verificada. A segunda desinstalação é inofensiva.
 - As tarefas VS Code executam o ABT instalado e dão mensagem explícita quando falta. O suporte a `.abt` e o realce lexical existentes permanecem.
 
 ## Reprodução da validação final
 
 ```bash
-ABT_TEST_JULIA=/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia python3 test_install_cli.py > install_cli_tests.log 2>&1
-ABT_REQUIRE_PYTHON=1 JULIA_DEPOT_PATH=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot JULIA_PYTHONCALL_EXE=/usr/bin/python3 python3 run_all_tests.py --julia /home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia --timeout 180 > install_final_full.log 2>&1
+ABT_TEST_JULIA=/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia python3 tests/test_install_cli.py > logs/historical/install_cli_tests.log 2>&1
+ABT_REQUIRE_PYTHON=1 JULIA_DEPOT_PATH=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot JULIA_PYTHONCALL_EXE=/usr/bin/python3 python3 tests/run_all_tests.py --julia /home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia --timeout 180 > logs/historical/install_final_full.log 2>&1
 ```
 
-O teste de instalação usa `HOME` temporário e não altera a instalação real. Ele cobre instalação, repetição, atualização, desinstalação, conflitos de arquivo e diretório, caminhos Unicode/com espaços, execução de outro diretório, comandos, aliases, códigos de saída, Julia ausente/incompatível, tarefas VS Code e um exemplo ABT anterior. Resultado: 5 testes aprovados em `install_cli_tests.log`. Uma asserção intermediária do novo teste consultava o índice errado do array de argumentos do VS Code; foi corrigida e a suíte foi repetida integralmente.
+O teste de instalação usa `HOME` temporário e não altera a instalação real. Ele cobre instalação, repetição, atualização, desinstalação, conflitos de arquivo e diretório, caminhos Unicode/com espaços, execução de outro diretório, comandos, aliases, códigos de saída, Julia ausente/incompatível, tarefas VS Code e um exemplo ABT anterior. Resultado: 5 testes aprovados em `logs/historical/install_cli_tests.log`. Uma asserção intermediária do novo teste consultava o índice errado do array de argumentos do VS Code; foi corrigida e a suíte foi repetida integralmente.
 
 ## Limites
 
@@ -45,4 +45,4 @@ O teste de instalação usa `HOME` temporário e não altera a instalação real
 
 ## Resultado final da suíte histórica
 
-Resultado executado: 38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT. Ver `install_final_full.log` e `test_logs/summary.json` para detalhes por suíte. Nenhuma sonda exploratória é contada como teste funcional aprovado. Não houve testes históricos ignorados nesta execução com `ABT_REQUIRE_PYTHON=1`.
+Resultado executado: 38 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT. Ver `logs/historical/install_final_full.log` e `logs/test_logs/summary.json` para detalhes por suíte. Nenhuma sonda exploratória é contada como teste funcional aprovado. Não houve testes históricos ignorados nesta execução com `ABT_REQUIRE_PYTHON=1`.

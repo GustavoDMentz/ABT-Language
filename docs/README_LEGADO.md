@@ -21,8 +21,8 @@ Saída: `[30, 40]`. A gramática e os contratos de tipos, ordem, vazios e erros 
 
 ```sh
 julia pseudo.jl examples/colecoes_pipeline.abt
-python3 run_cli_examples.py --julia julia
-julia test_collections_117.jl
+python3 tools/run_cli_examples.py --julia julia
+julia tests/test_collections_117.jl
 ```
 
 ## Histórico da ponte Python (0.9.2)
@@ -34,20 +34,20 @@ A ponte é compartilhada em `bridge_runtime.jl` pelo interpretador e pelo gerado
 ## Testes
 
 ```sh
-julia test_bridge_092.jl
-julia test_python_bridge.jl
-julia test_regression_091.jl
-julia test_interop_extended.jl
-julia test_interop.jl
-julia runtests.jl
-julia break_abt.jl
+julia tests/test_bridge_092.jl
+julia tests/test_python_bridge.jl
+julia tests/test_regression_091.jl
+julia tests/test_interop_extended.jl
+julia tests/test_interop.jl
+julia tests/runtests.jl
+julia tests/break_abt.jl
 ```
 
-Para testes obrigatórios: `ABT_REQUIRE_PYTHON=1 julia test_bridge_092.jl` após instalar PythonCall e NumPy. A suíte antiga ainda pode pular testes opcionais.
+Para testes obrigatórios: `ABT_REQUIRE_PYTHON=1 julia tests/test_bridge_092.jl` após instalar PythonCall e NumPy. A suíte antiga ainda pode pular testes opcionais.
 
 ## Revisão 0.9.3
 
-Veja `STATIC_REVIEW_093.md`; execute `julia test_static_093.jl` antes das demais suítes.
+Veja `STATIC_REVIEW_093.md`; execute `julia tests/test_static_093.jl` antes das demais suítes.
 
 
 ABT 0.10.4: ver STATIC_REVIEW_104.md; testes de Julia ainda não executados.
@@ -57,4 +57,4 @@ ABT 0.10.4: ver STATIC_REVIEW_104.md; testes de Julia ainda não executados.
 
 
 ### Revisão 0.11.3
-Veja `STATIC_REVIEW_113.md` e execute `julia test_static_113.jl` para verificar o limite `initial_names`.
+Veja `STATIC_REVIEW_113.md` e execute `julia tests/test_static_113.jl` para verificar o limite `initial_names`.

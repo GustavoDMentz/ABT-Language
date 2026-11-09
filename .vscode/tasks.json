@@ -5,7 +5,7 @@
       "label": "ABT: executar arquivo atual",
       "type": "process",
       "command": "/bin/sh",
-      "args": ["-c", "if [ ! -x \"$HOME/.local/bin/abt\" ]; then echo 'ABT não instalado: execute python3 install.py' >&2; exit 2; fi; exec \"$HOME/.local/bin/abt\" run \"$1\"", "abt-task", "${file}"],
+      "args": ["-c", "if [ ! -x \"$HOME/.local/bin/abt\" ]; then echo 'ABT não instalado: execute python3 tools/install.py' >&2; exit 2; fi; exec \"$HOME/.local/bin/abt\" run \"$1\"", "abt-task", "${file}"],
       "group": "build",
       "problemMatcher": []
     },
@@ -13,7 +13,7 @@
       "label": "ABT: verificar arquivo atual",
       "type": "process",
       "command": "/bin/sh",
-      "args": ["-c", "if [ ! -x \"$HOME/.local/bin/abt\" ]; then echo 'ABT não instalado: execute python3 install.py' >&2; exit 2; fi; exec \"$HOME/.local/bin/abt\" check \"$1\"", "abt-task", "${file}"],
+      "args": ["-c", "if [ ! -x \"$HOME/.local/bin/abt\" ]; then echo 'ABT não instalado: execute python3 tools/install.py' >&2; exit 2; fi; exec \"$HOME/.local/bin/abt\" check \"$1\"", "abt-task", "${file}"],
       "problemMatcher": []
     }
   ]

@@ -1,0 +1,15 @@
+failed = 0
+executed = 1000
+passed = 1000
+failures = []
+seed = 11235606
+julia_version = "1.13.3"
+
+[categories]
+julia_interop = 50
+loop_scope = 150
+unicode_names = 100
+aggregate = 150
+arithmetic = 250
+branch_logic = 150
+functions = 150

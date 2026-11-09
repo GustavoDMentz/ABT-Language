@@ -9,11 +9,11 @@ Instale Julia 1.13.3 e deixe `julia` no `PATH` ou defina `ABT_JULIA` com o camin
 Na pasta extraída do projeto, execute:
 
 ```bash
-python3 install.py
+python3 tools/install.py
 abt doctor
 ```
 
-O instalador coloca os arquivos em `~/.local/share/abt`, cria `~/.local/bin/abt` e pré-compila o módulo ABT no cache local de Julia. Essa etapa pode levar alguns segundos, mas evita pagar o custo de compilação na primeira execução. Se `~/.local/bin` não estiver no `PATH`, o instalador informa como resolver; não altera arquivos de configuração do shell. Funciona de qualquer diretório e pode ser executado novamente para atualizar. Recusa instalações conflitantes e modificações locais nos arquivos instalados. Para desinstalar, execute `python3 uninstall.py` a partir de uma cópia do projeto. A instalação não exige `sudo` nem a pasta de extração depois de concluída.
+O instalador coloca os arquivos em `~/.local/share/abt`, cria `~/.local/bin/abt` e pré-compila o módulo ABT no cache local de Julia. Essa etapa pode levar alguns segundos, mas evita pagar o custo de compilação na primeira execução. Se `~/.local/bin` não estiver no `PATH`, o instalador informa como resolver; não altera arquivos de configuração do shell. Funciona de qualquer diretório e pode ser executado novamente para atualizar. Recusa instalações conflitantes e modificações locais nos arquivos instalados. Para desinstalar, execute `python3 tools/uninstall.py` a partir de uma cópia do projeto. A instalação não exige `sudo` nem a pasta de extração depois de concluída.
 
 Crie e execute um primeiro programa:
 
@@ -71,15 +71,19 @@ O módulo público está em `src/ABT.jl`; a CLI está em `src/CLI.jl`; o runtime
 Para rodar todos os testes históricos e os novos testes de CLI:
 
 ```bash
-python3 run_all_tests.py --julia julia --timeout 180
+python3 tests/run_all_tests.py --julia julia --timeout 180
 ```
 
 Defina `ABT_REQUIRE_PYTHON=1` e configure PythonCall/NumPy se quiser exigir a execução dos testes Python opcionais.
 
-Para testar instalação e CLI em diretórios temporários, execute `ABT_TEST_JULIA=/caminho/para/julia python3 test_install_cli.py`.
+Para testar instalação e CLI em diretórios temporários, execute `ABT_TEST_JULIA=/caminho/para/julia python3 tests/test_install_cli.py`.
 
 ### Lote científico ABT 0.11.8
 
 Operadores unários e exponenciação, operações de dados/estatística/visualização/bioinformática e três aplicações completas: [contratos e execução](docs/LOTE_CIENTIFICO_0118.md).
 
 Resultados, limitações e medições do lote: [relatório consolidado](docs/RELATORIO_LOTE_0118.md).
+
+## Organização do repositório
+
+Testes ficam em `tests/`, medições em `benchmarks/`, ferramentas em `tools/` e evidências de execução em `logs/`. O histórico e a validação da mudança estão em [docs/REORGANIZACAO_REPOSITORIO.md](docs/REORGANIZACAO_REPOSITORIO.md).

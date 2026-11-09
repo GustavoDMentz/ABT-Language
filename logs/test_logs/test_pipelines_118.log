@@ -1,0 +1,6 @@
+Test Summary:                    | Pass  Total  Time
+ABT 0.11.8 pipeline differential |    9      9  8.1s
+Test Summary:                   | Pass  Total  Time
+ABT 0.11.8 pipeline diagnostics |    7      7  0.0s
+Test Summary:               | Pass  Total   Time
+ABT 0.11.8 seeded pipelines |  100    100  42.9s

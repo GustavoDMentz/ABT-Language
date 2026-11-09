@@ -52,14 +52,14 @@ export ABT_JULIA=/caminho/julia-1.13.3/bin/julia
 "$ABT_JULIA" --project=. -e 'import Pkg; Pkg.instantiate()'
 bin/abt run applications/data/vendas_por_regiao_json.abt
 bin/abt run applications/data/qualidade_lotes_json.abt
-python3 test_extensions.py --julia "$ABT_JULIA"
-python3 benchmark_extensions.py --julia "$ABT_JULIA" --repetitions 5
-python3 run_all_tests.py --julia "$ABT_JULIA"
+python3 tests/test_extensions.py --julia "$ABT_JULIA"
+python3 benchmarks/benchmark_extensions.py --julia "$ABT_JULIA" --repetitions 5
+python3 tests/run_all_tests.py --julia "$ABT_JULIA"
 ```
 
-`test_extensions.py` guarda comandos, programas gerados de casos de teste, saídas e erros de cada backend em `test_logs/extensions_results.json`. `benchmark_extensions.py` guarda medições por processo e resumos em `test_logs/extensions_benchmark.json`; usa `/usr/bin/time -v`. `run_all_tests.py` registra a regressão em `test_logs/`.
+`tests/test_extensions.py` guarda comandos, programas gerados de casos de teste, saídas e erros de cada backend em `logs/test_logs/extensions_results.json`. `benchmarks/benchmark_extensions.py` guarda medições por processo e resumos em `logs/test_logs/extensions_benchmark.json`; usa `/usr/bin/time -v`. `tests/run_all_tests.py` registra a regressão em `logs/test_logs/`.
 
-Para repetir um caso individual com a mesma entrada determinística, use `python3 test_extensions.py --julia "$ABT_JULIA" --case overflow --output test_logs/overflow_repetido.json`. Os caminhos temporários dos arquivos gerados em uma execução não persistem; o script reconstrói os casos e o JSON de resultados preserva o fonte ABT de cada um.
+Para repetir um caso individual com a mesma entrada determinística, use `python3 tests/test_extensions.py --julia "$ABT_JULIA" --case overflow --output logs/test_logs/overflow_repetido.json`. Os caminhos temporários dos arquivos gerados em uma execução não persistem; o script reconstrói os casos e o JSON de resultados preserva o fonte ABT de cada um.
 
 ## Limites e roadmap
 

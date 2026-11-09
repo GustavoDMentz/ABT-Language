@@ -1,0 +1,33 @@
+{
+  "historical": {
+    "total": 43,
+    "statuses": {
+      "PASS": 41,
+      "PROBE": 2,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TIMEOUT": 0
+    }
+  },
+  "stress": {
+    "executed": 10000,
+    "failures": 0
+  },
+  "invalid": {
+    "executed": 1000,
+    "rejected": 1000,
+    "accepted": 0
+  },
+  "metamorphic": {
+    "executed": 601,
+    "failures": 0
+  },
+  "adversarial": {
+    "executed": 14,
+    "statuses": {
+      "PASS": 14,
+      "FINDING": 0,
+      "TIMEOUT": 0
+    }
+  }
+}

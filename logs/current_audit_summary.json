@@ -1,0 +1,153 @@
+{
+  "historical": {
+    "total": 43,
+    "statuses": {
+      "PASS": 41,
+      "PROBE": 2,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TIMEOUT": 0
+    }
+  },
+  "stress": {
+    "chunks": [
+      {
+        "file": "stress_summary_1001_2000.toml",
+        "seconds": 42.28,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "function": 1000
+        }
+      },
+      {
+        "file": "stress_summary_1_1000.toml",
+        "seconds": 30.02,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "arithmetic": 1000
+        }
+      },
+      {
+        "file": "stress_summary_2001_3000.toml",
+        "seconds": 30.02,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "branch": 1000
+        }
+      },
+      {
+        "file": "stress_summary_3001_4000.toml",
+        "seconds": 60.72,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "loop": 1000
+        }
+      },
+      {
+        "file": "stress_summary_4001_5000.toml",
+        "seconds": 142.34,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "collection": 1000
+        }
+      },
+      {
+        "file": "stress_summary_5001_6000.toml",
+        "seconds": 228.38,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "pipeline": 1000
+        }
+      },
+      {
+        "file": "stress_summary_6001_7000.toml",
+        "seconds": 175.34,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "aggregate": 1000
+        }
+      },
+      {
+        "file": "stress_summary_7001_8000.toml",
+        "seconds": 42.85,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "nested_scope": 1000
+        }
+      },
+      {
+        "file": "stress_summary_8001_9000.toml",
+        "seconds": 30.75,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "boolean": 1000
+        }
+      },
+      {
+        "file": "stress_summary_9001_10000.toml",
+        "seconds": 46.0,
+        "executed": 1000,
+        "failures": 0,
+        "seed": "179769742",
+        "categories": {
+          "julia_bridge": 1000
+        }
+      }
+    ],
+    "executed": 10000,
+    "failures": 0
+  },
+  "invalid": {
+    "rejected": 1000,
+    "accepted": 0,
+    "executed": 1000,
+    "seed": "12243224",
+    "categories": {
+      "missing_terminal": 125,
+      "unclosed_block": 125,
+      "bad_character": 125,
+      "tab_indent": 125,
+      "trailing_terminal": 125,
+      "unknown_step": 125,
+      "missing_delimiter": 125,
+      "indent": 125
+    }
+  },
+  "metamorphic": {
+    "executed": 601,
+    "failures": 0,
+    "seed": "179806488",
+    "categories": {
+      "filter_true": 200,
+      "limit_size": 200,
+      "identity": 200,
+      "single_evaluation": 1
+    }
+  },
+  "adversarial": {
+    "executed": 14,
+    "statuses": {
+      "PASS": 14,
+      "FINDING": 0,
+      "TIMEOUT": 0
+    }
+  }
+}

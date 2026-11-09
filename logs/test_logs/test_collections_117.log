@@ -1,0 +1,6 @@
+Test Summary:                       | Pass  Total   Time
+ABT 0.11.7 collections differential |   30     30  11.3s
+Test Summary:                        | Pass  Total     Time
+ABT 0.11.7 deterministic composition |  300    300  1m27.9s
+Test Summary:        | Pass  Total  Time
+ABT 0.11.7 contracts |    5      5  0.1s

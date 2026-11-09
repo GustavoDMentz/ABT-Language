@@ -8,7 +8,7 @@ Esta entrega é um CLI com Julia instalada separadamente. Não contém um runtim
 
 No ambiente de desenvolvimento, a instalação Julia 1.13.3 ocupa cerca de **1,1 GiB** em disco (`du -sh` da árvore Julia), e a árvore do projeto ocupa cerca de **1,7 MiB**. Esses números não são o tamanho mínimo de uma distribuição ABT: a instalação Julia inclui componentes que uma imagem reduzida talvez não precise.
 
-Cinco processos independentes por comando, medidos com `/usr/bin/time` no Ubuntu local, deram as seguintes medianas de tempo total e pico de RSS (`distribution_measurements.json`):
+Cinco processos independentes por comando, medidos com `/usr/bin/time` no Ubuntu local, deram as seguintes medianas de tempo total e pico de RSS (`benchmarks/results/distribution_measurements.json`):
 
 | Comando | Tempo total | Pico de RSS |
 |---|---:|---:|
@@ -16,7 +16,7 @@ Cinco processos independentes por comando, medidos com `/usr/bin/time` no Ubuntu
 | `abt verificar` no exemplo básico | 5,21 s | 364 MiB |
 | `abt executar` no exemplo básico | 5,41 s | 365 MiB |
 
-A primeira implementação carregava o compilador antes de `--versao`; sua mediana era 3,76 s e 360 MiB (`distribution_measurements_before.json`). O comando informativo agora responde antes de carregar o compilador. Execução e verificação continuam incluindo inicialização e JIT do Julia. Estas medições não são uma comparação de desempenho entre plataformas nem uma promessa para um pacote autossuficiente; devem ser repetidas no artefato de distribuição final.
+A primeira implementação carregava o compilador antes de `--versao`; sua mediana era 3,76 s e 360 MiB (`benchmarks/results/distribution_measurements_before.json`). O comando informativo agora responde antes de carregar o compilador. Execução e verificação continuam incluindo inicialização e JIT do Julia. Estas medições não são uma comparação de desempenho entre plataformas nem uma promessa para um pacote autossuficiente; devem ser repetidas no artefato de distribuição final.
 
 ## Opções a avaliar
 

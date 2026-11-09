@@ -6,24 +6,24 @@ Ambiente: Ubuntu/Linux x86-64, Julia 1.13.3, projeto ABT local. PythonCall foi e
 
 | Suíte | Resultado efetivo | Evidência |
 |---|---:|---|
-| Extensões modulares: dois aplicativos, válidos, inválidos, sombreamento, tipo estático, três backends | 51 PASS, 0 FAIL | `test_logs/modular_results.json`, `test_logs/modular_execution.log` |
-| Registro: catálogo, integridade dos metadados, carregamento tardio e inclusão seletiva no gerador | 9 PASS, 0 FAIL | `test_logs/modular_registry.log` |
-| Regressão histórica completa | 41 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT | `test_logs/summary.json`, `test_logs/modular_historical.log` |
-| Suíte anterior de agrupamento e JSON | 45 PASS, 0 FAIL | `test_logs/extensions_results.json`, `test_logs/modular_prior_extensions.log` |
-| Aplicações existentes | 112 PASS, 0 FAIL, 0 TIMEOUT | `applications/test_results.json`, `test_logs/modular_applications.log` |
-| Instalador e CLI instalada, incluindo atualização de marcador antigo | 9 PASS, 0 FAIL | `test_logs/modular_install_cli.log` |
+| Extensões modulares: dois aplicativos, válidos, inválidos, sombreamento, tipo estático, três backends | 51 PASS, 0 FAIL | `logs/test_logs/modular_results.json`, `logs/test_logs/modular_execution.log` |
+| Registro: catálogo, integridade dos metadados, carregamento tardio e inclusão seletiva no gerador | 9 PASS, 0 FAIL | `logs/test_logs/modular_registry.log` |
+| Regressão histórica completa | 41 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT | `logs/test_logs/summary.json`, `logs/test_logs/modular_historical.log` |
+| Suíte anterior de agrupamento e JSON | 45 PASS, 0 FAIL | `logs/test_logs/extensions_results.json`, `logs/test_logs/modular_prior_extensions.log` |
+| Aplicações existentes | 112 PASS, 0 FAIL, 0 TIMEOUT | `applications/test_results.json`, `logs/test_logs/modular_applications.log` |
+| Instalador e CLI instalada, incluindo atualização de marcador antigo | 9 PASS, 0 FAIL | `logs/test_logs/modular_install_cli.log` |
 
-As duas sondas históricas mantêm status `PROBE`: são exploratórias, não aprovação da ausência de problemas. Na suíte modular, a mesma aplicação foi executada pelo interpretador e por Julia gerada com e sem otimização. JSON válido foi comparado por todos os campos e a saída literal foi comparada entre os três modos. Erros foram conferidos pela categoria/causa diagnóstica esperada. `test_extension_registry.jl` verificou que análise semântica e geração de um programa não carregam StatsBase.jl, e que um programa simples não inclui a implementação da extensão no código gerado.
+As duas sondas históricas mantêm status `PROBE`: são exploratórias, não aprovação da ausência de problemas. Na suíte modular, a mesma aplicação foi executada pelo interpretador e por Julia gerada com e sem otimização. JSON válido foi comparado por todos os campos e a saída literal foi comparada entre os três modos. Erros foram conferidos pela categoria/causa diagnóstica esperada. `tests/test_extension_registry.jl` verificou que análise semântica e geração de um programa não carregam StatsBase.jl, e que um programa simples não inclui a implementação da extensão no código gerado.
 
 O primeiro teste de ausência da coluna de grupo usou um arquivo CSV com linha inteiramente em branco, que CSV.jl ignora. O fixture foi corrigido para ter duas colunas e uma célula de grupo vazia; os três modos passaram. Foi uma correção do teste, não uma alteração semântica do ABT.
 
 ## Disponibilidade e instalação
 
-StatsBase.jl 0.34.13 foi selecionada a partir do registro General local e de sua [documentação oficial](https://juliastats.org/StatsBase.jl/latest/). A primeira tentativa de instalação no sandbox falhou por resolução DNS de `pkg.julialang.org`/GitHub; o log está em `test_logs/modular_install_first_attempt.log`. A instalação autorizada com acesso externo concluiu: StatsBase.jl 0.34.13 e suas dependências necessárias foram instaladas e 13 dependências pré-compiladas em 9 s, com 7 já pré-compiladas. A segunda integração, LinearAlgebra, já fazia parte da biblioteca padrão e do projeto; nenhuma instalação adicional foi necessária. Fontes e caches dos pacotes novos de StatsBase ocupam aproximadamente 14 MiB neste depot local. É espaço em disco, não RSS. Tempo de download numa instalação limpa não foi medido.
+StatsBase.jl 0.34.13 foi selecionada a partir do registro General local e de sua [documentação oficial](https://juliastats.org/StatsBase.jl/latest/). A primeira tentativa de instalação no sandbox falhou por resolução DNS de `pkg.julialang.org`/GitHub; o log está em `logs/test_logs/modular_install_first_attempt.log`. A instalação autorizada com acesso externo concluiu: StatsBase.jl 0.34.13 e suas dependências necessárias foram instaladas e 13 dependências pré-compiladas em 9 s, com 7 já pré-compiladas. A segunda integração, LinearAlgebra, já fazia parte da biblioteca padrão e do projeto; nenhuma instalação adicional foi necessária. Fontes e caches dos pacotes novos de StatsBase ocupam aproximadamente 14 MiB neste depot local. É espaço em disco, não RSS. Tempo de download numa instalação limpa não foi medido.
 
 ## Benchmark
 
-`benchmark_modular_extensions.py` executa cada cenário em processo independente, cinco vezes, com `/usr/bin/time -v` e `--compile=min`. Os cenários são Julia mínima, ABT mínimo, extensão StatsBase com CSV, extensão LinearAlgebra isolada, ambas combinadas e as duas aplicações finais com JSON. O arquivo `test_logs/modular_benchmark.json` preserva comandos, fontes de benchmark, tempos de parede/CPU e pico de RSS por repetição. Os cenários de StatsBase incluem a leitura CSV porque sua entrada pública é uma tabela ABT; sua diferença de RSS não pode ser atribuída exclusivamente ao pacote.
+`benchmarks/benchmark_modular_extensions.py` executa cada cenário em processo independente, cinco vezes, com `/usr/bin/time -v` e `--compile=min`. Os cenários são Julia mínima, ABT mínimo, extensão StatsBase com CSV, extensão LinearAlgebra isolada, ambas combinadas e as duas aplicações finais com JSON. O arquivo `logs/test_logs/modular_benchmark.json` preserva comandos, fontes de benchmark, tempos de parede/CPU e pico de RSS por repetição. Os cenários de StatsBase incluem a leitura CSV porque sua entrada pública é uma tabela ABT; sua diferença de RSS não pode ser atribuída exclusivamente ao pacote.
 
 | Cenário | Parede, mediana s (mín–máx) | CPU usuário s | CPU sistema s | Pico RSS, mediana KiB (mín–máx) |
 |---|---:|---:|---:|---:|
@@ -45,14 +45,14 @@ export ABT_JULIA=/caminho/julia-1.13.3/bin/julia
 bin/abt operacoes
 bin/abt run applications/data/distribuicao_vendas.abt
 bin/abt run applications/engineering/rede_condutancias.abt
-python3 test_modular_extensions.py --julia "$ABT_JULIA"
-"$ABT_JULIA" --startup-file=no --project=. test_extension_registry.jl
-python3 benchmark_modular_extensions.py --julia "$ABT_JULIA" --repetitions 5
-python3 test_extensions.py --julia "$ABT_JULIA"
-python3 test_applications.py --julia "$ABT_JULIA"
-python3 run_all_tests.py --julia "$ABT_JULIA"
+python3 tests/test_modular_extensions.py --julia "$ABT_JULIA"
+"$ABT_JULIA" --startup-file=no --project=. tests/test_extension_registry.jl
+python3 benchmarks/benchmark_modular_extensions.py --julia "$ABT_JULIA" --repetitions 5
+python3 tests/test_extensions.py --julia "$ABT_JULIA"
+python3 tests/test_applications.py --julia "$ABT_JULIA"
+python3 tests/run_all_tests.py --julia "$ABT_JULIA"
 ```
 
-Um caso diferencial pode ser repetido com `python3 test_modular_extensions.py --julia "$ABT_JULIA" --case matriz_nao_positiva`. O script reconstrói os arquivos temporários; o resultado estruturado registra o fonte ABT e os comandos de cada backend.
+Um caso diferencial pode ser repetido com `python3 tests/test_modular_extensions.py --julia "$ABT_JULIA" --case matriz_nao_positiva`. O script reconstrói os arquivos temporários; o resultado estruturado registra o fonte ABT e os comandos de cada backend.
 
 O contrato de `resolver_sistema_spd` exige Float64 e matriz definida positiva. A representação dos números negativos na aplicação usa `0.0 - 1.0`, pois o parser ABT atual não aceita um sinal unário negativo nesse contexto; a sintaxe da linguagem não foi alterada nesta missão.

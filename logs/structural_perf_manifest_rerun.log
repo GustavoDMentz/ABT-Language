@@ -1,0 +1,6 @@
+test_package_manifest_invalidates_precompile_cache (__main__.CompileModeSemantics.test_package_manifest_invalidates_precompile_cache) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.925s
+
+OK
