@@ -1,0 +1,97 @@
+name: ABT documentation
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'tools/validate_docs.py'
+      - 'tools/generate_docs_reference.py'
+      - 'src/**'
+      - 'applications/**'
+      - 'examples/**'
+      - 'bin/**'
+      - 'vscode/**'
+      - 'Project.toml'
+      - 'Manifest.toml'
+      - 'ABT.packages.toml'
+      - '.github/workflows/documentation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'tools/validate_docs.py'
+      - 'tools/generate_docs_reference.py'
+      - 'src/**'
+      - 'applications/**'
+      - 'examples/**'
+      - 'bin/**'
+      - 'vscode/**'
+      - 'Project.toml'
+      - 'Manifest.toml'
+      - 'ABT.packages.toml'
+      - '.github/workflows/documentation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: julia-actions/setup-julia@v2
+        with:
+          version: '1.13.3'
+      - uses: julia-actions/cache@v2
+      - name: Install ABT dependencies
+        run: julia --project=. -e 'import Pkg; Pkg.instantiate()'
+      - name: Install documentation dependencies
+        run: julia --project=docs -e 'import Pkg; Pkg.instantiate()'
+      - name: Install optional PythonCall for documentation tests
+        env:
+          JULIA_CONDAPKG_BACKEND: Null
+          JULIA_PYTHONCALL_EXE: /usr/bin/python3
+        run: julia --project=. -e 'import Pkg; Pkg.add(Pkg.PackageSpec(name="PythonCall", version="0.9.37"))'
+      - name: Validate catalog, links, CLI and examples
+        env:
+          ABT_JULIA: julia
+          XDG_CACHE_HOME: ${{ runner.temp }}/abt-cache
+          JULIA_CONDAPKG_BACKEND: Null
+          JULIA_PYTHONCALL_EXE: /usr/bin/python3
+        run: python3 tools/validate_docs.py
+      - name: Build site
+        run: julia --project=docs docs/make.jl
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref == 'refs/heads/main' && 'github-pages' || 'documentation-pr' }}
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Download and verify Pages artifact on PR
+        if: github.ref != 'refs/heads/main'
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: pages-artifact
+      - name: Check Pages contents on PR
+        if: github.ref != 'refs/heads/main'
+        run: |
+          test -s pages-artifact/artifact.tar
+          tar -tf pages-artifact/artifact.tar | grep -Eq '(^|/)index\.html$'
+          tar -tf pages-artifact/artifact.tar | grep -Eq '(^|/)search_index\.js$'
+      - id: deployment
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/deploy-pages@v4

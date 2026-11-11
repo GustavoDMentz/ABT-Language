@@ -1,0 +1,10 @@
+/* ABT source highlighting works in light and dark Documenter themes. */
+pre code.language-abt { border-left: 3px solid #6a5acd; }
+.abt-keyword { color: #7443a9; font-weight: 600; }
+.abt-string { color: #167643; }
+.abt-number { color: #b45721; }
+.abt-comment { color: #667588; font-style: italic; }
+html.theme--documenter-dark .abt-keyword { color: #c4a5ff; }
+html.theme--documenter-dark .abt-string { color: #8bd6a5; }
+html.theme--documenter-dark .abt-number { color: #f4b17e; }
+html.theme--documenter-dark .abt-comment { color: #a8b4c5; }

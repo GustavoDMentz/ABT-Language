@@ -1,0 +1,9 @@
+arquivo = "applications/data/sample.csv"
+tipos = esquema("nome", "texto", "grupo", "texto", "valor", "real")
+dados = ler_csv(arquivo, tipos, "erro")
+mostrar coluna(dados, "nome")
+mostrar linhas_tabela(dados)
+selecionados = filtrar_tabela(dados, "valor", ">", 10.0)
+mostrar resumir_coluna(selecionados, "valor")
+alterados = transformar_tabela(dados, "valor", "dobro", "*", 2.0, "real")
+mostrar coluna(alterados, "dobro")

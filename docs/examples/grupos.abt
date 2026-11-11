@@ -1,0 +1,3 @@
+dados = ler_csv("applications/biostatistics/ensaio.csv", esquema("grupo", "texto", "biomarcador", "real"), "erro")
+grupos = agrupar_dados(dados, "grupo", "biomarcador", "erro")
+mostrar testar_grupos(grupos, "controle", "tratamento", "welch")

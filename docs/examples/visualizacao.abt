@@ -1,0 +1,3 @@
+dados = ler_csv("applications/science/experimento.csv", esquema("tratamento", "texto", "resposta", "real", "tempo", "inteiro"), "erro")
+figura = grafico(dados, "tempo", "resposta", "linha")
+mostrar salvar_figura(figura, ambiente("ABT_DOC_FIGURE_PATH", "/tmp/abt-doc-figura.png"))
