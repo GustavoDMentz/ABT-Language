@@ -67,20 +67,31 @@ jobs:
       - name: Build site
         run: julia --project=docs docs/make.jl
       - uses: actions/upload-pages-artifact@v3
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:
           path: docs/build
 
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: ${{ github.event_name == 'pull_request' && 'documentation-pr' || 'github-pages' }}
       url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       pages: write
       id-token: write
     steps:
+      - name: Download and verify Pages artifact on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: pages-artifact
+      - name: Check Pages contents on PR
+        if: github.event_name == 'pull_request'
+        run: |
+          test -s pages-artifact/artifact.tar
+          tar -tf pages-artifact/artifact.tar | grep -Eq '(^|/)index\.html$'
+          tar -tf pages-artifact/artifact.tar | grep -Eq '(^|/)search_index\.js$'
       - id: deployment
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/deploy-pages@v4
