@@ -1,0 +1,10 @@
+PASS estatistica_amostra interpretador
+PASS estatistica_amostra julia_sem_otimizacao
+PASS estatistica_amostra julia_otimizada
+PASS csv_amostra interpretador
+PASS csv_amostra julia_sem_otimizacao
+PASS csv_amostra julia_otimizada
+PASS dna_amostra interpretador
+PASS dna_amostra julia_sem_otimizacao
+PASS dna_amostra julia_otimizada
+Resumo: {'PASS': 9, 'FAIL': 0, 'TIMEOUT': 0}

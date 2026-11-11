@@ -1,0 +1,17 @@
+PASS resumo
+PASS intervalo
+PASS correlacao
+PASS teste_t
+PASS nao_parametrico
+PASS normalidade
+PASS proporcoes
+PASS distribuicao
+PASS quantil
+PASS ausente
+PASS constante
+PASS contagens
+PASS colinear
+PASS ensaio_clinico
+PASS correlacao_biomedica
+PASS regressao_clinica
+Resumo: {'PASS': 16, 'FAIL': 0}

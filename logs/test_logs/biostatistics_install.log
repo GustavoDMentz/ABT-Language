@@ -1,0 +1,15 @@
+test_conflicts_preserved (__main__.InstalledCLI.test_conflicts_preserved) ... ok
+test_install_reinstall_update_and_uninstall (__main__.InstalledCLI.test_install_reinstall_update_and_uninstall) ... ok
+test_install_rejects_missing_julia_without_artifacts (__main__.InstalledCLI.test_install_rejects_missing_julia_without_artifacts) ... ok
+test_install_rolls_back_when_precompile_fails (__main__.InstalledCLI.test_install_rolls_back_when_precompile_fails) ... ok
+test_installed_commands_unicode_paths_and_errors (__main__.InstalledCLI.test_installed_commands_unicode_paths_and_errors) ... ok
+test_legacy_marker_can_be_upgraded (__main__.InstalledCLI.test_legacy_marker_can_be_upgraded) ... ok
+test_missing_and_incompatible_julia (__main__.InstalledCLI.test_missing_and_incompatible_julia) ... ok
+test_previous_version_marker_can_be_upgraded (__main__.InstalledCLI.test_previous_version_marker_can_be_upgraded) ... ok
+test_update_refreshes_package_manifest_cache (__main__.InstalledCLI.test_update_refreshes_package_manifest_cache) ... ok
+test_vscode_tasks_use_installed_command (__main__.InstalledCLI.test_vscode_tasks_use_installed_command) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 28.407s
+
+OK
