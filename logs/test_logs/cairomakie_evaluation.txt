@@ -1,7 +1,7 @@
 Exploratory evaluation, not a passed test.
 Package: CairoMakie.jl 0.15.17; initially installed as direct dependency.
 Command (minimal compilation):
-  JULIA_DEPOT_PATH=/tmp/abt-tabular-depot:/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot JULIA_PKG_PRECOMPILE_AUTO=0 julia --project=. --startup-file=no --compile=min --compiled-modules=existing src/CLI.jl applications/science/visualizacao.abt
+  JULIA_DEPOT_PATH=/tmp/abt-tabular-depot:<JULIA_DEPOT> JULIA_PKG_PRECOMPILE_AUTO=0 julia --project=. --startup-file=no --compile=min --compiled-modules=existing src/CLI.jl applications/science/visualizacao.abt
 Result: exit 1. ABT extensão CairoMakie indisponível: LoadError: UndefVarError: `ComputePipeline` not defined in `Makie`; binding may be too new (world age 39802 versus 53525).
 Command (full compilation):
   JULIA_DEPOT_PATH=... JULIA_PKG_PRECOMPILE_AUTO=0 julia --project=. --startup-file=no --compile=all src/CLI.jl applications/science/visualizacao.abt

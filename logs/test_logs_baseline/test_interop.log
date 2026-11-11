@@ -1,5 +1,5 @@
 
-ABT 0.8 — interoperabilidade Julia Statistics: Error During Test at /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_interop.jl:5
+ABT 0.8 — interoperabilidade Julia Statistics: Error During Test at <ABT_LEGACY_WORKTREE>/test_interop.jl:5
   Got exception outside of a @test
   Semantic error: Julia references require module and function
   Stacktrace:
@@ -33,4 +33,4 @@ Test Summary:                                 | Error  Total  Time
 ABT 0.8 — interoperabilidade Julia Statistics |     1      1  4.1s
 RNG of the outermost testset: Random.Xoshiro(0xdaf35d1d882d2f87, 0x3db7927a89387be7, 0x9c006d9581676faa, 0xbbcd672c19a9335f, 0xc2ba0aad5e7c3927)
 ERROR: LoadError: Some tests did not pass: 0 passed, 0 failed, 1 errored, 0 broken.
-in expression starting at /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_interop.jl:5
+in expression starting at <ABT_LEGACY_WORKTREE>/test_interop.jl:5

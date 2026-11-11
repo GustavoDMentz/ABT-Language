@@ -8,9 +8,9 @@ Julia 1.13.3, PythonCall 0.9.37 e NumPy 2.5.1. A execução final de `tests/run_
 
 ## Ambiente e comandos
 
-O launcher `~/.juliaup/bin/julia` não conseguiu criar seu lockfile neste ambiente. Foi usado diretamente `/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia`. `Statistics` e `LinearAlgebra` vêm da biblioteca padrão. Somente `PythonCall` foi instalado como pacote Julia adicional, em `.julia_depot/` isolado. PythonCall usou `/usr/bin/python3`, onde NumPy já estava disponível.
+O launcher `~/.juliaup/bin/julia` não conseguiu criar seu lockfile neste ambiente. Foi usado diretamente `<JULIA_BIN>`. `Statistics` e `LinearAlgebra` vêm da biblioteca padrão. Somente `PythonCall` foi instalado como pacote Julia adicional, em `.julia_depot/` isolado. PythonCall usou `/usr/bin/python3`, onde NumPy já estava disponível.
 
-Instalação: `JULIA_DEPOT_PATH=$PWD/.julia_depot /home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia --startup-file=no -e 'using Pkg; Pkg.add("PythonCall")'`
+Instalação: `JULIA_DEPOT_PATH=$PWD/.julia_depot <JULIA_BIN> --startup-file=no -e 'using Pkg; Pkg.add("PythonCall")'`
 
 Execução final, a partir desta pasta:
 
@@ -19,7 +19,7 @@ ABT_REQUIRE_PYTHON=1 \
 JULIA_DEPOT_PATH="$PWD/.julia_depot" \
 JULIA_PYTHONCALL_EXE=/usr/bin/python3 \
 python3 tests/run_all_tests.py \
-  --julia /home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia \
+  --julia <JULIA_BIN> \
   --timeout 180
 ```
 

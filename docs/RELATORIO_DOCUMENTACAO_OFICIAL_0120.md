@@ -12,7 +12,7 @@ Documentação anterior em `docs/` foi preservada. A nova documentação usa `do
 
 Documenter.jl 1.20.0, em `docs/Project.toml` e `docs/Manifest.toml`, gera HTML estático com navegação hierárquica, busca, índices, tema claro/escuro, layout responsivo e realce ABT local. A dependência não entra em `Project.toml` da linguagem. O workflow `.github/workflows/documentation.yml` valida catálogo, links, CLI e exemplos, compila o site em PRs e publica somente em push à `main`, com permissões de Pages limitadas ao job de publicação. A publicação usa artifact de Pages, sem alterar a configuração do repositório.
 
-GitHub Pages foi ativado com fonte **GitHub Actions**. O endereço configurado é `https://gustavodmentz.github.io/ABT-Language/`; a disponibilidade pública depende do primeiro deploy bem-sucedido na `main`. Na PR, os jobs `build` e `deploy` devem aprovar: o segundo baixa e inspeciona o artifact de Pages. A publicação real é executada pelo mesmo job somente após integração na `main`. PythonCall é instalado somente no job de validação.
+GitHub Pages foi ativado com fonte **GitHub Actions**. O endereço `https://gustavodmentz.github.io/ABT-Language/` respondeu com HTTP 200 após o deploy da `main`. Na PR, os jobs `build` e `deploy` devem aprovar: o segundo baixa e inspeciona o artifact de Pages. A publicação real é executada pelo mesmo job somente após integração na `main`. PythonCall é instalado somente no job de validação.
 
 ## Validação reproduzível
 

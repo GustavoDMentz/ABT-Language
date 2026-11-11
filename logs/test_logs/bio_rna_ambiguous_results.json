@@ -7,7 +7,7 @@
     "stdout": "(sequencias = 1, bases = 5, A = 1, C = 1, G = 1, U = 1, N = 1, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-_5lxgia5/rna_ambiguo.abt"
     ]
@@ -20,9 +20,9 @@
     "stdout": "(sequencias = 1, bases = 5, A = 1, C = 1, G = 1, U = 1, N = 1, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-_5lxgia5/rna_ambiguo_gerado_sem_otimizacao.jl"
     ]
   },
@@ -34,9 +34,9 @@
     "stdout": "(sequencias = 1, bases = 5, A = 1, C = 1, G = 1, U = 1, N = 1, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-_5lxgia5/rna_ambiguo_gerado_otimizado.jl"
     ]
   }

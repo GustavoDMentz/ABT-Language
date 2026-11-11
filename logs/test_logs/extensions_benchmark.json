@@ -5,10 +5,10 @@
       "scenario": "julia_minima",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -23,10 +23,10 @@
       "scenario": "julia_minima",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -41,10 +41,10 @@
       "scenario": "julia_minima",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -59,10 +59,10 @@
       "scenario": "julia_minima",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -77,10 +77,10 @@
       "scenario": "julia_minima",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -95,10 +95,10 @@
       "scenario": "julia_json",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "import JSON"
       ],
@@ -113,10 +113,10 @@
       "scenario": "julia_json",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "import JSON"
       ],
@@ -131,10 +131,10 @@
       "scenario": "julia_json",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "import JSON"
       ],
@@ -149,10 +149,10 @@
       "scenario": "julia_json",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "import JSON"
       ],
@@ -167,10 +167,10 @@
       "scenario": "julia_json",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "import JSON"
       ],
@@ -185,10 +185,10 @@
       "scenario": "abt_carregamento",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "include(\"src/ABT.jl\")"
       ],
@@ -203,10 +203,10 @@
       "scenario": "abt_carregamento",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "include(\"src/ABT.jl\")"
       ],
@@ -221,10 +221,10 @@
       "scenario": "abt_carregamento",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "include(\"src/ABT.jl\")"
       ],
@@ -239,10 +239,10 @@
       "scenario": "abt_carregamento",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "include(\"src/ABT.jl\")"
       ],
@@ -257,10 +257,10 @@
       "scenario": "abt_carregamento",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "include(\"src/ABT.jl\")"
       ],
@@ -275,9 +275,9 @@
       "scenario": "abt_csv_grupos_json",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/vendas_por_regiao_json.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -290,9 +290,9 @@
       "scenario": "abt_csv_grupos_json",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/vendas_por_regiao_json.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -305,9 +305,9 @@
       "scenario": "abt_csv_grupos_json",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/vendas_por_regiao_json.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -320,9 +320,9 @@
       "scenario": "abt_csv_grupos_json",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/vendas_por_regiao_json.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -335,9 +335,9 @@
       "scenario": "abt_csv_grupos_json",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/vendas_por_regiao_json.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/vendas_por_regiao_json.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",

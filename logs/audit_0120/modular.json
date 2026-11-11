@@ -6,9 +6,9 @@
     "phase": "run",
     "source": "caminho = ambiente(\"ABT_VENDAS_PATH\", \"applications/data/vendas.csv\")\ncolunas = esquema(\"produto\", \"texto\", \"regiao\", \"texto\", \"unidades\", \"inteiro\", \"preco\", \"real\")\nvendas = ler_csv(caminho, colunas, \"erro\")\nfrequencias = contar_categorias(vendas, \"regiao\", \"erro\")\nrelatorio = registro(\"fonte\", \"vendas\", \"dimensao\", \"regiao\", \"distribuicao\", frequencias)\nmostrar codificar_json(relatorio, \"erro\")\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/applications/data/distribuicao_vendas.abt"
+      "<ABT_REPO>/applications/data/distribuicao_vendas.abt"
     ],
     "returncode": 0,
     "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -21,9 +21,9 @@
     "phase": "run",
     "source": "caminho = ambiente(\"ABT_VENDAS_PATH\", \"applications/data/vendas.csv\")\ncolunas = esquema(\"produto\", \"texto\", \"regiao\", \"texto\", \"unidades\", \"inteiro\", \"preco\", \"real\")\nvendas = ler_csv(caminho, colunas, \"erro\")\nfrequencias = contar_categorias(vendas, \"regiao\", \"erro\")\nrelatorio = registro(\"fonte\", \"vendas\", \"dimensao\", \"regiao\", \"distribuicao\", frequencias)\nmostrar codificar_json(relatorio, \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/vendas_estatistica_json_gerado_sem_otimizacao.jl"
     ],
     "returncode": 0,
@@ -37,9 +37,9 @@
     "phase": "run",
     "source": "caminho = ambiente(\"ABT_VENDAS_PATH\", \"applications/data/vendas.csv\")\ncolunas = esquema(\"produto\", \"texto\", \"regiao\", \"texto\", \"unidades\", \"inteiro\", \"preco\", \"real\")\nvendas = ler_csv(caminho, colunas, \"erro\")\nfrequencias = contar_categorias(vendas, \"regiao\", \"erro\")\nrelatorio = registro(\"fonte\", \"vendas\", \"dimensao\", \"regiao\", \"distribuicao\", frequencias)\nmostrar codificar_json(relatorio, \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/vendas_estatistica_json_gerado_otimizado.jl"
     ],
     "returncode": 0,
@@ -53,9 +53,9 @@
     "phase": "run",
     "source": "coeficientes = [[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]]\ncorrentes = [1.0, 1.0]\nresultado = resolver_sistema_spd(coeficientes, correntes)\nrelatorio = registro(\"modelo\", \"rede_condutancias\", \"tensoes\", resultado.solucao, \"residuo_norma\", resultado.residuo_norma)\nmostrar codificar_json(relatorio, \"erro\")\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/applications/engineering/rede_condutancias.abt"
+      "<ABT_REPO>/applications/engineering/rede_condutancias.abt"
     ],
     "returncode": 0,
     "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
@@ -68,9 +68,9 @@
     "phase": "run",
     "source": "coeficientes = [[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]]\ncorrentes = [1.0, 1.0]\nresultado = resolver_sistema_spd(coeficientes, correntes)\nrelatorio = registro(\"modelo\", \"rede_condutancias\", \"tensoes\", resultado.solucao, \"residuo_norma\", resultado.residuo_norma)\nmostrar codificar_json(relatorio, \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/rede_algebra_json_gerado_sem_otimizacao.jl"
     ],
     "returncode": 0,
@@ -84,9 +84,9 @@
     "phase": "run",
     "source": "coeficientes = [[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]]\ncorrentes = [1.0, 1.0]\nresultado = resolver_sistema_spd(coeficientes, correntes)\nrelatorio = registro(\"modelo\", \"rede_condutancias\", \"tensoes\", resultado.solucao, \"residuo_norma\", resultado.residuo_norma)\nmostrar codificar_json(relatorio, \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/rede_algebra_json_gerado_otimizado.jl"
     ],
     "returncode": 0,
@@ -100,7 +100,7 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/categorias_vazias.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"erro\"), \"erro\")\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/categorias_vazias.abt"
     ],
@@ -115,9 +115,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/categorias_vazias.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"erro\"), \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/categorias_vazias_gerado_sem_otimizacao.jl"
     ],
     "returncode": 0,
@@ -131,9 +131,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/categorias_vazias.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"erro\"), \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/categorias_vazias_gerado_otimizado.jl"
     ],
     "returncode": 0,
@@ -147,7 +147,7 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/ausente_erro.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/ausente_erro.abt"
     ],
@@ -162,9 +162,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/ausente_erro.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/ausente_erro_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -178,9 +178,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/ausente_erro.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/ausente_erro_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -194,7 +194,7 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"ignorar_linha\"), \"erro\")\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/ausente_ignorar.abt"
     ],
@@ -209,9 +209,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"ignorar_linha\"), \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/ausente_ignorar_gerado_sem_otimizacao.jl"
     ],
     "returncode": 0,
@@ -225,9 +225,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"ignorar_linha\"), \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/ausente_ignorar_gerado_otimizado.jl"
     ],
     "returncode": 0,
@@ -241,7 +241,7 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/coluna_inexistente.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"x\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/coluna_inexistente.abt"
     ],
@@ -256,9 +256,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/coluna_inexistente.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"x\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/coluna_inexistente_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -272,9 +272,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/coluna_inexistente.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"x\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/coluna_inexistente_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -288,7 +288,7 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/coluna_numerica.csv\", esquema(\"grupo\", \"inteiro\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/coluna_numerica.abt"
     ],
@@ -303,9 +303,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/coluna_numerica.csv\", esquema(\"grupo\", \"inteiro\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/coluna_numerica_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -319,9 +319,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/coluna_numerica.csv\", esquema(\"grupo\", \"inteiro\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/coluna_numerica_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -335,7 +335,7 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/politica_invalida.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"adivinhar\")\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/politica_invalida.abt"
     ],
@@ -350,9 +350,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/politica_invalida.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"adivinhar\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/politica_invalida_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -366,9 +366,9 @@
     "phase": "run",
     "source": "dados = ler_csv(\"/tmp/abt-modular-ya2yvdgz/politica_invalida.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"adivinhar\")\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/politica_invalida_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -382,7 +382,7 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[1.0, 2.0]], [3.0])\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/matriz_nao_quadrada.abt"
     ],
@@ -397,9 +397,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[1.0, 2.0]], [3.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/matriz_nao_quadrada_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -413,9 +413,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[1.0, 2.0]], [3.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/matriz_nao_quadrada_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -429,7 +429,7 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2]], [2.0])\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/matriz_inteira.abt"
     ],
@@ -444,9 +444,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2]], [2.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/matriz_inteira_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -460,9 +460,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2]], [2.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/matriz_inteira_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -476,7 +476,7 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2.0, 1.0], [0.0, 2.0]], [3.0, 2.0])\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/matriz_assimetrica.abt"
     ],
@@ -491,9 +491,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2.0, 1.0], [0.0, 2.0]], [3.0, 2.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/matriz_assimetrica_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -507,9 +507,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2.0, 1.0], [0.0, 2.0]], [3.0, 2.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/matriz_assimetrica_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -523,7 +523,7 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[1.0, 0.0], [0.0, 0.0]], [1.0, 1.0])\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/matriz_nao_positiva.abt"
     ],
@@ -538,9 +538,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[1.0, 0.0], [0.0, 0.0]], [1.0, 1.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/matriz_nao_positiva_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -554,9 +554,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[1.0, 0.0], [0.0, 0.0]], [1.0, 1.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/matriz_nao_positiva_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -570,7 +570,7 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2.0]], [2])\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/vetor_invalido.abt"
     ],
@@ -585,9 +585,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2.0]], [2])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/vetor_invalido_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -601,9 +601,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[2.0]], [2])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/vetor_invalido_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -617,7 +617,7 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[0.0 / 0.0]], [1.0])\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/numero_nao_finito.abt"
     ],
@@ -632,9 +632,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[0.0 / 0.0]], [1.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/numero_nao_finito_gerado_sem_otimizacao.jl"
     ],
     "returncode": 1,
@@ -648,9 +648,9 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd([[0.0 / 0.0]], [1.0])\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/numero_nao_finito_gerado_otimizado.jl"
     ],
     "returncode": 1,
@@ -664,7 +664,7 @@
     "phase": "run",
     "source": "contar_categorias = 7\nmostrar contar_categorias\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/sombreamento.abt"
     ],
@@ -679,9 +679,9 @@
     "phase": "run",
     "source": "contar_categorias = 7\nmostrar contar_categorias\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/sombreamento_gerado_sem_otimizacao.jl"
     ],
     "returncode": 0,
@@ -695,9 +695,9 @@
     "phase": "run",
     "source": "contar_categorias = 7\nmostrar contar_categorias\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/sombreamento_gerado_otimizado.jl"
     ],
     "returncode": 0,
@@ -711,7 +711,7 @@
     "phase": "run",
     "source": "função contar_categorias(x) { retornar x + 1 }\nmostrar contar_categorias(2)\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/funcao_mesmo_nome.abt"
     ],
@@ -726,9 +726,9 @@
     "phase": "run",
     "source": "função contar_categorias(x) { retornar x + 1 }\nmostrar contar_categorias(2)\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/funcao_mesmo_nome_gerado_sem_otimizacao.jl"
     ],
     "returncode": 0,
@@ -742,9 +742,9 @@
     "phase": "run",
     "source": "função contar_categorias(x) { retornar x + 1 }\nmostrar contar_categorias(2)\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-modular-ya2yvdgz/funcao_mesmo_nome_gerado_otimizado.jl"
     ],
     "returncode": 0,
@@ -776,7 +776,7 @@
     "phase": "run",
     "source": "mostrar resolver_sistema_spd(1, [])\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-modular-ya2yvdgz/tipo_estatico.abt"
     ],

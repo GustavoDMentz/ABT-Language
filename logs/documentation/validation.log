@@ -5,7 +5,7 @@ PASS links internal markdown links
 PASS files referenced ABT/data files
 PASS cli --version exit=0; stdout='ABT 0.12.0\n'; stderr=''
 PASS cli --help exit=0; stdout='ABT — linguagem experimental\n\nUso:\n  abt arquivo.abt\n  abt run arquivo.abt\n  ab
-PASS cli doctor exit=0; stdout='ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt
+PASS cli doctor exit=0; stdout='ABT: <ABT_REPO>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime dis
 PASS cli operacoes exit=0; stdout='resumo_estatistico [bioestatistica] — lista de números finitos, n >= 2 → n, média, m
 PASS example-check bioinformatica.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
 PASS example-run bioinformatica.abt exit=0; stdout='(sequencias = 2, bases = 24, A = 6, C = 6, G = 6, T = 6, N = 0, GC_percentual = 50.0
@@ -14,7 +14,7 @@ PASS example-run dados.abt exit=0; stdout='(grupos = [(grupo = "Sul", quantidade
 PASS example-check estatistica.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
 PASS example-run estatistica.abt exit=0; stdout='(n = 5, media = 3.0, mediana = 3.0, variancia = 2.5, desvio_padrao = 1.5811388300841
 PASS example-check falhar.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
-PASS example-run falhar.abt exit=1; stdout=''; stderr='/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649
+PASS example-run falhar.abt exit=1; stdout=''; stderr='<ABT_REPO>/docs/examples/falhar.abt: Erro ABT[E000] — erro de compilação
 PASS example-check grupos.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
 PASS example-run grupos.abt exit=0; stdout='(metodo = "welch", grupo_a = "controle", grupo_b = "tratamento", n_a = 5, n_b = 5, m
 PASS example-check modelagem.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
@@ -26,7 +26,7 @@ PASS example-run tabelas.abt exit=0; stdout='["Ana", "Bruno", "Carla", "Diego", 
 PASS example-check visualizacao.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
 PASS example-run visualizacao.abt exit=0; stdout='(arquivo = "/tmp/abt-documentation-figure.png", pontos = 8)\n'; stderr=''
 PASS inline getting-started/overview.md:1 exit=0; stdout='(quantidade = 4, soma = 66, media = 16.5, mediana = 17.0, desvio_padrao = 3.69684550
-PASS inline-error getting-started/tooling.md:1 exit=1; stdout=''; stderr="/tmp/abt-doc-g3qx8sgd/example.abt: Erro ABT[E021] — variável não definida
+PASS inline-error getting-started/tooling.md:1 exit=1; stdout=''; stderr="/tmp/abt-doc-mom3_h5b/example.abt: Erro ABT[E021] — variável não definida
 PASS inline index.md:1 exit=0; stdout='[30, 40]\n'; stderr=''
 PASS inline manual/collections.md:1 exit=0; stdout='[6]\n7\n2.5\n'; stderr=''
 PASS inline manual/collections.md:2 exit=0; stdout='[30, 40]\n'; stderr=''

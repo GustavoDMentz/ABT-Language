@@ -30,7 +30,7 @@ O instalador por usuário coloca ABT em `~/.local/share/abt` e cria `~/.local/bi
 
 ## Documentação
 
-O [manual oficial](docs/src/index.md) cobre instalação, sintaxe, operações, tutoriais, arquitetura e [gramática](docs/src/reference/grammar.md). A [referência da biblioteca](docs/src/standard-library/index.md) documenta as 42 operações públicas, e os [programas de referência](docs/src/examples/programs.md) têm fontes executáveis em `docs/examples/`. O site está preparado para GitHub Pages em `https://gustavodmentz.github.io/ABT-Language/`; a disponibilidade desse endereço depende da configuração de Pages no repositório.
+O [manual oficial](docs/src/index.md) cobre instalação, sintaxe, operações, tutoriais, arquitetura e [gramática](docs/src/reference/grammar.md). A [referência da biblioteca](docs/src/standard-library/index.md) documenta as 42 operações públicas, e os [programas de referência](docs/src/examples/programs.md) têm fontes executáveis em `docs/examples/`. O site está publicado em `https://gustavodmentz.github.io/ABT-Language/`.
 
 Aplicações completas ficam em [`applications/`](applications/README.md). Para detalhes técnicos históricos, consulte [relatórios e especificações em `docs/`](docs/), incluindo [bioestatística 0.12.0](docs/BIOESTATISTICA_0120.md), [auditoria independente](docs/AUDITORIA_FINAL_BIOESTATISTICA_0120.md), [arquitetura de extensões](docs/ARQUITETURA_EXTENSOES_0118.md), [arquivos e tabelas](docs/ARQUIVOS_TABELAS_0118.md), [bioinformática](docs/BIOINFORMATICA_0118.md), [identidade e CLI](docs/MAPA_IDENTIDADE.md) e [benchmarks](docs/BENCHMARK_ESCALABILIDADE.md).
 

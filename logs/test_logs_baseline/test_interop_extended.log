@@ -1,5 +1,5 @@
 
-ABT 0.8.1 — bibliotecas Julia: Error During Test at /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_interop_extended.jl:11
+ABT 0.8.1 — bibliotecas Julia: Error During Test at <ABT_LEGACY_WORKTREE>/test_interop_extended.jl:11
   Got exception outside of a @test
   Semantic error: Julia references require module and function
   Stacktrace:
@@ -35,4 +35,4 @@ Test Summary:                 | Error  Total  Time
 ABT 0.8.1 — bibliotecas Julia |     1      1  4.4s
 RNG of the outermost testset: Random.Xoshiro(0xcc310b4fcb364dd9, 0x09bb89a21be8df79, 0x08b78ddd86ecc951, 0x5607704003eda15d, 0x6f2d7f49dd104464)
 ERROR: LoadError: Some tests did not pass: 0 passed, 0 failed, 1 errored, 0 broken.
-in expression starting at /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/test_interop_extended.jl:11
+in expression starting at <ABT_LEGACY_WORKTREE>/test_interop_extended.jl:11

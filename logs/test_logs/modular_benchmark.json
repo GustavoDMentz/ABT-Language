@@ -11,10 +11,10 @@
       "scenario": "julia_minima",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -29,10 +29,10 @@
       "scenario": "julia_minima",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -47,10 +47,10 @@
       "scenario": "julia_minima",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -65,10 +65,10 @@
       "scenario": "julia_minima",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -83,10 +83,10 @@
       "scenario": "julia_minima",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+        "<JULIA_BIN>",
         "--startup-file=no",
         "--compile=min",
-        "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+        "--project=<ABT_PERF_WORKTREE>",
         "-e",
         "nothing"
       ],
@@ -101,7 +101,7 @@
       "scenario": "abt_minimo",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
       ],
@@ -116,7 +116,7 @@
       "scenario": "abt_minimo",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
       ],
@@ -131,7 +131,7 @@
       "scenario": "abt_minimo",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
       ],
@@ -146,7 +146,7 @@
       "scenario": "abt_minimo",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
       ],
@@ -161,7 +161,7 @@
       "scenario": "abt_minimo",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/abt_minimo.abt"
       ],
@@ -176,7 +176,7 @@
       "scenario": "statsbase_isolada",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
       ],
@@ -191,7 +191,7 @@
       "scenario": "statsbase_isolada",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
       ],
@@ -206,7 +206,7 @@
       "scenario": "statsbase_isolada",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
       ],
@@ -221,7 +221,7 @@
       "scenario": "statsbase_isolada",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
       ],
@@ -236,7 +236,7 @@
       "scenario": "statsbase_isolada",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_isolada.abt"
       ],
@@ -251,7 +251,7 @@
       "scenario": "algebra_isolada",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
       ],
@@ -266,7 +266,7 @@
       "scenario": "algebra_isolada",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
       ],
@@ -281,7 +281,7 @@
       "scenario": "algebra_isolada",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
       ],
@@ -296,7 +296,7 @@
       "scenario": "algebra_isolada",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
       ],
@@ -311,7 +311,7 @@
       "scenario": "algebra_isolada",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/algebra_isolada.abt"
       ],
@@ -326,7 +326,7 @@
       "scenario": "statsbase_algebra",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
       ],
@@ -341,7 +341,7 @@
       "scenario": "statsbase_algebra",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
       ],
@@ -356,7 +356,7 @@
       "scenario": "statsbase_algebra",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
       ],
@@ -371,7 +371,7 @@
       "scenario": "statsbase_algebra",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
       ],
@@ -386,7 +386,7 @@
       "scenario": "statsbase_algebra",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
         "/tmp/abt-modular-bench-pvev4sij/statsbase_algebra.abt"
       ],
@@ -401,9 +401,9 @@
       "scenario": "app_estatistica_json",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/distribuicao_vendas.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -416,9 +416,9 @@
       "scenario": "app_estatistica_json",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/distribuicao_vendas.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -431,9 +431,9 @@
       "scenario": "app_estatistica_json",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/distribuicao_vendas.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -446,9 +446,9 @@
       "scenario": "app_estatistica_json",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/distribuicao_vendas.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -461,9 +461,9 @@
       "scenario": "app_estatistica_json",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/data/distribuicao_vendas.abt"
+        "<ABT_PERF_WORKTREE>/applications/data/distribuicao_vendas.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
@@ -476,9 +476,9 @@
       "scenario": "app_algebra_json",
       "repetition": 1,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+        "<ABT_PERF_WORKTREE>/applications/engineering/rede_condutancias.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
@@ -491,9 +491,9 @@
       "scenario": "app_algebra_json",
       "repetition": 2,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+        "<ABT_PERF_WORKTREE>/applications/engineering/rede_condutancias.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
@@ -506,9 +506,9 @@
       "scenario": "app_algebra_json",
       "repetition": 3,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+        "<ABT_PERF_WORKTREE>/applications/engineering/rede_condutancias.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
@@ -521,9 +521,9 @@
       "scenario": "app_algebra_json",
       "repetition": 4,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+        "<ABT_PERF_WORKTREE>/applications/engineering/rede_condutancias.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
@@ -536,9 +536,9 @@
       "scenario": "app_algebra_json",
       "repetition": 5,
       "command": [
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+        "<ABT_PERF_WORKTREE>/bin/abt",
         "run",
-        "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/engineering/rede_condutancias.abt"
+        "<ABT_PERF_WORKTREE>/applications/engineering/rede_condutancias.abt"
       ],
       "exit_code": 0,
       "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",

@@ -2,7 +2,7 @@
 
 Este relatório mede a etapa inicial de agrupamento/JSON. Para o estado atual com StatsBase/LinearAlgebra, consulte [Resultados da arquitetura de extensões](RESULTADOS_ARQUITETURA_EXTENSOES_0118.md).
 
-Ambiente: Linux x86-64, Julia 1.13.3; execução local com `JULIA_DEPOT_PATH=/tmp/abt-tabular-depot:/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot`. PythonCall foi exigido na regressão histórica com Python `/usr/bin/python3`.
+Ambiente: Linux x86-64, Julia 1.13.3; execução local com `JULIA_DEPOT_PATH=/tmp/abt-tabular-depot:<JULIA_DEPOT>`. PythonCall foi exigido na regressão histórica com Python `/usr/bin/python3`.
 
 ## Verificação funcional
 

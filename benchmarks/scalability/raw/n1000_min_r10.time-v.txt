@@ -1,4 +1,4 @@
-	Command being timed: "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt run /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+	Command being timed: "<ABT_PERF_WORKTREE>/bin/abt run <ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
 	User time (seconds): 1.97
 	System time (seconds): 0.12
 	Percent of CPU this job got: 101%

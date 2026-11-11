@@ -7,9 +7,9 @@
     "stdout": "[(identificador = \"alfa\", descricao = \"alfa amostra A\", sequencia = \"ACGT\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0), (identificador = \"beta\", descricao = \"beta amostra B\", sequencia = \"GGGG\", comprimento = 4, A = 0, C = 0, G = 4, T = 0, U = 0, N = 0, GC_percentual = 100.0), (identificador = \"gama\", descricao = \"gama amostra C\", sequencia = \"AAAA\", comprimento = 4, A = 4, C = 0, G = 0, T = 0, U = 0, N = 0, GC_percentual = 0.0)]\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/bio/por_registro.abt"
+      "<ABT_PERF_WORKTREE>/applications/bio/por_registro.abt"
     ]
   },
   {
@@ -20,9 +20,9 @@
     "stdout": "[(identificador = \"alfa\", descricao = \"alfa amostra A\", sequencia = \"ACGT\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0), (identificador = \"beta\", descricao = \"beta amostra B\", sequencia = \"GGGG\", comprimento = 4, A = 0, C = 0, G = 4, T = 0, U = 0, N = 0, GC_percentual = 100.0), (identificador = \"gama\", descricao = \"gama amostra C\", sequencia = \"AAAA\", comprimento = 4, A = 4, C = 0, G = 0, T = 0, U = 0, N = 0, GC_percentual = 0.0)]\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-app-dpd0vkvz/julia_sem_otimizacao.jl"
     ]
   },
@@ -34,9 +34,9 @@
     "stdout": "[(identificador = \"alfa\", descricao = \"alfa amostra A\", sequencia = \"ACGT\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0), (identificador = \"beta\", descricao = \"beta amostra B\", sequencia = \"GGGG\", comprimento = 4, A = 0, C = 0, G = 4, T = 0, U = 0, N = 0, GC_percentual = 100.0), (identificador = \"gama\", descricao = \"gama amostra C\", sequencia = \"AAAA\", comprimento = 4, A = 4, C = 0, G = 0, T = 0, U = 0, N = 0, GC_percentual = 0.0)]\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-app-dpd0vkvz/julia_otimizada.jl"
     ]
   }

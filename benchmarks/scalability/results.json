@@ -10,9 +10,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.46,
@@ -31,9 +31,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.47,
@@ -52,9 +52,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.47,
@@ -73,9 +73,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.46,
@@ -94,9 +94,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.47,
@@ -115,9 +115,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.46,
@@ -136,9 +136,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.47,
@@ -157,9 +157,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.47,
@@ -178,9 +178,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.46,
@@ -199,9 +199,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 0.47,
@@ -220,9 +220,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.16,
@@ -241,9 +241,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.09,
@@ -262,9 +262,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.17,
@@ -283,9 +283,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.1,
@@ -304,9 +304,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.14,
@@ -325,9 +325,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.11,
@@ -346,9 +346,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.12,
@@ -367,9 +367,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.13,
@@ -388,9 +388,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.15,
@@ -409,9 +409,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.1,
@@ -430,9 +430,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.88,
@@ -451,9 +451,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.88,
@@ -472,9 +472,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.89,
@@ -493,9 +493,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.94,
@@ -514,9 +514,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.92,
@@ -535,9 +535,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.91,
@@ -556,9 +556,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.96,
@@ -577,9 +577,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.96,
@@ -598,9 +598,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.96,
@@ -619,9 +619,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 1.97,
@@ -640,9 +640,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.46,
@@ -661,9 +661,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 3.95,
@@ -682,9 +682,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.08,
@@ -703,9 +703,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.06,
@@ -724,9 +724,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.06,
@@ -745,9 +745,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.04,
@@ -766,9 +766,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.16,
@@ -787,9 +787,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.24,
@@ -808,9 +808,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.31,
@@ -829,9 +829,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_1000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_1000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.06,
@@ -850,9 +850,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 15.93,
@@ -871,9 +871,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 15.8,
@@ -892,9 +892,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 15.63,
@@ -913,9 +913,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 16.39,
@@ -934,9 +934,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 16.28,
@@ -955,9 +955,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 16.24,
@@ -976,9 +976,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 16.05,
@@ -997,9 +997,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 16.0,
@@ -1018,9 +1018,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 15.75,
@@ -1039,9 +1039,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 15.96,
@@ -1060,9 +1060,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.34,
@@ -1081,9 +1081,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.16,
@@ -1102,9 +1102,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.27,
@@ -1123,9 +1123,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.08,
@@ -1144,9 +1144,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.17,
@@ -1165,9 +1165,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.03,
@@ -1186,9 +1186,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 4.13,
@@ -1207,9 +1207,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 3.98,
@@ -1228,9 +1228,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 3.98,
@@ -1249,9 +1249,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_10000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_10000.abt"
     ],
     "timeout_s": 300,
     "user_s": 3.97,
@@ -1270,9 +1270,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100000.abt"
     ],
     "timeout_s": 120,
     "user_s": 4.65,
@@ -1291,9 +1291,9 @@
     "command": [
       "/usr/bin/time",
       "-v",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100000.abt"
+      "<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100000.abt"
     ],
     "timeout_s": 120,
     "user_s": 119.34,
