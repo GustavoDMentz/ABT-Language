@@ -74,20 +74,20 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: ${{ github.event_name == 'pull_request' && 'documentation-pr' || 'github-pages' }}
+      name: ${{ github.ref == 'refs/heads/main' && 'github-pages' || 'documentation-pr' }}
       url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       pages: write
       id-token: write
     steps:
       - name: Download and verify Pages artifact on PR
-        if: github.event_name == 'pull_request'
+        if: github.ref != 'refs/heads/main'
         uses: actions/download-artifact@v4
         with:
           name: github-pages
           path: pages-artifact
       - name: Check Pages contents on PR
-        if: github.event_name == 'pull_request'
+        if: github.ref != 'refs/heads/main'
         run: |
           test -s pages-artifact/artifact.tar
           tar -tf pages-artifact/artifact.tar | grep -Eq '(^|/)index\.html$'
