@@ -2,8 +2,11 @@
 
 Crie uma branch a partir de `main`; mantenha mudanças de documentação separadas de correções semânticas. Para uma operação nova, escreva contrato e exemplo reproduzível, atualize o registro e rode os testes dos três backends. Defeitos descobertos durante a redação devem ter relatório ou issue própria antes de qualquer correção de linguagem.
 
+A validação dos exemplos de interoperação requer PythonCall 0.9.37 no ambiente de teste e Python 3 disponível. PythonCall permanece opcional para quem executa ABT sem importar Python. O workflow instala essa dependência somente no job de documentação.
+
 ```bash
 python3 tools/generate_docs_reference.py --check
+JULIA_CONDAPKG_BACKEND=Null JULIA_PYTHONCALL_EXE=/usr/bin/python3 julia --project=. -e 'import Pkg; Pkg.add(Pkg.PackageSpec(name="PythonCall", version="0.9.37"))'
 python3 tools/validate_docs.py
 julia --project=docs docs/make.jl
 ```

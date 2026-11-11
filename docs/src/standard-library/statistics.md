@@ -107,7 +107,7 @@ Compara duas proporções por Fisher exato 2×2.
 Calcula CDF, `P(X ≤ valor)`.
 
 - **Parâmetros e padrões:** Modelo `normal`, `student_t`, `binomial` ou `poisson`; parâmetros explícitos em lista.
-- **Retorno:** Registro de modelo, parâmetros, valor e resultado.
+- **Retorno:** Registro `modelo`, `parametros`, `entrada` e `resultado` (probabilidade acumulada).
 - **Pré-condições, ausentes, erros e limites:** Desvios/graus/taxas/probabilidades têm domínios próprios; modelos discretos exigem contagem inteira; inválidos são erros.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Distributions.jl sob demanda.
@@ -121,7 +121,7 @@ Calcula CDF, `P(X ≤ valor)`.
 Calcula quantil de distribuição.
 
 - **Parâmetros e padrões:** Mesmos modelos/parâmetros da CDF; 0 < p < 1.
-- **Retorno:** Registro de modelo, parâmetros, probabilidade e quantil.
+- **Retorno:** Registro `modelo`, `parametros`, `entrada` (p) e `resultado` (quantil).
 - **Pré-condições, ausentes, erros e limites:** Fronteiras 0/1, ausentes e parâmetros inválidos são erros; quantil discreto segue Distributions.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Distributions.jl sob demanda.

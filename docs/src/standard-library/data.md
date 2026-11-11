@@ -8,7 +8,7 @@ Todas as assinaturas abaixo são chamadas ABT, não assinaturas Julia internas. 
 
 Resume valores por grupo.
 
-- **Parâmetros e padrões:** Grupo textual, valor numérico, política explícita de ausentes.
+- **Parâmetros e padrões:** Grupo textual, valor numérico, política `erro`/`ignorar_linha`.
 - **Retorno:** Registro com grupos e contagem de linhas.
 - **Pré-condições, ausentes, erros e limites:** Coluna/tipo/ausente inválido ou soma inválida são erros; ordem segue primeira ocorrência.
 - **Efeitos:** Percorre a fonte.
@@ -22,7 +22,7 @@ Resume valores por grupo.
 
 Calcula frequências e proporções categóricas.
 
-- **Parâmetros e padrões:** Tabela, coluna textual e política de ausentes.
+- **Parâmetros e padrões:** Tabela, coluna textual e política `erro`/`ignorar_linha`.
 - **Retorno:** Registro estruturado de categorias.
 - **Pré-condições, ausentes, erros e limites:** Rejeita coluna, tipo ou política inválidos; ausentes tratados pela política informada.
 - **Efeitos:** Percorre a fonte.
@@ -78,7 +78,7 @@ Conta níveis categóricos explícitos.
 
 Serializa valor ABT em JSON textual.
 
-- **Parâmetros e padrões:** Valor estruturado e política explícita de ausentes.
+- **Parâmetros e padrões:** Valor estruturado e política `erro`/`nulo` para ausentes.
 - **Retorno:** Texto JSON.
 - **Pré-condições, ausentes, erros e limites:** Ciclos, tipos não suportados, números não finitos e ausentes sob política de erro são rejeitados.
 - **Efeitos:** Nenhum.

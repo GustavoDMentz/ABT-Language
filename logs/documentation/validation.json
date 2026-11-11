@@ -171,7 +171,7 @@
     "kind": "inline-error",
     "name": "getting-started/tooling.md:1",
     "status": "PASS",
-    "detail": "exit=1; stdout=''; stderr=\"/tmp/abt-doc-ueve59kk/example.abt: Erro ABT[E021] — variável não definida\\n\\nA variável 'resultado' não foi definida.\\n\""
+    "detail": "exit=1; stdout=''; stderr=\"/tmp/abt-doc-g3qx8sgd/example.abt: Erro ABT[E021] — variável não definida\\n\\nA variável 'resultado' não foi definida.\\n\""
   },
   {
     "kind": "inline",
@@ -224,8 +224,8 @@
   {
     "kind": "inline",
     "name": "manual/interop.md:2",
-    "status": "SKIP",
-    "detail": "PythonCall is optional"
+    "status": "PASS",
+    "detail": "exit=0; stdout='3.0\\n'; stderr=''"
   },
   {
     "kind": "inline",

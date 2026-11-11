@@ -26,7 +26,7 @@ PASS example-run tabelas.abt exit=0; stdout='["Ana", "Bruno", "Carla", "Diego", 
 PASS example-check visualizacao.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
 PASS example-run visualizacao.abt exit=0; stdout='(arquivo = "/tmp/abt-documentation-figure.png", pontos = 8)\n'; stderr=''
 PASS inline getting-started/overview.md:1 exit=0; stdout='(quantidade = 4, soma = 66, media = 16.5, mediana = 17.0, desvio_padrao = 3.69684550
-PASS inline-error getting-started/tooling.md:1 exit=1; stdout=''; stderr="/tmp/abt-doc-ueve59kk/example.abt: Erro ABT[E021] — variável não definida
+PASS inline-error getting-started/tooling.md:1 exit=1; stdout=''; stderr="/tmp/abt-doc-g3qx8sgd/example.abt: Erro ABT[E021] — variável não definida
 PASS inline index.md:1 exit=0; stdout='[30, 40]\n'; stderr=''
 PASS inline manual/collections.md:1 exit=0; stdout='[6]\n7\n2.5\n'; stderr=''
 PASS inline manual/collections.md:2 exit=0; stdout='[30, 40]\n'; stderr=''
@@ -35,7 +35,7 @@ PASS inline manual/control-flow.md:2 exit=0; stdout='10\n'; stderr=''
 PASS inline manual/expressions.md:1 exit=0; stdout='-8.0\n-8.0\n0.125\n-6.0\n10.0\n'; stderr=''
 PASS inline manual/expressions.md:2 exit=0; stdout='true\ntrue\n'; stderr=''
 PASS inline manual/interop.md:1 exit=0; stdout='2.0\n'; stderr=''
-SKIP inline manual/interop.md:2 PythonCall is optional
+PASS inline manual/interop.md:2 exit=0; stdout='3.0\n'; stderr=''
 PASS inline manual/syntax.md:1 exit=0; stdout='(nome = "ensaio", n = 3)\n'; stderr=''
 PASS inline manual/syntax.md:2 exit=0; stdout='11\n'; stderr=''
 PASS inline tutorials/bioinformatics.md:1 exit=0; stdout='(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.6
@@ -45,4 +45,4 @@ PASS inline tutorials/first-program.md:1 exit=0; stdout='4\n6\n'; stderr=''
 PASS inline tutorials/julia.md:1 exit=0; stdout='2026-11-06\n2026\n'; stderr=''
 PASS inline tutorials/statistics.md:1 exit=0; stdout='(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao =
 PASS inline tutorials/visualization.md:1 exit=0; stdout='(arquivo = "/tmp/abt-documentation-tutorial.png", pontos = 4)\n'; stderr=''
-Summary: {'PASS': 46, 'FAIL': 0, 'SKIP': 1}
+Summary: {'PASS': 47, 'FAIL': 0, 'SKIP': 0}

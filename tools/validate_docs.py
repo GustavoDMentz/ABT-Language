@@ -18,7 +18,7 @@ RESULTS = []
 
 def result(kind, name, status, detail=""):
     RESULTS.append(dict(kind=kind, name=name, status=status, detail=detail))
-    print(status, kind, name, detail[:100], flush=True)
+    print(" ".join(part for part in (status, kind, name, detail[:100]) if part), flush=True)
 
 def slug(text):
     text = re.sub(r"<[^>]*>", "", text).strip().lower()
@@ -103,7 +103,9 @@ def cli():
 def examples():
     env = dict(os.environ, ABT_JULIA=JULIA, ABT_DOC_FIGURE_PATH="/tmp/abt-documentation-figure.png",
                ABT_FIGURA_PATH="/tmp/abt-documentation-tutorial.png",
-               XDG_CACHE_HOME="/tmp/abt-documentation-cache")
+               XDG_CACHE_HOME="/tmp/abt-documentation-cache",
+               JULIA_CONDAPKG_BACKEND="Null",
+               JULIA_PYTHONCALL_EXE=os.environ.get("JULIA_PYTHONCALL_EXE", sys.executable))
     for path in sorted((ROOT / "docs/examples").glob("*.abt")):
         ok, detail = run([str(CLI), "check", str(path)], env=env, contains="Programa ABT válido.")
         result("example-check", path.name, "PASS" if ok else "FAIL", detail)
@@ -122,9 +124,6 @@ def examples():
                     program.write_text(source + "\n")
                     ok, detail = run([str(CLI), "run", str(program)], env=env, expected=1, contains="E021")
                 result("inline-error", name, "PASS" if ok else "FAIL", detail)
-                continue
-            if page == DOCS / "manual/interop.md" and "usar Python." in source:
-                result("inline", name, "SKIP", "PythonCall is optional")
                 continue
             with tempfile.TemporaryDirectory(prefix="abt-doc-") as directory:
                 program = Path(directory) / "example.abt"

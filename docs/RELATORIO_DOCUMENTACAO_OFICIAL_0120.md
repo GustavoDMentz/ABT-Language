@@ -12,7 +12,7 @@ Documentação anterior em `docs/` foi preservada. A nova documentação usa `do
 
 Documenter.jl 1.20.0, em `docs/Project.toml` e `docs/Manifest.toml`, gera HTML estático com navegação hierárquica, busca, índices, tema claro/escuro, layout responsivo e realce ABT local. A dependência não entra em `Project.toml` da linguagem. O workflow `.github/workflows/documentation.yml` valida catálogo, links, CLI e exemplos, compila o site em PRs e publica somente em push à `main`, com permissões de Pages limitadas ao job de publicação. A publicação usa artifact de Pages, sem alterar a configuração do repositório.
 
-O endpoint de leitura `GET /repos/GustavoDMentz/ABT-Language/pages` retornou HTTP 404 nesta auditoria. Isso não comprova a ativação de Pages; o mantenedor deve selecionar **GitHub Actions** como fonte em *Settings → Pages*. O endereço esperado é `https://gustavodmentz.github.io/ABT-Language/` após o primeiro deploy bem-sucedido. O workflow remoto ainda não foi executado nesta branch.
+O endpoint de leitura `GET /repos/GustavoDMentz/ABT-Language/pages` retornou HTTP 404 nesta auditoria. Isso não comprova a ativação de Pages; o mantenedor deve selecionar **GitHub Actions** como fonte em *Settings → Pages*. O endereço esperado é `https://gustavodmentz.github.io/ABT-Language/` após o primeiro deploy bem-sucedido. O workflow remoto é executado na PR de documentação; PythonCall é instalado somente no job de validação.
 
 ## Validação reproduzível
 
@@ -21,6 +21,7 @@ Ambiente local: Linux x86_64, Julia 1.13.3, Python 3.12.3. Com Julia no `PATH` o
 ```bash
 julia --project=. -e 'import Pkg; Pkg.instantiate()'
 julia --project=docs -e 'import Pkg; Pkg.instantiate()'
+JULIA_CONDAPKG_BACKEND=Null JULIA_PYTHONCALL_EXE=/usr/bin/python3 julia --project=. -e 'import Pkg; Pkg.add(Pkg.PackageSpec(name="PythonCall", version="0.9.37"))'
 python3 tools/generate_docs_reference.py --check
 python3 tools/validate_docs.py
 julia --project=docs docs/make.jl
@@ -35,13 +36,13 @@ O validador compara os nomes públicos reais com os títulos da referência, ver
 | Links internos e arquivos citados | Aprovados na validação local |
 | CLI (`--version`, `--help`, `doctor`, `operacoes`) | 4/4 |
 | Programas de referência (`check` + `run`) | 18/18 |
-| Blocos ABT inline | 19 PASS, inclusive erro intencional; 0 FAIL |
-| PythonCall opcional | 1 bloco não executado; dependência opcional |
+| Blocos ABT inline | 20 PASS, inclusive erro intencional e interoperação Python; 0 FAIL |
+| PythonCall opcional | 1 bloco executado; `Python.math.sqrt(9)` retornou `3.0` |
 
-O validador final registrou **46 PASS, 0 FAIL e 1 SKIP** em `logs/documentation/validation.json`. `docs/build/` foi gerado localmente, contém `index.html` e `search_index.js`, e usa `lang="pt-BR"`; o diretório de build é ignorado pelo Git. O log do build está em `logs/documentation/build.log`.
+O validador final registrou **47 PASS, 0 FAIL e 0 SKIP** em `logs/documentation/validation.json`. `docs/build/` foi gerado localmente, contém `index.html` e `search_index.js`, e usa `lang="pt-BR"`; o diretório de build é ignorado pelo Git. O log do build está em `logs/documentation/build.log`.
 
 O primeiro teste inline detectou `2 ^ -3` em um exemplo: Julia rejeita potência inteira de expoente negativo. O exemplo foi corrigido para `2.0 ^ -3` e o limite foi documentado. Não foi feita alteração na linguagem. A referência gerada é conferida por `--check` para detectar divergência entre fonte editorial e páginas publicadas.
 
 ## Manutenção e limites
 
-Para editar um contrato de operação, atualize `tools/generate_docs_reference.py`, gere novamente as páginas e execute o validador. Para novas operações, atualize também exemplo, testes diretos e diferenciais. O índice de operações cobre as funções ABT registradas, não todas as funções Julia importáveis. O site inicial documenta a versão atual da `main`; versionamento de páginas por tag não foi configurado, pois ainda não há release oficial a publicar. PythonCall continua opcional e exige ambiente próprio; o bloco de interoperação Python não foi executado nesta rodada. Logs históricos e relatórios anteriores permanecem intactos.
+Para editar um contrato de operação, atualize `tools/generate_docs_reference.py`, gere novamente as páginas e execute o validador. Para novas operações, atualize também exemplo, testes diretos e diferenciais. O índice de operações cobre as funções ABT registradas, não todas as funções Julia importáveis. O site inicial documenta a versão atual da `main`; versionamento de páginas por tag não foi configurado, pois ainda não há release oficial a publicar. PythonCall continua opcional para usuários do ABT, mas é obrigatório para a validação integral da documentação. Logs históricos e relatórios anteriores permanecem intactos.

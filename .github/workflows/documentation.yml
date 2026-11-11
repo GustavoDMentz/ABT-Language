@@ -52,10 +52,17 @@ jobs:
         run: julia --project=. -e 'import Pkg; Pkg.instantiate()'
       - name: Install documentation dependencies
         run: julia --project=docs -e 'import Pkg; Pkg.instantiate()'
+      - name: Install optional PythonCall for documentation tests
+        env:
+          JULIA_CONDAPKG_BACKEND: Null
+          JULIA_PYTHONCALL_EXE: /usr/bin/python3
+        run: julia --project=. -e 'import Pkg; Pkg.add(Pkg.PackageSpec(name="PythonCall", version="0.9.37"))'
       - name: Validate catalog, links, CLI and examples
         env:
           ABT_JULIA: julia
           XDG_CACHE_HOME: ${{ runner.temp }}/abt-cache
+          JULIA_CONDAPKG_BACKEND: Null
+          JULIA_PYTHONCALL_EXE: /usr/bin/python3
         run: python3 tools/validate_docs.py
       - name: Build site
         run: julia --project=docs docs/make.jl
