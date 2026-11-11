@@ -35,9 +35,9 @@
     "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/applications/data/vendas_por_regiao_json.abt"
+      "<ABT_REPO>/applications/data/vendas_por_regiao_json.abt"
     ]
   },
   {
@@ -76,9 +76,9 @@
     "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/vendas_app_gerado_sem_otimizacao.jl"
     ]
   },
@@ -118,9 +118,9 @@
     "stdout": "{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"minimo\":8,\"maximo\":8}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/vendas_app_gerado_otimizado.jl"
     ]
   },
@@ -160,9 +160,9 @@
     "stdout": "{\"fonte\":\"qualidade_lotes\",\"politica_ausentes\":\"ignorar_linha\",\"resumo\":{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":3,\"soma\":30.0,\"media\":10.0,\"minimo\":8.0,\"maximo\":12.0},{\"grupo\":\"B\",\"quantidade\":1,\"soma\":7.5,\"media\":7.5,\"minimo\":7.5,\"maximo\":7.5}],\"linhas_lidas\":5,\"linhas_ignoradas\":1}}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/applications/data/qualidade_lotes_json.abt"
+      "<ABT_REPO>/applications/data/qualidade_lotes_json.abt"
     ]
   },
   {
@@ -201,9 +201,9 @@
     "stdout": "{\"fonte\":\"qualidade_lotes\",\"politica_ausentes\":\"ignorar_linha\",\"resumo\":{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":3,\"soma\":30.0,\"media\":10.0,\"minimo\":8.0,\"maximo\":12.0},{\"grupo\":\"B\",\"quantidade\":1,\"soma\":7.5,\"media\":7.5,\"minimo\":7.5,\"maximo\":7.5}],\"linhas_lidas\":5,\"linhas_ignoradas\":1}}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/lotes_app_gerado_sem_otimizacao.jl"
     ]
   },
@@ -243,9 +243,9 @@
     "stdout": "{\"fonte\":\"qualidade_lotes\",\"politica_ausentes\":\"ignorar_linha\",\"resumo\":{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":3,\"soma\":30.0,\"media\":10.0,\"minimo\":8.0,\"maximo\":12.0},{\"grupo\":\"B\",\"quantidade\":1,\"soma\":7.5,\"media\":7.5,\"minimo\":7.5,\"maximo\":7.5}],\"linhas_lidas\":5,\"linhas_ignoradas\":1}}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/lotes_app_gerado_otimizado.jl"
     ]
   },
@@ -260,7 +260,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/ausente_erro.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_grupos: registro 2, coluna 'valor': valor ausente\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/ausente_erro.abt"
     ]
@@ -276,9 +276,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: registro 2, coluna 'valor': valor ausente\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:8\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:342\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:2\n\ncaused by: ABT resumir_grupos: registro 2, coluna 'valor': valor ausente\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:318\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/ausente_erro_gerado_sem_otimizacao.jl"
     ]
   },
@@ -293,9 +293,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: registro 2, coluna 'valor': valor ausente\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:8\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:342\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:2\n\ncaused by: ABT resumir_grupos: registro 2, coluna 'valor': valor ausente\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:318\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/ausente_erro_gerado_otimizado.jl"
     ]
   },
@@ -323,7 +323,7 @@
     "stdout": "{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":2,\"soma\":4,\"media\":2.0,\"minimo\":1,\"maximo\":3}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/ausente_ignorar.abt"
     ]
@@ -352,9 +352,9 @@
     "stdout": "{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":2,\"soma\":4,\"media\":2.0,\"minimo\":1,\"maximo\":3}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/ausente_ignorar_gerado_sem_otimizacao.jl"
     ]
   },
@@ -382,9 +382,9 @@
     "stdout": "{\"grupos\":[{\"grupo\":\"A\",\"quantidade\":2,\"soma\":4,\"media\":2.0,\"minimo\":1,\"maximo\":3}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/ausente_ignorar_gerado_otimizado.jl"
     ]
   },
@@ -403,7 +403,7 @@
     "stdout": "{\"grupos\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/vazia.abt"
     ]
@@ -423,9 +423,9 @@
     "stdout": "{\"grupos\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/vazia_gerado_sem_otimizacao.jl"
     ]
   },
@@ -444,9 +444,9 @@
     "stdout": "{\"grupos\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/vazia_gerado_otimizado.jl"
     ]
   },
@@ -461,7 +461,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/coluna_inexistente.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_grupos: coluna de valor inexistente \"x\"\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/coluna_inexistente.abt"
     ]
@@ -477,9 +477,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: coluna de valor inexistente \"x\"\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_sem_otimizacao.jl:300\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_sem_otimizacao.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_sem_otimizacao.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_sem_otimizacao.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_sem_otimizacao.jl"
     ]
   },
@@ -494,9 +494,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: coluna de valor inexistente \"x\"\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_otimizado.jl:300\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_otimizado.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_otimizado.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_otimizado.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/coluna_inexistente_gerado_otimizado.jl"
     ]
   },
@@ -511,7 +511,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/grupo_numerico.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_grupos: coluna de grupo deve ser texto\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/grupo_numerico.abt"
     ]
@@ -527,9 +527,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: coluna de grupo deve ser texto\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_sem_otimizacao.jl:303\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_sem_otimizacao.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_sem_otimizacao.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_sem_otimizacao.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/grupo_numerico_gerado_sem_otimizacao.jl"
     ]
   },
@@ -544,9 +544,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: coluna de grupo deve ser texto\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_otimizado.jl:303\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_otimizado.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_otimizado.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_otimizado.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/grupo_numerico_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/grupo_numerico_gerado_otimizado.jl"
     ]
   },
@@ -561,7 +561,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/valor_texto.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_grupos: coluna de valor deve ser numérica\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/valor_texto.abt"
     ]
@@ -577,9 +577,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: coluna de valor deve ser numérica\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/valor_texto_gerado_sem_otimizacao.jl:305\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/valor_texto_gerado_sem_otimizacao.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/valor_texto_gerado_sem_otimizacao.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/valor_texto_gerado_sem_otimizacao.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/valor_texto_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/valor_texto_gerado_sem_otimizacao.jl"
     ]
   },
@@ -594,9 +594,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: coluna de valor deve ser numérica\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/valor_texto_gerado_otimizado.jl:305\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/valor_texto_gerado_otimizado.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/valor_texto_gerado_otimizado.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/valor_texto_gerado_otimizado.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/valor_texto_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/valor_texto_gerado_otimizado.jl"
     ]
   },
@@ -611,7 +611,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/politica_invalida.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_grupos: política de ausentes deve ser erro ou ignorar_linha\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/politica_invalida.abt"
     ]
@@ -627,9 +627,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: política de ausentes deve ser erro ou ignorar_linha\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/politica_invalida_gerado_sem_otimizacao.jl:302\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/politica_invalida_gerado_sem_otimizacao.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/politica_invalida_gerado_sem_otimizacao.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/politica_invalida_gerado_sem_otimizacao.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/politica_invalida_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/politica_invalida_gerado_sem_otimizacao.jl"
     ]
   },
@@ -644,9 +644,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: política de ausentes deve ser erro ou ignorar_linha\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/politica_invalida_gerado_otimizado.jl:302\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/politica_invalida_gerado_otimizado.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/politica_invalida_gerado_otimizado.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/politica_invalida_gerado_otimizado.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/politica_invalida_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/politica_invalida_gerado_otimizado.jl"
     ]
   },
@@ -661,7 +661,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/overflow.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/overflow.abt"
     ]
@@ -677,9 +677,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:8\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:342\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:2\n\ncaused by: ABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:332\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\n\ncaused by: OverflowError: 9223372036854775807 + 1 overflowed for type Int64\nStacktrace:\n [1] throw_overflowerr_binaryop(op::Symbol, x::Int64, y::Int64)\n   @ Base.Checked ./checked.jl:164\n [2] checked_add(x::Int64, y::Int64)\n   @ Base.Checked ./checked.jl:176\n [3] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:329\n [4] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:393 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:400\n [6] top-level scope\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl:402\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/overflow_gerado_sem_otimizacao.jl"
     ]
   },
@@ -694,9 +694,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:8\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:342\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:2\n\ncaused by: ABT resumir_grupos: registro 2, coluna 'valor': soma excede Int64\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:332\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:393 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:400\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:402\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\n\ncaused by: OverflowError: 9223372036854775807 + 1 overflowed for type Int64\nStacktrace:\n [1] throw_overflowerr_binaryop(op::Symbol, x::Int64, y::Int64)\n   @ Base.Checked ./checked.jl:164\n [2] checked_add(x::Int64, y::Int64)\n   @ Base.Checked ./checked.jl:176\n [3] (::var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, group_name::String, value_name::String, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:329\n [4] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:393 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_group_summary#abt_std_group_summary##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:400\n [6] top-level scope\n   @ /tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl:402\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/overflow_gerado_otimizado.jl"
     ]
   },
@@ -722,7 +722,7 @@
     "stdout": "{\"colunas\":[\"grupo\",\"valor\"],\"registros\":[{\"grupo\":\"A\",\"valor\":1}]}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/json_tabela.abt"
     ]
@@ -749,9 +749,9 @@
     "stdout": "{\"colunas\":[\"grupo\",\"valor\"],\"registros\":[{\"grupo\":\"A\",\"valor\":1}]}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_tabela_gerado_sem_otimizacao.jl"
     ]
   },
@@ -777,9 +777,9 @@
     "stdout": "{\"colunas\":[\"grupo\",\"valor\"],\"registros\":[{\"grupo\":\"A\",\"valor\":1}]}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_tabela_gerado_otimizado.jl"
     ]
   },
@@ -794,7 +794,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/json_ausente_erro.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT codificar_json: valor.registros[1].valor: valor ausente\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/json_ausente_erro.abt"
     ]
@@ -810,9 +810,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT codificar_json: valor.registros[1].valor: valor ausente\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:8\n [2] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, policy::String, active::IdDict{Any, Bool}, path::String)\n   @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:306\n [3] (::var\"#abt_std_json#abt_std_json##0\")(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:329\n [4] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:384 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_json#abt_std_json##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:391\n [6] top-level scope\n   @ /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:393\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:2\n\ncaused by: ABT codificar_json: valor.registros[1].valor: valor ausente\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::Missing, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:299\n  [3] (::var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String})(pair::Pair{Symbol, Union{Missing, String}})\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:309\n  [4] iterate\n    @ ./generator.jl:48 [inlined]\n  [5] collect_to!(dest::Vector{String}, itr::Base.Generator{Vector{Pair{Symbol, Union{Missing, String}}}, var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String}}, offs::Int64, st::Int64)\n    @ Base ./array.jl:886\n  [6] collect_to_with_first!(dest::Vector{String}, v1::String, itr::Base.Generator{Vector{Pair{Symbol, Union{Missing, String}}}, var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String}}, st::Int64)\n    @ Base ./array.jl:864\n  [7] _collect(c::Vector{Pair{Symbol, Union{Missing, String}}}, itr::Base.Generator{Vector{Pair{Symbol, Union{Missing, String}}}, var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String}}, ::Base.EltypeUnknown, isz::Base.HasShape{1})\n    @ Base ./array.jl:858\n  [8] collect_similar\n    @ ./array.jl:763 [inlined]\n  [9] map\n    @ ./abstractarray.jl:3396 [inlined]\n [10] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::@NamedTuple{grupo::String, valor::Missing}, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:309\n [11] (::var\"#abt_std_json_value##1#abt_std_json_value##2\"{String, IdDict{Any, Bool}, String})(::Tuple{Int64, @NamedTuple{grupo::String, valor::Missing}})\n    @ Main ./none:-1\n [12] iterate\n    @ ./generator.jl:48 [inlined]\n [13] collect(itr::Base.Generator{Base.Iterators.Enumerate{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}}, var\"#abt_std_json_value##1#abt_std_json_value##2\"{String, IdDict{Any, Bool}, String}})\n    @ Base ./array.jl:828\n [14] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:303\n [15] (::var\"#abt_std_json#abt_std_json##0\")(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, missing_policy::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:329\n [16] abt_invoke\n    @ /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:384 [inlined]\n [17] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_json#abt_std_json##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:391\n [18] top-level scope\n    @ /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl:393\n [19] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [20] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [21] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_sem_otimizacao.jl"
     ]
   },
@@ -827,9 +827,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT codificar_json: valor.registros[1].valor: valor ausente\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:8\n [2] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, policy::String, active::IdDict{Any, Bool}, path::String)\n   @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:306\n [3] (::var\"#abt_std_json#abt_std_json##0\")(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:329\n [4] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:384 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_json#abt_std_json##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:391\n [6] top-level scope\n   @ /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:393\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:2\n\ncaused by: ABT codificar_json: valor.registros[1].valor: valor ausente\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::Missing, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:299\n  [3] (::var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String})(pair::Pair{Symbol, Union{Missing, String}})\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:309\n  [4] iterate\n    @ ./generator.jl:48 [inlined]\n  [5] collect_to!(dest::Vector{String}, itr::Base.Generator{Vector{Pair{Symbol, Union{Missing, String}}}, var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String}}, offs::Int64, st::Int64)\n    @ Base ./array.jl:886\n  [6] collect_to_with_first!(dest::Vector{String}, v1::String, itr::Base.Generator{Vector{Pair{Symbol, Union{Missing, String}}}, var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String}}, st::Int64)\n    @ Base ./array.jl:864\n  [7] _collect(c::Vector{Pair{Symbol, Union{Missing, String}}}, itr::Base.Generator{Vector{Pair{Symbol, Union{Missing, String}}}, var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String}}, ::Base.EltypeUnknown, isz::Base.HasShape{1})\n    @ Base ./array.jl:858\n  [8] collect_similar\n    @ ./array.jl:763 [inlined]\n  [9] map\n    @ ./abstractarray.jl:3396 [inlined]\n [10] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::@NamedTuple{grupo::String, valor::Missing}, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:309\n [11] (::var\"#abt_std_json_value##1#abt_std_json_value##2\"{String, IdDict{Any, Bool}, String})(::Tuple{Int64, @NamedTuple{grupo::String, valor::Missing}})\n    @ Main ./none:-1\n [12] iterate\n    @ ./generator.jl:48 [inlined]\n [13] collect(itr::Base.Generator{Base.Iterators.Enumerate{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}}, var\"#abt_std_json_value##1#abt_std_json_value##2\"{String, IdDict{Any, Bool}, String}})\n    @ Base ./array.jl:828\n [14] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:303\n [15] (::var\"#abt_std_json#abt_std_json##0\")(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, missing_policy::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:329\n [16] abt_invoke\n    @ /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:384 [inlined]\n [17] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_json#abt_std_json##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n    @ Main /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:391\n [18] top-level scope\n    @ /tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl:393\n [19] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [20] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [21] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_ausente_erro_gerado_otimizado.jl"
     ]
   },
@@ -855,7 +855,7 @@
     "stdout": "{\"colunas\":[\"grupo\",\"valor\"],\"registros\":[{\"grupo\":\"A\",\"valor\":null}]}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/json_ausente_nulo.abt"
     ]
@@ -882,9 +882,9 @@
     "stdout": "{\"colunas\":[\"grupo\",\"valor\"],\"registros\":[{\"grupo\":\"A\",\"valor\":null}]}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_ausente_nulo_gerado_sem_otimizacao.jl"
     ]
   },
@@ -910,9 +910,9 @@
     "stdout": "{\"colunas\":[\"grupo\",\"valor\"],\"registros\":[{\"grupo\":\"A\",\"valor\":null}]}\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_ausente_nulo_gerado_otimizado.jl"
     ]
   },
@@ -927,7 +927,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/json_politica_invalida.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT codificar_json: política de ausentes deve ser erro ou nulo\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/json_politica_invalida.abt"
     ]
@@ -943,9 +943,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT codificar_json: política de ausentes deve ser erro ou nulo\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_json#abt_std_json##0\")(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_sem_otimizacao.jl:328\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_sem_otimizacao.jl:384 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_json#abt_std_json##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_sem_otimizacao.jl:391\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_sem_otimizacao.jl:393\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_sem_otimizacao.jl"
     ]
   },
@@ -960,9 +960,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT codificar_json: política de ausentes deve ser erro ou nulo\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_json#abt_std_json##0\")(value::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, missing_policy::String)\n   @ Main /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_otimizado.jl:328\n [3] abt_invoke\n   @ /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_otimizado.jl:384 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_json#abt_std_json##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_otimizado.jl:391\n [5] top-level scope\n   @ /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_otimizado.jl:393\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_politica_invalida_gerado_otimizado.jl"
     ]
   },
@@ -977,7 +977,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-extensions-r971cur5/json_nan.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT codificar_json: valor.x: tipo não suportado ou número não finito (Float64)\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "<ABT_REPO>/bin/abt",
       "run",
       "/tmp/abt-extensions-r971cur5/json_nan.abt"
     ]
@@ -993,9 +993,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT codificar_json: valor.x: tipo não suportado ou número não finito (Float64)\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::Float64, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl:324\n  [3] (::var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String})(pair::Pair{Symbol, Float64})\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl:309\n  [4] iterate\n    @ ./generator.jl:48 [inlined]\n  [5] _collect(c::Vector{Pair{Symbol, Float64}}, itr::Base.Generator{Vector{Pair{Symbol, Float64}}, var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String}}, ::Base.EltypeUnknown, isz::Base.HasShape{1})\n    @ Base ./array.jl:848\n  [6] collect_similar\n    @ ./array.jl:763 [inlined]\n  [7] map\n    @ ./abstractarray.jl:3396 [inlined]\n  [8] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::@NamedTuple{x::Float64}, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl:309\n  [9] (::var\"#abt_std_json#abt_std_json##0\")(value::@NamedTuple{x::Float64}, missing_policy::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl:329\n [10] abt_invoke\n    @ /tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl:385 [inlined]\n [11] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_json#abt_std_json##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl:392\n [12] top-level scope\n    @ /tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl:394\n [13] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [14] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [15] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_nan_gerado_sem_otimizacao.jl"
     ]
   },
@@ -1010,9 +1010,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT codificar_json: valor.x: tipo não suportado ou número não finito (Float64)\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::Float64, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl:324\n  [3] (::var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String})(pair::Pair{Symbol, Float64})\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl:309\n  [4] iterate\n    @ ./generator.jl:48 [inlined]\n  [5] _collect(c::Vector{Pair{Symbol, Float64}}, itr::Base.Generator{Vector{Pair{Symbol, Float64}}, var\"#abt_std_json_value##3#abt_std_json_value##4\"{String, IdDict{Any, Bool}, String}}, ::Base.EltypeUnknown, isz::Base.HasShape{1})\n    @ Base ./array.jl:848\n  [6] collect_similar\n    @ ./array.jl:763 [inlined]\n  [7] map\n    @ ./abstractarray.jl:3396 [inlined]\n  [8] (::var\"#abt_std_json_value#abt_std_json_value##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(value::@NamedTuple{x::Float64}, policy::String, active::IdDict{Any, Bool}, path::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl:309\n  [9] (::var\"#abt_std_json#abt_std_json##0\")(value::@NamedTuple{x::Float64}, missing_policy::String)\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl:329\n [10] abt_invoke\n    @ /tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl:385 [inlined]\n [11] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_json#abt_std_json##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl:392\n [12] top-level scope\n    @ /tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl:394\n [13] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [14] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [15] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "--project=<ABT_REPO>",
       "/tmp/abt-extensions-r971cur5/json_nan_gerado_otimizado.jl"
     ]
   }

@@ -13,7 +13,7 @@ Ambiente: Ubuntu, Julia 1.13.3 local, PythonCall opcional disponível via `.juli
 Comando integral, a partir da raiz deste projeto:
 
 ```sh
-ABT_REQUIRE_PYTHON=1 JULIA_DEPOT_PATH="$PWD/.julia_depot" JULIA_PYTHONCALL_EXE=/usr/bin/python3 python3 tests/run_all_tests.py --julia /home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia --timeout 180
+ABT_REQUIRE_PYTHON=1 JULIA_DEPOT_PATH="$PWD/.julia_depot" JULIA_PYTHONCALL_EXE=/usr/bin/python3 python3 tests/run_all_tests.py --julia <JULIA_BIN> --timeout 180
 ```
 
 Resultado: **36 PASS, 2 PROBE, 0 PARTIAL, 0 FAIL, 0 TIMEOUT**. Os 36 incluem os testes históricos, estáticos, legados (`tests/runtests_legacy.jl` via `tests/runtests.jl`), interoperabilidade Python/Julia, 1.000 casos diferenciais anteriores, 335 verificações de coleções 0.11.7 e a nova suíte de pipelines. Esta nova suíte executou 9 casos diferenciais dirigidos, 100 casos determinísticos com semente `0xAB7118` e 7 testes de diagnóstico. O harness diferencial compara interpretador, Julia gerado sem otimização e com otimização, inclusive saídas e erros. Resultados estruturados e logs por arquivo: `logs/test_logs/summary.json` e `logs/test_logs/*.log`.

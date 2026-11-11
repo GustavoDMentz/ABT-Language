@@ -9,7 +9,7 @@
     "stdout": "(sequencias = 2, bases = 8, A = 1, C = 3, G = 3, T = 1, N = 0, GC_percentual = 75.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/dna.abt"
     ]
@@ -24,9 +24,9 @@
     "stdout": "(sequencias = 2, bases = 8, A = 1, C = 3, G = 3, T = 1, N = 0, GC_percentual = 75.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/dna_gerado_sem_otimizacao.jl"
     ]
   },
@@ -40,9 +40,9 @@
     "stdout": "(sequencias = 2, bases = 8, A = 1, C = 3, G = 3, T = 1, N = 0, GC_percentual = 75.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/dna_gerado_otimizado.jl"
     ]
   },
@@ -56,7 +56,7 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, U = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/rna.abt"
     ]
@@ -71,9 +71,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, U = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/rna_gerado_sem_otimizacao.jl"
     ]
   },
@@ -87,9 +87,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, U = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/rna_gerado_otimizado.jl"
     ]
   },
@@ -103,7 +103,7 @@
     "stdout": "(sequencias = 1, bases = 5, A = 1, C = 1, G = 1, U = 1, N = 1, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/rna_ambiguo.abt"
     ]
@@ -118,9 +118,9 @@
     "stdout": "(sequencias = 1, bases = 5, A = 1, C = 1, G = 1, U = 1, N = 1, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/rna_ambiguo_gerado_sem_otimizacao.jl"
     ]
   },
@@ -134,9 +134,9 @@
     "stdout": "(sequencias = 1, bases = 5, A = 1, C = 1, G = 1, U = 1, N = 1, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/rna_ambiguo_gerado_otimizado.jl"
     ]
   },
@@ -150,7 +150,7 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 0, N = 1, GC_percentual = 66.66666666666667)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/ambiguo.abt"
     ]
@@ -165,9 +165,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 0, N = 1, GC_percentual = 66.66666666666667)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/ambiguo_gerado_sem_otimizacao.jl"
     ]
   },
@@ -181,9 +181,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 0, N = 1, GC_percentual = 66.66666666666667)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/ambiguo_gerado_otimizado.jl"
     ]
   },
@@ -197,7 +197,7 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/multilinha.abt"
     ]
@@ -212,9 +212,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/multilinha_gerado_sem_otimizacao.jl"
     ]
   },
@@ -228,9 +228,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/multilinha_gerado_otimizado.jl"
     ]
   },
@@ -244,7 +244,7 @@
     "stdout": "(sequencias = 1, bases = 4, A = 4, C = 0, G = 0, T = 0, N = 0, GC_percentual = 0.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/gc_zero.abt"
     ]
@@ -259,9 +259,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 4, C = 0, G = 0, T = 0, N = 0, GC_percentual = 0.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/gc_zero_gerado_sem_otimizacao.jl"
     ]
   },
@@ -275,9 +275,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 4, C = 0, G = 0, T = 0, N = 0, GC_percentual = 0.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/gc_zero_gerado_otimizado.jl"
     ]
   },
@@ -291,7 +291,7 @@
     "stdout": "(sequencias = 1, bases = 4, A = 0, C = 0, G = 4, T = 0, N = 0, GC_percentual = 100.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/gc_cem.abt"
     ]
@@ -306,9 +306,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 0, C = 0, G = 4, T = 0, N = 0, GC_percentual = 100.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/gc_cem_gerado_sem_otimizacao.jl"
     ]
   },
@@ -322,9 +322,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 0, C = 0, G = 4, T = 0, N = 0, GC_percentual = 100.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/gc_cem_gerado_otimizado.jl"
     ]
   },
@@ -338,7 +338,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/duplicado.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 2: identificador duplicado 'a'\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/duplicado.abt"
     ]
@@ -353,9 +353,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 2: identificador duplicado 'a'\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:2\n\ncaused by: registro 2: identificador duplicado 'a'\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:331\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/duplicado_gerado_sem_otimizacao.jl"
     ]
   },
@@ -369,9 +369,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 2: identificador duplicado 'a'\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:2\n\ncaused by: registro 2: identificador duplicado 'a'\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:331\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/duplicado_gerado_otimizado.jl"
     ]
   },
@@ -385,7 +385,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/minusculas.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': bases minúsculas não permitidas\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/minusculas.abt"
     ]
@@ -400,9 +400,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': bases minúsculas não permitidas\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:2\n\ncaused by: registro 1 'a': bases minúsculas não permitidas\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:337\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/minusculas_gerado_sem_otimizacao.jl"
     ]
   },
@@ -416,9 +416,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': bases minúsculas não permitidas\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:2\n\ncaused by: registro 1 'a': bases minúsculas não permitidas\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:337\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/minusculas_gerado_otimizado.jl"
     ]
   },
@@ -432,7 +432,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/base_invalida.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': base inválida 'X' na posição 3 para DNA\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/base_invalida.abt"
     ]
@@ -447,9 +447,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': base inválida 'X' na posição 3 para DNA\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:2\n\ncaused by: registro 1 'a': base inválida 'X' na posição 3 para DNA\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:341\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/base_invalida_gerado_sem_otimizacao.jl"
     ]
   },
@@ -463,9 +463,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': base inválida 'X' na posição 3 para DNA\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:2\n\ncaused by: registro 1 'a': base inválida 'X' na posição 3 para DNA\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:341\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/base_invalida_gerado_otimizado.jl"
     ]
   },
@@ -479,7 +479,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/n_rejeitado.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': base inválida 'N' na posição 3 para DNA\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/n_rejeitado.abt"
     ]
@@ -494,9 +494,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': base inválida 'N' na posição 3 para DNA\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:2\n\ncaused by: registro 1 'a': base inválida 'N' na posição 3 para DNA\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:341\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_sem_otimizacao.jl"
     ]
   },
@@ -510,9 +510,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': base inválida 'N' na posição 3 para DNA\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:2\n\ncaused by: registro 1 'a': base inválida 'N' na posição 3 para DNA\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:341\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/n_rejeitado_gerado_otimizado.jl"
     ]
   },
@@ -526,7 +526,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/somente_n.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': GC indefinido sem bases não ambíguas\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/somente_n.abt"
     ]
@@ -541,9 +541,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': GC indefinido sem bases não ambíguas\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:2\n\ncaused by: registro 1 'a': GC indefinido sem bases não ambíguas\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:353\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/somente_n_gerado_sem_otimizacao.jl"
     ]
   },
@@ -557,9 +557,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': GC indefinido sem bases não ambíguas\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:2\n\ncaused by: registro 1 'a': GC indefinido sem bases não ambíguas\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:353\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/somente_n_gerado_otimizado.jl"
     ]
   },
@@ -573,7 +573,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/vazio.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': sequência vazia\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/vazio.abt"
     ]
@@ -588,9 +588,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': sequência vazia\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:2\n\ncaused by: registro 1 'a': sequência vazia\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:335\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/vazio_gerado_sem_otimizacao.jl"
     ]
   },
@@ -604,9 +604,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1 'a': sequência vazia\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:2\n\ncaused by: registro 1 'a': sequência vazia\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:335\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/vazio_gerado_otimizado.jl"
     ]
   },
@@ -620,7 +620,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/sem_cabecalho.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': Error when parsing FASTX file. Saw unexpected byte 'A' on line 1\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/sem_cabecalho.abt"
     ]
@@ -635,9 +635,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': Error when parsing FASTX file. Saw unexpected byte 'A' on line 1\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:2\n\ncaused by: Error when parsing FASTX file. Saw unexpected byte 'A' on line 1\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] throw_parser_error(data::Vector{UInt8}, p::Int64, line::Int64)\n    @ FASTX /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/FASTX.jl:132\n  [3] macro expansion\n    @ /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/fasta/readrecord.jl:88 [inlined]\n  [4] readrecord!(stream::TranscodingStreams.NoopStream{IOStream}, record::FASTX.FASTA.Record, state::Tuple{Int64, Int64})\n    @ FASTX.FASTA /tmp/abt-tabular-depot/packages/Automa/fzRJn/src/stream.jl:83\n  [5] _read!\n    @ /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/fasta/reader.jl:104 [inlined]\n  [6] iterate\n    @ /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/fasta/reader.jl:79 [inlined]\n  [7] iterate(rdr::FASTX.FASTA.Reader{TranscodingStreams.NoopStream{IOStream}})\n    @ FASTX.FASTA /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/fasta/reader.jl:79\n  [8] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:327\n  [9] #open#324\n    @ ./io.jl:429 [inlined]\n [10] open\n    @ ./io.jl:426 [inlined]\n [11] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:324\n [12] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:312\n [13] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:387\n [14] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:427 [inlined]\n [15] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:434\n [16] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl:436\n [17] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [18] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [19] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_sem_otimizacao.jl"
     ]
   },
@@ -651,9 +651,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': Error when parsing FASTX file. Saw unexpected byte 'A' on line 1\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:2\n\ncaused by: Error when parsing FASTX file. Saw unexpected byte 'A' on line 1\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] throw_parser_error(data::Vector{UInt8}, p::Int64, line::Int64)\n    @ FASTX /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/FASTX.jl:132\n  [3] macro expansion\n    @ /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/fasta/readrecord.jl:88 [inlined]\n  [4] readrecord!(stream::TranscodingStreams.NoopStream{IOStream}, record::FASTX.FASTA.Record, state::Tuple{Int64, Int64})\n    @ FASTX.FASTA /tmp/abt-tabular-depot/packages/Automa/fzRJn/src/stream.jl:83\n  [5] _read!\n    @ /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/fasta/reader.jl:104 [inlined]\n  [6] iterate\n    @ /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/fasta/reader.jl:79 [inlined]\n  [7] iterate(rdr::FASTX.FASTA.Reader{TranscodingStreams.NoopStream{IOStream}})\n    @ FASTX.FASTA /tmp/abt-tabular-depot/packages/FASTX/0hqwj/src/fasta/reader.jl:79\n  [8] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:327\n  [9] #open#324\n    @ ./io.jl:429 [inlined]\n [10] open\n    @ ./io.jl:426 [inlined]\n [11] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:324\n [12] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:312\n [13] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:387\n [14] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:427 [inlined]\n [15] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:434\n [16] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl:436\n [17] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [18] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [19] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/sem_cabecalho_gerado_otimizado.jl"
     ]
   },
@@ -667,7 +667,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/id_vazio.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1: identificador vazio\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/id_vazio.abt"
     ]
@@ -682,9 +682,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1: identificador vazio\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:2\n\ncaused by: registro 1: identificador vazio\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:330\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/id_vazio_gerado_sem_otimizacao.jl"
     ]
   },
@@ -698,9 +698,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': registro 1: identificador vazio\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:373\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:2\n\ncaused by: registro 1: identificador vazio\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded##1#abt_std_fasta_walk_loaded##2\"{@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, Bool, Module, Module, String, Vector{Int64}, Vector{NamedTuple}, Set{String}})(io::IOStream)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:330\n  [3] #open#324\n    @ ./io.jl:429 [inlined]\n  [4] open\n    @ ./io.jl:426 [inlined]\n  [5] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:324\n  [6] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:312\n  [7] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:387\n  [8] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:427 [inlined]\n  [9] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:434\n [10] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl:436\n [11] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [12] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [13] _start()\n    @ Base ./client.jl:577\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/id_vazio_gerado_otimizado.jl"
     ]
   },
@@ -714,7 +714,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/arquivo_vazio.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': nenhum registro\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/arquivo_vazio.abt"
     ]
@@ -729,9 +729,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': nenhum registro\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_sem_otimizacao.jl:375\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_sem_otimizacao.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_sem_otimizacao.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_sem_otimizacao.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_sem_otimizacao.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_sem_otimizacao.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_sem_otimizacao.jl"
     ]
   },
@@ -745,9 +745,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta': nenhum registro\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_fasta_walk_loaded#abt_std_fasta_walk_loaded##0\")(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool, fastx::Module, bio::Module)\n    @ Main /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_otimizado.jl:375\n  [3] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String}, materialize::Bool)\n    @ Main /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_otimizado.jl:312\n  [4] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::@NamedTuple{__abt_fasta__::Bool, path::String, alphabet::String, ambiguity::String, case_policy::String})\n    @ Main /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_otimizado.jl:387\n  [5] abt_invoke\n    @ /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_otimizado.jl:427 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n    @ Main /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_otimizado.jl:434\n  [7] top-level scope\n    @ /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_otimizado.jl:436\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/arquivo_vazio_gerado_otimizado.jl"
     ]
   },
@@ -761,7 +761,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/arquivo_inexistente.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_fasta: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta' não existe\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/arquivo_inexistente.abt"
     ]
@@ -776,9 +776,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT ler_fasta: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta' não existe\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_fasta#abt_std_fasta##0\")(path::String, alphabet::String, ambiguity::String, case_policy::String)\n   @ Main /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_sem_otimizacao.jl:304\n [3] abt_invoke\n   @ /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_sem_otimizacao.jl:427 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n   @ Main /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_sem_otimizacao.jl:433\n [5] top-level scope\n   @ /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_sem_otimizacao.jl:436\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_sem_otimizacao.jl"
     ]
   },
@@ -792,9 +792,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT ler_fasta: arquivo '/tmp/abt-bio-hk7tpgde/data.fasta' não existe\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_fasta#abt_std_fasta##0\")(path::String, alphabet::String, ambiguity::String, case_policy::String)\n   @ Main /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_otimizado.jl:304\n [3] abt_invoke\n   @ /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_otimizado.jl:427 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n   @ Main /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_otimizado.jl:433\n [5] top-level scope\n   @ /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_otimizado.jl:436\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/arquivo_inexistente_gerado_otimizado.jl"
     ]
   },
@@ -808,7 +808,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/alfabeto_invalido.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_fasta: alfabeto deve ser DNA ou RNA\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/alfabeto_invalido.abt"
     ]
@@ -823,9 +823,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT ler_fasta: alfabeto deve ser DNA ou RNA\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_fasta#abt_std_fasta##0\")(path::String, alphabet::String, ambiguity::String, case_policy::String)\n   @ Main /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_sem_otimizacao.jl:301\n [3] abt_invoke\n   @ /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_sem_otimizacao.jl:427 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n   @ Main /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_sem_otimizacao.jl:433\n [5] top-level scope\n   @ /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_sem_otimizacao.jl:436\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_sem_otimizacao.jl"
     ]
   },
@@ -839,9 +839,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT ler_fasta: alfabeto deve ser DNA ou RNA\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_fasta#abt_std_fasta##0\")(path::String, alphabet::String, ambiguity::String, case_policy::String)\n   @ Main /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_otimizado.jl:301\n [3] abt_invoke\n   @ /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_otimizado.jl:427 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}, var\"#abt_std_fasta#abt_std_fasta##0\"})()\n   @ Main /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_otimizado.jl:433\n [5] top-level scope\n   @ /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_otimizado.jl:436\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/alfabeto_invalido_gerado_otimizado.jl"
     ]
   },
@@ -855,7 +855,7 @@
     "stdout": "",
     "stderr": "/tmp/abt-bio-hk7tpgde/objeto_invalido.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: esperado valor produzido por ler_fasta\n",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/objeto_invalido.abt"
     ]
@@ -870,9 +870,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: esperado valor produzido por ler_fasta\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::Int64, materialize::Bool)\n   @ Main /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_sem_otimizacao.jl:309\n [3] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::Int64)\n   @ Main /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_sem_otimizacao.jl:387\n [4] abt_invoke\n   @ /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_sem_otimizacao.jl:426 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}})()\n   @ Main /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_sem_otimizacao.jl:432\n [6] top-level scope\n   @ /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_sem_otimizacao.jl:434\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_sem_otimizacao.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_sem_otimizacao.jl"
     ]
   },
@@ -886,9 +886,9 @@
     "stdout": "",
     "stderr": "ERROR: LoadError: ABT FASTA: esperado valor produzido por ler_fasta\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"})(handle::Int64, materialize::Bool)\n   @ Main /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_otimizado.jl:309\n [3] (::var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}})(handle::Int64)\n   @ Main /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_otimizado.jl:387\n [4] abt_invoke\n   @ /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_otimizado.jl:426 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_fasta_summary#abt_std_fasta_summary##0\"{var\"#abt_std_fasta_walk#abt_std_fasta_walk##0\"{var\"#abt_std_isfasta#abt_std_isfasta##0\"}}})()\n   @ Main /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_otimizado.jl:432\n [6] top-level scope\n   @ /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_otimizado.jl:434\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_otimizado.jl:2\n",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/objeto_invalido_gerado_otimizado.jl"
     ]
   },
@@ -902,7 +902,7 @@
     "stdout": "[(identificador = \"a\", descricao = \"a descrição\", sequencia = \"acgt\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0)]\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/registros.abt"
     ]
@@ -917,9 +917,9 @@
     "stdout": "[(identificador = \"a\", descricao = \"a descrição\", sequencia = \"acgt\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0)]\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/registros_gerado_sem_otimizacao.jl"
     ]
   },
@@ -933,9 +933,9 @@
     "stdout": "[(identificador = \"a\", descricao = \"a descrição\", sequencia = \"acgt\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0)]\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/registros_gerado_otimizado.jl"
     ]
   },
@@ -949,7 +949,7 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-hk7tpgde/funcao.abt"
     ]
@@ -964,9 +964,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/funcao_gerado_sem_otimizacao.jl"
     ]
   },
@@ -980,9 +980,9 @@
     "stdout": "(sequencias = 1, bases = 4, A = 1, C = 1, G = 1, T = 1, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-hk7tpgde/funcao_gerado_otimizado.jl"
     ]
   }

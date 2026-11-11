@@ -8,13 +8,13 @@
     "size": 21125,
     "sha256": "ddd72a6407e7082559ae7e5c646af930b32fce56860af56f0857dba06e773ce9",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
       "--compiled-modules=existing",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/src/CLI.jl",
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/science/visualizacao.abt"
+      "--project=<ABT_PERF_WORKTREE>",
+      "<ABT_PERF_WORKTREE>/src/CLI.jl",
+      "<ABT_PERF_WORKTREE>/applications/science/visualizacao.abt"
     ]
   },
   {
@@ -26,11 +26,11 @@
     "size": 21125,
     "sha256": "ddd72a6407e7082559ae7e5c646af930b32fce56860af56f0857dba06e773ce9",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
       "--compiled-modules=existing",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-chart-m7sy1ehp/gerado_sem_otimizacao.jl"
     ]
   },
@@ -43,11 +43,11 @@
     "size": 21125,
     "sha256": "ddd72a6407e7082559ae7e5c646af930b32fce56860af56f0857dba06e773ce9",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
       "--compiled-modules=existing",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-chart-m7sy1ehp/gerado_otimizado.jl"
     ]
   },
@@ -68,6 +68,6 @@
     "status": "PASS",
     "code": 1,
     "stdout": "",
-    "stderr": "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/applications/science/visualizacao.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT salvar_figura: caminho deve terminar em .png ou .svg\n"
+    "stderr": "<ABT_PERF_WORKTREE>/applications/science/visualizacao.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT salvar_figura: caminho deve terminar em .png ou .svg\n"
   }
 ]

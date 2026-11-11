@@ -14,7 +14,7 @@ O teste de Wilcoxon com todos os pares iguais retorna valor-p 1 conforme `Hypoth
 
 ## Execuções desta auditoria
 
-Os comandos abaixo usam `JULIA` como caminho absoluto para Julia 1.13.3. Nesta máquina, o depot utilizado foi `/tmp/abt-tabular-depot:/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot`; em outra instalação, o depot padrão da Julia é suficiente após `Pkg.instantiate()`. A opção de PythonCall é usada apenas para os testes legados de interoperabilidade.
+Os comandos abaixo usam `JULIA` como caminho absoluto para Julia 1.13.3. Nesta máquina, o depot utilizado foi `/tmp/abt-tabular-depot:<JULIA_DEPOT>`; em outra instalação, o depot padrão da Julia é suficiente após `Pkg.instantiate()`. A opção de PythonCall é usada apenas para os testes legados de interoperabilidade.
 
 ```bash
 cd /caminho/para/ABT-Language

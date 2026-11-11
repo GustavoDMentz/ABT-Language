@@ -15,7 +15,7 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.abt"
     ]
@@ -36,7 +36,7 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.abt"
     ]
@@ -57,7 +57,7 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.abt"
     ]
@@ -78,7 +78,7 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.abt"
     ]
@@ -99,7 +99,7 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.abt"
     ]
@@ -120,7 +120,7 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.abt"
     ]
@@ -141,10 +141,10 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.jl"
     ]
   },
@@ -164,10 +164,10 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.jl"
     ]
   },
@@ -187,10 +187,10 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.jl"
     ]
   },
@@ -210,10 +210,10 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.jl"
     ]
   },
@@ -233,10 +233,10 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.jl"
     ]
   },
@@ -256,10 +256,10 @@
     "stdout": "(sequencias = 1, bases = 100, A = 25, C = 25, G = 25, T = 25, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/pequeno.jl"
     ]
   },
@@ -279,7 +279,7 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/medio.abt"
     ]
@@ -300,7 +300,7 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/medio.abt"
     ]
@@ -321,7 +321,7 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/medio.abt"
     ]
@@ -342,7 +342,7 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/medio.abt"
     ]
@@ -363,7 +363,7 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/medio.abt"
     ]
@@ -384,7 +384,7 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/medio.abt"
     ]
@@ -405,10 +405,10 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/medio.jl"
     ]
   },
@@ -428,10 +428,10 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/medio.jl"
     ]
   },
@@ -451,10 +451,10 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/medio.jl"
     ]
   },
@@ -474,10 +474,10 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/medio.jl"
     ]
   },
@@ -497,10 +497,10 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/medio.jl"
     ]
   },
@@ -520,10 +520,10 @@
     "stdout": "(sequencias = 10, bases = 100000, A = 25000, C = 25000, G = 25000, T = 25000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/medio.jl"
     ]
   },
@@ -543,7 +543,7 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/grande.abt"
     ]
@@ -564,7 +564,7 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/grande.abt"
     ]
@@ -585,7 +585,7 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/grande.abt"
     ]
@@ -606,7 +606,7 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/grande.abt"
     ]
@@ -627,7 +627,7 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/grande.abt"
     ]
@@ -648,7 +648,7 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt",
+      "<ABT_PERF_WORKTREE>/bin/abt",
       "run",
       "/tmp/abt-bio-bench-90p7ti8x/grande.abt"
     ]
@@ -669,10 +669,10 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/grande.jl"
     ]
   },
@@ -692,10 +692,10 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/grande.jl"
     ]
   },
@@ -715,10 +715,10 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=min",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/grande.jl"
     ]
   },
@@ -738,10 +738,10 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/grande.jl"
     ]
   },
@@ -761,10 +761,10 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/grande.jl"
     ]
   },
@@ -784,10 +784,10 @@
     "stdout": "(sequencias = 100, bases = 1000000, A = 250000, C = 250000, G = 250000, T = 250000, N = 0, GC_percentual = 50.0)\n",
     "stderr": "",
     "command": [
-      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "<JULIA_BIN>",
       "--startup-file=no",
       "--compile=all",
-      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118",
+      "--project=<ABT_PERF_WORKTREE>",
       "/tmp/abt-bio-bench-90p7ti8x/grande.jl"
     ]
   }

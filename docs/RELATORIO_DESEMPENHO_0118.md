@@ -8,7 +8,7 @@ O ABT continua sendo interpretado pelo mesmo módulo Julia. A CLI agora carrega 
 
 ## Metodologia
 
-- Ambiente: Ubuntu local, Julia 1.13.3 em `/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia`.
+- Ambiente: Ubuntu local, Julia 1.13.3 em `<JULIA_BIN>`.
 - `benchmarks/bench_startup.py` executa processos independentes por cenário, mede latência externa com `time.perf_counter()` e pico de RSS com `/usr/bin/time -f '%e %M'`. Guarda cada amostra, stdout, stderr e código de retorno em JSON.
 - Cenários: lançador isolado, Julia vazio, versão, doctor, check/run de Olá Mundo, pipeline, agregação matemática, programa representativo e arquivo de 1.000 atribuições.
 - Mediana, p95 interpolado, desvio padrão e pico de RSS são calculados das amostras. A primeira amostra fica registrada separadamente nos JSONs; não foi descartada.
@@ -77,9 +77,9 @@ PythonCall exige configuração Julia/Python apropriada para os testes opcionais
 Comandos exatos usados neste host para repetir as medições da árvore atual:
 
 ```bash
-cd /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118
-export ABT_JULIA=/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia
-export JULIA_DEPOT_PATH=/tmp/abt-perf-final-depot:/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot
+cd <ABT_PERF_WORKTREE>
+export ABT_JULIA=<JULIA_BIN>
+export JULIA_DEPOT_PATH=/tmp/abt-perf-final-depot:<JULIA_DEPOT>
 export JULIA_PYTHONCALL_EXE=/usr/bin/python3
 python3 benchmarks/bench_startup.py --julia "$ABT_JULIA" --repeats 10 --output logs/perf_logs/repeticao.json
 python3 benchmarks/measure_process_phases.py --julia "$ABT_JULIA" --output logs/perf_logs/fases_repeticao.json

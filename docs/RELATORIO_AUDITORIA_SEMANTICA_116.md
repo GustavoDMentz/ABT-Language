@@ -49,4 +49,4 @@ julia --startup-file=no tests/test_differential_1000.jl --case 731
 julia --startup-file=no --depwarn=error tests/test_semantic_adversarial.jl
 ```
 
-PythonCall 0.9.37 e NumPy 2.5.1 foram usados nesta auditoria. O executável `julia` via juliaup não funcionou sob a restrição de escrita desta sessão; aqui foi usado diretamente `/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia`. A instalação de PythonCall é necessária para reproduzir a rodada com `ABT_REQUIRE_PYTHON=1`, mas continua opcional para a execução normal do ABT.
+PythonCall 0.9.37 e NumPy 2.5.1 foram usados nesta auditoria. O executável `julia` via juliaup não funcionou sob a restrição de escrita desta sessão; aqui foi usado diretamente `<JULIA_BIN>`. A instalação de PythonCall é necessária para reproduzir a rodada com `ABT_REQUIRE_PYTHON=1`, mas continua opcional para a execução normal do ABT.

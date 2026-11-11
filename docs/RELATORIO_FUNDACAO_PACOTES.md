@@ -29,8 +29,8 @@ As Fases B–E permanecem pendentes. Não foi especificada sem ambiguidade a sem
 ## Comandos exatos usados localmente
 
 ```bash
-export JULIA=/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia
-export JULIA_DEPOT_PATH=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot
+export JULIA=<JULIA_BIN>
+export JULIA_DEPOT_PATH=<JULIA_DEPOT>
 export JULIA_PYTHONCALL_EXE=/usr/bin/python3
 ABT_REQUIRE_PYTHON=1 python3 tests/run_all_tests.py --julia "$JULIA" --timeout 180
 "$JULIA" --startup-file=no tests/test_packages_foundation.jl

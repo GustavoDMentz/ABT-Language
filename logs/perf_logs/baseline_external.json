@@ -131,7 +131,7 @@
       "time_s": 0.04,
       "rss_kb": 29720,
       "returncode": 0,
-      "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+      "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
       "stderr": ""
     },
     {
@@ -139,7 +139,7 @@
       "time_s": 0.02,
       "rss_kb": 29724,
       "returncode": 0,
-      "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+      "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
       "stderr": ""
     },
     {
@@ -147,7 +147,7 @@
       "time_s": 0.02,
       "rss_kb": 29740,
       "returncode": 0,
-      "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+      "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
       "stderr": ""
     },
     {
@@ -155,7 +155,7 @@
       "time_s": 0.02,
       "rss_kb": 29744,
       "returncode": 0,
-      "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+      "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
       "stderr": ""
     },
     {
@@ -163,7 +163,7 @@
       "time_s": 0.02,
       "rss_kb": 29648,
       "returncode": 0,
-      "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+      "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
       "stderr": ""
     }
   ],

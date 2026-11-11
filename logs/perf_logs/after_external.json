@@ -1,7 +1,7 @@
 {
   "environment": {
-    "julia": "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
-    "julia_depot_path": "/tmp/abt-perf-final-depot:/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot",
+    "julia": "<JULIA_BIN>",
+    "julia_depot_path": "/tmp/abt-perf-final-depot:<JULIA_DEPOT>",
     "compile_mode": "min",
     "repeats": 10,
     "os_cache_cleared": false
@@ -278,7 +278,7 @@
           "time_s": 0.01,
           "rss_kb": 30148,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -286,7 +286,7 @@
           "time_s": 0.01,
           "rss_kb": 29968,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -294,7 +294,7 @@
           "time_s": 0.01,
           "rss_kb": 30020,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -302,7 +302,7 @@
           "time_s": 0.01,
           "rss_kb": 30120,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -310,7 +310,7 @@
           "time_s": 0.01,
           "rss_kb": 30128,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -318,7 +318,7 @@
           "time_s": 0.01,
           "rss_kb": 29972,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -326,7 +326,7 @@
           "time_s": 0.01,
           "rss_kb": 29916,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -334,7 +334,7 @@
           "time_s": 0.01,
           "rss_kb": 29924,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -342,7 +342,7 @@
           "time_s": 0.01,
           "rss_kb": 30116,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         },
         {
@@ -350,7 +350,7 @@
           "time_s": 0.01,
           "rss_kb": 30148,
           "returncode": 0,
-          "stdout": "ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
+          "stdout": "ABT: <ABT_PERF_WORKTREE>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime disponíveis.\n",
           "stderr": ""
         }
       ],

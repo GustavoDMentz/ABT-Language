@@ -16,9 +16,13 @@ JULIA = os.environ.get("ABT_JULIA", "julia")
 CLI = ROOT / "bin/abt"
 RESULTS = []
 
+def redact_local_paths(detail):
+    return detail.replace(str(ROOT), "<ABT_REPO>").replace(str(Path.home()), "<USER_HOME>")
+
 def result(kind, name, status, detail=""):
+    detail = redact_local_paths(detail)
     RESULTS.append(dict(kind=kind, name=name, status=status, detail=detail))
-    print(" ".join(part for part in (status, kind, name, detail[:100]) if part), flush=True)
+    print(" ".join(part for part in (status, kind, name, detail[:100].rstrip()) if part), flush=True)
 
 def slug(text):
     text = re.sub(r"<[^>]*>", "", text).strip().lower()

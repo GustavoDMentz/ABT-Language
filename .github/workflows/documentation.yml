@@ -5,6 +5,7 @@ on:
     paths:
       - 'docs/**'
       - 'tools/validate_docs.py'
+      - 'tools/check_privacy.py'
       - 'tools/generate_docs_reference.py'
       - 'src/**'
       - 'applications/**'
@@ -20,6 +21,7 @@ on:
     paths:
       - 'docs/**'
       - 'tools/validate_docs.py'
+      - 'tools/check_privacy.py'
       - 'tools/generate_docs_reference.py'
       - 'src/**'
       - 'applications/**'
@@ -64,6 +66,8 @@ jobs:
           JULIA_CONDAPKG_BACKEND: Null
           JULIA_PYTHONCALL_EXE: /usr/bin/python3
         run: python3 tools/validate_docs.py
+      - name: Check tracked files for personal paths
+        run: python3 tools/check_privacy.py
       - name: Build site
         run: julia --project=docs docs/make.jl
       - uses: actions/upload-pages-artifact@v3

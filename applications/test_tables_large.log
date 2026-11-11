@@ -1,6 +1,6 @@
 table_bytes=3366808
 rows=100000 sum=5000050000
-	Command being timed: "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia --startup-file=no --project=. test_tables_large.jl"
+	Command being timed: "<JULIA_BIN> --startup-file=no --project=. test_tables_large.jl"
 	User time (seconds): 4.22
 	System time (seconds): 0.17
 	Percent of CPU this job got: 99%

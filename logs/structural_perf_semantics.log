@@ -8,7 +8,7 @@ test_package_manifest_invalidates_precompile_cache (__main__.CompileModeSemantic
 ERROR: test_interrupt_and_next_run (__main__.CompileModeSemantics.test_interrupt_and_next_run)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/tests/test_perf_semantics.py", line 62, in test_interrupt_and_next_run
+  File "<ABT_REPO>/tests/test_perf_semantics.py", line 62, in test_interrupt_and_next_run
     process.communicate(timeout=15)
   File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
     stdout, stderr = self._communicate(input, endtime, timeout)
@@ -17,16 +17,16 @@ Traceback (most recent call last):
     self._check_timeout(endtime, orig_timeout, stdout, stderr)
   File "/usr/lib/python3.12/subprocess.py", line 1253, in _check_timeout
     raise TimeoutExpired(
-subprocess.TimeoutExpired: Command '['/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt', 'run', '/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/benchmarks/scenarios/large_1000.abt']' timed out after 15 seconds
+subprocess.TimeoutExpired: Command '['<ABT_REPO>/bin/abt', 'run', '<ABT_REPO>/benchmarks/scenarios/large_1000.abt']' timed out after 15 seconds
 
 ======================================================================
 FAIL: test_package_manifest_invalidates_precompile_cache (__main__.CompileModeSemantics.test_package_manifest_invalidates_precompile_cache)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/tests/test_perf_semantics.py", line 81, in test_package_manifest_invalidates_precompile_cache
+  File "<ABT_REPO>/tests/test_perf_semantics.py", line 81, in test_package_manifest_invalidates_precompile_cache
     self.assertIn("year", functions())
                           ^^^^^^^^^^^
-  File "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/tests/test_perf_semantics.py", line 78, in functions
+  File "<ABT_REPO>/tests/test_perf_semantics.py", line 78, in functions
     self.assertEqual(result.returncode, 0, result.stderr)
 AssertionError: 1 != 0 : ERROR: LoadError: SystemError: opening file "/tmp/abt perf α 56k2g_a8/package copy/src/StdlibRender.jl": No such file or directory
 Stacktrace:

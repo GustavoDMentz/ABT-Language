@@ -1,8 +1,8 @@
-/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100000.abt: Erro ABT[E000] — erro de compilação ou execução
+<ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100000.abt: Erro ABT[E000] — erro de compilação ou execução
 
 Erro semântico: malformed IR: structural validation budget exceeded
 Command exited with non-zero status 1
-	Command being timed: "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/bin/abt run /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_perf_0118/benchmarks/scalability/incrementos_100000.abt"
+	Command being timed: "<ABT_PERF_WORKTREE>/bin/abt run <ABT_PERF_WORKTREE>/benchmarks/scalability/incrementos_100000.abt"
 	User time (seconds): 119.34
 	System time (seconds): 0.32
 	Percent of CPU this job got: 99%

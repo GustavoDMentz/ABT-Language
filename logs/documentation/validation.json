@@ -45,7 +45,7 @@
     "kind": "cli",
     "name": "doctor",
     "status": "PASS",
-    "detail": "exit=0; stdout='ABT: /home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized\\nJulia: julia version 1.13.3\\nABT: arquivos essenciais e runtime disponíveis.\\n'; stderr=''"
+    "detail": "exit=0; stdout='ABT: <ABT_REPO>\\nJulia: julia version 1.13.3\\nABT: arquivos essenciais e runtime disponíveis.\\n'; stderr=''"
   },
   {
     "kind": "cli",
@@ -99,7 +99,7 @@
     "kind": "example-run",
     "name": "falhar.abt",
     "status": "PASS",
-    "detail": "exit=1; stdout=''; stderr='/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/docs/examples/falhar.abt: Erro ABT[E000] — erro de compilação ou execução\\n\\nABT: erro demonstrativo\\n'"
+    "detail": "exit=1; stdout=''; stderr='<ABT_REPO>/docs/examples/falhar.abt: Erro ABT[E000] — erro de compilação ou execução\\n\\nABT: erro demonstrativo\\n'"
   },
   {
     "kind": "example-check",
@@ -171,7 +171,7 @@
     "kind": "inline-error",
     "name": "getting-started/tooling.md:1",
     "status": "PASS",
-    "detail": "exit=1; stdout=''; stderr=\"/tmp/abt-doc-g3qx8sgd/example.abt: Erro ABT[E021] — variável não definida\\n\\nA variável 'resultado' não foi definida.\\n\""
+    "detail": "exit=1; stdout=''; stderr=\"/tmp/abt-doc-mom3_h5b/example.abt: Erro ABT[E021] — variável não definida\\n\\nA variável 'resultado' não foi definida.\\n\""
   },
   {
     "kind": "inline",

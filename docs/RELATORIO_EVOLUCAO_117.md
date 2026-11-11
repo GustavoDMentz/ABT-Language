@@ -42,4 +42,4 @@ julia --startup-file=no pseudo.jl examples/colecoes_pipeline.abt
 julia --startup-file=no tests/test_collections_117.jl
 ```
 
-Nesta sessão, o launcher juliaup não podia criar lockfile sob a restrição de escrita; os comandos foram executados com `/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia` no lugar de `julia`. O cache `.julia_depot/` foi excluído do ZIP entregue; o comando de instalação acima o reconstrói.
+Nesta sessão, o launcher juliaup não podia criar lockfile sob a restrição de escrita; os comandos foram executados com `<JULIA_BIN>` no lugar de `julia`. O cache `.julia_depot/` foi excluído do ZIP entregue; o comando de instalação acima o reconstrói.
