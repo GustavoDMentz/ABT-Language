@@ -1,0 +1,8 @@
+vendas = ler_csv("applications/data/vendas.csv", esquema("produto", "texto", "regiao", "texto", "unidades", "inteiro", "preco", "real"), "erro")
+mostrar resumir_grupos(vendas, "regiao", "unidades", "erro")
+mostrar contar_categorias(vendas, "regiao", "erro")
+grupos = agrupar_dados(vendas, "regiao", "preco", "erro")
+mostrar grupos
+mostrar categorias(vendas, "regiao", ["Norte", "Sul"], "erro")
+mostrar codificar_json(registro("regioes", coluna(vendas, "regiao")), "erro")
+mostrar resolver_sistema_spd([[2.0, -1.0], [-1.0, 2.0]], [1.0, 1.0])

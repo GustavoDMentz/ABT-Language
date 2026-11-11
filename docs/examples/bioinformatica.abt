@@ -1,0 +1,4 @@
+sequencias = ler_fasta("applications/science/amostras.fasta", "DNA", "rejeitar", "exigir_maiusculas")
+mostrar descrever_sequencias(sequencias)
+mostrar registros_fasta(sequencias)
+mostrar alinhar_sequencias(sequencias, "amostra_a", "amostra_b", "global", 2, -1, -3, -1)

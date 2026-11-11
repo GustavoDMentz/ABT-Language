@@ -1,0 +1,2 @@
+dados = ler_csv("applications/biostatistics/regressao.csv", esquema("resposta", "real", "idade", "inteiro", "exposicao", "inteiro"), "erro")
+mostrar regressao_linear(dados, "resposta", ["idade", "exposicao"])

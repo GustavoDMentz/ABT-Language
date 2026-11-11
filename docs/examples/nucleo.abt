@@ -1,0 +1,10 @@
+# Executar da raiz do repositório.
+texto = ler_texto("applications/data/sample.csv")
+mostrar comprimento_texto(aparar(" ABT "))
+mostrar maiusculas("abt")
+mostrar inicia_com(texto, "nome")
+mostrar contar_caractere("banana", "a")
+mostrar linhas_texto("a\nb")
+mostrar ambiente("ABT_DOC_NOME", "documentacao")
+mostrar registro("categoria", "exemplo", "n", 2)
+mostrar descrever([1, 2, 3, 4])
