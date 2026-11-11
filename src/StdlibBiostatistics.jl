@@ -149,6 +149,8 @@ function abt_std_proportions(success_a,total_a,success_b,total_b,alternative)
   error("ABT teste_proporcoes: contagens devem ser Int64")
  total_a > 0 && total_b > 0 && 0 <= success_a <= total_a && 0 <= success_b <= total_b ||
   error("ABT teste_proporcoes: contagens fora do domínio")
+ total_a <= typemax(Int64) - total_b ||
+  error("ABT teste_proporcoes: total combinado excede Int64")
  tail=abt_bio_tail(alternative,"teste_proporcoes")
  ht=abt_bio_require("HypothesisTests", "09f84164-cd44-5f33-b23f-e6b0d136a0d5")
  return Base.invokelatest(abt_std_proportions_loaded,success_a,total_a,success_b,total_b,alternative,tail,ht)

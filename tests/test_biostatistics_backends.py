@@ -24,6 +24,9 @@ CASES = [
     ("constante", 'mostrar intervalo_confianca_media([2,2,2], 0.95)\n', "variância zero"),
     ("contagens", 'mostrar teste_proporcoes(11,10,2,10,"bilateral")\n', "contagens fora do domínio"),
     ("colinear", 't = ler_csv("applications/biostatistics/regressao.csv", esquema("resposta","real","idade","inteiro","exposicao","inteiro"),"erro")\nmostrar regressao_linear(t,"resposta",["idade","idade"])\n', "preditores distintos"),
+    ("overflow_contagens", 'mostrar teste_proporcoes(1,9223372036854775807,1,1,"bilateral")\n', "total combinado excede Int64"),
+    ("spearman_empates", 'mostrar codificar_json(correlacao([1,1,2,3], [2,2,1,3], "spearman"), "erro")\n', None),
+    ("teste_t_unilateral", 'mostrar codificar_json(teste_t([1,2,3,4], [2,4,5,7], "welch", "menor", 0), "erro")\n', None),
 ]
 APPS = ["ensaio_clinico", "correlacao_biomedica", "regressao_clinica"]
 
