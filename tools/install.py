@@ -18,11 +18,12 @@ LEGACY_FILES = (
     "bin/abt", "src/CLI.jl", "src/ABT.jl", "src/Runtime/Bridge.jl",
     "ABT.packages.toml", "Project.toml", "README.md",
 )
-FILES = LEGACY_FILES + (
+PREVIOUS_FILES = LEGACY_FILES + (
     "Manifest.toml", "src/StdlibRender.jl", "src/Stdlib.jl", "src/StdlibBio.jl",
     "src/StdlibAnalytics.jl", "src/StdlibJSON.jl", "src/StdlibStats.jl",
     "src/StdlibLinear.jl", "src/StdlibBatch.jl", "src/ExtensionRegistry.jl",
 )
+FILES = PREVIOUS_FILES + ("src/StdlibBiostatistics.jl",)
 
 
 def digest(path):
@@ -44,7 +45,7 @@ def existing():
     except (OSError, ValueError) as exc:
         fail(f"marcador de instalação inválido: {exc}")
     saved_files = set(marker.get("files", {}))
-    if marker.get("application") != "ABT" or marker.get("schema") != 1 or saved_files not in (set(FILES), set(LEGACY_FILES)):
+    if marker.get("application") != "ABT" or marker.get("schema") != 1 or saved_files not in (set(FILES), set(PREVIOUS_FILES), set(LEGACY_FILES)):
         fail("marcador de instalação incompatível")
     allowed = saved_files | {MARKER, "bin", "src", "src/Runtime"}
     found = {str(p.relative_to(TARGET)) for p in TARGET.rglob("*")}
