@@ -1,0 +1,306 @@
+[
+  {
+    "case": "resumo",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"n\":4,\"media\":2.5,\"mediana\":2.5,\"variancia\":1.6666666666666667,\"desvio_padrao\":1.2909944487358056,\"minimo\":1.0,\"maximo\":4.0,\"q1\":1.75,\"q3\":3.25}\n",
+      "{\"n\":4,\"media\":2.5,\"mediana\":2.5,\"variancia\":1.6666666666666667,\"desvio_padrao\":1.2909944487358056,\"minimo\":1.0,\"maximo\":4.0,\"q1\":1.75,\"q3\":3.25}\n",
+      "{\"n\":4,\"media\":2.5,\"mediana\":2.5,\"variancia\":1.6666666666666667,\"desvio_padrao\":1.2909944487358056,\"minimo\":1.0,\"maximo\":4.0,\"q1\":1.75,\"q3\":3.25}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "intervalo",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"n\":4,\"nivel\":0.95,\"media\":2.5,\"inferior\":0.4457397432394794,\"superior\":4.554260256760521,\"metodo\":\"t_student\"}\n",
+      "{\"n\":4,\"nivel\":0.95,\"media\":2.5,\"inferior\":0.4457397432394794,\"superior\":4.554260256760521,\"metodo\":\"t_student\"}\n",
+      "{\"n\":4,\"nivel\":0.95,\"media\":2.5,\"inferior\":0.4457397432394794,\"superior\":4.554260256760521,\"metodo\":\"t_student\"}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "correlacao",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"metodo\":\"spearman\",\"n\":4,\"coeficiente\":1.0}\n",
+      "{\"metodo\":\"spearman\",\"n\":4,\"coeficiente\":1.0}\n",
+      "{\"metodo\":\"spearman\",\"n\":4,\"coeficiente\":1.0}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "teste_t",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"metodo\":\"welch\",\"alternativa\":\"bilateral\",\"n_a\":4,\"n_b\":4,\"hipotese_nula\":0.0,\"estatistica\":-1.6329931618554523,\"graus_liberdade\":5.010309278350515,\"p_valor\":0.16327856100088697}\n",
+      "{\"metodo\":\"welch\",\"alternativa\":\"bilateral\",\"n_a\":4,\"n_b\":4,\"hipotese_nula\":0.0,\"estatistica\":-1.6329931618554523,\"graus_liberdade\":5.010309278350515,\"p_valor\":0.16327856100088697}\n",
+      "{\"metodo\":\"welch\",\"alternativa\":\"bilateral\",\"n_a\":4,\"n_b\":4,\"hipotese_nula\":0.0,\"estatistica\":-1.6329931618554523,\"graus_liberdade\":5.010309278350515,\"p_valor\":0.16327856100088697}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "nao_parametrico",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"metodo\":\"mann_whitney\",\"alternativa\":\"bilateral\",\"n_a\":3,\"n_b\":3,\"p_valor\":0.10000000000000014}\n",
+      "{\"metodo\":\"mann_whitney\",\"alternativa\":\"bilateral\",\"n_a\":3,\"n_b\":3,\"p_valor\":0.10000000000000014}\n",
+      "{\"metodo\":\"mann_whitney\",\"alternativa\":\"bilateral\",\"n_a\":3,\"n_b\":3,\"p_valor\":0.10000000000000014}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "normalidade",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"metodo\":\"shapiro_wilk\",\"n\":5,\"estatistica\":0.9867621554477198,\"p_valor\":0.9671739359680417}\n",
+      "{\"metodo\":\"shapiro_wilk\",\"n\":5,\"estatistica\":0.9867621554477198,\"p_valor\":0.9671739359680417}\n",
+      "{\"metodo\":\"shapiro_wilk\",\"n\":5,\"estatistica\":0.9867621554477198,\"p_valor\":0.9671739359680417}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "proporcoes",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"metodo\":\"fisher_exato\",\"alternativa\":\"bilateral\",\"sucessos_a\":8,\"total_a\":10,\"sucessos_b\":3,\"total_b\":10,\"proporcao_a\":0.8,\"proporcao_b\":0.3,\"p_valor\":0.06977851869492736}\n",
+      "{\"metodo\":\"fisher_exato\",\"alternativa\":\"bilateral\",\"sucessos_a\":8,\"total_a\":10,\"sucessos_b\":3,\"total_b\":10,\"proporcao_a\":0.8,\"proporcao_b\":0.3,\"p_valor\":0.06977851869492736}\n",
+      "{\"metodo\":\"fisher_exato\",\"alternativa\":\"bilateral\",\"sucessos_a\":8,\"total_a\":10,\"sucessos_b\":3,\"total_b\":10,\"proporcao_a\":0.8,\"proporcao_b\":0.3,\"p_valor\":0.06977851869492736}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "distribuicao",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"modelo\":\"normal\",\"parametros\":[0,1],\"entrada\":0,\"resultado\":0.5}\n",
+      "{\"modelo\":\"normal\",\"parametros\":[0,1],\"entrada\":0,\"resultado\":0.5}\n",
+      "{\"modelo\":\"normal\",\"parametros\":[0,1],\"entrada\":0,\"resultado\":0.5}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "quantil",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"modelo\":\"student_t\",\"parametros\":[4],\"entrada\":0.975,\"resultado\":2.7764451051977934}\n",
+      "{\"modelo\":\"student_t\",\"parametros\":[4],\"entrada\":0.975,\"resultado\":2.7764451051977934}\n",
+      "{\"modelo\":\"student_t\",\"parametros\":[4],\"entrada\":0.975,\"resultado\":2.7764451051977934}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "ausente",
+    "status": "PASS",
+    "codes": [
+      1,
+      1,
+      1
+    ],
+    "stdout": [
+      "",
+      "",
+      ""
+    ],
+    "stderr": [
+      "/tmp/abt-bio-dv0pb3st/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumo_estatistico: valores ausentes, não finitos ou incompatíveis\n",
+      "ERROR: LoadError: ABT resumo_estatistico: valores ausentes, não finitos ou incompatíveis\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_bio_numbers#abt_bio_numbers##0\"{var\"#abt_bio_numbers#9#17\"{var\"#abt_bio_number#abt_bio_number##0\"}})(xs::Vector{Union{Nothing, Int64}}, operation::String; minimum::Int64)\n    @ Main /tmp/abt-bio-dv0pb3st/plain.jl:308\n  [3] (::var\"#abt_bio_numbers#abt_bio_numbers##0\"{var\"#abt_bio_numbers#9#17\"{var\"#abt_bio_number#abt_bio_number##0\"}})(xs::Vector{Union{Nothing, Int64}}, operation::String)\n    @ Main /tmp/abt-bio-dv0pb3st/plain.jl:306\n  [4] (::var\"#abt_std_stat_summary#abt_std_stat_summary##0\"{Module})(xs::Vector{Union{Nothing, Int64}})\n    @ Main /tmp/abt-bio-dv0pb3st/plain.jl:316\n  [5] abt_invoke\n    @ /tmp/abt-bio-dv0pb3st/plain.jl:593 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_stat_summary#abt_std_stat_summary##0\"{Module}})()\n    @ Main /tmp/abt-bio-dv0pb3st/plain.jl:602\n  [7] top-level scope\n    @ /tmp/abt-bio-dv0pb3st/plain.jl:604\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-dv0pb3st/plain.jl:2\n",
+      "ERROR: LoadError: ABT resumo_estatistico: valores ausentes, não finitos ou incompatíveis\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_bio_numbers#abt_bio_numbers##0\"{var\"#abt_bio_numbers#9#17\"{var\"#abt_bio_number#abt_bio_number##0\"}})(xs::Vector{Union{Nothing, Int64}}, operation::String; minimum::Int64)\n    @ Main /tmp/abt-bio-dv0pb3st/optimized.jl:308\n  [3] (::var\"#abt_bio_numbers#abt_bio_numbers##0\"{var\"#abt_bio_numbers#9#17\"{var\"#abt_bio_number#abt_bio_number##0\"}})(xs::Vector{Union{Nothing, Int64}}, operation::String)\n    @ Main /tmp/abt-bio-dv0pb3st/optimized.jl:306\n  [4] (::var\"#abt_std_stat_summary#abt_std_stat_summary##0\"{Module})(xs::Vector{Union{Nothing, Int64}})\n    @ Main /tmp/abt-bio-dv0pb3st/optimized.jl:316\n  [5] abt_invoke\n    @ /tmp/abt-bio-dv0pb3st/optimized.jl:593 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_stat_summary#abt_std_stat_summary##0\"{Module}})()\n    @ Main /tmp/abt-bio-dv0pb3st/optimized.jl:602\n  [7] top-level scope\n    @ /tmp/abt-bio-dv0pb3st/optimized.jl:604\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-dv0pb3st/optimized.jl:2\n"
+    ]
+  },
+  {
+    "case": "constante",
+    "status": "PASS",
+    "codes": [
+      1,
+      1,
+      1
+    ],
+    "stdout": [
+      "",
+      "",
+      ""
+    ],
+    "stderr": [
+      "/tmp/abt-bio-vyqzvd0y/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT intervalo_confianca_media: variância zero ou não finita\n",
+      "ERROR: LoadError: ABT intervalo_confianca_media: variância zero ou não finita\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_mean_ci#abt_std_mean_ci##0\"{var\"#abt_bio_level#abt_bio_level##0\"{var\"#abt_bio_number#abt_bio_number##0\"}, var\"#abt_bio_variable#abt_bio_variable##0\"{Module}, var\"#abt_bio_require#abt_bio_require##0\"})(xs::Vector{Int64}, level::Float64)\n   @ Main /tmp/abt-bio-vyqzvd0y/plain.jl:336\n [3] abt_invoke\n   @ /tmp/abt-bio-vyqzvd0y/plain.jl:593 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_mean_ci#abt_std_mean_ci##0\"{var\"#abt_bio_level#abt_bio_level##0\"{var\"#abt_bio_number#abt_bio_number##0\"}, var\"#abt_bio_variable#abt_bio_variable##0\"{Module}, var\"#abt_bio_require#abt_bio_require##0\"}})()\n   @ Main /tmp/abt-bio-vyqzvd0y/plain.jl:599\n [5] top-level scope\n   @ /tmp/abt-bio-vyqzvd0y/plain.jl:601\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-vyqzvd0y/plain.jl:2\n",
+      "ERROR: LoadError: ABT intervalo_confianca_media: variância zero ou não finita\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_mean_ci#abt_std_mean_ci##0\"{var\"#abt_bio_level#abt_bio_level##0\"{var\"#abt_bio_number#abt_bio_number##0\"}, var\"#abt_bio_variable#abt_bio_variable##0\"{Module}, var\"#abt_bio_require#abt_bio_require##0\"})(xs::Vector{Int64}, level::Float64)\n   @ Main /tmp/abt-bio-vyqzvd0y/optimized.jl:336\n [3] abt_invoke\n   @ /tmp/abt-bio-vyqzvd0y/optimized.jl:593 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_mean_ci#abt_std_mean_ci##0\"{var\"#abt_bio_level#abt_bio_level##0\"{var\"#abt_bio_number#abt_bio_number##0\"}, var\"#abt_bio_variable#abt_bio_variable##0\"{Module}, var\"#abt_bio_require#abt_bio_require##0\"}})()\n   @ Main /tmp/abt-bio-vyqzvd0y/optimized.jl:599\n [5] top-level scope\n   @ /tmp/abt-bio-vyqzvd0y/optimized.jl:601\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-vyqzvd0y/optimized.jl:2\n"
+    ]
+  },
+  {
+    "case": "contagens",
+    "status": "PASS",
+    "codes": [
+      1,
+      1,
+      1
+    ],
+    "stdout": [
+      "",
+      "",
+      ""
+    ],
+    "stderr": [
+      "/tmp/abt-bio-ag4c10t0/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT teste_proporcoes: contagens fora do domínio\n",
+      "ERROR: LoadError: ABT teste_proporcoes: contagens fora do domínio\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_proportions#abt_std_proportions##0\"{var\"#abt_bio_tail#abt_bio_tail##0\", var\"#abt_bio_require#abt_bio_require##0\"})(success_a::Int64, total_a::Int64, success_b::Int64, total_b::Int64, alternative::String)\n   @ Main /tmp/abt-bio-ag4c10t0/plain.jl:446\n [3] abt_invoke\n   @ /tmp/abt-bio-ag4c10t0/plain.jl:593 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_proportions#abt_std_proportions##0\"{var\"#abt_bio_tail#abt_bio_tail##0\", var\"#abt_bio_require#abt_bio_require##0\"}})()\n   @ Main /tmp/abt-bio-ag4c10t0/plain.jl:599\n [5] top-level scope\n   @ /tmp/abt-bio-ag4c10t0/plain.jl:601\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-ag4c10t0/plain.jl:2\n",
+      "ERROR: LoadError: ABT teste_proporcoes: contagens fora do domínio\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_proportions#abt_std_proportions##0\"{var\"#abt_bio_tail#abt_bio_tail##0\", var\"#abt_bio_require#abt_bio_require##0\"})(success_a::Int64, total_a::Int64, success_b::Int64, total_b::Int64, alternative::String)\n   @ Main /tmp/abt-bio-ag4c10t0/optimized.jl:446\n [3] abt_invoke\n   @ /tmp/abt-bio-ag4c10t0/optimized.jl:593 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_proportions#abt_std_proportions##0\"{var\"#abt_bio_tail#abt_bio_tail##0\", var\"#abt_bio_require#abt_bio_require##0\"}})()\n   @ Main /tmp/abt-bio-ag4c10t0/optimized.jl:599\n [5] top-level scope\n   @ /tmp/abt-bio-ag4c10t0/optimized.jl:601\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-ag4c10t0/optimized.jl:2\n"
+    ]
+  },
+  {
+    "case": "colinear",
+    "status": "PASS",
+    "codes": [
+      1,
+      1,
+      1
+    ],
+    "stdout": [
+      "",
+      "",
+      ""
+    ],
+    "stderr": [
+      "/tmp/abt-bio-fzi6bzi8/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT regressao_linear: preditores distintos da resposta são obrigatórios\n",
+      "ERROR: LoadError: ABT regressao_linear: preditores distintos da resposta são obrigatórios\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_linear_regression#abt_std_linear_regression##0\"{var\"#abt_bio_variable#abt_bio_variable##0\"{Module}, var\"#abt_bio_require#abt_bio_require##0\", var\"#abt_bio_number#abt_bio_number##0\", var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{resposta::String, idade::String, exposicao::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, response::String, predictors::Vector{String})\n   @ Main /tmp/abt-bio-fzi6bzi8/plain.jl:504\n [3] abt_invoke\n   @ /tmp/abt-bio-fzi6bzi8/plain.jl:595 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_linear_regression#abt_std_linear_regression##0\"{var\"#abt_bio_variable#abt_bio_variable##0\"{Module}, var\"#abt_bio_require#abt_bio_require##0\", var\"#abt_bio_number#abt_bio_number##0\", var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-bio-fzi6bzi8/plain.jl:602\n [5] top-level scope\n   @ /tmp/abt-bio-fzi6bzi8/plain.jl:604\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-fzi6bzi8/plain.jl:2\n",
+      "ERROR: LoadError: ABT regressao_linear: preditores distintos da resposta são obrigatórios\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_linear_regression#abt_std_linear_regression##0\"{var\"#abt_bio_variable#abt_bio_variable##0\"{Module}, var\"#abt_bio_require#abt_bio_require##0\", var\"#abt_bio_number#abt_bio_number##0\", var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{resposta::String, idade::String, exposicao::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, response::String, predictors::Vector{String})\n   @ Main /tmp/abt-bio-fzi6bzi8/optimized.jl:504\n [3] abt_invoke\n   @ /tmp/abt-bio-fzi6bzi8/optimized.jl:595 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_linear_regression#abt_std_linear_regression##0\"{var\"#abt_bio_variable#abt_bio_variable##0\"{Module}, var\"#abt_bio_require#abt_bio_require##0\", var\"#abt_bio_number#abt_bio_number##0\", var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-bio-fzi6bzi8/optimized.jl:602\n [5] top-level scope\n   @ /tmp/abt-bio-fzi6bzi8/optimized.jl:604\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-bio-fzi6bzi8/optimized.jl:2\n"
+    ]
+  },
+  {
+    "case": "ensaio_clinico",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"origem\":\"dados sintéticos\",\"controle\":{\"n\":5,\"media\":12.12,\"mediana\":12.1,\"variancia\":0.0819999999999999,\"desvio_padrao\":0.2863564212655269,\"minimo\":11.8,\"maximo\":12.5,\"q1\":11.9,\"q3\":12.3},\"tratamento\":{\"n\":5,\"media\":10.4,\"mediana\":10.4,\"variancia\":0.07500000000000027,\"desvio_padrao\":0.27386127875258354,\"minimo\":10.1,\"maximo\":10.8,\"q1\":10.2,\"q3\":10.5},\"intervalo_controle\":{\"n\":5,\"nivel\":0.95,\"media\":12.12,\"inferior\":11.764441541060124,\"superior\":12.475558458939874,\"metodo\":\"t_student\"},\"comparacao\":{\"metodo\":\"welch\",\"alternativa\":\"bilateral\",\"n_a\":5,\"n_b\":5,\"hipotese_nula\":0.0,\"estatistica\":-9.706521545309313,\"graus_liberdade\":7.9841282694955105,\"p_valor\":1.0744396334449615e-5}}\n",
+      "{\"origem\":\"dados sintéticos\",\"controle\":{\"n\":5,\"media\":12.12,\"mediana\":12.1,\"variancia\":0.0819999999999999,\"desvio_padrao\":0.2863564212655269,\"minimo\":11.8,\"maximo\":12.5,\"q1\":11.9,\"q3\":12.3},\"tratamento\":{\"n\":5,\"media\":10.4,\"mediana\":10.4,\"variancia\":0.07500000000000027,\"desvio_padrao\":0.27386127875258354,\"minimo\":10.1,\"maximo\":10.8,\"q1\":10.2,\"q3\":10.5},\"intervalo_controle\":{\"n\":5,\"nivel\":0.95,\"media\":12.12,\"inferior\":11.764441541060124,\"superior\":12.475558458939874,\"metodo\":\"t_student\"},\"comparacao\":{\"metodo\":\"welch\",\"alternativa\":\"bilateral\",\"n_a\":5,\"n_b\":5,\"hipotese_nula\":0.0,\"estatistica\":-9.706521545309313,\"graus_liberdade\":7.9841282694955105,\"p_valor\":1.0744396334449615e-5}}\n",
+      "{\"origem\":\"dados sintéticos\",\"controle\":{\"n\":5,\"media\":12.12,\"mediana\":12.1,\"variancia\":0.0819999999999999,\"desvio_padrao\":0.2863564212655269,\"minimo\":11.8,\"maximo\":12.5,\"q1\":11.9,\"q3\":12.3},\"tratamento\":{\"n\":5,\"media\":10.4,\"mediana\":10.4,\"variancia\":0.07500000000000027,\"desvio_padrao\":0.27386127875258354,\"minimo\":10.1,\"maximo\":10.8,\"q1\":10.2,\"q3\":10.5},\"intervalo_controle\":{\"n\":5,\"nivel\":0.95,\"media\":12.12,\"inferior\":11.764441541060124,\"superior\":12.475558458939874,\"metodo\":\"t_student\"},\"comparacao\":{\"metodo\":\"welch\",\"alternativa\":\"bilateral\",\"n_a\":5,\"n_b\":5,\"hipotese_nula\":0.0,\"estatistica\":-9.706521545309313,\"graus_liberdade\":7.9841282694955105,\"p_valor\":1.0744396334449615e-5}}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "correlacao_biomedica",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"origem\":\"dados sintéticos\",\"pearson\":{\"metodo\":\"pearson\",\"n\":8,\"coeficiente\":0.9918405049944308},\"spearman\":{\"metodo\":\"spearman\",\"n\":8,\"coeficiente\":1.0}}\n",
+      "{\"origem\":\"dados sintéticos\",\"pearson\":{\"metodo\":\"pearson\",\"n\":8,\"coeficiente\":0.9918405049944308},\"spearman\":{\"metodo\":\"spearman\",\"n\":8,\"coeficiente\":1.0}}\n",
+      "{\"origem\":\"dados sintéticos\",\"pearson\":{\"metodo\":\"pearson\",\"n\":8,\"coeficiente\":0.9918405049944308},\"spearman\":{\"metodo\":\"spearman\",\"n\":8,\"coeficiente\":1.0}}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "regressao_clinica",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"origem\":\"dados sintéticos\",\"modelo\":{\"n\":8,\"resposta\":\"resposta\",\"preditores\":[\"idade\",\"exposicao\"],\"coeficientes\":[{\"nome\":\"intercepto\",\"estimativa\":-1.3618776244750739,\"erro_padrao\":0.42617983635275836,\"p_valor\":0.0241149080209529,\"inferior\":-2.457407770517931,\"superior\":-0.2663474784322164},{\"nome\":\"idade\",\"estimativa\":0.18632273545290876,\"erro_padrao\":0.00895337766459334,\"p_valor\":4.744868089531391e-6,\"inferior\":0.16330734546071324,\"superior\":0.20933812544510427},{\"nome\":\"exposicao\",\"estimativa\":-0.011097780443908804,\"erro_padrao\":0.26495796342615924,\"p_valor\":0.9682114542465522,\"inferior\":-0.6921939084343847,\"superior\":0.669998347546567}],\"r_quadrado\":0.9891214853740421,\"nivel\":0.95}}\n",
+      "{\"origem\":\"dados sintéticos\",\"modelo\":{\"n\":8,\"resposta\":\"resposta\",\"preditores\":[\"idade\",\"exposicao\"],\"coeficientes\":[{\"nome\":\"intercepto\",\"estimativa\":-1.3618776244750739,\"erro_padrao\":0.42617983635275836,\"p_valor\":0.0241149080209529,\"inferior\":-2.457407770517931,\"superior\":-0.2663474784322164},{\"nome\":\"idade\",\"estimativa\":0.18632273545290876,\"erro_padrao\":0.00895337766459334,\"p_valor\":4.744868089531391e-6,\"inferior\":0.16330734546071324,\"superior\":0.20933812544510427},{\"nome\":\"exposicao\",\"estimativa\":-0.011097780443908804,\"erro_padrao\":0.26495796342615924,\"p_valor\":0.9682114542465522,\"inferior\":-0.6921939084343847,\"superior\":0.669998347546567}],\"r_quadrado\":0.9891214853740421,\"nivel\":0.95}}\n",
+      "{\"origem\":\"dados sintéticos\",\"modelo\":{\"n\":8,\"resposta\":\"resposta\",\"preditores\":[\"idade\",\"exposicao\"],\"coeficientes\":[{\"nome\":\"intercepto\",\"estimativa\":-1.3618776244750739,\"erro_padrao\":0.42617983635275836,\"p_valor\":0.0241149080209529,\"inferior\":-2.457407770517931,\"superior\":-0.2663474784322164},{\"nome\":\"idade\",\"estimativa\":0.18632273545290876,\"erro_padrao\":0.00895337766459334,\"p_valor\":4.744868089531391e-6,\"inferior\":0.16330734546071324,\"superior\":0.20933812544510427},{\"nome\":\"exposicao\",\"estimativa\":-0.011097780443908804,\"erro_padrao\":0.26495796342615924,\"p_valor\":0.9682114542465522,\"inferior\":-0.6921939084343847,\"superior\":0.669998347546567}],\"r_quadrado\":0.9891214853740421,\"nivel\":0.95}}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  }
+]

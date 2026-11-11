@@ -1,0 +1,6 @@
+# Dados sintéticos: não representam conclusão clínica.
+t = ler_csv("applications/biostatistics/correlacao.csv", esquema("idade", "inteiro", "biomarcador", "real"), "erro")
+idades = coluna(t, "idade")
+valores = coluna(t, "biomarcador")
+resultado = registro("origem", "dados sintéticos", "pearson", correlacao(idades, valores, "pearson"), "spearman", correlacao(idades, valores, "spearman"))
+mostrar codificar_json(resultado, "erro")

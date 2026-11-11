@@ -1,0 +1,6 @@
+# Dados sintéticos: não representam conclusão clínica.
+t = ler_csv("applications/biostatistics/ensaio.csv", esquema("grupo", "texto", "biomarcador", "real"), "erro")
+controle = coluna(filtrar_tabela(t, "grupo", "==", "controle"), "biomarcador")
+tratamento = coluna(filtrar_tabela(t, "grupo", "==", "tratamento"), "biomarcador")
+resultado = registro("origem", "dados sintéticos", "controle", resumo_estatistico(controle), "tratamento", resumo_estatistico(tratamento), "intervalo_controle", intervalo_confianca_media(controle, 0.95), "comparacao", teste_t(tratamento, controle, "welch", "bilateral", 0))
+mostrar codificar_json(resultado, "erro")

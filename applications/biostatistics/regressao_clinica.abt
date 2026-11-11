@@ -1,0 +1,4 @@
+# Dados sintéticos: não representam conclusão clínica.
+t = ler_csv("applications/biostatistics/regressao.csv", esquema("resposta", "real", "idade", "inteiro", "exposicao", "inteiro"), "erro")
+resultado = registro("origem", "dados sintéticos", "modelo", regressao_linear(t, "resposta", ["idade", "exposicao"]))
+mostrar codificar_json(resultado, "erro")

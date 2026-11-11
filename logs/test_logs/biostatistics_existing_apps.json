@@ -1,0 +1,125 @@
+[
+  {
+    "case": "estatistica_amostra",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao = 6.48074069840786, minimo = 12, maximo = 30), quantidade_maior_igual_18 = 4)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/applications/statistics/descritiva.abt"
+    ]
+  },
+  {
+    "case": "estatistica_amostra",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao = 6.48074069840786, minimo = 12, maximo = 30), quantidade_maior_igual_18 = 4)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "/tmp/abt-app-9c_bajqw/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "estatistica_amostra",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao = 6.48074069840786, minimo = 12, maximo = 30), quantidade_maior_igual_18 = 4)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "/tmp/abt-app-9c_bajqw/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_amostra",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 5, selecionados_grupo_A_valor_maior_igual_10 = 2, soma = 32.0, media = 16.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_amostra",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 5, selecionados_grupo_A_valor_maior_igual_10 = 2, soma = 32.0, media = 16.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "/tmp/abt-app-hhqfsytz/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_amostra",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 5, selecionados_grupo_A_valor_maior_igual_10 = 2, soma = 32.0, media = 16.0)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "/tmp/abt-app-hhqfsytz/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "dna_amostra",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.666666666666664)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/bin/abt",
+      "run",
+      "/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "dna_amostra",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.666666666666664)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "/tmp/abt-app-d5y97sds/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "dna_amostra",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.666666666666664)\n",
+    "stderr": "",
+    "command": [
+      "/home/gumentz/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=/home/gumentz/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_language_reorganized",
+      "/tmp/abt-app-d5y97sds/julia_otimizada.jl"
+    ]
+  }
+]

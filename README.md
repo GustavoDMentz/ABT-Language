@@ -87,3 +87,9 @@ Resultados, limitações e medições do lote: [relatório consolidado](docs/REL
 ## Organização do repositório
 
 Testes ficam em `tests/`, medições em `benchmarks/`, ferramentas em `tools/` e evidências de execução em `logs/`. O histórico e a validação da mudança estão em [docs/REORGANIZACAO_REPOSITORIO.md](docs/REORGANIZACAO_REPOSITORIO.md).
+
+## Bioestatística 0.12.0
+
+Operações modulares para inferência, correlação, distribuições e regressão linear estão descritas em [docs/BIOESTATISTICA_0120.md](docs/BIOESTATISTICA_0120.md). Os exemplos executáveis com dados sintéticos ficam em `applications/biostatistics/`.
+
+A validação independente da versão 0.12.0 está em [docs/AUDITORIA_FINAL_BIOESTATISTICA_0120.md](docs/AUDITORIA_FINAL_BIOESTATISTICA_0120.md).
