@@ -13,7 +13,7 @@ import unittest
 ROOT = Path(__file__).resolve().parent.parent
 JULIA = os.environ.get("ABT_TEST_JULIA") or shutil.which("julia")
 sys.path.insert(0, str(ROOT / "tools"))
-from install import FILES, LEGACY_FILES, PREVIOUS_FILES, digest
+from install import FILES, LEGACY_FILES, PREVIOUS_FILES, V0120_FILES, digest
 
 
 @unittest.skipUnless(JULIA, "set ABT_TEST_JULIA to a Julia 1.13.3 executable")
@@ -42,7 +42,7 @@ class InstalledCLI(unittest.TestCase):
         link = self.home / ".local/bin/abt"
         self.assertTrue(link.is_symlink())
         self.install()
-        self.assertEqual(self.call("abt", "--version").stdout.strip(), "ABT 0.12.0")
+        self.assertEqual(self.call("abt", "--version").stdout.strip(), "ABT 0.13.0")
         installed = self.home / ".local/share/abt/src/CLI.jl"
         installed.write_text(installed.read_text() + "\n# user modification\n")
         blocked = self.call(sys.executable, str(ROOT / "tools/install.py"))
@@ -104,6 +104,22 @@ class InstalledCLI(unittest.TestCase):
         result = self.call(sys.executable, str(ROOT / "tools/install.py"))
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertTrue((target / "src/StdlibBiostatistics.jl").is_file())
+
+    def test_v0120_marker_can_be_upgraded(self):
+        target = self.home / ".local/share/abt"
+        hashes = {}
+        for relative in V0120_FILES:
+            destination = target / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(ROOT / relative, destination)
+            hashes[relative] = digest(destination)
+        (target / ".abt-install.json").write_text(json.dumps({"application":"ABT", "schema":1, "files":hashes}))
+        link = self.home / ".local/bin/abt"
+        link.parent.mkdir(parents=True)
+        link.symlink_to(target / "bin/abt")
+        result = self.call(sys.executable, str(ROOT / "tools/install.py"))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertTrue((target / "src/StdlibScientificNumerics.jl").is_file())
 
     def test_vscode_tasks_use_installed_command(self):
         tasks = json.loads((ROOT / ".vscode/tasks.json").read_text())
