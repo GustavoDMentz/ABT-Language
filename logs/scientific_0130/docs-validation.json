@@ -1,0 +1,296 @@
+[
+  {
+    "kind": "generation",
+    "name": "reference/examples sync",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Reference synchronized: 62 operations\\n'; stderr=''"
+  },
+  {
+    "kind": "reference",
+    "name": "public operations",
+    "status": "PASS",
+    "detail": "62 documented; missing=[]; extra=[]; duplicate=[]"
+  },
+  {
+    "kind": "reference",
+    "name": "operation example coverage",
+    "status": "PASS",
+    "detail": "62 covered; missing=[]"
+  },
+  {
+    "kind": "links",
+    "name": "internal markdown links",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "kind": "files",
+    "name": "referenced ABT/data files",
+    "status": "PASS",
+    "detail": ""
+  },
+  {
+    "kind": "cli",
+    "name": "--version",
+    "status": "PASS",
+    "detail": "exit=0; stdout='ABT 0.13.0\\n'; stderr=''"
+  },
+  {
+    "kind": "cli",
+    "name": "--help",
+    "status": "PASS",
+    "detail": "exit=0; stdout='ABT — linguagem experimental\\n\\nUso:\\n  abt arquivo.abt\\n  abt run arquivo.abt\\n  abt executar arquivo.abt\\n  abt check arquivo.abt\\n  abt verificar arquivo.abt\\n  abt doctor\\n  abt operacoes\\n  abt --version\\n '; stderr=''"
+  },
+  {
+    "kind": "cli",
+    "name": "doctor",
+    "status": "PASS",
+    "detail": "exit=0; stdout='ABT: <ABT_REPO>\\nJulia: julia version 1.13.3\\nABT: arquivos essenciais e runtime disponíveis.\\n'; stderr=''"
+  },
+  {
+    "kind": "cli",
+    "name": "operacoes",
+    "status": "PASS",
+    "detail": "exit=0; stdout='ler_fastq [bioinformatica] — arquivo, DNA, rejeitar/permitir_N, phred33 → leitor FASTQ reutilizável | pacote: FASTX.jl | carga: sob demanda\\nresumir_fastq [bioinformatica] — leitor FASTQ → registros, b'; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "bioinformatica.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "bioinformatica.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(sequencias = 2, bases = 24, A = 6, C = 6, G = 6, T = 6, N = 0, GC_percentual = 50.0)\\n[(identificador = \"amostra_a\", descricao = \"amostra_a\", sequencia = \"ACGTACGTACGT\", comprimento = 12, A = 3, C = 3'; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "cientifico.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "cientifico.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(fastq = (registros = 2, bases = 12, A = 4, C = 4, G = 3, T = 1, N = 0, phred_minimo = 30, phred_maximo = 40, phred_medio = 35.0), registros = [(identificador = \"leitura_1\", sequencia = \"ACGTAC\", comp'; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "dados.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "dados.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(grupos = [(grupo = \"Sul\", quantidade = 3, soma = 10, media = 3.3333333333333335, minimo = 2, maximo = 5), (grupo = \"Norte\", quantidade = 1, soma = 8, media = 8.0, minimo = 8, maximo = 8)], linhas_lid'; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "estatistica.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "estatistica.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(n = 5, media = 3.0, mediana = 3.0, variancia = 2.5, desvio_padrao = 1.5811388300841898, minimo = 1.0, maximo = 5.0, q1 = 2.0, q3 = 4.0)\\n(n = 5, nivel = 0.95, media = 3.0, inferior = 1.036756838522442'; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "falhar.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "falhar.abt",
+    "status": "PASS",
+    "detail": "exit=1; stdout=''; stderr='<ABT_REPO>/docs/examples/falhar.abt: Erro ABT[E000] — erro de compilação ou execução\\n\\nABT: erro demonstrativo\\n'"
+  },
+  {
+    "kind": "example-check",
+    "name": "grupos.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "grupos.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(metodo = \"welch\", grupo_a = \"controle\", grupo_b = \"tratamento\", n_a = 5, n_b = 5, media_a = 12.12, media_b = 10.4, estatistica = 9.706521545309313, p_valor = 1.0744396334449615e-5)\\n'; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "modelagem.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "modelagem.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(n = 8, resposta = \"resposta\", preditores = [\"idade\", \"exposicao\"], coeficientes = [(nome = \"intercepto\", estimativa = -1.3618776244750739, erro_padrao = 0.42617983635275836, p_valor = 0.0241149080209'; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "nucleo.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "nucleo.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='3\\nABT\\ntrue\\n3\\n[\"a\", \"b\"]\\ndocumentacao\\n(categoria = \"exemplo\", n = 2)\\n(quantidade = 4, soma = 10, media = 2.5, mediana = 2.5, desvio_padrao = 1.2909944487358056, minimo = 1, maximo = 4)\\n'; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "tabelas.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "tabelas.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='[\"Ana\", \"Bruno\", \"Carla\", \"Diego\", \"Eva\"]\\n[(nome = \"Ana\", grupo = \"A\", valor = 12.5), (nome = \"Bruno\", grupo = \"B\", valor = 8.0), (nome = \"Carla\", grupo = \"A\", valor = 19.5), (nome = \"Diego\", grupo = '; stderr=''"
+  },
+  {
+    "kind": "example-check",
+    "name": "visualizacao.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='Programa ABT válido.\\n'; stderr=''"
+  },
+  {
+    "kind": "example-run",
+    "name": "visualizacao.abt",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(arquivo = \"/tmp/abt-documentation-figure.png\", pontos = 8)\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "getting-started/overview.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(quantidade = 4, soma = 66, media = 16.5, mediana = 17.0, desvio_padrao = 3.696845502136472, minimo = 12, maximo = 20)\\n'; stderr=''"
+  },
+  {
+    "kind": "inline-error",
+    "name": "getting-started/tooling.md:1",
+    "status": "PASS",
+    "detail": "exit=1; stdout=''; stderr=\"/tmp/abt-doc-vsj4_32g/example.abt: Erro ABT[E021] — variável não definida\\n\\nA variável 'resultado' não foi definida.\\n\""
+  },
+  {
+    "kind": "inline",
+    "name": "index.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='[30, 40]\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/collections.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='[6]\\n7\\n2.5\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/collections.md:2",
+    "status": "PASS",
+    "detail": "exit=0; stdout='[30, 40]\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/control-flow.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='maior\\n1\\n2\\n3\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/control-flow.md:2",
+    "status": "PASS",
+    "detail": "exit=0; stdout='10\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/expressions.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='-8.0\\n-8.0\\n0.125\\n-6.0\\n10.0\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/expressions.md:2",
+    "status": "PASS",
+    "detail": "exit=0; stdout='true\\ntrue\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/interop.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='2.0\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/interop.md:2",
+    "status": "PASS",
+    "detail": "exit=0; stdout='3.0\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/syntax.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(nome = \"ensaio\", n = 3)\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "manual/syntax.md:2",
+    "status": "PASS",
+    "detail": "exit=0; stdout='11\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "tutorials/bioinformatics.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.666666666666664)\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "tutorials/biostatistics.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='{\"controle\":{\"n\":5,\"media\":12.12,\"mediana\":12.1,\"variancia\":0.0819999999999999,\"desvio_padrao\":0.2863564212655269,\"minimo\":11.8,\"maximo\":12.5,\"q1\":11.9,\"q3\":12.3},\"tratamento\":{\"n\":5,\"media\":10.4,\"med'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "tutorials/data.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='{\"fonte\":\"vendas\",\"unidade\":\"itens\",\"resumo\":{\"grupos\":[{\"grupo\":\"Sul\",\"quantidade\":3,\"soma\":10,\"media\":3.3333333333333335,\"minimo\":2,\"maximo\":5},{\"grupo\":\"Norte\",\"quantidade\":1,\"soma\":8,\"media\":8.0,\"'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "tutorials/first-program.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='4\\n6\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "tutorials/julia.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='2026-11-06\\n2026\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "tutorials/statistics.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao = 6.48074069840786, minimo = 12, maximo = 30), quantidade_maior_igual_18 = 4)\\n'; stderr=''"
+  },
+  {
+    "kind": "inline",
+    "name": "tutorials/visualization.md:1",
+    "status": "PASS",
+    "detail": "exit=0; stdout='(arquivo = \"/tmp/abt-documentation-tutorial.png\", pontos = 4)\\n'; stderr=''"
+  }
+]

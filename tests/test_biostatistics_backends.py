@@ -75,7 +75,7 @@ results = [check(*case) for case in CASES]
 for name in APPS:
     source = (ROOT / "applications/biostatistics" / f"{name}.abt").read_text()
     results.append(check(name, source, None))
-log = ROOT / "logs/test_logs/biostatistics_backends.json"
+log = ROOT / os.environ.get("ABT_TEST_LOG_DIR", "logs/test_logs") / "biostatistics_backends.json"
 log.parent.mkdir(parents=True, exist_ok=True)
 log.write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n")
 for result in results:

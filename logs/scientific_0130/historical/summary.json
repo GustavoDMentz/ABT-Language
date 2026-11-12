@@ -1,0 +1,287 @@
+{
+  "results": [
+    {
+      "file": "test_adversarial_093.jl",
+      "status": "PASS",
+      "seconds": 13.29,
+      "log": "logs/scientific_0130/historical/test_adversarial_093.log"
+    },
+    {
+      "file": "test_biostatistics_0120.jl",
+      "status": "PASS",
+      "seconds": 20.7,
+      "log": "logs/scientific_0130/historical/test_biostatistics_0120.log"
+    },
+    {
+      "file": "test_biostatistics_adversarial_0120.jl",
+      "status": "PASS",
+      "seconds": 15.5,
+      "log": "logs/scientific_0130/historical/test_biostatistics_adversarial_0120.log"
+    },
+    {
+      "file": "test_bridge_092.jl",
+      "status": "PASS",
+      "seconds": 35.7,
+      "log": "logs/scientific_0130/historical/test_bridge_092.log"
+    },
+    {
+      "file": "test_cli_identity.jl",
+      "status": "PASS",
+      "seconds": 18.14,
+      "log": "logs/scientific_0130/historical/test_cli_identity.log"
+    },
+    {
+      "file": "test_collections_117.jl",
+      "status": "PASS",
+      "seconds": 87.05,
+      "log": "logs/scientific_0130/historical/test_collections_117.log"
+    },
+    {
+      "file": "test_diagnostics.jl",
+      "status": "PASS",
+      "seconds": 6.66,
+      "log": "logs/scientific_0130/historical/test_diagnostics.log"
+    },
+    {
+      "file": "test_differential_1000.jl",
+      "status": "PASS",
+      "seconds": 110.59,
+      "log": "logs/scientific_0130/historical/test_differential_1000.log"
+    },
+    {
+      "file": "test_extension_registry.jl",
+      "status": "PASS",
+      "seconds": 15.99,
+      "log": "logs/scientific_0130/historical/test_extension_registry.log"
+    },
+    {
+      "file": "test_extensions_internal.jl",
+      "status": "PASS",
+      "seconds": 5.95,
+      "log": "logs/scientific_0130/historical/test_extensions_internal.log"
+    },
+    {
+      "file": "test_interop.jl",
+      "status": "PASS",
+      "seconds": 12.8,
+      "log": "logs/scientific_0130/historical/test_interop.log"
+    },
+    {
+      "file": "test_interop_extended.jl",
+      "status": "PASS",
+      "seconds": 14.65,
+      "log": "logs/scientific_0130/historical/test_interop_extended.log"
+    },
+    {
+      "file": "test_packages_foundation.jl",
+      "status": "PASS",
+      "seconds": 13.82,
+      "log": "logs/scientific_0130/historical/test_packages_foundation.log"
+    },
+    {
+      "file": "test_pipelines_118.jl",
+      "status": "PASS",
+      "seconds": 41.85,
+      "log": "logs/scientific_0130/historical/test_pipelines_118.log"
+    },
+    {
+      "file": "test_python_bridge.jl",
+      "status": "PASS",
+      "seconds": 16.92,
+      "log": "logs/scientific_0130/historical/test_python_bridge.log"
+    },
+    {
+      "file": "test_regression_091.jl",
+      "status": "PASS",
+      "seconds": 33.23,
+      "log": "logs/scientific_0130/historical/test_regression_091.log"
+    },
+    {
+      "file": "test_scientific_0130.jl",
+      "status": "PASS",
+      "seconds": 25.29,
+      "log": "logs/scientific_0130/historical/test_scientific_0130.log"
+    },
+    {
+      "file": "test_semantic_adversarial.jl",
+      "status": "PASS",
+      "seconds": 22.25,
+      "log": "logs/scientific_0130/historical/test_semantic_adversarial.log"
+    },
+    {
+      "file": "test_static_093.jl",
+      "status": "PASS",
+      "seconds": 16.43,
+      "log": "logs/scientific_0130/historical/test_static_093.log"
+    },
+    {
+      "file": "test_static_094.jl",
+      "status": "PASS",
+      "seconds": 16.66,
+      "log": "logs/scientific_0130/historical/test_static_094.log"
+    },
+    {
+      "file": "test_static_095.jl",
+      "status": "PASS",
+      "seconds": 17.99,
+      "log": "logs/scientific_0130/historical/test_static_095.log"
+    },
+    {
+      "file": "test_static_096.jl",
+      "status": "PASS",
+      "seconds": 19.34,
+      "log": "logs/scientific_0130/historical/test_static_096.log"
+    },
+    {
+      "file": "test_static_097.jl",
+      "status": "PASS",
+      "seconds": 15.38,
+      "log": "logs/scientific_0130/historical/test_static_097.log"
+    },
+    {
+      "file": "test_static_098.jl",
+      "status": "PASS",
+      "seconds": 11.37,
+      "log": "logs/scientific_0130/historical/test_static_098.log"
+    },
+    {
+      "file": "test_static_099.jl",
+      "status": "PASS",
+      "seconds": 11.9,
+      "log": "logs/scientific_0130/historical/test_static_099.log"
+    },
+    {
+      "file": "test_static_100.jl",
+      "status": "PASS",
+      "seconds": 12.13,
+      "log": "logs/scientific_0130/historical/test_static_100.log"
+    },
+    {
+      "file": "test_static_101.jl",
+      "status": "PASS",
+      "seconds": 11.96,
+      "log": "logs/scientific_0130/historical/test_static_101.log"
+    },
+    {
+      "file": "test_static_102.jl",
+      "status": "PASS",
+      "seconds": 13.13,
+      "log": "logs/scientific_0130/historical/test_static_102.log"
+    },
+    {
+      "file": "test_static_103.jl",
+      "status": "PASS",
+      "seconds": 11.09,
+      "log": "logs/scientific_0130/historical/test_static_103.log"
+    },
+    {
+      "file": "test_static_104.jl",
+      "status": "PASS",
+      "seconds": 12.28,
+      "log": "logs/scientific_0130/historical/test_static_104.log"
+    },
+    {
+      "file": "test_static_105.jl",
+      "status": "PASS",
+      "seconds": 12.64,
+      "log": "logs/scientific_0130/historical/test_static_105.log"
+    },
+    {
+      "file": "test_static_106.jl",
+      "status": "PASS",
+      "seconds": 14.03,
+      "log": "logs/scientific_0130/historical/test_static_106.log"
+    },
+    {
+      "file": "test_static_107.jl",
+      "status": "PASS",
+      "seconds": 14.39,
+      "log": "logs/scientific_0130/historical/test_static_107.log"
+    },
+    {
+      "file": "test_static_108.jl",
+      "status": "PASS",
+      "seconds": 13.33,
+      "log": "logs/scientific_0130/historical/test_static_108.log"
+    },
+    {
+      "file": "test_static_109.jl",
+      "status": "PASS",
+      "seconds": 7.76,
+      "log": "logs/scientific_0130/historical/test_static_109.log"
+    },
+    {
+      "file": "test_static_110.jl",
+      "status": "PASS",
+      "seconds": 10.47,
+      "log": "logs/scientific_0130/historical/test_static_110.log"
+    },
+    {
+      "file": "test_static_111.jl",
+      "status": "PASS",
+      "seconds": 9.71,
+      "log": "logs/scientific_0130/historical/test_static_111.log"
+    },
+    {
+      "file": "test_static_112.jl",
+      "status": "PASS",
+      "seconds": 9.38,
+      "log": "logs/scientific_0130/historical/test_static_112.log"
+    },
+    {
+      "file": "test_static_113.jl",
+      "status": "PASS",
+      "seconds": 6.95,
+      "log": "logs/scientific_0130/historical/test_static_113.log"
+    },
+    {
+      "file": "test_static_114.jl",
+      "status": "PASS",
+      "seconds": 9.05,
+      "log": "logs/scientific_0130/historical/test_static_114.log"
+    },
+    {
+      "file": "test_static_115.jl",
+      "status": "PASS",
+      "seconds": 7.66,
+      "log": "logs/scientific_0130/historical/test_static_115.log"
+    },
+    {
+      "file": "test_static_116.jl",
+      "status": "PASS",
+      "seconds": 9.06,
+      "log": "logs/scientific_0130/historical/test_static_116.log"
+    },
+    {
+      "file": "test_tables_large.jl",
+      "status": "PASS",
+      "seconds": 7.83,
+      "log": "logs/scientific_0130/historical/test_tables_large.log"
+    },
+    {
+      "file": "runtests.jl",
+      "status": "PASS",
+      "seconds": 20.08,
+      "log": "logs/scientific_0130/historical/runtests.log"
+    },
+    {
+      "file": "break_abt.jl",
+      "status": "PROBE",
+      "seconds": 36.83,
+      "log": "logs/scientific_0130/historical/break_abt.log"
+    },
+    {
+      "file": "audit_adversarial.jl",
+      "status": "PROBE",
+      "seconds": 17.16,
+      "log": "logs/scientific_0130/historical/audit_adversarial.log"
+    }
+  ],
+  "included_tests": [
+    "runtests_legacy.jl (via runtests.jl)"
+  ],
+  "probe_only": [
+    "audit_adversarial.jl",
+    "break_abt.jl"
+  ]
+}

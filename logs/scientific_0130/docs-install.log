@@ -1,0 +1,17 @@
+   Installed Git_LFS_jll ───────────── v3.8.1+0
+   Installed OpenSSH_jll ───────────── v10.6.1+0
+   Installed IOCapture ─────────────── v1.0.0
+   Installed Git_jll ───────────────── v2.56.0+0
+   Installed AbstractTrees ─────────── v0.4.5
+   Installed MarkdownAST ───────────── v0.1.3
+   Installed DocStringExtensions ───── v0.10.2
+   Installed RegistryInstances ─────── v0.1.0
+   Installed Git ───────────────────── v1.5.0
+   Installed SimpleImageMetadata ───── v0.1.0
+   Installed ANSIColoredPrinters ───── v0.0.1
+   Installed LazilyInitializedFields ─ v1.3.0
+   Installed Documenter ────────────── v1.20.0
+  Installing 3 artifacts
+   Installed artifact OpenSSH  2.3 MiB
+   Installed artifact Git_LFS  8.6 MiB
+   Installed artifact Git      43.0 MiB

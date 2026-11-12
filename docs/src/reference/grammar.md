@@ -1,4 +1,4 @@
-# Gramática da versão 0.12.0
+# Gramática da versão 0.13.0
 
 O resumo abaixo transcreve a estrutura de `tokenize`, `statement`, `expr` e `atom` em `src/ABT.jl`. É uma **EBNF de superfície** com restrições semânticas descritas depois; não substitui o parser para mensagens de erro ou casos de fronteira. `ws` inclui espaços, tabs e quebras de linha, exceto dentro de pipelines. Comentário começa com `#` e termina na quebra de linha.
 

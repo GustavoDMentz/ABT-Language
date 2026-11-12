@@ -1,0 +1,306 @@
+[
+  {
+    "case": "fastq",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"registros\":2,\"bases\":12,\"A\":4,\"C\":4,\"G\":3,\"T\":1,\"N\":0,\"phred_minimo\":30,\"phred_maximo\":40,\"phred_medio\":35.0}\n",
+      "{\"registros\":2,\"bases\":12,\"A\":4,\"C\":4,\"G\":3,\"T\":1,\"N\":0,\"phred_minimo\":30,\"phred_maximo\":40,\"phred_medio\":35.0}\n",
+      "{\"registros\":2,\"bases\":12,\"A\":4,\"C\":4,\"G\":3,\"T\":1,\"N\":0,\"phred_minimo\":30,\"phred_maximo\":40,\"phred_medio\":35.0}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "records",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "[{\"identificador\":\"leitura_1\",\"sequencia\":\"ACGTAC\",\"comprimento\":6,\"A\":2,\"C\":2,\"G\":1,\"T\":1,\"N\":0,\"phred_minimo\":40,\"phred_maximo\":40,\"phred_medio\":40.0},{\"identificador\":\"leitura_2\",\"sequencia\":\"AACCGG\",\"comprimento\":6,\"A\":2,\"C\":2,\"G\":2,\"T\":0,\"N\":0,\"phred_minimo\":30,\"phred_maximo\":30,\"phred_medio\":30.0}]\n",
+      "[{\"identificador\":\"leitura_1\",\"sequencia\":\"ACGTAC\",\"comprimento\":6,\"A\":2,\"C\":2,\"G\":1,\"T\":1,\"N\":0,\"phred_minimo\":40,\"phred_maximo\":40,\"phred_medio\":40.0},{\"identificador\":\"leitura_2\",\"sequencia\":\"AACCGG\",\"comprimento\":6,\"A\":2,\"C\":2,\"G\":2,\"T\":0,\"N\":0,\"phred_minimo\":30,\"phred_maximo\":30,\"phred_medio\":30.0}]\n",
+      "[{\"identificador\":\"leitura_1\",\"sequencia\":\"ACGTAC\",\"comprimento\":6,\"A\":2,\"C\":2,\"G\":1,\"T\":1,\"N\":0,\"phred_minimo\":40,\"phred_maximo\":40,\"phred_medio\":40.0},{\"identificador\":\"leitura_2\",\"sequencia\":\"AACCGG\",\"comprimento\":6,\"A\":2,\"C\":2,\"G\":2,\"T\":0,\"N\":0,\"phred_minimo\":30,\"phred_maximo\":30,\"phred_medio\":30.0}]\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "dna",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"k\":{\"k\":2,\"total\":5,\"frequencias\":[{\"sequencia\":\"AC\",\"quantidade\":2,\"frequencia\":0.4},{\"sequencia\":\"CG\",\"quantidade\":1,\"frequencia\":0.2},{\"sequencia\":\"GT\",\"quantidade\":1,\"frequencia\":0.2},{\"sequencia\":\"TA\",\"quantidade\":1,\"frequencia\":0.2}]},\"r\":\"NACGT\",\"p\":\"ME\"}\n",
+      "{\"k\":{\"k\":2,\"total\":5,\"frequencias\":[{\"sequencia\":\"AC\",\"quantidade\":2,\"frequencia\":0.4},{\"sequencia\":\"CG\",\"quantidade\":1,\"frequencia\":0.2},{\"sequencia\":\"GT\",\"quantidade\":1,\"frequencia\":0.2},{\"sequencia\":\"TA\",\"quantidade\":1,\"frequencia\":0.2}]},\"r\":\"NACGT\",\"p\":\"ME\"}\n",
+      "{\"k\":{\"k\":2,\"total\":5,\"frequencias\":[{\"sequencia\":\"AC\",\"quantidade\":2,\"frequencia\":0.4},{\"sequencia\":\"CG\",\"quantidade\":1,\"frequencia\":0.2},{\"sequencia\":\"GT\",\"quantidade\":1,\"frequencia\":0.2},{\"sequencia\":\"TA\",\"quantidade\":1,\"frequencia\":0.2}]},\"r\":\"NACGT\",\"p\":\"ME\"}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "linear",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"x\":{\"solucao\":[0.09090909090909091,0.6363636363636364],\"residuo_norma\":0.0},\"svd\":{\"metodo\":\"svd\",\"U\":[[-0.8506508083520402,-0.5257311121191337],[-0.5257311121191336,0.8506508083520399]],\"singulares\":[4.618033988749895,2.3819660112501055],\"Vt\":[[-0.8506508083520399,-0.5257311121191336],[-0.5257311121191336,0.8506508083520399]]},\"d\":11.0,\"r\":2}\n",
+      "{\"x\":{\"solucao\":[0.09090909090909091,0.6363636363636364],\"residuo_norma\":0.0},\"svd\":{\"metodo\":\"svd\",\"U\":[[-0.8506508083520402,-0.5257311121191337],[-0.5257311121191336,0.8506508083520399]],\"singulares\":[4.618033988749895,2.3819660112501055],\"Vt\":[[-0.8506508083520399,-0.5257311121191336],[-0.5257311121191336,0.8506508083520399]]},\"d\":11.0,\"r\":2}\n",
+      "{\"x\":{\"solucao\":[0.09090909090909091,0.6363636363636364],\"residuo_norma\":0.0},\"svd\":{\"metodo\":\"svd\",\"U\":[[-0.8506508083520402,-0.5257311121191337],[-0.5257311121191336,0.8506508083520399]],\"singulares\":[4.618033988749895,2.3819660112501055],\"Vt\":[[-0.8506508083520399,-0.5257311121191336],[-0.5257311121191336,0.8506508083520399]]},\"d\":11.0,\"r\":2}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "matrices",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"m\":[[7.0,10.0],[15.0,22.0]],\"t\":[[1.0,3.0],[2.0,4.0]],\"qr\":{\"metodo\":\"qr\",\"Q\":[[-0.316227766016838,-0.9486832980505138],[-0.9486832980505138,0.316227766016838]],\"R\":[[-3.1622776601683795,-4.427188724235731],[0.0,-0.6324555320336751]]}}\n",
+      "{\"m\":[[7.0,10.0],[15.0,22.0]],\"t\":[[1.0,3.0],[2.0,4.0]],\"qr\":{\"metodo\":\"qr\",\"Q\":[[-0.316227766016838,-0.9486832980505138],[-0.9486832980505138,0.316227766016838]],\"R\":[[-3.1622776601683795,-4.427188724235731],[0.0,-0.6324555320336751]]}}\n",
+      "{\"m\":[[7.0,10.0],[15.0,22.0]],\"t\":[[1.0,3.0],[2.0,4.0]],\"qr\":{\"metodo\":\"qr\",\"Q\":[[-0.316227766016838,-0.9486832980505138],[-0.9486832980505138,0.316227766016838]],\"R\":[[-3.1622776601683795,-4.427188724235731],[0.0,-0.6324555320336751]]}}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "pvalues",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"metodo\":\"by\",\"controle\":\"FDR\",\"alpha\":0.05,\"originais\":[0.01,0.04,0.2],\"ajustados\":[0.055,0.11,0.3666666666666667],\"rejeitar\":[false,false,false]}\n",
+      "{\"metodo\":\"by\",\"controle\":\"FDR\",\"alpha\":0.05,\"originais\":[0.01,0.04,0.2],\"ajustados\":[0.055,0.11,0.3666666666666667],\"rejeitar\":[false,false,false]}\n",
+      "{\"metodo\":\"by\",\"controle\":\"FDR\",\"alpha\":0.05,\"originais\":[0.01,0.04,0.2],\"ajustados\":[0.055,0.11,0.3666666666666667],\"rejeitar\":[false,false,false]}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "optimization",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "{\"solucao\":1.0,\"valor_objetivo\":0.0,\"iteracoes\":5,\"convergiu\":true,\"status\":\"convergiu\"}\n",
+      "{\"solucao\":1.0,\"valor_objetivo\":0.0,\"iteracoes\":5,\"convergiu\":true,\"status\":\"convergiu\"}\n",
+      "{\"solucao\":1.0,\"valor_objetivo\":0.0,\"iteracoes\":5,\"convergiu\":true,\"status\":\"convergiu\"}\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "tables",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "[{\"gene\":\"G1\",\"p\":0.001},{\"gene\":\"G2\",\"p\":0.04},{\"gene\":\"G3\",\"p\":0.2}]\n",
+      "[{\"gene\":\"G1\",\"p\":0.001},{\"gene\":\"G2\",\"p\":0.04},{\"gene\":\"G3\",\"p\":0.2}]\n",
+      "[{\"gene\":\"G1\",\"p\":0.001},{\"gene\":\"G2\",\"p\":0.04},{\"gene\":\"G3\",\"p\":0.2}]\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "join",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "[{\"gene\":\"G1\",\"p_valor\":0.001,\"p\":0.001},{\"gene\":\"G2\",\"p_valor\":0.04,\"p\":0.04},{\"gene\":\"G3\",\"p_valor\":0.2,\"p\":0.2}]\n",
+      "[{\"gene\":\"G1\",\"p_valor\":0.001,\"p\":0.001},{\"gene\":\"G2\",\"p_valor\":0.04,\"p\":0.04},{\"gene\":\"G3\",\"p_valor\":0.2,\"p\":0.2}]\n",
+      "[{\"gene\":\"G1\",\"p_valor\":0.001,\"p\":0.001},{\"gene\":\"G2\",\"p_valor\":0.04,\"p\":0.04},{\"gene\":\"G3\",\"p_valor\":0.2,\"p\":0.2}]\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "bad_fastq",
+    "status": "PASS",
+    "codes": [
+      1,
+      1,
+      1
+    ],
+    "stdout": [
+      "",
+      "",
+      ""
+    ],
+    "stderr": [
+      "/tmp/abt0130-synie58s/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_fastq: codificação deve ser phred33 explícita\n",
+      "ERROR: LoadError: ABT ler_fastq: codificação deve ser phred33 explícita\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_sc_fastq#abt_sc_fastq##0\")(path::String, alphabet::String, ambiguity::String, encoding::String)\n   @ Main /tmp/abt0130-synie58s/plain.jl:307\n [3] abt_invoke\n   @ /tmp/abt0130-synie58s/plain.jl:414 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_sc_fastq_summary#abt_sc_fastq_summary##0\"{var\"#abt_sc_fastq_walk#abt_sc_fastq_walk##0\"}, var\"#abt_sc_fastq#abt_sc_fastq##0\"})()\n   @ Main /tmp/abt0130-synie58s/plain.jl:420\n [5] top-level scope\n   @ /tmp/abt0130-synie58s/plain.jl:423\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt0130-synie58s/plain.jl:2\n",
+      "ERROR: LoadError: ABT ler_fastq: codificação deve ser phred33 explícita\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_sc_fastq#abt_sc_fastq##0\")(path::String, alphabet::String, ambiguity::String, encoding::String)\n   @ Main /tmp/abt0130-synie58s/opt.jl:307\n [3] abt_invoke\n   @ /tmp/abt0130-synie58s/opt.jl:414 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_sc_fastq_summary#abt_sc_fastq_summary##0\"{var\"#abt_sc_fastq_walk#abt_sc_fastq_walk##0\"}, var\"#abt_sc_fastq#abt_sc_fastq##0\"})()\n   @ Main /tmp/abt0130-synie58s/opt.jl:420\n [5] top-level scope\n   @ /tmp/abt0130-synie58s/opt.jl:423\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt0130-synie58s/opt.jl:2\n"
+    ]
+  },
+  {
+    "case": "bad_pvalue",
+    "status": "PASS",
+    "codes": [
+      1,
+      1,
+      1
+    ],
+    "stdout": [
+      "",
+      "",
+      ""
+    ],
+    "stderr": [
+      "/tmp/abt0130-mki5b7rd/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ajustar_valores_p: valores-p fora de [0,1]\n",
+      "ERROR: LoadError: ABT ajustar_valores_p: valores-p fora de [0,1]\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_sc_adjust#abt_sc_adjust##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"})(values::Vector{Float64}, method::String, alpha::Float64)\n   @ Main /tmp/abt0130-mki5b7rd/plain.jl:369\n [3] abt_invoke\n   @ /tmp/abt0130-mki5b7rd/plain.jl:435 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_sc_adjust#abt_sc_adjust##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}})()\n   @ Main /tmp/abt0130-mki5b7rd/plain.jl:441\n [5] top-level scope\n   @ /tmp/abt0130-mki5b7rd/plain.jl:443\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt0130-mki5b7rd/plain.jl:2\n",
+      "ERROR: LoadError: ABT ajustar_valores_p: valores-p fora de [0,1]\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_sc_adjust#abt_sc_adjust##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"})(values::Vector{Float64}, method::String, alpha::Float64)\n   @ Main /tmp/abt0130-mki5b7rd/opt.jl:369\n [3] abt_invoke\n   @ /tmp/abt0130-mki5b7rd/opt.jl:435 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_sc_adjust#abt_sc_adjust##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}})()\n   @ Main /tmp/abt0130-mki5b7rd/opt.jl:441\n [5] top-level scope\n   @ /tmp/abt0130-mki5b7rd/opt.jl:443\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt0130-mki5b7rd/opt.jl:2\n"
+    ]
+  },
+  {
+    "case": "singular",
+    "status": "PASS",
+    "codes": [
+      1,
+      1,
+      1
+    ],
+    "stdout": [
+      "",
+      "",
+      ""
+    ],
+    "stderr": [
+      "/tmp/abt0130-43x8d2ov/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resolver_sistema: SingularException: matrix is singular; factorization failed. Zero pivot found at index 2\n",
+      "ERROR: LoadError: ABT resolver_sistema: SingularException: matrix is singular; factorization failed. Zero pivot found at index 2\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_sc_solve#abt_sc_solve##0\"{var\"#abt_sc_finite#abt_sc_finite##0\", var\"#abt_sc_la#abt_sc_la##0\", var\"#abt_sc_matrix#abt_sc_matrix##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}, var\"#abt_sc_reals#abt_sc_reals##0\"})(a::Vector{Vector{Float64}}, b::Vector{Float64})\n   @ Main /tmp/abt0130-43x8d2ov/plain.jl:364\n [3] abt_invoke\n   @ /tmp/abt0130-43x8d2ov/plain.jl:435 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_sc_solve#abt_sc_solve##0\"{var\"#abt_sc_finite#abt_sc_finite##0\", var\"#abt_sc_la#abt_sc_la##0\", var\"#abt_sc_matrix#abt_sc_matrix##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}, var\"#abt_sc_reals#abt_sc_reals##0\"}})()\n   @ Main /tmp/abt0130-43x8d2ov/plain.jl:441\n [5] top-level scope\n   @ /tmp/abt0130-43x8d2ov/plain.jl:443\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt0130-43x8d2ov/plain.jl:2\n\ncaused by: SingularException: matrix is singular; factorization failed. Zero pivot found at index 2\nStacktrace:\n  [1] checknonsingular\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/factorization.jl:69 [inlined]\n  [2] _check_lu_success\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:84 [inlined]\n  [3] #lu!#180\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:92 [inlined]\n  [4] lu!\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:90 [inlined]\n  [5] lu!\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:89 [inlined]\n  [6] _lu\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:405 [inlined]\n  [7] lu(::Matrix{Float64}; kwargs::@Kwargs{check::Bool})\n    @ LinearAlgebra ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:399\n  [8] (::var\"#abt_sc_solve##1#abt_sc_solve##2\"{var\"#abt_sc_finite#abt_sc_finite##0\"})(a::Matrix{Float64}, b::Vector{Float64}, l::Module)\n    @ Main /tmp/abt0130-43x8d2ov/plain.jl:358\n  [9] (::var\"#abt_sc_solve#abt_sc_solve##0\"{var\"#abt_sc_finite#abt_sc_finite##0\", var\"#abt_sc_la#abt_sc_la##0\", var\"#abt_sc_matrix#abt_sc_matrix##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}, var\"#abt_sc_reals#abt_sc_reals##0\"})(a::Vector{Vector{Float64}}, b::Vector{Float64})\n    @ Main /tmp/abt0130-43x8d2ov/plain.jl:357\n [10] abt_invoke\n    @ /tmp/abt0130-43x8d2ov/plain.jl:435 [inlined]\n [11] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_sc_solve#abt_sc_solve##0\"{var\"#abt_sc_finite#abt_sc_finite##0\", var\"#abt_sc_la#abt_sc_la##0\", var\"#abt_sc_matrix#abt_sc_matrix##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}, var\"#abt_sc_reals#abt_sc_reals##0\"}})()\n    @ Main /tmp/abt0130-43x8d2ov/plain.jl:441\n [12] top-level scope\n    @ /tmp/abt0130-43x8d2ov/plain.jl:443\n [13] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [14] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [15] _start()\n    @ Base ./client.jl:577\n",
+      "ERROR: LoadError: ABT resolver_sistema: SingularException: matrix is singular; factorization failed. Zero pivot found at index 2\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_sc_solve#abt_sc_solve##0\"{var\"#abt_sc_finite#abt_sc_finite##0\", var\"#abt_sc_la#abt_sc_la##0\", var\"#abt_sc_matrix#abt_sc_matrix##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}, var\"#abt_sc_reals#abt_sc_reals##0\"})(a::Vector{Vector{Float64}}, b::Vector{Float64})\n   @ Main /tmp/abt0130-43x8d2ov/opt.jl:364\n [3] abt_invoke\n   @ /tmp/abt0130-43x8d2ov/opt.jl:435 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_sc_solve#abt_sc_solve##0\"{var\"#abt_sc_finite#abt_sc_finite##0\", var\"#abt_sc_la#abt_sc_la##0\", var\"#abt_sc_matrix#abt_sc_matrix##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}, var\"#abt_sc_reals#abt_sc_reals##0\"}})()\n   @ Main /tmp/abt0130-43x8d2ov/opt.jl:441\n [5] top-level scope\n   @ /tmp/abt0130-43x8d2ov/opt.jl:443\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt0130-43x8d2ov/opt.jl:2\n\ncaused by: SingularException: matrix is singular; factorization failed. Zero pivot found at index 2\nStacktrace:\n  [1] checknonsingular\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/factorization.jl:69 [inlined]\n  [2] _check_lu_success\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:84 [inlined]\n  [3] #lu!#180\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:92 [inlined]\n  [4] lu!\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:90 [inlined]\n  [5] lu!\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:89 [inlined]\n  [6] _lu\n    @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:405 [inlined]\n  [7] lu(::Matrix{Float64}; kwargs::@Kwargs{check::Bool})\n    @ LinearAlgebra ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/lu.jl:399\n  [8] (::var\"#abt_sc_solve##1#abt_sc_solve##2\"{var\"#abt_sc_finite#abt_sc_finite##0\"})(a::Matrix{Float64}, b::Vector{Float64}, l::Module)\n    @ Main /tmp/abt0130-43x8d2ov/opt.jl:358\n  [9] (::var\"#abt_sc_solve#abt_sc_solve##0\"{var\"#abt_sc_finite#abt_sc_finite##0\", var\"#abt_sc_la#abt_sc_la##0\", var\"#abt_sc_matrix#abt_sc_matrix##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}, var\"#abt_sc_reals#abt_sc_reals##0\"})(a::Vector{Vector{Float64}}, b::Vector{Float64})\n    @ Main /tmp/abt0130-43x8d2ov/opt.jl:357\n [10] abt_invoke\n    @ /tmp/abt0130-43x8d2ov/opt.jl:435 [inlined]\n [11] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_sc_solve#abt_sc_solve##0\"{var\"#abt_sc_finite#abt_sc_finite##0\", var\"#abt_sc_la#abt_sc_la##0\", var\"#abt_sc_matrix#abt_sc_matrix##0\"{var\"#abt_sc_reals#abt_sc_reals##0\"}, var\"#abt_sc_reals#abt_sc_reals##0\"}})()\n    @ Main /tmp/abt0130-43x8d2ov/opt.jl:441\n [12] top-level scope\n    @ /tmp/abt0130-43x8d2ov/opt.jl:443\n [13] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [14] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [15] _start()\n    @ Base ./client.jl:577\n"
+    ]
+  },
+  {
+    "case": "sequenciamento",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "(id = \"leitura_1\", kmer = (k = 2, total = 5, frequencias = [(sequencia = \"AC\", quantidade = 2, frequencia = 0.4), (sequencia = \"CG\", quantidade = 1, frequencia = 0.2), (sequencia = \"GT\", quantidade = 1, frequencia = 0.2), (sequencia = \"TA\", quantidade = 1, frequencia = 0.2)]))\n(id = \"leitura_2\", kmer = (k = 2, total = 5, frequencias = [(sequencia = \"AA\", quantidade = 1, frequencia = 0.2), (sequencia = \"AC\", quantidade = 1, frequencia = 0.2), (sequencia = \"CC\", quantidade = 1, frequencia = 0.2), (sequencia = \"CG\", quantidade = 1, frequencia = 0.2), (sequencia = \"GG\", quantidade = 1, frequencia = 0.2)]))\n(registros = 2, bases = 12, A = 4, C = 4, G = 3, T = 1, N = 0, phred_minimo = 30, phred_maximo = 40, phred_medio = 35.0)\n",
+      "(id = \"leitura_1\", kmer = (k = 2, total = 5, frequencias = [(sequencia = \"AC\", quantidade = 2, frequencia = 0.4), (sequencia = \"CG\", quantidade = 1, frequencia = 0.2), (sequencia = \"GT\", quantidade = 1, frequencia = 0.2), (sequencia = \"TA\", quantidade = 1, frequencia = 0.2)]))\n(id = \"leitura_2\", kmer = (k = 2, total = 5, frequencias = [(sequencia = \"AA\", quantidade = 1, frequencia = 0.2), (sequencia = \"AC\", quantidade = 1, frequencia = 0.2), (sequencia = \"CC\", quantidade = 1, frequencia = 0.2), (sequencia = \"CG\", quantidade = 1, frequencia = 0.2), (sequencia = \"GG\", quantidade = 1, frequencia = 0.2)]))\n(registros = 2, bases = 12, A = 4, C = 4, G = 3, T = 1, N = 0, phred_minimo = 30, phred_maximo = 40, phred_medio = 35.0)\n",
+      "(id = \"leitura_1\", kmer = (k = 2, total = 5, frequencias = [(sequencia = \"AC\", quantidade = 2, frequencia = 0.4), (sequencia = \"CG\", quantidade = 1, frequencia = 0.2), (sequencia = \"GT\", quantidade = 1, frequencia = 0.2), (sequencia = \"TA\", quantidade = 1, frequencia = 0.2)]))\n(id = \"leitura_2\", kmer = (k = 2, total = 5, frequencias = [(sequencia = \"AA\", quantidade = 1, frequencia = 0.2), (sequencia = \"AC\", quantidade = 1, frequencia = 0.2), (sequencia = \"CC\", quantidade = 1, frequencia = 0.2), (sequencia = \"CG\", quantidade = 1, frequencia = 0.2), (sequencia = \"GG\", quantidade = 1, frequencia = 0.2)]))\n(registros = 2, bases = 12, A = 4, C = 4, G = 3, T = 1, N = 0, phred_minimo = 30, phred_maximo = 40, phred_medio = 35.0)\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "expressao",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "(genes = [\"G1\", \"G2\", \"G3\"], log2fc = [1.5, -0.4, 2.0], ajuste = (metodo = \"bh\", controle = \"FDR\", alpha = 0.05, originais = [0.001, 0.04, 0.2], ajustados = [0.003, 0.06, 0.2], rejeitar = [true, false, false]))\n",
+      "(genes = [\"G1\", \"G2\", \"G3\"], log2fc = [1.5, -0.4, 2.0], ajuste = (metodo = \"bh\", controle = \"FDR\", alpha = 0.05, originais = [0.001, 0.04, 0.2], ajustados = [0.003, 0.06, 0.2], rejeitar = [true, false, false]))\n",
+      "(genes = [\"G1\", \"G2\", \"G3\"], log2fc = [1.5, -0.4, 2.0], ajuste = (metodo = \"bh\", controle = \"FDR\", alpha = 0.05, originais = [0.001, 0.04, 0.2], ajustados = [0.003, 0.06, 0.2], rejeitar = [true, false, false]))\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "algebra",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "(solucao = (solucao = [0.09090909090909091, 0.6363636363636364], residuo_norma = 0.0), singulares = [4.618033988749895, 2.3819660112501055])\n",
+      "(solucao = (solucao = [0.09090909090909091, 0.6363636363636364], residuo_norma = 0.0), singulares = [4.618033988749895, 2.3819660112501055])\n",
+      "(solucao = (solucao = [0.09090909090909091, 0.6363636363636364], residuo_norma = 0.0), singulares = [4.618033988749895, 2.3819660112501055])\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "case": "visualizacao",
+    "status": "PASS",
+    "codes": [
+      0,
+      0,
+      0
+    ],
+    "stdout": [
+      "(arquivo = \"/tmp/abt0130-79_7twg4/figure.png\", pontos = 4)\n",
+      "(arquivo = \"/tmp/abt0130-79_7twg4/figure.png\", pontos = 4)\n",
+      "(arquivo = \"/tmp/abt0130-79_7twg4/figure.png\", pontos = 4)\n"
+    ],
+    "stderr": [
+      "",
+      "",
+      ""
+    ]
+  }
+]

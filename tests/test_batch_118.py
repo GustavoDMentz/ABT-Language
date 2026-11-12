@@ -62,7 +62,7 @@ with tempfile.TemporaryDirectory(prefix='abt-batch-') as d:
   if expected is None and error is None and len(observed)==3 and all(r['code']==0 for r in observed):
    if len(set(r['stdout'] for r in observed))!=1:
     results.append(dict(case=name,status='FAIL',phase='stdout_parity',observed=[r['stdout'] for r in observed]))
-path=ROOT/'logs/test_logs/batch_118_results.json';path.parent.mkdir(exist_ok=True)
+path=ROOT/os.environ.get('ABT_TEST_LOG_DIR','logs/test_logs')/'batch_118_results.json';path.parent.mkdir(parents=True,exist_ok=True)
 path.write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n')
 print('Resumo', {s:sum(r['status']==s for r in results) for s in ('PASS','FAIL')})
 sys.exit(any(r['status']!='PASS' for r in results))

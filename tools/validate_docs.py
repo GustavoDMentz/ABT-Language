@@ -100,7 +100,7 @@ def files():
     result("files", "referenced ABT/data files", "PASS" if not failures else "FAIL", "; ".join(failures[:10]))
 
 def cli():
-    for command, expected_text in [(["--version"], "ABT 0.12.0"), (["--help"], "Uso:"), (["doctor"], "runtime disponíveis"), (["operacoes"], "resumo_estatistico")]:
+    for command, expected_text in [(["--version"], "ABT 0.13.0"), (["--help"], "Uso:"), (["doctor"], "runtime disponíveis"), (["operacoes"], "resumo_estatistico")]:
         ok, detail = run([str(CLI), *command], env=os.environ, contains=expected_text)
         result("cli", " ".join(command), "PASS" if ok else "FAIL", detail)
 
@@ -137,7 +137,7 @@ def examples():
 
 def main():
     generated(); reference(); links(); files(); cli(); examples()
-    output = ROOT / "logs/documentation/validation.json"
+    output = ROOT / os.environ.get("ABT_DOC_VALIDATION_OUTPUT", "logs/documentation/validation.json")
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(RESULTS, ensure_ascii=False, indent=2) + "\n")
     counts = {status: sum(row["status"] == status for row in RESULTS) for status in ("PASS", "FAIL", "SKIP")}

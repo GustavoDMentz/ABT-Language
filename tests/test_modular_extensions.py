@@ -107,8 +107,8 @@ with tempfile.TemporaryDirectory(prefix='abt-modular-') as directory:
             results.append(dict(case=name, status='FAIL', phase='stdout_parity', observed=observed))
             print('FAIL', name, 'stdout_parity', flush=True)
 
-output = root/'logs/test_logs/modular_results.json'
-output.parent.mkdir(exist_ok=True)
+output = root/os.environ.get('ABT_TEST_LOG_DIR','logs/test_logs')/'modular_results.json'
+output.parent.mkdir(parents=True,exist_ok=True)
 output.write_text(json.dumps(results, ensure_ascii=False, indent=2)+'\n')
 print('Resumo:', {status:sum(row['status']==status for row in results) for status in ('PASS','FAIL')})
 raise SystemExit(any(row['status'] != 'PASS' for row in results))

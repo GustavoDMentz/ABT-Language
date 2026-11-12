@@ -22,7 +22,7 @@ end
     @test help[1] == 0
     @test occursin("abt verificar", help[2])
     @test !occursin("Julia", help[2])
-    @test cli("--versao"; dir="/tmp") == (0, "ABT 0.12.0\n", "")
+    @test cli("--versao"; dir="/tmp") == (0, "ABT 0.13.0\n", "")
     example = joinpath(ROOT, "examples", "pipeline_basico.abt")
     direct = cli(example; dir="/tmp")
     explicit = cli("executar", example; dir="/tmp")
