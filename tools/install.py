@@ -23,7 +23,8 @@ PREVIOUS_FILES = LEGACY_FILES + (
     "src/StdlibAnalytics.jl", "src/StdlibJSON.jl", "src/StdlibStats.jl",
     "src/StdlibLinear.jl", "src/StdlibBatch.jl", "src/ExtensionRegistry.jl",
 )
-FILES = PREVIOUS_FILES + ("src/StdlibBiostatistics.jl",)
+V0120_FILES = PREVIOUS_FILES + ("src/StdlibBiostatistics.jl",)
+FILES = V0120_FILES + ("src/StdlibScientificBio.jl", "src/StdlibScientificNumerics.jl", "src/StdlibScientificTables.jl")
 
 
 def digest(path):
@@ -45,7 +46,7 @@ def existing():
     except (OSError, ValueError) as exc:
         fail(f"marcador de instalação inválido: {exc}")
     saved_files = set(marker.get("files", {}))
-    if marker.get("application") != "ABT" or marker.get("schema") != 1 or saved_files not in (set(FILES), set(PREVIOUS_FILES), set(LEGACY_FILES)):
+    if marker.get("application") != "ABT" or marker.get("schema") != 1 or saved_files not in (set(FILES), set(V0120_FILES), set(PREVIOUS_FILES), set(LEGACY_FILES)):
         fail("marcador de instalação incompatível")
     allowed = saved_files | {MARKER, "bin", "src", "src/Runtime"}
     found = {str(p.relative_to(TARGET)) for p in TARGET.rglob("*")}

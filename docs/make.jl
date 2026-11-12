@@ -15,7 +15,7 @@ makedocs(
         edit_link = "main",
         repolink = "https://github.com/GustavoDMentz/ABT-Language",
         lang = "pt-BR",
-        description = "Manual oficial da linguagem ABT 0.12.0",
+        description = "Manual oficial da linguagem ABT 0.13.0",
         footer = "Gerado com [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl).",
         assets = ["assets/abt.css", "assets/abt.js"],
     ),
@@ -40,7 +40,9 @@ makedocs(
             "Estatística e bioestatística" => "standard-library/statistics.md",
             "Dados, JSON e álgebra" => "standard-library/data.md",
             "Bioinformática e visualização" => "standard-library/science.md",
+            "Bibliotecas científicas 0.13.0" => "standard-library/scientific0130.md",
         ],
+        "Ciência 0.13.0" => "scientific/overview.md",
         "Tutoriais" => [
             "Primeiros passos" => "tutorials/first-program.md",
             "Dados e CSV" => "tutorials/data.md",

@@ -1,0 +1,209 @@
+{
+  "method": "independent cold processes; first call includes Julia compilation; repeated calls are warm",
+  "results": [
+    {
+      "workload": "valores_p",
+      "backend": "Julia",
+      "repetition": 1,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.522768171,
+        "prepare": 0.000192706,
+        "first_call": 0.688189644,
+        "repeated_calls": 0.010478322
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:01.51",
+      "maximum_rss_kib": 333428,
+      "stderr": ""
+    },
+    {
+      "workload": "valores_p",
+      "backend": "Julia",
+      "repetition": 2,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.521978121,
+        "prepare": 0.000197899,
+        "first_call": 0.706715975,
+        "repeated_calls": 0.010652926
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:01.53",
+      "maximum_rss_kib": 333396,
+      "stderr": ""
+    },
+    {
+      "workload": "valores_p",
+      "backend": "Julia",
+      "repetition": 3,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.523606279,
+        "prepare": 0.000222016,
+        "first_call": 0.705511998,
+        "repeated_calls": 0.010911333
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:01.52",
+      "maximum_rss_kib": 333500,
+      "stderr": ""
+    },
+    {
+      "workload": "valores_p",
+      "backend": "ABT",
+      "repetition": 1,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.047704976,
+        "prepare": 1.390743306,
+        "first_call": 4.840190378,
+        "repeated_calls": 0.832059002
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:07.41",
+      "maximum_rss_kib": 405284,
+      "stderr": ""
+    },
+    {
+      "workload": "valores_p",
+      "backend": "ABT",
+      "repetition": 2,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.046981359,
+        "prepare": 1.343949403,
+        "first_call": 4.864311093,
+        "repeated_calls": 0.810144585
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:07.35",
+      "maximum_rss_kib": 398540,
+      "stderr": ""
+    },
+    {
+      "workload": "valores_p",
+      "backend": "ABT",
+      "repetition": 3,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.047207764,
+        "prepare": 1.343743033,
+        "first_call": 4.880611157,
+        "repeated_calls": 0.816974107
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:07.37",
+      "maximum_rss_kib": 402832,
+      "stderr": ""
+    },
+    {
+      "workload": "matriz",
+      "backend": "Julia",
+      "repetition": 1,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.014914529,
+        "prepare": 0.000207032,
+        "first_call": 0.26983052,
+        "repeated_calls": 0.014503987
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:00.52",
+      "maximum_rss_kib": 244456,
+      "stderr": ""
+    },
+    {
+      "workload": "matriz",
+      "backend": "Julia",
+      "repetition": 2,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.014820624,
+        "prepare": 0.000188852,
+        "first_call": 0.268963551,
+        "repeated_calls": 0.014499596
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:00.52",
+      "maximum_rss_kib": 244480,
+      "stderr": ""
+    },
+    {
+      "workload": "matriz",
+      "backend": "Julia",
+      "repetition": 3,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.015624197,
+        "prepare": 0.000191626,
+        "first_call": 0.270049987,
+        "repeated_calls": 0.014559308
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:00.54",
+      "maximum_rss_kib": 244320,
+      "stderr": ""
+    },
+    {
+      "workload": "matriz",
+      "backend": "ABT",
+      "repetition": 1,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.048202097,
+        "prepare": 1.490070897,
+        "first_call": 4.124782575,
+        "repeated_calls": 0.012573273
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:05.91",
+      "maximum_rss_kib": 352516,
+      "stderr": ""
+    },
+    {
+      "workload": "matriz",
+      "backend": "ABT",
+      "repetition": 2,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.048142922,
+        "prepare": 1.38345956,
+        "first_call": 4.391586076,
+        "repeated_calls": 0.033664062
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:06.11",
+      "maximum_rss_kib": 359316,
+      "stderr": ""
+    },
+    {
+      "workload": "matriz",
+      "backend": "ABT",
+      "repetition": 3,
+      "command": "/usr/bin/time -v julia --startup-file=no --project=. bench.jl",
+      "exit_code": 0,
+      "stages_seconds": {
+        "library_load": 0.051122107,
+        "prepare": 1.539636997,
+        "first_call": 4.15809417,
+        "repeated_calls": 0.012960393
+      },
+      "repeated_iterations": 20,
+      "process_wall": "0:06.01",
+      "maximum_rss_kib": 356676,
+      "stderr": ""
+    }
+  ]
+}

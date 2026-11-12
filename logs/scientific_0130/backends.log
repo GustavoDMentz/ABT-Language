@@ -1,0 +1,17 @@
+PASS fastq
+PASS records
+PASS dna
+PASS linear
+PASS matrices
+PASS pvalues
+PASS optimization
+PASS tables
+PASS join
+PASS bad_fastq
+PASS bad_pvalue
+PASS singular
+PASS sequenciamento
+PASS expressao
+PASS algebra
+PASS visualizacao
+Resumo: {'PASS': 16, 'FAIL': 0}

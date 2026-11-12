@@ -1,0 +1,4 @@
+dados = ler_csv("applications/scientific_0130/data/medidas.csv", esquema("tempo", "real", "marcador", "real"), "erro")
+figura = grafico(dados, "tempo", "marcador", "linha")
+saida = salvar_figura(figura, ambiente("ABT_0130_FIGURA", "/tmp/abt-0130-biomed.png"))
+mostrar saida

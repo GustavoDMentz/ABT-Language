@@ -1,4 +1,17 @@
-# Aplicações ABT 0.11.8
+# Aplicações ABT
+
+## Ciência 0.13.0
+
+As quatro [aplicações científicas](scientific_0130/) usam dados sintéticos versionados e são executadas a partir da raiz do repositório:
+
+```sh
+bin/abt run applications/scientific_0130/sequenciamento.abt
+bin/abt run applications/scientific_0130/expressao.abt
+bin/abt run applications/scientific_0130/algebra.abt
+bin/abt run applications/scientific_0130/visualizacao.abt
+```
+
+Elas cobrem FASTQ e qualidade Phred, CSV com correção de valores-p, solução e decomposição de matrizes, e exportação de gráfico biomédico. A última grava `/tmp/abt-0130-biomed.png` por padrão; `ABT_0130_FIGURA` define outro destino. Consulte [contratos científicos](../docs/src/scientific/overview.md) e [resultados de validação](../docs/scientific_0130/RELATORIO.md). A aplicação de expressão usa valores-p de exemplo e não constitui análise diferencial validada de RNA-seq.
 
 Execute a partir da raiz do projeto com Julia 1.13.3 e `Pkg.instantiate()` no projeto Julia. CSV.jl e Tables.jl são usados pela camada tabular; FASTX.jl e BioSequences.jl pela camada biológica. PythonCall é opcional para outras aplicações ABT e para testes históricos de interoperabilidade. Contratos: [tabelas](../docs/ARQUIVOS_TABELAS_0118.md) e [bioinformática](../docs/BIOINFORMATICA_0118.md).
 

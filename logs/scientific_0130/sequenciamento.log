@@ -1,0 +1,3 @@
+(id = "leitura_1", kmer = (k = 2, total = 5, frequencias = [(sequencia = "AC", quantidade = 2, frequencia = 0.4), (sequencia = "CG", quantidade = 1, frequencia = 0.2), (sequencia = "GT", quantidade = 1, frequencia = 0.2), (sequencia = "TA", quantidade = 1, frequencia = 0.2)]))
+(id = "leitura_2", kmer = (k = 2, total = 5, frequencias = [(sequencia = "AA", quantidade = 1, frequencia = 0.2), (sequencia = "AC", quantidade = 1, frequencia = 0.2), (sequencia = "CC", quantidade = 1, frequencia = 0.2), (sequencia = "CG", quantidade = 1, frequencia = 0.2), (sequencia = "GG", quantidade = 1, frequencia = 0.2)]))
+(registros = 2, bases = 12, A = 4, C = 4, G = 3, T = 1, N = 0, phred_minimo = 30, phred_maximo = 40, phred_medio = 35.0)

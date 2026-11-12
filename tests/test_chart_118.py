@@ -38,6 +38,7 @@ with tempfile.TemporaryDirectory(prefix='abt-chart-') as d:
  invalid_run=subprocess.run(base+[str(root/'src/CLI.jl'),str(source)],cwd=root,env=invalid_env,capture_output=True,text=True,timeout=120)
  invalid_ok=invalid_run.returncode!=0 and 'caminho deve terminar' in invalid_run.stderr
  results.append(dict(check='invalid_format',status='PASS' if invalid_ok else 'FAIL',code=invalid_run.returncode,stdout=invalid_run.stdout,stderr=invalid_run.stderr))
-(root/'logs/test_logs/batch_chart_results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n')
+log=root/os.environ.get('ABT_TEST_LOG_DIR','logs/test_logs')/'batch_chart_results.json';log.parent.mkdir(parents=True,exist_ok=True)
+log.write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n')
 print('parity',parity)
 sys.exit(any(x['status']!='PASS' for x in results))

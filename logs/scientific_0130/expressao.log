@@ -1,0 +1,1 @@
+(genes = ["G1", "G2", "G3"], log2fc = [1.5, -0.4, 2.0], ajuste = (metodo = "bh", controle = "FDR", alpha = 0.05, originais = [0.001, 0.04, 0.2], ajustados = [0.003, 0.06, 0.2], rejeitar = [true, false, false]))

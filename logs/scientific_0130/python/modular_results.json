@@ -1,0 +1,787 @@
+[
+  {
+    "case": "vendas_estatistica_json",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "caminho = ambiente(\"ABT_VENDAS_PATH\", \"applications/data/vendas.csv\")\ncolunas = esquema(\"produto\", \"texto\", \"regiao\", \"texto\", \"unidades\", \"inteiro\", \"preco\", \"real\")\nvendas = ler_csv(caminho, colunas, \"erro\")\nfrequencias = contar_categorias(vendas, \"regiao\", \"erro\")\nrelatorio = registro(\"fonte\", \"vendas\", \"dimensao\", \"regiao\", \"distribuicao\", frequencias)\nmostrar codificar_json(relatorio, \"erro\")\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/distribuicao_vendas.abt"
+    ],
+    "returncode": 0,
+    "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+    "stderr": ""
+  },
+  {
+    "case": "vendas_estatistica_json",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "caminho = ambiente(\"ABT_VENDAS_PATH\", \"applications/data/vendas.csv\")\ncolunas = esquema(\"produto\", \"texto\", \"regiao\", \"texto\", \"unidades\", \"inteiro\", \"preco\", \"real\")\nvendas = ler_csv(caminho, colunas, \"erro\")\nfrequencias = contar_categorias(vendas, \"regiao\", \"erro\")\nrelatorio = registro(\"fonte\", \"vendas\", \"dimensao\", \"regiao\", \"distribuicao\", frequencias)\nmostrar codificar_json(relatorio, \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/vendas_estatistica_json_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 0,
+    "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+    "stderr": ""
+  },
+  {
+    "case": "vendas_estatistica_json",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "caminho = ambiente(\"ABT_VENDAS_PATH\", \"applications/data/vendas.csv\")\ncolunas = esquema(\"produto\", \"texto\", \"regiao\", \"texto\", \"unidades\", \"inteiro\", \"preco\", \"real\")\nvendas = ler_csv(caminho, colunas, \"erro\")\nfrequencias = contar_categorias(vendas, \"regiao\", \"erro\")\nrelatorio = registro(\"fonte\", \"vendas\", \"dimensao\", \"regiao\", \"distribuicao\", frequencias)\nmostrar codificar_json(relatorio, \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/vendas_estatistica_json_gerado_otimizado.jl"
+    ],
+    "returncode": 0,
+    "stdout": "{\"fonte\":\"vendas\",\"dimensao\":\"regiao\",\"distribuicao\":{\"categorias\":[{\"categoria\":\"Sul\",\"quantidade\":3,\"proporcao\":0.75},{\"categoria\":\"Norte\",\"quantidade\":1,\"proporcao\":0.25}],\"linhas_lidas\":4,\"linhas_ignoradas\":0}}\n",
+    "stderr": ""
+  },
+  {
+    "case": "rede_algebra_json",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "coeficientes = [[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]]\ncorrentes = [1.0, 1.0]\nresultado = resolver_sistema_spd(coeficientes, correntes)\nrelatorio = registro(\"modelo\", \"rede_condutancias\", \"tensoes\", resultado.solucao, \"residuo_norma\", resultado.residuo_norma)\nmostrar codificar_json(relatorio, \"erro\")\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/engineering/rede_condutancias.abt"
+    ],
+    "returncode": 0,
+    "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
+    "stderr": ""
+  },
+  {
+    "case": "rede_algebra_json",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "coeficientes = [[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]]\ncorrentes = [1.0, 1.0]\nresultado = resolver_sistema_spd(coeficientes, correntes)\nrelatorio = registro(\"modelo\", \"rede_condutancias\", \"tensoes\", resultado.solucao, \"residuo_norma\", resultado.residuo_norma)\nmostrar codificar_json(relatorio, \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/rede_algebra_json_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 0,
+    "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
+    "stderr": ""
+  },
+  {
+    "case": "rede_algebra_json",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "coeficientes = [[2.0, 0.0 - 1.0], [0.0 - 1.0, 2.0]]\ncorrentes = [1.0, 1.0]\nresultado = resolver_sistema_spd(coeficientes, correntes)\nrelatorio = registro(\"modelo\", \"rede_condutancias\", \"tensoes\", resultado.solucao, \"residuo_norma\", resultado.residuo_norma)\nmostrar codificar_json(relatorio, \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/rede_algebra_json_gerado_otimizado.jl"
+    ],
+    "returncode": 0,
+    "stdout": "{\"modelo\":\"rede_condutancias\",\"tensoes\":[0.9999999999999998,1.0000000000000002],\"residuo_norma\":9.42055475210265e-16}\n",
+    "stderr": ""
+  },
+  {
+    "case": "categorias_vazias",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/categorias_vazias.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"erro\"), \"erro\")\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/categorias_vazias.abt"
+    ],
+    "returncode": 0,
+    "stdout": "{\"categorias\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
+    "stderr": ""
+  },
+  {
+    "case": "categorias_vazias",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/categorias_vazias.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"erro\"), \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/categorias_vazias_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 0,
+    "stdout": "{\"categorias\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
+    "stderr": ""
+  },
+  {
+    "case": "categorias_vazias",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/categorias_vazias.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"erro\"), \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/categorias_vazias_gerado_otimizado.jl"
+    ],
+    "returncode": 0,
+    "stdout": "{\"categorias\":[],\"linhas_lidas\":0,\"linhas_ignoradas\":0}\n",
+    "stderr": ""
+  },
+  {
+    "case": "ausente_erro",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/ausente_erro.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/ausente_erro.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/ausente_erro.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT contar_categorias: registro 2, coluna 'grupo': valor ausente\n"
+  },
+  {
+    "case": "ausente_erro",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/ausente_erro.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT contar_categorias: registro 2, coluna 'grupo': valor ausente\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, medida::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:8\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, medida::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:328\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:2\n\ncaused by: ABT contar_categorias: registro 2, coluna 'grupo': valor ausente\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, medida::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:315\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/ausente_erro_gerado_sem_otimizacao.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\n"
+  },
+  {
+    "case": "ausente_erro",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/ausente_erro.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT contar_categorias: registro 2, coluna 'grupo': valor ausente\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, medida::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:8\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, medida::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:328\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:2\n\ncaused by: ABT contar_categorias: registro 2, coluna 'grupo': valor ausente\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String, medida::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:315\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/ausente_erro_gerado_otimizado.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\n"
+  },
+  {
+    "case": "ausente_ignorar",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"ignorar_linha\"), \"erro\")\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/ausente_ignorar.abt"
+    ],
+    "returncode": 0,
+    "stdout": "{\"categorias\":[{\"categoria\":\"A\",\"quantidade\":2,\"proporcao\":1.0}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
+    "stderr": ""
+  },
+  {
+    "case": "ausente_ignorar",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"ignorar_linha\"), \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/ausente_ignorar_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 0,
+    "stdout": "{\"categorias\":[{\"categoria\":\"A\",\"quantidade\":2,\"proporcao\":1.0}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
+    "stderr": ""
+  },
+  {
+    "case": "ausente_ignorar",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/ausente_ignorar.csv\", esquema(\"grupo\", \"texto\", \"medida\", \"inteiro\"), \"permitir\")\nmostrar codificar_json(contar_categorias(dados, \"grupo\", \"ignorar_linha\"), \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/ausente_ignorar_gerado_otimizado.jl"
+    ],
+    "returncode": 0,
+    "stdout": "{\"categorias\":[{\"categoria\":\"A\",\"quantidade\":2,\"proporcao\":1.0}],\"linhas_lidas\":3,\"linhas_ignoradas\":1}\n",
+    "stderr": ""
+  },
+  {
+    "case": "coluna_inexistente",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/coluna_inexistente.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"x\", \"erro\")\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/coluna_inexistente.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/coluna_inexistente.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT contar_categorias: coluna inexistente \"x\"\n"
+  },
+  {
+    "case": "coluna_inexistente",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/coluna_inexistente.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"x\", \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT contar_categorias: coluna inexistente \"x\"\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_sem_otimizacao.jl:299\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_sem_otimizacao.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_sem_otimizacao.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_sem_otimizacao.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_sem_otimizacao.jl:2\n"
+  },
+  {
+    "case": "coluna_inexistente",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/coluna_inexistente.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"x\", \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT contar_categorias: coluna inexistente \"x\"\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_otimizado.jl:299\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_otimizado.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_otimizado.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_otimizado.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/coluna_inexistente_gerado_otimizado.jl:2\n"
+  },
+  {
+    "case": "coluna_numerica",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/coluna_numerica.csv\", esquema(\"grupo\", \"inteiro\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/coluna_numerica.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/coluna_numerica.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT contar_categorias: coluna deve ser texto\n"
+  },
+  {
+    "case": "coluna_numerica",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/coluna_numerica.csv\", esquema(\"grupo\", \"inteiro\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/coluna_numerica_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT contar_categorias: coluna deve ser texto\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_sem_otimizacao.jl:303\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_sem_otimizacao.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_sem_otimizacao.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_sem_otimizacao.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_sem_otimizacao.jl:2\n"
+  },
+  {
+    "case": "coluna_numerica",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/coluna_numerica.csv\", esquema(\"grupo\", \"inteiro\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"erro\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/coluna_numerica_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT contar_categorias: coluna deve ser texto\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_otimizado.jl:303\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_otimizado.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_otimizado.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_otimizado.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/coluna_numerica_gerado_otimizado.jl:2\n"
+  },
+  {
+    "case": "politica_invalida",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/politica_invalida.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"adivinhar\")\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/politica_invalida.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/politica_invalida.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT contar_categorias: política de ausentes deve ser erro ou ignorar_linha\n"
+  },
+  {
+    "case": "politica_invalida",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/politica_invalida.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"adivinhar\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/politica_invalida_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT contar_categorias: política de ausentes deve ser erro ou ignorar_linha\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/politica_invalida_gerado_sem_otimizacao.jl:301\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/politica_invalida_gerado_sem_otimizacao.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/politica_invalida_gerado_sem_otimizacao.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/politica_invalida_gerado_sem_otimizacao.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/politica_invalida_gerado_sem_otimizacao.jl:2\n"
+  },
+  {
+    "case": "politica_invalida",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "dados = ler_csv(\"/tmp/abt-modular-h5u360iy/politica_invalida.csv\", esquema(\"grupo\", \"texto\"), \"erro\")\nmostrar contar_categorias(dados, \"grupo\", \"adivinhar\")\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/politica_invalida_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT contar_categorias: política de ausentes deve ser erro ou ignorar_linha\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{grupo::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, column::String, missing_policy::String)\n   @ Main /tmp/abt-modular-h5u360iy/politica_invalida_gerado_otimizado.jl:301\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/politica_invalida_gerado_otimizado.jl:387 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_category_counts#abt_std_category_counts##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-modular-h5u360iy/politica_invalida_gerado_otimizado.jl:394\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/politica_invalida_gerado_otimizado.jl:396\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/politica_invalida_gerado_otimizado.jl:2\n"
+  },
+  {
+    "case": "matriz_nao_quadrada",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[1.0, 2.0]], [3.0])\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/matriz_nao_quadrada.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/matriz_nao_quadrada.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resolver_sistema_spd: linha 1 deve ter 1 valores\n"
+  },
+  {
+    "case": "matriz_nao_quadrada",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[1.0, 2.0]], [3.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: linha 1 deve ter 1 valores\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_sem_otimizacao.jl:307\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_sem_otimizacao.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_sem_otimizacao.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_sem_otimizacao.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_sem_otimizacao.jl:2\n"
+  },
+  {
+    "case": "matriz_nao_quadrada",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[1.0, 2.0]], [3.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: linha 1 deve ter 1 valores\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_otimizado.jl:307\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_otimizado.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_otimizado.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_otimizado.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/matriz_nao_quadrada_gerado_otimizado.jl:2\n"
+  },
+  {
+    "case": "matriz_inteira",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2]], [2.0])\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/matriz_inteira.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/matriz_inteira.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resolver_sistema_spd: matriz[1,1] deve ser Float64 finito\n"
+  },
+  {
+    "case": "matriz_inteira",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2]], [2.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/matriz_inteira_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: matriz[1,1] deve ser Float64 finito\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Int64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_sem_otimizacao.jl:311\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_sem_otimizacao.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_sem_otimizacao.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_sem_otimizacao.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_sem_otimizacao.jl:2\n"
+  },
+  {
+    "case": "matriz_inteira",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2]], [2.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/matriz_inteira_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: matriz[1,1] deve ser Float64 finito\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Int64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_otimizado.jl:311\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_otimizado.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_otimizado.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_otimizado.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/matriz_inteira_gerado_otimizado.jl:2\n"
+  },
+  {
+    "case": "matriz_assimetrica",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2.0, 1.0], [0.0, 2.0]], [3.0, 2.0])\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/matriz_assimetrica.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/matriz_assimetrica.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resolver_sistema_spd: matriz não simétrica em [1,2]\n"
+  },
+  {
+    "case": "matriz_assimetrica",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2.0, 1.0], [0.0, 2.0]], [3.0, 2.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: matriz não simétrica em [1,2]\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_sem_otimizacao.jl:321\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_sem_otimizacao.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_sem_otimizacao.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_sem_otimizacao.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_sem_otimizacao.jl:2\n"
+  },
+  {
+    "case": "matriz_assimetrica",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2.0, 1.0], [0.0, 2.0]], [3.0, 2.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: matriz não simétrica em [1,2]\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_otimizado.jl:321\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_otimizado.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_otimizado.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_otimizado.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/matriz_assimetrica_gerado_otimizado.jl:2\n"
+  },
+  {
+    "case": "matriz_nao_positiva",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[1.0, 0.0], [0.0, 0.0]], [1.0, 1.0])\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/matriz_nao_positiva.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/matriz_nao_positiva.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resolver_sistema_spd: fatoração/solução: PosDefException: matrix is not positive definite; Factorization failed.\n"
+  },
+  {
+    "case": "matriz_nao_positiva",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[1.0, 0.0], [0.0, 0.0]], [1.0, 1.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: fatoração/solução: PosDefException: matrix is not positive definite; Factorization failed.\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:334\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:2\n\ncaused by: PosDefException: matrix is not positive definite; Factorization failed.\nStacktrace:\n   [1] checkpositivedefinite\n     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/factorization.jl:68 [inlined]\n   [2] #cholesky!#163\n     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:418 [inlined]\n ┌ [3] cholesky!\n │   @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:416 [inlined]\n ╰──── repeated 2 times\n   [5] _cholesky\n     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:552 [inlined]\n   [6] cholesky\n     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:542 [inlined]\n   [7] cholesky(A::LinearAlgebra.Symmetric{Float64, Matrix{Float64}})\n     @ LinearAlgebra ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:542\n   [8] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n     @ Main /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:331\n   [9] abt_invoke\n     @ /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:382 [inlined]\n  [10] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n     @ Main /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:388\n  [11] top-level scope\n     @ /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_sem_otimizacao.jl:390\n  [12] include(mod::Module, _path::String)\n     @ Base ./Base.jl:309\n  [13] exec_options(opts::Base.JLOptions)\n     @ Base ./client.jl:344\n  [14] _start()\n     @ Base ./client.jl:577\n"
+  },
+  {
+    "case": "matriz_nao_positiva",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[1.0, 0.0], [0.0, 0.0]], [1.0, 1.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: fatoração/solução: PosDefException: matrix is not positive definite; Factorization failed.\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:334\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:2\n\ncaused by: PosDefException: matrix is not positive definite; Factorization failed.\nStacktrace:\n   [1] checkpositivedefinite\n     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/factorization.jl:68 [inlined]\n   [2] #cholesky!#163\n     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:418 [inlined]\n ┌ [3] cholesky!\n │   @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:416 [inlined]\n ╰──── repeated 2 times\n   [5] _cholesky\n     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:552 [inlined]\n   [6] cholesky\n     @ ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:542 [inlined]\n   [7] cholesky(A::LinearAlgebra.Symmetric{Float64, Matrix{Float64}})\n     @ LinearAlgebra ~/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/share/julia/stdlib/v1.13/LinearAlgebra/src/cholesky.jl:542\n   [8] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n     @ Main /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:331\n   [9] abt_invoke\n     @ /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:382 [inlined]\n  [10] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n     @ Main /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:388\n  [11] top-level scope\n     @ /tmp/abt-modular-h5u360iy/matriz_nao_positiva_gerado_otimizado.jl:390\n  [12] include(mod::Module, _path::String)\n     @ Base ./Base.jl:309\n  [13] exec_options(opts::Base.JLOptions)\n     @ Base ./client.jl:344\n  [14] _start()\n     @ Base ./client.jl:577\n"
+  },
+  {
+    "case": "vetor_invalido",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2.0]], [2])\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/vetor_invalido.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/vetor_invalido.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resolver_sistema_spd: vetor[1] deve ser Float64 finito\n"
+  },
+  {
+    "case": "vetor_invalido",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2.0]], [2])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/vetor_invalido_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: vetor[1] deve ser Float64 finito\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Int64})\n   @ Main /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_sem_otimizacao.jl:316\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_sem_otimizacao.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_sem_otimizacao.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_sem_otimizacao.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_sem_otimizacao.jl:2\n"
+  },
+  {
+    "case": "vetor_invalido",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[2.0]], [2])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/vetor_invalido_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: vetor[1] deve ser Float64 finito\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Int64})\n   @ Main /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_otimizado.jl:316\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_otimizado.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_otimizado.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_otimizado.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/vetor_invalido_gerado_otimizado.jl:2\n"
+  },
+  {
+    "case": "numero_nao_finito",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[0.0 / 0.0]], [1.0])\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/numero_nao_finito.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/numero_nao_finito.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resolver_sistema_spd: matriz[1,1] deve ser Float64 finito\n"
+  },
+  {
+    "case": "numero_nao_finito",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[0.0 / 0.0]], [1.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: matriz[1,1] deve ser Float64 finito\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_sem_otimizacao.jl:311\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_sem_otimizacao.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_sem_otimizacao.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_sem_otimizacao.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_sem_otimizacao.jl:2\n"
+  },
+  {
+    "case": "numero_nao_finito",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd([[0.0 / 0.0]], [1.0])\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_otimizado.jl"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resolver_sistema_spd: matriz[1,1] deve ser Float64 finito\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_solve_spd#abt_std_solve_spd##0\")(rows::Vector{Vector{Float64}}, terms::Vector{Float64})\n   @ Main /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_otimizado.jl:311\n [3] abt_invoke\n   @ /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_otimizado.jl:382 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_solve_spd#abt_std_solve_spd##0\"})()\n   @ Main /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_otimizado.jl:388\n [5] top-level scope\n   @ /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_otimizado.jl:390\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-modular-h5u360iy/numero_nao_finito_gerado_otimizado.jl:2\n"
+  },
+  {
+    "case": "sombreamento",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "contar_categorias = 7\nmostrar contar_categorias\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/sombreamento.abt"
+    ],
+    "returncode": 0,
+    "stdout": "7\n",
+    "stderr": ""
+  },
+  {
+    "case": "sombreamento",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "contar_categorias = 7\nmostrar contar_categorias\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/sombreamento_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 0,
+    "stdout": "7\n",
+    "stderr": ""
+  },
+  {
+    "case": "sombreamento",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "contar_categorias = 7\nmostrar contar_categorias\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/sombreamento_gerado_otimizado.jl"
+    ],
+    "returncode": 0,
+    "stdout": "7\n",
+    "stderr": ""
+  },
+  {
+    "case": "funcao_mesmo_nome",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "função contar_categorias(x) { retornar x + 1 }\nmostrar contar_categorias(2)\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/funcao_mesmo_nome.abt"
+    ],
+    "returncode": 0,
+    "stdout": "3\n",
+    "stderr": ""
+  },
+  {
+    "case": "funcao_mesmo_nome",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "run",
+    "source": "função contar_categorias(x) { retornar x + 1 }\nmostrar contar_categorias(2)\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/funcao_mesmo_nome_gerado_sem_otimizacao.jl"
+    ],
+    "returncode": 0,
+    "stdout": "3\n",
+    "stderr": ""
+  },
+  {
+    "case": "funcao_mesmo_nome",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "run",
+    "source": "função contar_categorias(x) { retornar x + 1 }\nmostrar contar_categorias(2)\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-modular-h5u360iy/funcao_mesmo_nome_gerado_otimizado.jl"
+    ],
+    "returncode": 0,
+    "stdout": "3\n",
+    "stderr": ""
+  },
+  {
+    "case": "tipo_estatico",
+    "backend": "gerado_sem_otimizacao",
+    "status": "PASS",
+    "phase": "emit",
+    "source": "mostrar resolver_sistema_spd(1, [])\n",
+    "stdout": "",
+    "stderr": "Erro ABT[E052] — quantidade incorreta de argumentos\n\nErro semântico: resolver_sistema_spd argument 1 expects list\n\nABT: Confira os argumentos da chamada.\n"
+  },
+  {
+    "case": "tipo_estatico",
+    "backend": "gerado_otimizado",
+    "status": "PASS",
+    "phase": "emit",
+    "source": "mostrar resolver_sistema_spd(1, [])\n",
+    "stdout": "",
+    "stderr": "Erro ABT[E052] — quantidade incorreta de argumentos\n\nErro semântico: resolver_sistema_spd argument 1 expects list\n\nABT: Confira os argumentos da chamada.\n"
+  },
+  {
+    "case": "tipo_estatico",
+    "backend": "interpretador",
+    "status": "PASS",
+    "phase": "run",
+    "source": "mostrar resolver_sistema_spd(1, [])\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-modular-h5u360iy/tipo_estatico.abt"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-modular-h5u360iy/tipo_estatico.abt: Erro ABT[E052] — quantidade incorreta de argumentos\n\nErro semântico: resolver_sistema_spd argument 1 expects list\n"
+  }
+]

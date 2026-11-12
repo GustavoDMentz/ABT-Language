@@ -13,6 +13,36 @@ mostrar registros_fasta(sequencias)
 mostrar alinhar_sequencias(sequencias, "amostra_a", "amostra_b", "global", 2, -1, -3, -1)
 ```
 
+## cientifico
+
+Arquivo: `docs/examples/cientifico.abt`.
+
+```abt
+fastq = ler_fastq("applications/scientific_0130/data/reads.fastq", "DNA", "rejeitar", "phred33")
+q = resumir_fastq(fastq)
+registros = registros_fastq(fastq)
+k = frequencias_kmers("ACGTAC", 2)
+reverso = complemento_reverso("ACGTN")
+proteina = traduzir_dna("ATGGAA")
+a = [[2.0, 0.0], [0.0, 3.0]]
+produto = produto_matricial(a, a)
+t = transpor_matriz(a)
+d = determinante_matriz(a)
+posto = posto_matriz(a, 0.0)
+svd = decompor_matriz(a, "svd")
+solucao = resolver_sistema(a, [2.0, 3.0])
+ajuste = ajustar_valores_p([0.01, 0.04, 0.2], "holm", 0.05)
+otimo = minimizar_polinomio([1.0, -2.0, 1.0], -2.0, 3.0, 0.00000001, 0.0000000001, 100)
+dados = ler_csv("applications/scientific_0130/data/expressao.csv", esquema("gene", "texto", "log2fc", "real", "p_valor", "real"), "erro")
+selecao = selecionar_colunas(dados, ["gene", "p_valor"])
+renomeado = renomear_colunas(selecao, ["p_valor"], ["probabilidade"])
+ordenado = ordenar_tabela(renomeado, ["probabilidade"], ["crescente"], "erro")
+unicos = remover_duplicatas(ordenado, ["gene"])
+juncao = juntar_tabelas(unicos, selecao, ["gene"], "interna")
+saida = exportar_csv(juncao, "/tmp/abt-docs-scientific.csv", "NA")
+mostrar registro("fastq", q, "registros", registros, "k", k, "reverso", reverso, "proteina", proteina, "produto", produto, "transposta", t, "determinante", d, "posto", posto, "svd", svd.singulares, "solucao", solucao, "ajuste", ajuste, "otimo", otimo, "saida", saida)
+```
+
 ## dados
 
 Arquivo: `docs/examples/dados.abt`.

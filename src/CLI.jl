@@ -1,4 +1,4 @@
-const ABT_VERSION = "0.12.0"
+const ABT_VERSION = "0.13.0"
 const ABT_HELP = """ABT — linguagem experimental
 
 Uso:

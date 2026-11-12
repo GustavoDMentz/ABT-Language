@@ -1,0 +1,6 @@
+dados = ler_csv("applications/scientific_0130/data/expressao.csv", esquema("gene", "texto", "log2fc", "real", "p_valor", "real"), "erro")
+campos = selecionar_colunas(dados, ["gene", "log2fc", "p_valor"])
+ordenados = ordenar_tabela(campos, ["gene"], ["crescente"], "erro")
+p = coluna(ordenados, "p_valor")
+ajuste = ajustar_valores_p(p, "bh", 0.05)
+mostrar registro("genes", coluna(ordenados, "gene"), "log2fc", coluna(ordenados, "log2fc"), "ajuste", ajuste)

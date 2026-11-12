@@ -1,0 +1,7 @@
+leituras = ler_fastq("applications/scientific_0130/data/reads.fastq", "DNA", "rejeitar", "phred33")
+resumo = resumir_fastq(leituras)
+registros = registros_fastq(leituras)
+para cada leitura em registros {
+    mostrar registro("id", leitura.identificador, "kmer", frequencias_kmers(leitura.sequencia, 2))
+}
+mostrar resumo

@@ -1,0 +1,1518 @@
+[
+  {
+    "case": "estatistica_amostra",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao = 6.48074069840786, minimo = 12, maximo = 30), quantidade_maior_igual_18 = 4)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/statistics/descritiva.abt"
+    ]
+  },
+  {
+    "case": "estatistica_amostra",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao = 6.48074069840786, minimo = 12, maximo = 30), quantidade_maior_igual_18 = 4)\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-sbdk88qg/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "estatistica_amostra",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao = 6.48074069840786, minimo = 12, maximo = 30), quantidade_maior_igual_18 = 4)\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-sbdk88qg/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_amostra",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 5, selecionados_grupo_A_valor_maior_igual_10 = 2, soma = 32.0, media = 16.0)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_amostra",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 5, selecionados_grupo_A_valor_maior_igual_10 = 2, soma = 32.0, media = 16.0)\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-9iq0o8zm/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_amostra",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 5, selecionados_grupo_A_valor_maior_igual_10 = 2, soma = 32.0, media = 16.0)\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-9iq0o8zm/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "dna_amostra",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.666666666666664)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "dna_amostra",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.666666666666664)\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-l74nmrwa/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "dna_amostra",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.666666666666664)\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-l74nmrwa/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "dna_registros_amostra",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[(identificador = \"alfa\", descricao = \"alfa amostra A\", sequencia = \"ACGT\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0), (identificador = \"beta\", descricao = \"beta amostra B\", sequencia = \"GGGG\", comprimento = 4, A = 0, C = 0, G = 4, T = 0, U = 0, N = 0, GC_percentual = 100.0), (identificador = \"gama\", descricao = \"gama amostra C\", sequencia = \"AAAA\", comprimento = 4, A = 4, C = 0, G = 0, T = 0, U = 0, N = 0, GC_percentual = 0.0)]\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/por_registro.abt"
+    ]
+  },
+  {
+    "case": "dna_registros_amostra",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[(identificador = \"alfa\", descricao = \"alfa amostra A\", sequencia = \"ACGT\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0), (identificador = \"beta\", descricao = \"beta amostra B\", sequencia = \"GGGG\", comprimento = 4, A = 0, C = 0, G = 4, T = 0, U = 0, N = 0, GC_percentual = 100.0), (identificador = \"gama\", descricao = \"gama amostra C\", sequencia = \"AAAA\", comprimento = 4, A = 4, C = 0, G = 0, T = 0, U = 0, N = 0, GC_percentual = 0.0)]\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-pqihgn9u/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "dna_registros_amostra",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[(identificador = \"alfa\", descricao = \"alfa amostra A\", sequencia = \"ACGT\", comprimento = 4, A = 1, C = 1, G = 1, T = 1, U = 0, N = 0, GC_percentual = 50.0), (identificador = \"beta\", descricao = \"beta amostra B\", sequencia = \"GGGG\", comprimento = 4, A = 0, C = 0, G = 4, T = 0, U = 0, N = 0, GC_percentual = 100.0), (identificador = \"gama\", descricao = \"gama amostra C\", sequencia = \"AAAA\", comprimento = 4, A = 4, C = 0, G = 0, T = 0, U = 0, N = 0, GC_percentual = 0.0)]\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-pqihgn9u/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "estatistica_constante",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(resumo = (quantidade = 3, soma = 15, media = 5.0, mediana = 5.0, desvio_padrao = 0.0, minimo = 5, maximo = 5), quantidade_maior_igual_18 = 0)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-xpk552__/case.abt"
+    ]
+  },
+  {
+    "case": "estatistica_vazia",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-17lianv0/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: at least two values required\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-17lianv0/case.abt"
+    ]
+  },
+  {
+    "case": "estatistica_tipo_invalido",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-v2cya2i5/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: expected finite Int64 or Float64 values without missing values\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-v2cya2i5/case.abt"
+    ]
+  },
+  {
+    "case": "csv_aspas_e_filtro",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 2, selecionados_grupo_A_valor_maior_igual_10 = 1, soma = 20.0, media = 20.0)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_sem_selecao",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_coluna: empty table\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_cabecalho_invalido",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_csv: file '/tmp/abt-app-s5r32j4t/input.txt': header does not match explicit schema; found [\"nome\", \"grupo\", \"pontos\"]\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_numero_invalido",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT CSV: file '/tmp/abt-app-605ltxu6/input.txt', row 2, column 'valor': invalid real value \"abc\"; cause: ArgumentError: cannot parse \"abc\" as Float64\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_linha_incompleta",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_coluna: file '/tmp/abt-app-gtif3btp/input.txt': cause: CSV.ParseError: short_row at data row 1, column 3 (byte 18) in /tmp/abt-app-gtif3btp/input.txt: row has no field 3\nFor CSV.File without a schema, use on_error=:collect to keep parsing and inspect CSV.problems(file), or on_error=:warn for one summary warning (the eager default).\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_vazio",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_csv: file '/tmp/abt-app-lh5t8cgu/input.txt': empty file or missing header\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "dna_multiplas_minusculas",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 2, bases = 8, A = 1, C = 3, G = 3, T = 1, N = 0, GC_percentual = 75.0)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "dna_gc_zero",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 4, C = 0, G = 0, T = 0, N = 0, GC_percentual = 0.0)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "dna_gc_cem",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(sequencias = 1, bases = 4, A = 0, C = 0, G = 4, T = 0, N = 0, GC_percentual = 100.0)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "dna_base_invalida",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/bio/conteudo_gc.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-app-aflxa6n3/input.txt': registro 1 'a': base inválida 'N' na posição 3 para DNA\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "dna_sem_cabecalho",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/bio/conteudo_gc.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-app-tdrc7g51/input.txt': Error when parsing FASTX file. Saw unexpected byte 'A' on line 1\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "dna_vazio",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/bio/conteudo_gc.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-app-egat1w3b/input.txt': registro 1 'a': sequência vazia\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "dna_ultimo_registro_vazio",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/bio/conteudo_gc.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT FASTA: arquivo '/tmp/abt-app-qr8w5819/input.txt': registro 2 'b': sequência vazia\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/bio/conteudo_gc.abt"
+    ]
+  },
+  {
+    "case": "registro_composicao",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "2.0\n(nome = \"ABT\", metricas = (quantidade = 3, soma = 6, media = 2.0, mediana = 2.0, desvio_padrao = 1.0, minimo = 1, maximo = 3))\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-ekql6e5i/case.abt"
+    ]
+  },
+  {
+    "case": "registro_composicao",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "2.0\n(nome = \"ABT\", metricas = (quantidade = 3, soma = 6, media = 2.0, mediana = 2.0, desvio_padrao = 1.0, minimo = 1, maximo = 3))\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-ekql6e5i/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "registro_composicao",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "2.0\n(nome = \"ABT\", metricas = (quantidade = 3, soma = 6, media = 2.0, mediana = 2.0, desvio_padrao = 1.0, minimo = 1, maximo = 3))\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-ekql6e5i/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "registro_duplicado",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-83qtoloj/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT registro: duplicate field 'x'\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-83qtoloj/case.abt"
+    ]
+  },
+  {
+    "case": "registro_duplicado",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT registro: duplicate field 'x'\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_record#abt_std_record##0\")(::String, ::Vararg{Any})\n   @ Main /tmp/abt-app-83qtoloj/julia_sem_otimizacao.jl:44\n [3] abt_invoke\n   @ /tmp/abt-app-83qtoloj/julia_sem_otimizacao.jl:336 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-83qtoloj/julia_sem_otimizacao.jl:342\n [5] top-level scope\n   @ /tmp/abt-app-83qtoloj/julia_sem_otimizacao.jl:344\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-83qtoloj/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-83qtoloj/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "registro_duplicado",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT registro: duplicate field 'x'\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_record#abt_std_record##0\")(::String, ::Vararg{Any})\n   @ Main /tmp/abt-app-83qtoloj/julia_otimizada.jl:44\n [3] abt_invoke\n   @ /tmp/abt-app-83qtoloj/julia_otimizada.jl:336 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-83qtoloj/julia_otimizada.jl:342\n [5] top-level scope\n   @ /tmp/abt-app-83qtoloj/julia_otimizada.jl:344\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-83qtoloj/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-83qtoloj/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "registro_nome_invalido",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-g8ulrs2l/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT registro: invalid field name\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-g8ulrs2l/case.abt"
+    ]
+  },
+  {
+    "case": "registro_aridade_invalida",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-jdyq3k8k/case.abt: Erro ABT[E052] — quantidade incorreta de argumentos\n\nErro semântico: registro expects name/value pairs\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-jdyq3k8k/case.abt"
+    ]
+  },
+  {
+    "case": "descrever_um_valor",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-4zpb84z7/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: at least two values required\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-4zpb84z7/case.abt"
+    ]
+  },
+  {
+    "case": "descrever_um_valor",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: at least two values required\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Int64}, stats::Module)\n   @ Main /tmp/abt-app-4zpb84z7/julia_sem_otimizacao.jl:53\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Int64})\n   @ Main /tmp/abt-app-4zpb84z7/julia_sem_otimizacao.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-4zpb84z7/julia_sem_otimizacao.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-4zpb84z7/julia_sem_otimizacao.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-4zpb84z7/julia_sem_otimizacao.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-4zpb84z7/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-4zpb84z7/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "descrever_um_valor",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: at least two values required\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Int64}, stats::Module)\n   @ Main /tmp/abt-app-4zpb84z7/julia_otimizada.jl:53\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Int64})\n   @ Main /tmp/abt-app-4zpb84z7/julia_otimizada.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-4zpb84z7/julia_otimizada.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-4zpb84z7/julia_otimizada.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-4zpb84z7/julia_otimizada.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-4zpb84z7/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-4zpb84z7/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "descrever_nao_numerico",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-95x3tin_/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: expected finite Int64 or Float64 values without missing values\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-95x3tin_/case.abt"
+    ]
+  },
+  {
+    "case": "descrever_nao_numerico",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: expected finite Int64 or Float64 values without missing values\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Any}, stats::Module)\n   @ Main /tmp/abt-app-95x3tin_/julia_sem_otimizacao.jl:54\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Any})\n   @ Main /tmp/abt-app-95x3tin_/julia_sem_otimizacao.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-95x3tin_/julia_sem_otimizacao.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-95x3tin_/julia_sem_otimizacao.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-95x3tin_/julia_sem_otimizacao.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-95x3tin_/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-95x3tin_/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "descrever_nao_numerico",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: expected finite Int64 or Float64 values without missing values\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Any}, stats::Module)\n   @ Main /tmp/abt-app-95x3tin_/julia_otimizada.jl:54\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Any})\n   @ Main /tmp/abt-app-95x3tin_/julia_otimizada.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-95x3tin_/julia_otimizada.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-95x3tin_/julia_otimizada.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-95x3tin_/julia_otimizada.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-95x3tin_/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-95x3tin_/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "descrever_booleano",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-b2fj80yp/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: expected finite Int64 or Float64 values without missing values\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-b2fj80yp/case.abt"
+    ]
+  },
+  {
+    "case": "descrever_ausente",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-fwxtact_/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: expected finite Int64 or Float64 values without missing values\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-fwxtact_/case.abt"
+    ]
+  },
+  {
+    "case": "descrever_ausente",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: expected finite Int64 or Float64 values without missing values\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Union{Nothing, Int64}}, stats::Module)\n   @ Main /tmp/abt-app-fwxtact_/julia_sem_otimizacao.jl:54\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Union{Nothing, Int64}})\n   @ Main /tmp/abt-app-fwxtact_/julia_sem_otimizacao.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-fwxtact_/julia_sem_otimizacao.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-fwxtact_/julia_sem_otimizacao.jl:346\n [6] top-level scope\n   @ /tmp/abt-app-fwxtact_/julia_sem_otimizacao.jl:348\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-fwxtact_/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-fwxtact_/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "descrever_ausente",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: expected finite Int64 or Float64 values without missing values\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Union{Nothing, Int64}}, stats::Module)\n   @ Main /tmp/abt-app-fwxtact_/julia_otimizada.jl:54\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Union{Nothing, Int64}})\n   @ Main /tmp/abt-app-fwxtact_/julia_otimizada.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-fwxtact_/julia_otimizada.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-fwxtact_/julia_otimizada.jl:346\n [6] top-level scope\n   @ /tmp/abt-app-fwxtact_/julia_otimizada.jl:348\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-fwxtact_/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-fwxtact_/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "descrever_infinito",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-605m_ptj/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: expected finite Int64 or Float64 values without missing values\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-605m_ptj/case.abt"
+    ]
+  },
+  {
+    "case": "descrever_infinito",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: expected finite Int64 or Float64 values without missing values\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Float64}, stats::Module)\n   @ Main /tmp/abt-app-605m_ptj/julia_sem_otimizacao.jl:54\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Float64})\n   @ Main /tmp/abt-app-605m_ptj/julia_sem_otimizacao.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-605m_ptj/julia_sem_otimizacao.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-605m_ptj/julia_sem_otimizacao.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-605m_ptj/julia_sem_otimizacao.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-605m_ptj/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-605m_ptj/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "descrever_infinito",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: expected finite Int64 or Float64 values without missing values\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Float64}, stats::Module)\n   @ Main /tmp/abt-app-605m_ptj/julia_otimizada.jl:54\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Float64})\n   @ Main /tmp/abt-app-605m_ptj/julia_otimizada.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-605m_ptj/julia_otimizada.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-605m_ptj/julia_otimizada.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-605m_ptj/julia_otimizada.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-605m_ptj/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-605m_ptj/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "descrever_nan",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-3i0yq7bn/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: expected finite Int64 or Float64 values without missing values\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-3i0yq7bn/case.abt"
+    ]
+  },
+  {
+    "case": "descrever_overflow",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-um_gw4ms/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT descrever: sum overflow\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-um_gw4ms/case.abt"
+    ]
+  },
+  {
+    "case": "descrever_overflow",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: sum overflow\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Int64}, stats::Module)\n   @ Main /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:63\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Int64})\n   @ Main /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:2\n\ncaused by: OverflowError: 9223372036854775807 + 1 overflowed for type Int64\nStacktrace:\n  [1] throw_overflowerr_binaryop(op::Symbol, x::Int64, y::Int64)\n    @ Base.Checked ./checked.jl:164\n  [2] checked_add\n    @ ./checked.jl:176 [inlined]\n  [3] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Int64}, stats::Module)\n    @ Main /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:60\n  [4] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Int64})\n    @ Main /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:297\n  [5] abt_invoke\n    @ /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:337 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n    @ Main /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:343\n  [7] top-level scope\n    @ /tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl:345\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-um_gw4ms/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "descrever_overflow",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT descrever: sum overflow\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Int64}, stats::Module)\n   @ Main /tmp/abt-app-um_gw4ms/julia_otimizada.jl:63\n [3] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Int64})\n   @ Main /tmp/abt-app-um_gw4ms/julia_otimizada.jl:297\n [4] abt_invoke\n   @ /tmp/abt-app-um_gw4ms/julia_otimizada.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n   @ Main /tmp/abt-app-um_gw4ms/julia_otimizada.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-um_gw4ms/julia_otimizada.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-um_gw4ms/julia_otimizada.jl:2\n\ncaused by: OverflowError: 9223372036854775807 + 1 overflowed for type Int64\nStacktrace:\n  [1] throw_overflowerr_binaryop(op::Symbol, x::Int64, y::Int64)\n    @ Base.Checked ./checked.jl:164\n  [2] checked_add\n    @ ./checked.jl:176 [inlined]\n  [3] (::var\"#abt_std_describe#abt_std_describe##0\")(xs::Vector{Int64}, stats::Module)\n    @ Main /tmp/abt-app-um_gw4ms/julia_otimizada.jl:60\n  [4] (::var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"})(xs::Vector{Int64})\n    @ Main /tmp/abt-app-um_gw4ms/julia_otimizada.jl:297\n  [5] abt_invoke\n    @ /tmp/abt-app-um_gw4ms/julia_otimizada.jl:337 [inlined]\n  [6] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#11#12\"{Module, var\"#abt_std_describe#abt_std_describe##0\"}})()\n    @ Main /tmp/abt-app-um_gw4ms/julia_otimizada.jl:343\n  [7] top-level scope\n    @ /tmp/abt-app-um_gw4ms/julia_otimizada.jl:345\n  [8] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n  [9] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [10] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-um_gw4ms/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "descrever_escalar",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-inzxu5gz/case.abt: Erro ABT[E052] — quantidade incorreta de argumentos\n\nErro semântico: descrever expects a collection\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-inzxu5gz/case.abt"
+    ]
+  },
+  {
+    "case": "sombreamento_funcao_existente",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "3\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-ppzrnlvi/case.abt"
+    ]
+  },
+  {
+    "case": "sombreamento_funcao_existente",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "3\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-ppzrnlvi/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "sombreamento_funcao_existente",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "3\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-ppzrnlvi/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "biblioteca_em_funcao",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "3.0\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-q5kew9ft/case.abt"
+    ]
+  },
+  {
+    "case": "biblioteca_em_funcao",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "3.0\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-q5kew9ft/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "biblioteca_em_funcao",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "3.0\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-q5kew9ft/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "sem_captura_apos_sombreamento",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-i56epxgj/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: undefined function 'descrever'\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-i56epxgj/case.abt"
+    ]
+  },
+  {
+    "case": "vendas_amostra",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(regiao = \"Sul\", resumo = (quantidade = 3, soma = 20, media = 6.666666666666667, minimo = 4, maximo = 10), produtos = [\"Caderno\", \"Lápis\", \"Borracha\"])\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/vendas.abt"
+    ]
+  },
+  {
+    "case": "vendas_amostra",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(regiao = \"Sul\", resumo = (quantidade = 3, soma = 20, media = 6.666666666666667, minimo = 4, maximo = 10), produtos = [\"Caderno\", \"Lápis\", \"Borracha\"])\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-u2jc8leq/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "vendas_amostra",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(regiao = \"Sul\", resumo = (quantidade = 3, soma = 20, media = 6.666666666666667, minimo = 4, maximo = 10), produtos = [\"Caderno\", \"Lápis\", \"Borracha\"])\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-u2jc8leq/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_cabecalho_duplicado",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_csv: file '/tmp/abt-app-ugfq8hfr/input.txt': duplicate header\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_cabecalho_duplicado",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT ler_csv: file '/tmp/abt-app-ugfq8hfr/input.txt': duplicate header\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String, delimiter::String)\n   @ Main /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:195\n [3] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String)\n   @ Main /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:162\n [4] abt_invoke\n   @ /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:341 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:349\n [6] top-level scope\n   @ /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:357\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:2\n\ncaused by: duplicate header\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String, delimiter::String)\n   @ Main /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:182\n [3] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String)\n   @ Main /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:162\n [4] abt_invoke\n   @ /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:341 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:349\n [6] top-level scope\n   @ /tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl:357\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-ugfq8hfr/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_cabecalho_duplicado",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT ler_csv: file '/tmp/abt-app-ugfq8hfr/input.txt': duplicate header\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String, delimiter::String)\n   @ Main /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:195\n [3] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String)\n   @ Main /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:162\n [4] abt_invoke\n   @ /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:341 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:349\n [6] top-level scope\n   @ /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:357\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:2\n\ncaused by: duplicate header\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String, delimiter::String)\n   @ Main /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:182\n [3] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String)\n   @ Main /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:162\n [4] abt_invoke\n   @ /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:341 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:349\n [6] top-level scope\n   @ /tmp/abt-app-ugfq8hfr/julia_otimizada.jl:357\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-ugfq8hfr/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_campo_ausente",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT CSV: file '/tmp/abt-app-k748g47x/input.txt', row 2, column 'valor': missing field\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_campo_ausente",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT CSV: file '/tmp/abt-app-k748g47x/input.txt', row 2, column 'valor': missing field\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:8\n [2] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:290\n [3] abt_invoke\n   @ /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:341 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:352\n [5] top-level scope\n   @ /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:357\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:2\n\ncaused by: ABT CSV: file '/tmp/abt-app-k748g47x/input.txt', row 2, column 'valor': missing field\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_convert#abt_std_convert##0\")(raw::Missing, kind::String, policy::String, path::String, row::Int64, column::String)\n    @ Main /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:133\n  [3] (::var\"#abt_std_csv_row##1#abt_std_csv_row##2\"{CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, Vector{String}, Vector{String}, String, String, Int64, var\"#abt_std_convert#abt_std_convert##0\"})(i::Int64)\n    @ Main /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:156\n  [4] ntuple\n    @ ./ntuple.jl:19 [inlined]\n  [5] (::var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"})(raw::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, columns::Vector{String}, types::Vector{String}, policy::String, path::String, index::Int64)\n    @ Main /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:156\n  [6] #abt_std_csv##3\n    @ ./none:-1 [inlined]\n  [7] iterate\n    @ ./generator.jl:48 [inlined]\n  [8] iterate\n    @ ./iterators.jl:203 [inlined]\n  [9] iterate\n    @ ./iterators.jl:202 [inlined]\n [10] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:275\n [11] abt_invoke\n    @ /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:341 [inlined]\n [12] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:352\n [13] top-level scope\n    @ /tmp/abt-app-k748g47x/julia_sem_otimizacao.jl:357\n [14] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [15] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [16] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-k748g47x/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_campo_ausente",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT CSV: file '/tmp/abt-app-k748g47x/input.txt', row 2, column 'valor': missing field\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-app-k748g47x/julia_otimizada.jl:8\n [2] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-k748g47x/julia_otimizada.jl:290\n [3] abt_invoke\n   @ /tmp/abt-app-k748g47x/julia_otimizada.jl:341 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-k748g47x/julia_otimizada.jl:352\n [5] top-level scope\n   @ /tmp/abt-app-k748g47x/julia_otimizada.jl:357\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-k748g47x/julia_otimizada.jl:2\n\ncaused by: ABT CSV: file '/tmp/abt-app-k748g47x/input.txt', row 2, column 'valor': missing field\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_convert#abt_std_convert##0\")(raw::Missing, kind::String, policy::String, path::String, row::Int64, column::String)\n    @ Main /tmp/abt-app-k748g47x/julia_otimizada.jl:133\n  [3] (::var\"#abt_std_csv_row##1#abt_std_csv_row##2\"{CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, Vector{String}, Vector{String}, String, String, Int64, var\"#abt_std_convert#abt_std_convert##0\"})(i::Int64)\n    @ Main /tmp/abt-app-k748g47x/julia_otimizada.jl:156\n  [4] ntuple\n    @ ./ntuple.jl:19 [inlined]\n  [5] (::var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"})(raw::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, columns::Vector{String}, types::Vector{String}, policy::String, path::String, index::Int64)\n    @ Main /tmp/abt-app-k748g47x/julia_otimizada.jl:156\n  [6] #abt_std_csv##3\n    @ ./none:-1 [inlined]\n  [7] iterate\n    @ ./generator.jl:48 [inlined]\n  [8] iterate\n    @ ./iterators.jl:203 [inlined]\n  [9] iterate\n    @ ./iterators.jl:202 [inlined]\n [10] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-k748g47x/julia_otimizada.jl:275\n [11] abt_invoke\n    @ /tmp/abt-app-k748g47x/julia_otimizada.jl:341 [inlined]\n [12] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-app-k748g47x/julia_otimizada.jl:352\n [13] top-level scope\n    @ /tmp/abt-app-k748g47x/julia_otimizada.jl:357\n [14] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [15] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [16] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-k748g47x/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_campo_vazio_entre_aspas",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT CSV: file '/tmp/abt-app-elqp3_66/input.txt', row 2, column 'valor': invalid real value \"\"; cause: ArgumentError: cannot parse \"\" as Float64\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_campo_vazio_entre_aspas",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT CSV: file '/tmp/abt-app-elqp3_66/input.txt', row 2, column 'valor': invalid real value \"\"; cause: ArgumentError: cannot parse \"\" as Float64\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:8\n [2] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:290\n [3] abt_invoke\n   @ /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:341 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:352\n [5] top-level scope\n   @ /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:357\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:2\n\ncaused by: ABT CSV: file '/tmp/abt-app-elqp3_66/input.txt', row 2, column 'valor': invalid real value \"\"; cause: ArgumentError: cannot parse \"\" as Float64\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_convert#abt_std_convert##0\")(raw::String, kind::String, policy::String, path::String, row::Int64, column::String)\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:151\n  [3] (::var\"#abt_std_csv_row##1#abt_std_csv_row##2\"{CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, Vector{String}, Vector{String}, String, String, Int64, var\"#abt_std_convert#abt_std_convert##0\"})(i::Int64)\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:156\n  [4] ntuple\n    @ ./ntuple.jl:19 [inlined]\n  [5] (::var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"})(raw::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, columns::Vector{String}, types::Vector{String}, policy::String, path::String, index::Int64)\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:156\n  [6] #abt_std_csv##3\n    @ ./none:-1 [inlined]\n  [7] iterate\n    @ ./generator.jl:48 [inlined]\n  [8] iterate\n    @ ./iterators.jl:203 [inlined]\n  [9] iterate\n    @ ./iterators.jl:202 [inlined]\n [10] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:275\n [11] abt_invoke\n    @ /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:341 [inlined]\n [12] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:352\n [13] top-level scope\n    @ /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:357\n [14] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [15] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [16] _start()\n    @ Base ./client.jl:577\n\ncaused by: ArgumentError: cannot parse \"\" as Float64\nStacktrace:\n  [1] _parse_failure(T::Type, s::String, startpos::Int64, endpos::Int64)\n    @ Base ./parse.jl:388\n  [2] #tryparse_internal#478\n    @ ./parse.jl:384 [inlined]\n  [3] tryparse_internal\n    @ ./parse.jl:381 [inlined]\n  [4] parse\n    @ ./parse.jl:394 [inlined]\n  [5] (::var\"#abt_std_convert#abt_std_convert##0\")(raw::String, kind::String, policy::String, path::String, row::Int64, column::String)\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:142\n  [6] (::var\"#abt_std_csv_row##1#abt_std_csv_row##2\"{CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, Vector{String}, Vector{String}, String, String, Int64, var\"#abt_std_convert#abt_std_convert##0\"})(i::Int64)\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:156\n  [7] ntuple\n    @ ./ntuple.jl:19 [inlined]\n  [8] (::var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"})(raw::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, columns::Vector{String}, types::Vector{String}, policy::String, path::String, index::Int64)\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:156\n  [9] #abt_std_csv##3\n    @ ./none:-1 [inlined]\n [10] iterate\n    @ ./generator.jl:48 [inlined]\n [11] iterate\n    @ ./iterators.jl:203 [inlined]\n [12] iterate\n    @ ./iterators.jl:202 [inlined]\n [13] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:275\n [14] abt_invoke\n    @ /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:341 [inlined]\n [15] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:352\n [16] top-level scope\n    @ /tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl:357\n [17] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [18] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [19] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-elqp3_66/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_campo_vazio_entre_aspas",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT CSV: file '/tmp/abt-app-elqp3_66/input.txt', row 2, column 'valor': invalid real value \"\"; cause: ArgumentError: cannot parse \"\" as Float64\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:8\n [2] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:290\n [3] abt_invoke\n   @ /tmp/abt-app-elqp3_66/julia_otimizada.jl:341 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:352\n [5] top-level scope\n   @ /tmp/abt-app-elqp3_66/julia_otimizada.jl:357\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-elqp3_66/julia_otimizada.jl:2\n\ncaused by: ABT CSV: file '/tmp/abt-app-elqp3_66/input.txt', row 2, column 'valor': invalid real value \"\"; cause: ArgumentError: cannot parse \"\" as Float64\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#abt_std_convert#abt_std_convert##0\")(raw::String, kind::String, policy::String, path::String, row::Int64, column::String)\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:151\n  [3] (::var\"#abt_std_csv_row##1#abt_std_csv_row##2\"{CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, Vector{String}, Vector{String}, String, String, Int64, var\"#abt_std_convert#abt_std_convert##0\"})(i::Int64)\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:156\n  [4] ntuple\n    @ ./ntuple.jl:19 [inlined]\n  [5] (::var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"})(raw::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, columns::Vector{String}, types::Vector{String}, policy::String, path::String, index::Int64)\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:156\n  [6] #abt_std_csv##3\n    @ ./none:-1 [inlined]\n  [7] iterate\n    @ ./generator.jl:48 [inlined]\n  [8] iterate\n    @ ./iterators.jl:203 [inlined]\n  [9] iterate\n    @ ./iterators.jl:202 [inlined]\n [10] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:275\n [11] abt_invoke\n    @ /tmp/abt-app-elqp3_66/julia_otimizada.jl:341 [inlined]\n [12] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:352\n [13] top-level scope\n    @ /tmp/abt-app-elqp3_66/julia_otimizada.jl:357\n [14] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [15] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [16] _start()\n    @ Base ./client.jl:577\n\ncaused by: ArgumentError: cannot parse \"\" as Float64\nStacktrace:\n  [1] _parse_failure(T::Type, s::String, startpos::Int64, endpos::Int64)\n    @ Base ./parse.jl:388\n  [2] #tryparse_internal#478\n    @ ./parse.jl:384 [inlined]\n  [3] tryparse_internal\n    @ ./parse.jl:381 [inlined]\n  [4] parse\n    @ ./parse.jl:394 [inlined]\n  [5] (::var\"#abt_std_convert#abt_std_convert##0\")(raw::String, kind::String, policy::String, path::String, row::Int64, column::String)\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:142\n  [6] (::var\"#abt_std_csv_row##1#abt_std_csv_row##2\"{CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, Vector{String}, Vector{String}, String, String, Int64, var\"#abt_std_convert#abt_std_convert##0\"})(i::Int64)\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:156\n  [7] ntuple\n    @ ./ntuple.jl:19 [inlined]\n  [8] (::var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"})(raw::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, columns::Vector{String}, types::Vector{String}, policy::String, path::String, index::Int64)\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:156\n  [9] #abt_std_csv##3\n    @ ./none:-1 [inlined]\n [10] iterate\n    @ ./generator.jl:48 [inlined]\n [11] iterate\n    @ ./iterators.jl:203 [inlined]\n [12] iterate\n    @ ./iterators.jl:202 [inlined]\n [13] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:275\n [14] abt_invoke\n    @ /tmp/abt-app-elqp3_66/julia_otimizada.jl:341 [inlined]\n [15] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-app-elqp3_66/julia_otimizada.jl:352\n [16] top-level scope\n    @ /tmp/abt-app-elqp3_66/julia_otimizada.jl:357\n [17] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [18] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [19] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-elqp3_66/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_citacao_malformada",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "<ABT_REPO>/applications/data/resumo_csv.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT resumir_coluna: file '/tmp/abt-app-fbnbnb3k/input.txt': cause: CSV.ParseError: invalid_quoted_field at data row 1, column 1 (byte 18) in /tmp/abt-app-fbnbnb3k/input.txt: malformed quoting in \"\\\"Ana,A,20\\n\"\nFor CSV.File without a schema, use on_error=:collect to keep parsing and inspect CSV.problems(file), or on_error=:warn for one summary warning (the eager default).\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_citacao_malformada",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resumir_coluna: file '/tmp/abt-app-fbnbnb3k/input.txt': cause: CSV.ParseError: invalid_quoted_field at data row 1, column 1 (byte 18) in /tmp/abt-app-fbnbnb3k/input.txt: malformed quoting in \"\\\"Ana,A,20\\n\"\nFor CSV.File without a schema, use on_error=:collect to keep parsing and inspect CSV.problems(file), or on_error=:warn for one summary warning (the eager default).\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::CSV.ParseError)\n   @ Main /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:9\n [3] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:290\n [4] abt_invoke\n   @ /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:341 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:352\n [6] top-level scope\n   @ /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:357\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:2\n\ncaused by: CSV.ParseError: invalid_quoted_field at data row 1, column 1 (byte 18) in /tmp/abt-app-fbnbnb3k/input.txt: malformed quoting in \"\\\"Ana,A,20\\n\"\nFor CSV.File without a schema, use on_error=:collect to keep parsing and inspect CSV.problems(file), or on_error=:warn for one summary warning (the eager default).\nStacktrace:\n  [1] _throwrowproblem(view::CSV._IndexedRow, j::Int64, pos::Int64, kind::Symbol, message::String)\n    @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2687\n  [2] _strictcell\n    @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2719 [inlined]\n  [3] _strictrowvalue(view::CSV._IndexedRow, j::Int64, ::Type{String})\n    @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2696\n  [4] _rowcell\n    @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2760 [inlined]\n  [5] getcolumn\n    @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2757 [inlined]\n  [6] getcolumn\n    @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2778 [inlined]\n  [7] getproperty(r::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, nm::Symbol)\n    @ Tables ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot/packages/Tables/qGyu7/src/Tables.jl:186\n  [8] (::var\"#abt_std_csv_row##1#abt_std_csv_row##2\"{CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, Vector{String}, Vector{String}, String, String, Int64, var\"#abt_std_convert#abt_std_convert##0\"})(i::Int64)\n    @ Main /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:156\n  [9] ntuple\n    @ ./ntuple.jl:19 [inlined]\n [10] (::var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"})(raw::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, columns::Vector{String}, types::Vector{String}, policy::String, path::String, index::Int64)\n    @ Main /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:156\n [11] #abt_std_csv##3\n    @ ./none:-1 [inlined]\n [12] iterate\n    @ ./generator.jl:48 [inlined]\n [13] iterate\n    @ ./iterators.jl:203 [inlined]\n [14] iterate\n    @ ./iterators.jl:202 [inlined]\n [15] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:275\n [16] abt_invoke\n    @ /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:341 [inlined]\n [17] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:352\n [18] top-level scope\n    @ /tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl:357\n [19] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [20] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [21] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-fbnbnb3k/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_citacao_malformada",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT resumir_coluna: file '/tmp/abt-app-fbnbnb3k/input.txt': cause: CSV.ParseError: invalid_quoted_field at data row 1, column 1 (byte 18) in /tmp/abt-app-fbnbnb3k/input.txt: malformed quoting in \"\\\"Ana,A,20\\n\"\nFor CSV.File without a schema, use on_error=:collect to keep parsing and inspect CSV.problems(file), or on_error=:warn for one summary warning (the eager default).\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, err::CSV.ParseError)\n   @ Main /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:9\n [3] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:290\n [4] abt_invoke\n   @ /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:341 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n   @ Main /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:352\n [6] top-level scope\n   @ /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:357\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:2\n\ncaused by: CSV.ParseError: invalid_quoted_field at data row 1, column 1 (byte 18) in /tmp/abt-app-fbnbnb3k/input.txt: malformed quoting in \"\\\"Ana,A,20\\n\"\nFor CSV.File without a schema, use on_error=:collect to keep parsing and inspect CSV.problems(file), or on_error=:warn for one summary warning (the eager default).\nStacktrace:\n  [1] _throwrowproblem(view::CSV._IndexedRow, j::Int64, pos::Int64, kind::Symbol, message::String)\n    @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2687\n  [2] _strictcell\n    @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2719 [inlined]\n  [3] _strictrowvalue(view::CSV._IndexedRow, j::Int64, ::Type{String})\n    @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2696\n  [4] _rowcell\n    @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2760 [inlined]\n  [5] getcolumn\n    @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2757 [inlined]\n  [6] getcolumn\n    @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2778 [inlined]\n  [7] getproperty(r::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, nm::Symbol)\n    @ Tables ~/.codex/.chatgpt-projects/g-p-6aed28c64c608191837b0b5384a649bb/abt_v116/.julia_depot/packages/Tables/qGyu7/src/Tables.jl:186\n  [8] (::var\"#abt_std_csv_row##1#abt_std_csv_row##2\"{CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, Vector{String}, Vector{String}, String, String, Int64, var\"#abt_std_convert#abt_std_convert##0\"})(i::Int64)\n    @ Main /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:156\n  [9] ntuple\n    @ ./ntuple.jl:19 [inlined]\n [10] (::var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"})(raw::CSV.Row{@NamedTuple{nome::String, grupo::String, valor::String}, :error}, columns::Vector{String}, types::Vector{String}, policy::String, path::String, index::Int64)\n    @ Main /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:156\n [11] #abt_std_csv##3\n    @ ./none:-1 [inlined]\n [12] iterate\n    @ ./generator.jl:48 [inlined]\n [13] iterate\n    @ ./iterators.jl:203 [inlined]\n [14] iterate\n    @ ./iterators.jl:202 [inlined]\n [15] (::var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:275\n [16] abt_invoke\n    @ /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:341 [inlined]\n [17] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_external_field#abt_external_field##0\", var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_summarize#abt_std_summarize##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\", var\"#abt_std_record#abt_std_record##0\"})()\n    @ Main /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:352\n [18] top-level scope\n    @ /tmp/abt-app-fbnbnb3k/julia_otimizada.jl:357\n [19] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [20] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [21] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-fbnbnb3k/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_quebra_linha_entre_aspas",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 1, selecionados_grupo_A_valor_maior_igual_10 = 1, soma = 20.0, media = 20.0)\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/resumo_csv.abt"
+    ]
+  },
+  {
+    "case": "csv_quebra_linha_entre_aspas",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 1, selecionados_grupo_A_valor_maior_igual_10 = 1, soma = 20.0, media = 20.0)\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-wxjz9oal/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_quebra_linha_entre_aspas",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "(registros = 1, selecionados_grupo_A_valor_maior_igual_10 = 1, soma = 20.0, media = 20.0)\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-wxjz9oal/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_arquivo_inexistente",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-vy9m8kch/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_csv: file '/tmp/abt_arquivo_que_nao_existe.csv': ArgumentError: no file at \"/tmp/abt_arquivo_que_nao_existe.csv\" — a String source is a file path (or an http(s):// URL); wrap literal data in IOBuffer\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-vy9m8kch/case.abt"
+    ]
+  },
+  {
+    "case": "csv_arquivo_inexistente",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT ler_csv: file '/tmp/abt_arquivo_que_nao_existe.csv': ArgumentError: no file at \"/tmp/abt_arquivo_que_nao_existe.csv\" — a String source is a file path (or an http(s):// URL); wrap literal data in IOBuffer\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{x::String}, policy::String, delimiter::String)\n   @ Main /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:195\n [3] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{x::String}, policy::String)\n   @ Main /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:162\n [4] abt_invoke\n   @ /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:2\n\ncaused by: ArgumentError: no file at \"/tmp/abt_arquivo_que_nao_existe.csv\" — a String source is a file path (or an http(s):// URL); wrap literal data in IOBuffer\nStacktrace:\n   [1] resolvesource(f::CSV.LocalFile; buffer_in_memory::Bool, prefetch::Bool, workers::Vector{Task})\n     @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:199\n   [2] resolvesource\n     @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:196 [inlined]\n   [3] resolvesource(s::String; buffer_in_memory::Bool, prefetch::Bool, workers::Vector{Task})\n     @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:186\n   [4] resolvesource\n     @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:174 [inlined]\n   [5] _prepareindexed(source::String, schemanames::Nothing; kw::@Kwargs{header::Bool, limit::Int64, delim::Char, missingstring::Nothing, normalizenames::Bool})\n     @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:1188\n ┌ [6] _prepareindexed\n │   @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:1182 [inlined]\n ╰──── repeated 2 times\n   [8] _rows(source::String; types::Type, reusebuffer::Bool, select::Nothing, drop::Nothing, stringtype::Type, strict::Bool, on_error::Symbol, kw::@Kwargs{header::Bool, limit::Int64, delim::Char, missingstring::Nothing, normalizenames::Bool})\n     @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2610\n   [9] _rows\n     @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2600 [inlined]\n  [10] #Rows#205\n     @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2597 [inlined]\n  [11] invokelatest\n     @ ./Base_compiler.jl:253 [inlined]\n  [12] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{x::String}, policy::String, delimiter::String)\n     @ Main /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:176\n  [13] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{x::String}, policy::String)\n     @ Main /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:162\n  [14] abt_invoke\n     @ /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:337 [inlined]\n  [15] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n     @ Main /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:343\n  [16] top-level scope\n     @ /tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl:345\n  [17] include(mod::Module, _path::String)\n     @ Base ./Base.jl:309\n  [18] exec_options(opts::Base.JLOptions)\n     @ Base ./client.jl:344\n  [19] _start()\n     @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-vy9m8kch/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_arquivo_inexistente",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT ler_csv: file '/tmp/abt_arquivo_que_nao_existe.csv': ArgumentError: no file at \"/tmp/abt_arquivo_que_nao_existe.csv\" — a String source is a file path (or an http(s):// URL); wrap literal data in IOBuffer\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{x::String}, policy::String, delimiter::String)\n   @ Main /tmp/abt-app-vy9m8kch/julia_otimizada.jl:195\n [3] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{x::String}, policy::String)\n   @ Main /tmp/abt-app-vy9m8kch/julia_otimizada.jl:162\n [4] abt_invoke\n   @ /tmp/abt-app-vy9m8kch/julia_otimizada.jl:337 [inlined]\n [5] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-vy9m8kch/julia_otimizada.jl:343\n [6] top-level scope\n   @ /tmp/abt-app-vy9m8kch/julia_otimizada.jl:345\n [7] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [8] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [9] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-vy9m8kch/julia_otimizada.jl:2\n\ncaused by: ArgumentError: no file at \"/tmp/abt_arquivo_que_nao_existe.csv\" — a String source is a file path (or an http(s):// URL); wrap literal data in IOBuffer\nStacktrace:\n   [1] resolvesource(f::CSV.LocalFile; buffer_in_memory::Bool, prefetch::Bool, workers::Vector{Task})\n     @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:199\n   [2] resolvesource\n     @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:196 [inlined]\n   [3] resolvesource(s::String; buffer_in_memory::Bool, prefetch::Bool, workers::Vector{Task})\n     @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:186\n   [4] resolvesource\n     @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:174 [inlined]\n   [5] _prepareindexed(source::String, schemanames::Nothing; kw::@Kwargs{header::Bool, limit::Int64, delim::Char, missingstring::Nothing, normalizenames::Bool})\n     @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:1188\n ┌ [6] _prepareindexed\n │   @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:1182 [inlined]\n ╰──── repeated 2 times\n   [8] _rows(source::String; types::Type, reusebuffer::Bool, select::Nothing, drop::Nothing, stringtype::Type, strict::Bool, on_error::Symbol, kw::@Kwargs{header::Bool, limit::Int64, delim::Char, missingstring::Nothing, normalizenames::Bool})\n     @ CSV /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2610\n   [9] _rows\n     @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2600 [inlined]\n  [10] #Rows#205\n     @ /tmp/abt0130-depot/packages/CSV/sDJIi/src/api.jl:2597 [inlined]\n  [11] invokelatest\n     @ ./Base_compiler.jl:253 [inlined]\n  [12] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{x::String}, policy::String, delimiter::String)\n     @ Main /tmp/abt-app-vy9m8kch/julia_otimizada.jl:176\n  [13] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{x::String}, policy::String)\n     @ Main /tmp/abt-app-vy9m8kch/julia_otimizada.jl:162\n  [14] abt_invoke\n     @ /tmp/abt-app-vy9m8kch/julia_otimizada.jl:337 [inlined]\n  [15] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n     @ Main /tmp/abt-app-vy9m8kch/julia_otimizada.jl:343\n  [16] top-level scope\n     @ /tmp/abt-app-vy9m8kch/julia_otimizada.jl:345\n  [17] include(mod::Module, _path::String)\n     @ Base ./Base.jl:309\n  [18] exec_options(opts::Base.JLOptions)\n     @ Base ./client.jl:344\n  [19] _start()\n     @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-vy9m8kch/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_tipo_invalido",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-u_qota3t/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT esquema: column 'x' requires texto, inteiro, real or booleano\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-u_qota3t/case.abt"
+    ]
+  },
+  {
+    "case": "csv_tipo_invalido",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT esquema: column 'x' requires texto, inteiro, real or booleano\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"})(::String, ::Vararg{String})\n   @ Main /tmp/abt-app-u_qota3t/julia_sem_otimizacao.jl:124\n [3] abt_invoke\n   @ /tmp/abt-app-u_qota3t/julia_sem_otimizacao.jl:336 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-u_qota3t/julia_sem_otimizacao.jl:342\n [5] top-level scope\n   @ /tmp/abt-app-u_qota3t/julia_sem_otimizacao.jl:344\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-u_qota3t/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-u_qota3t/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_tipo_invalido",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT esquema: column 'x' requires texto, inteiro, real or booleano\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"})(::String, ::Vararg{String})\n   @ Main /tmp/abt-app-u_qota3t/julia_otimizada.jl:124\n [3] abt_invoke\n   @ /tmp/abt-app-u_qota3t/julia_otimizada.jl:336 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-u_qota3t/julia_otimizada.jl:342\n [5] top-level scope\n   @ /tmp/abt-app-u_qota3t/julia_otimizada.jl:344\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-u_qota3t/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-u_qota3t/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_coluna_inexistente",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-r92mo39l/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT coluna: unknown column \"inexistente\"\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-r92mo39l/case.abt"
+    ]
+  },
+  {
+    "case": "csv_coluna_inexistente",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT coluna: unknown column \"inexistente\"\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-r92mo39l/julia_sem_otimizacao.jl:201\n [3] abt_invoke\n   @ /tmp/abt-app-r92mo39l/julia_sem_otimizacao.jl:338 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-r92mo39l/julia_sem_otimizacao.jl:345\n [5] top-level scope\n   @ /tmp/abt-app-r92mo39l/julia_sem_otimizacao.jl:347\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-r92mo39l/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-r92mo39l/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_coluna_inexistente",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT coluna: unknown column \"inexistente\"\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-r92mo39l/julia_otimizada.jl:201\n [3] abt_invoke\n   @ /tmp/abt-app-r92mo39l/julia_otimizada.jl:338 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-r92mo39l/julia_otimizada.jl:345\n [5] top-level scope\n   @ /tmp/abt-app-r92mo39l/julia_otimizada.jl:347\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-r92mo39l/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-r92mo39l/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_filtro_tipo_incompativel",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-9bin24zw/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT filtrar_tabela: incompatible comparison value for 'valor'\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-9bin24zw/case.abt"
+    ]
+  },
+  {
+    "case": "csv_filtro_tipo_incompativel",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT filtrar_tabela: incompatible comparison value for 'valor'\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String, operator::String, value::String)\n   @ Main /tmp/abt-app-9bin24zw/julia_sem_otimizacao.jl:227\n [3] abt_invoke\n   @ /tmp/abt-app-9bin24zw/julia_sem_otimizacao.jl:338 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-9bin24zw/julia_sem_otimizacao.jl:345\n [5] top-level scope\n   @ /tmp/abt-app-9bin24zw/julia_sem_otimizacao.jl:347\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-9bin24zw/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-9bin24zw/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_filtro_tipo_incompativel",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT filtrar_tabela: incompatible comparison value for 'valor'\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{nome::String, grupo::String, valor::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String, operator::String, value::String)\n   @ Main /tmp/abt-app-9bin24zw/julia_otimizada.jl:227\n [3] abt_invoke\n   @ /tmp/abt-app-9bin24zw/julia_otimizada.jl:338 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-9bin24zw/julia_otimizada.jl:345\n [5] top-level scope\n   @ /tmp/abt-app-9bin24zw/julia_otimizada.jl:347\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-9bin24zw/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-9bin24zw/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_transformacao_tipo_incompativel",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-yj8oa6w8/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT transformar_tabela: result does not match declared type 'inteiro'\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-yj8oa6w8/case.abt"
+    ]
+  },
+  {
+    "case": "csv_transformacao_tipo_incompativel",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT transformar_tabela: result does not match declared type 'inteiro'\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{produto::String, regiao::String, unidades::String, preco::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:8\n [2] (::var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{produto::String, regiao::String, unidades::String, preco::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:205\n [3] abt_invoke\n   @ /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:339 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_transform_table#abt_std_transform_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:347\n [5] top-level scope\n   @ /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:349\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:2\n\ncaused by: ABT transformar_tabela: result does not match declared type 'inteiro'\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String})(row::@NamedTuple{produto::String, regiao::String, unidades::Int64, preco::Float64})\n    @ Main /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:258\n  [3] iterate\n    @ ./generator.jl:48 [inlined]\n  [4] iterate\n    @ ./generator.jl:45 [inlined]\n  [5] collect(itr::Base.Generator{Base.Generator{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{produto::String, regiao::String, unidades::String, preco::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String}}, var\"#abt_std_column##1#abt_std_column##2\"{String}})\n    @ Base ./array.jl:828\n  [6] (::var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{produto::String, regiao::String, unidades::String, preco::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:203\n  [7] abt_invoke\n    @ /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:339 [inlined]\n  [8] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_transform_table#abt_std_transform_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n    @ Main /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:347\n  [9] top-level scope\n    @ /tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl:349\n [10] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [11] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [12] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-yj8oa6w8/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_transformacao_tipo_incompativel",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT transformar_tabela: result does not match declared type 'inteiro'\nStacktrace:\n [1] (::var\"#abt_std_table_error#abt_std_table_error##0\")(operation::String, table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{produto::String, regiao::String, unidades::String, preco::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String}}, columns::Vector{String}, types::Vector{String}, source::String}, err::ErrorException)\n   @ Main /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:8\n [2] (::var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{produto::String, regiao::String, unidades::String, preco::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n   @ Main /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:205\n [3] abt_invoke\n   @ /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:339 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_transform_table#abt_std_transform_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:347\n [5] top-level scope\n   @ /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:349\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:2\n\ncaused by: ABT transformar_tabela: result does not match declared type 'inteiro'\nStacktrace:\n  [1] error(s::String)\n    @ Base ./error.jl:44\n  [2] (::var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String})(row::@NamedTuple{produto::String, regiao::String, unidades::Int64, preco::Float64})\n    @ Main /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:258\n  [3] iterate\n    @ ./generator.jl:48 [inlined]\n  [4] iterate\n    @ ./generator.jl:45 [inlined]\n  [5] collect(itr::Base.Generator{Base.Generator{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{produto::String, regiao::String, unidades::String, preco::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String}}, var\"#abt_std_column##1#abt_std_column##2\"{String}})\n    @ Base ./array.jl:828\n  [6] (::var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{produto::String, regiao::String, unidades::String, preco::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, var\"#transform#abt_std_transform_table##1\"{String, String, String, Int64, String, String}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String)\n    @ Main /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:203\n  [7] abt_invoke\n    @ /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:339 [inlined]\n  [8] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_transform_table#abt_std_transform_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_column#abt_std_column##0\"{var\"#abt_std_table_error#abt_std_table_error##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n    @ Main /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:347\n  [9] top-level scope\n    @ /tmp/abt-app-yj8oa6w8/julia_otimizada.jl:349\n [10] include(mod::Module, _path::String)\n    @ Base ./Base.jl:309\n [11] exec_options(opts::Base.JLOptions)\n    @ Base ./client.jl:344\n [12] _start()\n    @ Base ./client.jl:577\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-yj8oa6w8/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_ausente_permitido",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[ausente, \"\"]\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-ywizwwu1/case.abt"
+    ]
+  },
+  {
+    "case": "csv_ausente_permitido",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[ausente, \"\"]\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-ywizwwu1/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_ausente_permitido",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[ausente, \"\"]\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-ywizwwu1/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_unicode",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[\"João\", \"Érica\"]\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-x2c35wzw/case.abt"
+    ]
+  },
+  {
+    "case": "csv_unicode",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[\"João\", \"Érica\"]\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-x2c35wzw/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_unicode",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[\"João\", \"Érica\"]\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-x2c35wzw/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_delimitador_explicito",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[2]\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-pywc3x7e/case.abt"
+    ]
+  },
+  {
+    "case": "csv_delimitador_explicito",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[2]\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-pywc3x7e/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_delimitador_explicito",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "[2]\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-pywc3x7e/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_delimitador_invalido",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-jwiycufv/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT ler_csv: delimiter must be one character\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-jwiycufv/case.abt"
+    ]
+  },
+  {
+    "case": "csv_delimitador_invalido",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT ler_csv: delimiter must be one character\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String, delimiter::String)\n   @ Main /tmp/abt-app-jwiycufv/julia_sem_otimizacao.jl:165\n [3] abt_invoke\n   @ /tmp/abt-app-jwiycufv/julia_sem_otimizacao.jl:337 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-jwiycufv/julia_sem_otimizacao.jl:343\n [5] top-level scope\n   @ /tmp/abt-app-jwiycufv/julia_sem_otimizacao.jl:345\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-jwiycufv/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-jwiycufv/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_delimitador_invalido",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT ler_csv: delimiter must be one character\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"})(path::String, schema::@NamedTuple{nome::String, grupo::String, valor::String}, policy::String, delimiter::String)\n   @ Main /tmp/abt-app-jwiycufv/julia_otimizada.jl:165\n [3] abt_invoke\n   @ /tmp/abt-app-jwiycufv/julia_otimizada.jl:337 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}})()\n   @ Main /tmp/abt-app-jwiycufv/julia_otimizada.jl:343\n [5] top-level scope\n   @ /tmp/abt-app-jwiycufv/julia_otimizada.jl:345\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-jwiycufv/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-jwiycufv/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_booleano_sem_ordem",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "/tmp/abt-app-8zu4kszc/case.abt: Erro ABT[E000] — erro de compilação ou execução\n\nABT filtrar_tabela: boolean columns support only == and !=\n",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "/tmp/abt-app-8zu4kszc/case.abt"
+    ]
+  },
+  {
+    "case": "csv_booleano_sem_ordem",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT filtrar_tabela: boolean columns support only == and !=\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{ok::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String, operator::String, value::Bool)\n   @ Main /tmp/abt-app-8zu4kszc/julia_sem_otimizacao.jl:223\n [3] abt_invoke\n   @ /tmp/abt-app-8zu4kszc/julia_sem_otimizacao.jl:339 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\"})()\n   @ Main /tmp/abt-app-8zu4kszc/julia_sem_otimizacao.jl:346\n [5] top-level scope\n   @ /tmp/abt-app-8zu4kszc/julia_sem_otimizacao.jl:348\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-8zu4kszc/julia_sem_otimizacao.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-8zu4kszc/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_booleano_sem_ordem",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 1,
+    "stdout": "",
+    "stderr": "ERROR: LoadError: ABT filtrar_tabela: boolean columns support only == and !=\nStacktrace:\n [1] error(s::String)\n   @ Base ./error.jl:44\n [2] (::var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"})(table::@NamedTuple{__abt_table__::Bool, rows::Base.Generator{Base.Iterators.Enumerate{CSV.Rows{@NamedTuple{ok::String}, :error}}, var\"#abt_std_csv##3#abt_std_csv##4\"{String, String, Vector{String}, Vector{String}, var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}}}, columns::Vector{String}, types::Vector{String}, source::String}, name::String, operator::String, value::Bool)\n   @ Main /tmp/abt-app-8zu4kszc/julia_otimizada.jl:223\n [3] abt_invoke\n   @ /tmp/abt-app-8zu4kszc/julia_otimizada.jl:339 [inlined]\n [4] (::var\"#__abt_program_main__#__abt_program_main__##0\"{var\"#abt_invoke#abt_invoke##0\", var\"#abt_std_filter_table#abt_std_filter_table##0\"{var\"#abt_std_table#abt_std_table##0\", var\"#abt_std_istable#abt_std_istable##0\"}, var\"#abt_std_csv#abt_std_csv##0\"{var\"#abt_std_csv_row#abt_std_csv_row##0\"{var\"#abt_std_convert#abt_std_convert##0\"}, var\"#abt_std_table#abt_std_table##0\"}, var\"#abt_std_schema#abt_std_schema##0\"{var\"#abt_std_record#abt_std_record##0\"}, var\"#abt_std_environment#abt_std_environment##0\"})()\n   @ Main /tmp/abt-app-8zu4kszc/julia_otimizada.jl:346\n [5] top-level scope\n   @ /tmp/abt-app-8zu4kszc/julia_otimizada.jl:348\n [6] include(mod::Module, _path::String)\n   @ Base ./Base.jl:309\n [7] exec_options(opts::Base.JLOptions)\n   @ Base ./client.jl:344\n [8] _start()\n   @ Base ./client.jl:577\nin expression starting at /tmp/abt-app-8zu4kszc/julia_otimizada.jl:2\n",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-8zu4kszc/julia_otimizada.jl"
+    ]
+  },
+  {
+    "case": "csv_acesso_registros",
+    "backend": "interpretador",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "Ana\nBruno\nCarla\nDiego\nEva\n",
+    "stderr": "",
+    "command": [
+      "<ABT_REPO>/bin/abt",
+      "run",
+      "<ABT_REPO>/applications/data/listar_nomes.abt"
+    ]
+  },
+  {
+    "case": "csv_acesso_registros",
+    "backend": "julia_sem_otimizacao",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "Ana\nBruno\nCarla\nDiego\nEva\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-cptar_w2/julia_sem_otimizacao.jl"
+    ]
+  },
+  {
+    "case": "csv_acesso_registros",
+    "backend": "julia_otimizada",
+    "status": "PASS",
+    "code": 0,
+    "stdout": "Ana\nBruno\nCarla\nDiego\nEva\n",
+    "stderr": "",
+    "command": [
+      "<USER_HOME>/.julia/juliaup/julia-1.13.3+0.x64.linux.gnu/bin/julia",
+      "--startup-file=no",
+      "--project=<ABT_REPO>",
+      "/tmp/abt-app-cptar_w2/julia_otimizada.jl"
+    ]
+  }
+]

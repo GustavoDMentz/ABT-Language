@@ -1,0 +1,50 @@
+PASS generation reference/examples sync exit=0; stdout='Reference synchronized: 62 operations\n'; stderr=''
+PASS reference public operations 62 documented; missing=[]; extra=[]; duplicate=[]
+PASS reference operation example coverage 62 covered; missing=[]
+PASS links internal markdown links
+PASS files referenced ABT/data files
+PASS cli --version exit=0; stdout='ABT 0.13.0\n'; stderr=''
+PASS cli --help exit=0; stdout='ABT — linguagem experimental\n\nUso:\n  abt arquivo.abt\n  abt run arquivo.abt\n  ab
+PASS cli doctor exit=0; stdout='ABT: <ABT_REPO>\nJulia: julia version 1.13.3\nABT: arquivos essenciais e runtime dis
+PASS cli operacoes exit=0; stdout='ler_fastq [bioinformatica] — arquivo, DNA, rejeitar/permitir_N, phred33 → leitor FAS
+PASS example-check bioinformatica.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run bioinformatica.abt exit=0; stdout='(sequencias = 2, bases = 24, A = 6, C = 6, G = 6, T = 6, N = 0, GC_percentual = 50.0
+PASS example-check cientifico.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run cientifico.abt exit=0; stdout='(fastq = (registros = 2, bases = 12, A = 4, C = 4, G = 3, T = 1, N = 0, phred_minimo
+PASS example-check dados.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run dados.abt exit=0; stdout='(grupos = [(grupo = "Sul", quantidade = 3, soma = 10, media = 3.3333333333333335, mi
+PASS example-check estatistica.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run estatistica.abt exit=0; stdout='(n = 5, media = 3.0, mediana = 3.0, variancia = 2.5, desvio_padrao = 1.5811388300841
+PASS example-check falhar.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run falhar.abt exit=1; stdout=''; stderr='<ABT_REPO>/docs/examples/falhar.abt: Erro ABT[E000] — erro de compilação
+PASS example-check grupos.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run grupos.abt exit=0; stdout='(metodo = "welch", grupo_a = "controle", grupo_b = "tratamento", n_a = 5, n_b = 5, m
+PASS example-check modelagem.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run modelagem.abt exit=0; stdout='(n = 8, resposta = "resposta", preditores = ["idade", "exposicao"], coeficientes = [
+PASS example-check nucleo.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run nucleo.abt exit=0; stdout='3\nABT\ntrue\n3\n["a", "b"]\ndocumentacao\n(categoria = "exemplo", n = 2)\n(quantida
+PASS example-check tabelas.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run tabelas.abt exit=0; stdout='["Ana", "Bruno", "Carla", "Diego", "Eva"]\n[(nome = "Ana", grupo = "A", valor = 12.5
+PASS example-check visualizacao.abt exit=0; stdout='Programa ABT válido.\n'; stderr=''
+PASS example-run visualizacao.abt exit=0; stdout='(arquivo = "/tmp/abt-documentation-figure.png", pontos = 8)\n'; stderr=''
+PASS inline getting-started/overview.md:1 exit=0; stdout='(quantidade = 4, soma = 66, media = 16.5, mediana = 17.0, desvio_padrao = 3.69684550
+PASS inline-error getting-started/tooling.md:1 exit=1; stdout=''; stderr="/tmp/abt-doc-vsj4_32g/example.abt: Erro ABT[E021] — variável não definida
+PASS inline index.md:1 exit=0; stdout='[30, 40]\n'; stderr=''
+PASS inline manual/collections.md:1 exit=0; stdout='[6]\n7\n2.5\n'; stderr=''
+PASS inline manual/collections.md:2 exit=0; stdout='[30, 40]\n'; stderr=''
+PASS inline manual/control-flow.md:1 exit=0; stdout='maior\n1\n2\n3\n'; stderr=''
+PASS inline manual/control-flow.md:2 exit=0; stdout='10\n'; stderr=''
+PASS inline manual/expressions.md:1 exit=0; stdout='-8.0\n-8.0\n0.125\n-6.0\n10.0\n'; stderr=''
+PASS inline manual/expressions.md:2 exit=0; stdout='true\ntrue\n'; stderr=''
+PASS inline manual/interop.md:1 exit=0; stdout='2.0\n'; stderr=''
+PASS inline manual/interop.md:2 exit=0; stdout='3.0\n'; stderr=''
+PASS inline manual/syntax.md:1 exit=0; stdout='(nome = "ensaio", n = 3)\n'; stderr=''
+PASS inline manual/syntax.md:2 exit=0; stdout='11\n'; stderr=''
+PASS inline tutorials/bioinformatics.md:1 exit=0; stdout='(sequencias = 1, bases = 12, A = 4, C = 2, G = 3, T = 3, N = 0, GC_percentual = 41.6
+PASS inline tutorials/biostatistics.md:1 exit=0; stdout='{"controle":{"n":5,"media":12.12,"mediana":12.1,"variancia":0.0819999999999999,"desv
+PASS inline tutorials/data.md:1 exit=0; stdout='{"fonte":"vendas","unidade":"itens","resumo":{"grupos":[{"grupo":"Sul","quantidade":
+PASS inline tutorials/first-program.md:1 exit=0; stdout='4\n6\n'; stderr=''
+PASS inline tutorials/julia.md:1 exit=0; stdout='2026-11-06\n2026\n'; stderr=''
+PASS inline tutorials/statistics.md:1 exit=0; stdout='(resumo = (quantidade = 6, soma = 120, media = 20.0, mediana = 19.5, desvio_padrao =
+PASS inline tutorials/visualization.md:1 exit=0; stdout='(arquivo = "/tmp/abt-documentation-tutorial.png", pontos = 4)\n'; stderr=''
+Summary: {'PASS': 49, 'FAIL': 0, 'SKIP': 0}
