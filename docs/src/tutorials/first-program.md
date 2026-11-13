@@ -1,6 +1,12 @@
-# Tutorial 1 — primeiro programa
+# Seu primeiro programa ABT
 
-**Objetivo:** usar variáveis, expressões, condição, laço e função. **Pré-requisito:** [Julia 1.13.3 e CLI](../getting-started/install.md). Não há dados externos.
+Este percurso reúne variáveis, funções, condições e laços em um programa pequeno. Ao final, você terá um arquivo `.abt` que pode conferir e executar pela CLI.
+
+## Antes de começar
+
+Instale [Julia 1.13.3 e a CLI do ABT](../getting-started/install.md). O exemplo não usa pacotes ou dados externos.
+
+## Escreva o programa
 
 Salve como `primeiro.abt`:
 
@@ -16,4 +22,19 @@ para cada n em numeros {
 }
 ```
 
-Execute `bin/abt check primeiro.abt` e `bin/abt run primeiro.abt`. Saída esperada do segundo comando: duas linhas, `4` e `6`. A função é conhecida antes da primeira chamada; `n` percorre a lista em ordem. Uma condição como `se 1 { ... }` é inválida, pois ABT exige booleano. Continue com [expressões](../manual/expressions.md) e [controle de fluxo](../manual/control-flow.md).
+## Execute e confira
+
+Rode `bin/abt check primeiro.abt` e depois `bin/abt run primeiro.abt`. A saída esperada são duas linhas:
+
+```text
+4
+6
+```
+
+A função `dobro` é conhecida antes da primeira chamada. O laço visita os elementos de `numeros` em ordem; a condição só permite exibir os valores maiores que 1.
+
+## Entenda o contrato
+
+Condições exigem booleanos. Escrever `se 1 { ... }` é inválido: ABT não converte `1` em verdadeiro. A instrução `mostrar` apresenta os valores calculados sem alterar a função.
+
+Continue por [expressões e operadores](../manual/expressions.md), [controle de fluxo](../manual/control-flow.md) ou [coleções e pipelines](../manual/collections.md).
