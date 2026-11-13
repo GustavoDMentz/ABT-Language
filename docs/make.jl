@@ -3,7 +3,7 @@ using Documenter
 const IS_CI = get(ENV, "CI", "false") == "true"
 
 makedocs(
-    sitename = "ABT — Portal de aprendizado",
+    sitename = "ABT — Documentação",
     source = "src",
     build = "build",
     clean = true,
@@ -15,9 +15,9 @@ makedocs(
         edit_link = "main",
         repolink = "https://github.com/GustavoDMentz/ABT-Language",
         lang = "pt-BR",
-        description = "Aprenda ABT: tutoriais, referência da linguagem e bibliotecas científicas",
+        description = "Documentação da linguagem ABT: guia, referência e bibliotecas científicas",
         footer = "Gerado com [Documenter.jl](https://github.com/JuliaDocs/Documenter.jl).",
-        assets = ["assets/abt.css", "assets/abt.js"],
+        assets = ["assets/abt-premium.css", "assets/abt.js"],
     ),
     pages = [
         "Início" => "index.md",
