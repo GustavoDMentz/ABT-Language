@@ -30,9 +30,11 @@ O instalador por usuário coloca ABT em `~/.local/share/abt` e cria `~/.local/bi
 
 ## Documentação
 
-O [manual desta branch](docs/src/index.md) cobre instalação, sintaxe, operações, tutoriais, arquitetura e [gramática](docs/src/reference/grammar.md). A [referência da biblioteca](docs/src/standard-library/index.md) documenta as 62 operações públicas, e os [programas de referência](docs/src/examples/programs.md) têm fontes executáveis em `docs/examples/`. O site da versão publicada está em `https://gustavodmentz.github.io/ABT-Language/`.
+O [manual desta branch](docs/src/index.md) cobre instalação, sintaxe, operações, tutoriais, arquitetura e [gramática](docs/src/reference/grammar.md). A [referência da biblioteca](docs/src/standard-library/index.md) documenta as 63 operações públicas, e os [programas de referência](docs/src/examples/programs.md) têm fontes executáveis em `docs/examples/`. O site da versão publicada está em `https://gustavodmentz.github.io/ABT-Language/`.
 
 Aplicações completas ficam em [`applications/`](applications/README.md). A [expansão científica 0.13.0](docs/src/scientific/overview.md) reúne as novas operações e seus limites. Para detalhes técnicos históricos, consulte [relatórios e especificações em `docs/`](docs/), incluindo [bioestatística 0.12.0](docs/BIOESTATISTICA_0120.md), [auditoria independente](docs/AUDITORIA_FINAL_BIOESTATISTICA_0120.md), [arquitetura de extensões](docs/ARQUITETURA_EXTENSOES_0118.md), [arquivos e tabelas](docs/ARQUIVOS_TABELAS_0118.md), [bioinformática](docs/BIOINFORMATICA_0118.md), [identidade e CLI](docs/MAPA_IDENTIDADE.md) e [benchmarks](docs/BENCHMARK_ESCALABILIDADE.md).
+
+Os [princípios de abstração](docs/architecture/ABSTRACTION_PRINCIPLES.md) definem a fronteira entre a API ABT e o runtime Julia; a [auditoria de abstração](docs/architecture/ABSTRACTION_AUDIT.md) registra as melhorias implementadas e propostas.
 
 ## Desenvolvimento
 
