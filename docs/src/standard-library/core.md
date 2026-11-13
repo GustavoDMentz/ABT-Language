@@ -14,7 +14,7 @@ Cria um registro reutilizável com campos nomeados.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `descrever`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `descrever`, `contar`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
 
 ## `descrever`
 
@@ -28,7 +28,21 @@ Resume números reais finitos.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Statistics (stdlib).
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `contar`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+
+## `contar`
+
+`contar(lista)`
+
+Conta elementos de uma lista.
+
+- **Parâmetros e padrões:** Uma lista ABT, inclusive vazia; sem padrão.
+- **Retorno:** Inteiro com a quantidade de elementos.
+- **Pré-condições, ausentes, erros e limites:** Conta valores ausentes como elementos; rejeita texto, registro, tabela e qualquer valor que não seja lista; não percorre tabelas lazy.
+- **Efeitos:** Nenhum.
+- **Dependência Julia:** Base Julia.
+- **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
 
 ## `falhar`
 
@@ -42,7 +56,7 @@ Interrompe o programa com erro explícito.
 - **Efeitos:** Lança erro e encerra a execução corrente.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/falhar.abt`](../examples/programs.md#falhar).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
 
 ## `ambiente`
 
@@ -56,7 +70,7 @@ Lê uma variável de ambiente.
 - **Efeitos:** Lê o ambiente do processo.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `falhar`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
 
 ## `ler_texto`
 
@@ -70,7 +84,7 @@ Lê um arquivo UTF-8 completo.
 - **Efeitos:** Lê arquivo; materializa o conteúdo.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ambiente`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `falhar`, `ambiente`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
 
 ## `linhas_texto`
 
@@ -84,7 +98,7 @@ Separa texto em linhas.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ambiente`, `ler_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `falhar`, `ambiente`, `ler_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
 
 ## `aparar`
 
@@ -98,7 +112,7 @@ Remove espaços nas bordas do texto.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
 
 ## `maiusculas`
 
@@ -112,7 +126,7 @@ Converte texto para maiúsculas segundo Julia.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `inicia_com`, `comprimento_texto`, `contar_caractere`.
 
 ## `inicia_com`
 
@@ -126,7 +140,7 @@ Verifica prefixo textual.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `comprimento_texto`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `comprimento_texto`, `contar_caractere`.
 
 ## `comprimento_texto`
 
@@ -140,7 +154,7 @@ Conta caracteres Unicode do texto.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `contar_caractere`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `contar_caractere`.
 
 ## `contar_caractere`
 
@@ -154,4 +168,4 @@ Conta ocorrências de um caractere.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Base Julia.
 - **Exemplo executável:** [`docs/examples/nucleo.abt`](../examples/programs.md#nucleo).
-- **Operações relacionadas nesta seção:** `registro`, `descrever`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`.
+- **Operações relacionadas nesta seção:** `registro`, `descrever`, `contar`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`.

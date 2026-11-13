@@ -68,6 +68,10 @@ function abt_std_text_arg(operation, value)
  value isa String || error("ABT $operation: expected text")
  return value
 end
+function abt_std_count(values)
+ values isa Vector || error("ABT contar: esperada uma lista")
+ return Int64(length(values))
+end
 abt_std_lines(value) = readlines(IOBuffer(abt_std_text_arg("linhas_texto", value)))
 abt_std_strip(value) = String(strip(abt_std_text_arg("aparar", value)))
 abt_std_uppercase(value) = uppercase(abt_std_text_arg("maiusculas", value))
