@@ -10,6 +10,7 @@ include("StdlibBiostatistics.jl")
 include("StdlibScientificBio.jl")
 include("StdlibScientificNumerics.jl")
 include("StdlibScientificTables.jl")
+include("StdlibBioAdvanced.jl")
 
 const ABT_EXTENSION_SPECS = (
  ler_fastq=(domain="bioinformatica", arity=4, static_args=(:string,:string,:string,:string), return_kind=:unknown,
@@ -159,6 +160,48 @@ const ABT_EXTENSION_SPECS = (
  alinhar_sequencias=(domain="bioinformatica", arity=8, static_args=(:unknown,:string,:string,:string,:number,:number,:number,:number), return_kind=:unknown,
                     implementation=abt_std_align_fasta, generated="abt_std_align_fasta", source="StdlibBatch.jl",
                     input="FASTA, IDs, modo, pontuações explícitas", output="métricas de alinhamento", errors="ID/modo/pontuação", dependencies="BioAlignments.jl", loading="sob demanda"),
+ conteudo_gc=(domain="bioinformatica", arity=1, static_args=(:string,), return_kind=:number,
+  implementation=abt_bio_gc_content, generated="abt_bio_gc_content", source="StdlibBioAdvanced.jl",
+  input="DNA ou RNA maiúsculo, N permitido", output="percentual de G+C entre bases A/C/G/T/U", errors="vazio, base inválida, mistura T/U, sem bases não ambíguas", dependencies="Base Julia", loading="já carregada"),
+ composicao_sequencia=(domain="bioinformatica", arity=1, static_args=(:string,), return_kind=:unknown,
+  implementation=abt_bio_composition, generated="abt_bio_composition", source="StdlibBioAdvanced.jl",
+  input="DNA ou RNA maiúsculo, N permitido", output="registro com comprimento, contagens A/C/G/T-U/N e GC_percentual", errors="vazio, base inválida, mistura T/U", dependencies="Base Julia", loading="já carregada"),
+ transcrever_dna=(domain="bioinformatica", arity=1, static_args=(:string,), return_kind=:string,
+  implementation=abt_bio_transcribe, generated="abt_bio_transcribe", source="StdlibBioAdvanced.jl",
+  input="DNA maiúsculo (fita codificante), N permitido", output="RNA com T trocado por U", errors="vazio, base inválida, presença de U", dependencies="Base Julia", loading="já carregada"),
+ traduzir_quadro=(domain="bioinformatica", arity=2, static_args=(:string,:number), return_kind=:string,
+  implementation=abt_bio_translate_frame, generated="abt_bio_translate_frame", source="StdlibBioAdvanced.jl",
+  input="DNA ou RNA ACGT/ACGU maiúsculo e quadro 1, 2 ou 3", output="proteína pelo código padrão; códons completos a partir do quadro; stop como *", errors="vazio, base inválida ou ambígua, quadro, sem códon completo", dependencies="BioSequences.jl", loading="sob demanda"),
+ subsequencia=(domain="bioinformatica", arity=3, static_args=(:string,:number,:number), return_kind=:string,
+  implementation=abt_bio_subsequence, generated="abt_bio_subsequence", source="StdlibBioAdvanced.jl",
+  input="texto e intervalo 1-based com fim incluído", output="trecho do texto", errors="vazio, índices não inteiros ou fora do intervalo", dependencies="Base Julia", loading="já carregada"),
+ localizar_motivo=(domain="bioinformatica", arity=2, static_args=(:string,:string), return_kind=:list,
+  implementation=abt_bio_motif_positions, generated="abt_bio_motif_positions", source="StdlibBioAdvanced.jl",
+  input="sequência e motivo exato em letras maiúsculas", output="lista de posições iniciais 1-based, com sobreposição", errors="vazio, caracteres não maiúsculos", dependencies="Base Julia", loading="já carregada"),
+ validar_sequencia=(domain="bioinformatica", arity=3, static_args=(:string,:string,:string), return_kind=:bool,
+  implementation=abt_bio_is_valid, generated="abt_bio_is_valid", source="StdlibBioAdvanced.jl",
+  input="texto, alfabeto DNA/RNA/proteina, ambiguidade rejeitar/permitir_N/permitir_X", output="booleano", errors="tipo, alfabeto ou política inválidos; texto vazio retorna falso", dependencies="Base Julia", loading="já carregada"),
+ pontuacao_dna=(domain="bioinformatica", arity=4, static_args=(:number,:number,:number,:number), return_kind=:unknown,
+  implementation=abt_bio_nucleotide_scoring, generated="abt_bio_nucleotide_scoring", source="StdlibBioAdvanced.jl",
+  input="acerto, erro, abertura e extensão de gap inteiros", output="registro de esquema de pontuação reutilizável", errors="tipos, sinais", dependencies="Base Julia", loading="já carregada"),
+ pontuacao_proteina=(domain="bioinformatica", arity=3, static_args=(:string,:number,:number), return_kind=:unknown,
+  implementation=abt_bio_protein_scoring, generated="abt_bio_protein_scoring", source="StdlibBioAdvanced.jl",
+  input="matriz BLOSUM62 ou PAM250, abertura e extensão de gap inteiros", output="registro de esquema de pontuação reutilizável", errors="matriz, tipos, sinais", dependencies="Base Julia", loading="já carregada"),
+ alinhar_par=(domain="bioinformatica", arity=4, static_args=(:string,:string,:string,:unknown), return_kind=:unknown,
+  implementation=abt_bio_align_pair, generated="abt_bio_align_pair", source="StdlibBioAdvanced.jl",
+  input="duas sequências, modo global/local e esquema de pontuação", output="registro com pontuação, contagens, identidade, similaridade, posições e alinhamento textual", errors="sequências inválidas, modo, esquema, alinhamento local vazio", dependencies="BioAlignments.jl e BioSequences.jl", loading="sob demanda"),
+ resumir_comprimentos=(domain="bioinformatica", arity=1, static_args=(:unknown,), return_kind=:unknown,
+  implementation=abt_bio_length_summary, generated="abt_bio_length_summary", source="StdlibBioAdvanced.jl",
+  input="leitor FASTA", output="registro com sequências, bases, mínimo, máximo, média, mediana e N50", errors="mesma validação de ler_fasta", dependencies="FASTX.jl e BioSequences.jl", loading="sob demanda; só comprimentos em memória"),
+ metricas_leituras=(domain="bioinformatica", arity=1, static_args=(:unknown,), return_kind=:list,
+  implementation=abt_sc_fastq_metrics, generated="abt_sc_fastq_metrics", source="StdlibScientificBio.jl",
+  input="leitor FASTQ, opcionalmente filtrado", output="lista de registros por leitura sem a sequência: comprimento, GC, N, Phred e percentual Q20/Q30", errors="vazio, truncado, bases, qualidades, GC indefinido", dependencies="FASTX.jl", loading="sob demanda; um registro por leitura em memória"),
+ filtrar_fastq=(domain="bioinformatica", arity=4, static_args=(:unknown,:number,:number,:number), return_kind=:unknown,
+  implementation=abt_sc_fastq_filter, generated="abt_sc_fastq_filter", source="StdlibScientificBio.jl",
+  input="leitor FASTQ, comprimento mínimo, Phred médio mínimo e máximo de N", output="novo leitor com o filtro acumulado (E lógico); nada é lido na chamada", errors="tipo do leitor, limites inválidos", dependencies="Base Julia", loading="já carregada; filtro aplicado em fluxo"),
+ exportar_fastq=(domain="bioinformatica", arity=2, static_args=(:unknown,:string), return_kind=:unknown,
+  implementation=abt_sc_fastq_export, generated="abt_sc_fastq_export", source="StdlibScientificBio.jl",
+  input="leitor FASTQ (filtrado ou não) e caminho de saída", output="registro com arquivo e leituras_escritas", errors="destino igual à origem, IO, validação do FASTQ", dependencies="FASTX.jl", loading="sob demanda; escrita em fluxo"),
 )
 
 function abt_extension_catalog()

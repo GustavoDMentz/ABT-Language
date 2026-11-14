@@ -100,7 +100,7 @@ def files():
     result("files", "referenced ABT/data files", "PASS" if not failures else "FAIL", "; ".join(failures[:10]))
 
 def cli():
-    for command, expected_text in [(["--version"], "ABT 0.13.0"), (["--help"], "Uso:"), (["doctor"], "runtime disponíveis"), (["operacoes"], "resumo_estatistico")]:
+    for command, expected_text in [(["--version"], "ABT 0.14.0"), (["--help"], "Uso:"), (["doctor"], "runtime disponíveis"), (["operacoes"], "resumo_estatistico")]:
         ok, detail = run([str(CLI), *command], env=os.environ, contains=expected_text)
         result("cli", " ".join(command), "PASS" if ok else "FAIL", detail)
 

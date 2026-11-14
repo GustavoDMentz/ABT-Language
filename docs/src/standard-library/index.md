@@ -1,6 +1,6 @@
 # Índice da biblioteca padrão
 
-A fonte de verdade dos nomes públicos é `ABT.ABT_STDLIB_NAMES` em `src/ABT.jl`, formada pelas operações básicas, bioinformáticas e por `ABT_EXTENSION_SPECS` em `src/ExtensionRegistry.jl`. Esta branch adiciona ao catálogo 0.13.0 as operações fundamentais de lista (`contar`, `minimo`, `maximo`, `ordenar`, `sem_duplicatas`) e as conversões explícitas (`para_inteiro`, `para_real`, `para_texto`), totalizando **70 operações**. `abt operacoes` mostra as extensões modulares; não lista todas as operações básicas. A validação documental compara o conjunto completo com as seções abaixo.
+A fonte de verdade dos nomes públicos é `ABT.ABT_STDLIB_NAMES` em `src/ABT.jl`, formada pelas operações básicas, bioinformáticas e por `ABT_EXTENSION_SPECS` em `src/ExtensionRegistry.jl`. Na versão 0.14.0 há **84 operações**: as 62 da 0.13.0, as operações fundamentais de lista (`contar`, `minimo`, `maximo`, `ordenar`, `sem_duplicatas`) e conversões explícitas (`para_inteiro`, `para_real`, `para_texto`), e as 14 de bioinformática avançada. `abt operacoes` mostra as extensões modulares; não lista todas as operações básicas. A validação documental compara o conjunto completo com as seções abaixo.
 
 | Domínio | Operações |
 |---|---|
@@ -10,6 +10,7 @@ A fonte de verdade dos nomes públicos é `ABT.ABT_STDLIB_NAMES` em `src/ABT.jl`
 | [Dados, JSON e álgebra](data.md) | `resumir_grupos`, `contar_categorias`, `agrupar_dados`, `testar_grupos`, `categorias`, `codificar_json`, `resolver_sistema_spd` |
 | [Bioinformática e visualização](science.md) | `ler_fasta`, `descrever_sequencias`, `registros_fasta`, `alinhar_sequencias`, `grafico`, `salvar_figura` |
 | [Bibliotecas científicas 0.13.0](scientific0130.md) | FASTQ, sequências DNA, tabelas, correção de valores-p, álgebra linear e otimização explícita. |
+| [Bioinformática avançada 0.14.0](bio0140.md) | `conteudo_gc`, `composicao_sequencia`, `transcrever_dna`, `traduzir_quadro`, `subsequencia`, `localizar_motivo`, `validar_sequencia`, `pontuacao_dna`, `pontuacao_proteina`, `alinhar_par`, `resumir_comprimentos`, `metricas_leituras`, `filtrar_fastq`, `exportar_fastq` |
 
 As operações retornam valores. A instrução `mostrar` apresenta um valor de modo determinístico; exportar uma figura é uma operação separada. Bibliotecas científicas têm carregamento tardio, mas precisam estar resolvidas no ambiente Julia. Não há política universal implícita para ausentes: cada operação declara seu contrato.
 

@@ -1,0 +1,23 @@
+# Executar da raiz do repositório. Dados sintéticos versionados.
+sequencia = "ATGGCCATTGTAATGGGCCGCTGA"
+mostrar conteudo_gc(sequencia)
+mostrar composicao_sequencia(sequencia)
+mostrar transcrever_dna(subsequencia(sequencia, 1, 12))
+mostrar traduzir_quadro(sequencia, 1)
+mostrar localizar_motivo(sequencia, "ATG")
+mostrar validar_sequencia(sequencia, "DNA", "rejeitar")
+
+dna = pontuacao_dna(2, -1, -3, -1)
+alinhamento = alinhar_par(sequencia, "ATGGCCATTGAATGGGCCGCTGA", "global", dna)
+mostrar alinhamento.pontuacao
+mostrar alinhamento.alinhamento_b
+mostrar alinhar_par("HEAGAWGHEE", "PAWHEAE", "global", pontuacao_proteina("BLOSUM62", -10, -1)).pontuacao
+
+genes = ler_fasta("applications/bioinformatics_0140/data/genes.fasta", "DNA", "permitir_N", "exigir_maiusculas")
+mostrar resumir_comprimentos(genes)
+
+leituras = ler_fastq("applications/bioinformatics_0140/data/leituras.fastq", "DNA", "permitir_N", "phred33")
+aprovadas = filtrar_fastq(leituras, 24, 30, 1)
+mostrar resumir_fastq(aprovadas)
+mostrar transformar (metricas_leituras(aprovadas)) com valor.GC_percentual
+mostrar exportar_fastq(aprovadas, ambiente("ABT_FASTQ_SAIDA", "/tmp/abt-doc-014.fastq")).leituras_escritas

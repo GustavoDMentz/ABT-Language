@@ -1,0 +1,69 @@
+{
+  "maquina": {
+    "cpu": "x86_64",
+    "nucleos": 4,
+    "sistema": "Linux-7.0.0-42-generic-x86_64-with-glibc2.39",
+    "julia": "julia version 1.13.3",
+    "repeticoes": 3
+  },
+  "cli_version_caminho_rapido": {
+    "mediana_s": 0.19,
+    "minimo_s": 0.19,
+    "rss_max_mib": 167.3
+  },
+  "cli_vazio_carrega_abt": {
+    "mediana_s": 0.37,
+    "minimo_s": 0.35,
+    "rss_max_mib": 240.3
+  },
+  "julia_vazia_com_projeto": {
+    "mediana_s": 0.15,
+    "minimo_s": 0.15,
+    "rss_max_mib": 161.2
+  },
+  "fastq_abt_cli_compile_min": {
+    "mediana_s": 101.12,
+    "minimo_s": 101.01,
+    "rss_max_mib": 329.6
+  },
+  "fastq_abt_cli_compile_all": {
+    "mediana_s": 8.76,
+    "minimo_s": 8.68,
+    "rss_max_mib": 434.8
+  },
+  "fastq_julia_direta": {
+    "mediana_s": 0.47,
+    "minimo_s": 0.43,
+    "rss_max_mib": 275.1
+  },
+  "fasta_abt_cli_compile_min": {
+    "mediana_s": 48.1,
+    "minimo_s": 47.43,
+    "rss_max_mib": 371.4
+  },
+  "fasta_abt_cli_compile_all": {
+    "mediana_s": 7.96,
+    "minimo_s": 7.91,
+    "rss_max_mib": 433.9
+  },
+  "fasta_julia_direta": {
+    "mediana_s": 0.33,
+    "minimo_s": 0.33,
+    "rss_max_mib": 263.6
+  },
+  "align_abt_cli_compile_min": {
+    "mediana_s": 244.24,
+    "minimo_s": 239.8,
+    "rss_max_mib": 316.4
+  },
+  "align_abt_cli_compile_all": {
+    "mediana_s": 8.79,
+    "minimo_s": 8.76,
+    "rss_max_mib": 420.1
+  },
+  "align_julia_direta": {
+    "mediana_s": 0.96,
+    "minimo_s": 0.95,
+    "rss_max_mib": 291.9
+  }
+}

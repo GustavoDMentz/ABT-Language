@@ -7,10 +7,10 @@ Escreva a intenção. O Julia executa.
 
 <br>
 
-![versão](https://img.shields.io/badge/vers%C3%A3o-0.13.0-6f42c1?style=for-the-badge)
+![versão](https://img.shields.io/badge/vers%C3%A3o-0.14.0-6f42c1?style=for-the-badge)
 ![julia](https://img.shields.io/badge/Julia-1.13.3-9558B2?style=for-the-badge&logo=julia&logoColor=white)
 ![status](https://img.shields.io/badge/status-experimental-orange?style=for-the-badge)
-![opera%C3%A7%C3%B5es](https://img.shields.io/badge/opera%C3%A7%C3%B5es-70-2ea44f?style=for-the-badge)
+![opera%C3%A7%C3%B5es](https://img.shields.io/badge/opera%C3%A7%C3%B5es-84-2ea44f?style=for-the-badge)
 
 [**Manual**](https://gustavodmentz.github.io/ABT-Language/) ·
 [Começar](#-começando-em-2-minutos) ·
@@ -156,7 +156,7 @@ O esquema declara os tipos e a política `"erro"` diz o que fazer com campos aus
 
 ## 📦 O que já vem pronto
 
-**70 operações públicas**, organizadas por domínio. Cada uma tem contrato, erros e exemplo executável na [referência](docs/src/standard-library/index.md).
+**84 operações públicas**, organizadas por domínio. Cada uma tem contrato, erros e exemplo executável na [referência](docs/src/standard-library/index.md).
 
 | Domínio | Para quê | Alguns exemplos |
 |---|---|---|
@@ -166,6 +166,7 @@ O esquema declara os tipos e a política `"erro"` diz o que fazer com campos aus
 | 🗂️ [**Dados e JSON**](docs/src/standard-library/data.md) | Agrupar, contar categorias, serializar | `agrupar_dados` · `contar_categorias` · `codificar_json` |
 | 🧬 [**Bioinformática e gráficos**](docs/src/standard-library/science.md) | FASTA, alinhamento, figuras | `ler_fasta` · `alinhar_sequencias` · `salvar_figura` |
 | 🔬 [**Bibliotecas científicas 0.13**](docs/src/standard-library/scientific0130.md) | FASTQ, k-mers, matrizes, valores-p, otimização | `ler_fastq` · `produto_matricial` · `ajustar_valores_p` |
+| 🧪 [**Bioinformática avançada 0.14**](docs/src/standard-library/bio0140.md) | GC, tradução por quadro, motivos, alinhamento com BLOSUM62/PAM250, métricas e filtros de FASTQ | `conteudo_gc` · `alinhar_par` · `filtrar_fastq` |
 
 ---
 
@@ -198,7 +199,7 @@ O mesmo front-end alimenta dois caminhos de execução com resultados equivalent
 | Entender a linguagem | [Sintaxe](docs/src/manual/syntax.md) · [Coleções e pipelines](docs/src/manual/collections.md) · [Gramática](docs/src/reference/grammar.md) |
 | Consultar operações | [Referência da biblioteca](docs/src/standard-library/index.md) |
 | Ver programas completos | [Exemplos](docs/src/examples/programs.md) · [`applications/`](applications/README.md) |
-| Usar ciência de dados | [Estatística](docs/src/tutorials/statistics.md) · [Bioestatística](docs/src/tutorials/biostatistics.md) · [Bioinformática](docs/src/tutorials/bioinformatics.md) |
+| Usar ciência de dados | [Estatística](docs/src/tutorials/statistics.md) · [Bioestatística](docs/src/tutorials/biostatistics.md) · [Bioinformática](docs/src/tutorials/bioinformatics.md) · [Bioinformática avançada](docs/src/tutorials/bioinformatics-advanced.md) |
 | Conhecer os limites | [Semântica e limites](docs/src/reference/semantics.md) · [Ciência 0.13](docs/src/scientific/overview.md) |
 | Ir fundo | [Bioestatística 0.12](docs/BIOESTATISTICA_0120.md) · [Auditoria independente](docs/AUDITORIA_FINAL_BIOESTATISTICA_0120.md) · [Extensões](docs/ARQUITETURA_EXTENSOES_0118.md) · [Arquivos e tabelas](docs/ARQUIVOS_TABELAS_0118.md) · [Benchmarks](docs/BENCHMARK_ESCALABILIDADE.md) |
 
@@ -230,6 +231,6 @@ julia --project=docs docs/make.jl                                   # build do s
 
 <div align="center">
 
-<sub>ABT 0.13.0 · feita para ser lida como o que ela faz</sub>
+<sub>ABT 0.14.0 · feita para ser lida como o que ela faz</sub>
 
 </div>

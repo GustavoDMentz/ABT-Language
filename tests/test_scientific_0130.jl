@@ -3,7 +3,7 @@ const S = ABT
 @testset "bibliotecas científicas 0.13.0" begin
  @test !any(pkg -> pkg.name=="MultipleTesting",keys(Base.loaded_modules))
  @test !any(pkg -> pkg.name=="Optim",keys(Base.loaded_modules))
- @test length(S.abt_extension_catalog())==41
+ @test length(S.abt_extension_catalog())==55  # 41 em 0.13.0 + 14 operações de bioinformática da 0.14.0
  path=joinpath(@__DIR__,"..","applications","scientific_0130","data","reads.fastq")
  h=S.abt_sc_fastq(path,"DNA","rejeitar","phred33")
  q=S.abt_sc_fastq_summary(h)
