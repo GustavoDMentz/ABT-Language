@@ -1,6 +1,6 @@
 # Expressões e operadores
 
-Da maior para a menor precedência: chamadas/acesso a campos, potência `^`, sinal unário `+`/`-`, multiplicação e divisão `*`/`/`, adição e subtração `+`/`-`, comparações, `e`, `ou`. A potência associa à direita; operadores binários nos demais níveis associam à esquerda. Comparações encadeadas são avaliadas como binárias sucessivas; use parênteses para explicitar a intenção.
+Da maior para a menor precedência: chamadas/acesso a campos, potência `^`, sinal unário `+`/`-`, multiplicação e divisão `*`/`/`, adição e subtração `+`/`-`, comparações, `e`, `ou`. A potência associa à direita; operadores binários nos demais níveis associam à esquerda. Comparações encadeadas são agrupadas à esquerda, como binárias sucessivas: `a < b < c` é `(a < b) < c`. Como `a < b` é booleano e `<`, `>`, `<=` e `>=` exigem números, a validação rejeita o encadeamento desses quatro operadores; `==` e `!=` aceitam qualquer tipo e podem ser encadeados (`1 == 1 == verdadeiro` vale `true`). Para testar um intervalo, use `e`: `a < b e b < c`.
 
 ```abt
 a = 2.0

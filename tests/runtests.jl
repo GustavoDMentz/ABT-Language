@@ -31,7 +31,7 @@ end
 
 @testset "ABT 0.7 — 600 deterministic arithmetic cases" begin
     for a in -12:12, b in 1:24
-        # Avoid unary minus (not in current grammar): represent negatives as 0 - N.
+        # Negatives are written as (0 - N) so these cases exercise binary arithmetic only (unary minus exists).
         aa = a < 0 ? "(0 - $(-a))" : string(a)
         src = "show $aa + $b * 2"
         @test interpret_source(src) == [string(a + b * 2)]
