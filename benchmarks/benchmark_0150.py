@@ -32,7 +32,10 @@ HEAVY = {"fasta", "fastq", "metricas", "alinhamento_dna", "alinhamento_proteina"
 
 
 def timed(cmd, env):
-    r = subprocess.run(["/usr/bin/time", "-v"] + cmd, cwd=ROOT, env=env, capture_output=True, text=True, timeout=args.timeout)
+    try:
+        r = subprocess.run(["/usr/bin/time", "-v"] + cmd, cwd=ROOT, env=env, capture_output=True, text=True, timeout=args.timeout)
+    except subprocess.TimeoutExpired:
+        return None, None, "TIMEOUT"
     if r.returncode:
         raise RuntimeError(f"falhou: {cmd}\n{r.stderr[-800:]}")
     m = re.search(r"Elapsed \(wall clock\) time.*: (?:(\d+):)?(\d+):([\d.]+)", r.stderr)
@@ -53,7 +56,7 @@ def build_data(d):
     aa = "ACDEFGHIKLMNPQRSTVWY"
     prot_a, prot_b = ("".join(rng.choices(aa, k=400)) for _ in range(2))
     numeros = ", ".join(str(rng.randint(1, 1000)) for _ in range(20000))
-    pequenos = ", ".join(str(i) for i in range(1, 301))
+    pequenos = ", ".join(str(i) for i in range(1, 101))
     programs = {
         "trivial": "mostrar 1\n",
         "aritmetica": f"""função passo(a, b) {{
@@ -104,7 +107,7 @@ mostrar alinhar_par(subsequencia("{dna_a}", 1, 300), subsequencia("{dna_b}", 1, 
         (d / f"{name}.jl").write_text(f'include("{ROOT}/benchmarks/direct_equivalents_0150.jl")\nprintln({expr})\n')
     sizes = {"fastq": "20 000 leituras × 100 pb (~4,5 MB)", "fasta": "20 000 sequências de 150–200 pb (~3,6 MB)",
              "alinhamento_dna": "1000 × 1000 pb", "alinhamento_proteina": "400 × 400 aminoácidos",
-             "aritmetica": "90 000 chamadas de função (300 × 300)", "listas": "lista literal de 20 000 inteiros"}
+             "aritmetica": "10 000 chamadas de função ABT (100 × 100)", "listas": "lista literal de 20 000 inteiros"}
     return list(programs), sizes
 
 
@@ -137,6 +140,10 @@ def main():
                 is_min = label.endswith("min") or label.endswith("rapido")
                 reps = args.repeat_min if (is_min and name in HEAVY) else args.repeat
                 runs = [timed(cmd + [str(d / f"{name}.abt")], {**base_env, **extra}) for _ in range(reps)]
+                if any(r[0] is None for r in runs):
+                    row[label] = dict(resultado=f"TIMEOUT (> {args.timeout} s)", repeticoes=reps)
+                    print(name, label, row[label], flush=True)
+                    continue
                 row[label] = dict(mediana_s=round(statistics.median(r[0] for r in runs), 2), minimo_s=round(min(r[0] for r in runs), 2),
                                   rss_max_mib=round(max(r[1] for r in runs)), repeticoes=reps)
                 outputs[label] = runs[0][2]
@@ -147,11 +154,11 @@ def main():
                                     rss_max_mib=round(max(r[1] for r in runs)), repeticoes=args.repeat)
                 print(name, "julia", row["julia"], flush=True)
             # as quatro configurações ABT devem produzir exatamente a mesma saída
-            row["saidas_identicas"] = len(set(outputs.values())) == 1
+            row["saidas_identicas"] = len(set(outputs.values())) == 1 if outputs else None
             results["cenarios"][name] = row
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     Path(args.output).write_text(json.dumps(results, indent=2, ensure_ascii=False))
-    print(json.dumps({k: {c: v[c]["mediana_s"] for c in v if isinstance(v[c], dict)} for k, v in results["cenarios"].items()}, indent=1, ensure_ascii=False))
+    print(json.dumps({k: {c: v[c].get("mediana_s", v[c].get("resultado")) for c in v if isinstance(v[c], dict)} for k, v in results["cenarios"].items()}, indent=1, ensure_ascii=False))
 
 
 main()

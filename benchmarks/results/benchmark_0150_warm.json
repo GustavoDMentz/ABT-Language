@@ -1,0 +1,97 @@
+{
+  "alinhamento_dna": {
+    "abt": {
+      "primeira_s": 0.9221,
+      "aquecida_mediana_s": 0.0057,
+      "aquecida_minima_s": 0.0056,
+      "alocado_mib": 1.4
+    },
+    "julia_equivalente": {
+      "primeira_s": 0.0046,
+      "aquecida_mediana_s": 0.0046,
+      "aquecida_minima_s": 0.0046,
+      "alocado_mib": 1.04
+    }
+  },
+  "alinhamento_proteina": {
+    "abt": {
+      "primeira_s": 0.6759,
+      "aquecida_mediana_s": 0.0014,
+      "aquecida_minima_s": 0.0014,
+      "alocado_mib": 0.36
+    },
+    "julia_equivalente": {
+      "primeira_s": 0.0008,
+      "aquecida_mediana_s": 0.0008,
+      "aquecida_minima_s": 0.0008,
+      "alocado_mib": 0.18
+    }
+  },
+  "aritmetica": {
+    "abt": {
+      "primeira_s": 0.6634,
+      "aquecida_mediana_s": 0.4757,
+      "aquecida_minima_s": 0.4662,
+      "alocado_mib": 110.85
+    }
+  },
+  "fasta": {
+    "abt": {
+      "primeira_s": 0.6302,
+      "aquecida_mediana_s": 0.0531,
+      "aquecida_minima_s": 0.053,
+      "alocado_mib": 18.04
+    },
+    "julia_equivalente": {
+      "primeira_s": 0.0163,
+      "aquecida_mediana_s": 0.019,
+      "aquecida_minima_s": 0.0184,
+      "alocado_mib": 16.34
+    }
+  },
+  "fastq": {
+    "abt": {
+      "primeira_s": 0.4896,
+      "aquecida_mediana_s": 0.0361,
+      "aquecida_minima_s": 0.0359,
+      "alocado_mib": 32.72
+    },
+    "julia_equivalente": {
+      "primeira_s": 0.0319,
+      "aquecida_mediana_s": 0.0262,
+      "aquecida_minima_s": 0.0253,
+      "alocado_mib": 32.05
+    }
+  },
+  "listas": {
+    "abt": {
+      "primeira_s": 0.5421,
+      "aquecida_mediana_s": 0.1351,
+      "aquecida_minima_s": 0.1297,
+      "alocado_mib": 297.79
+    }
+  },
+  "maquina": {
+    "cpu": "skylake",
+    "nucleos": 4,
+    "julia": "1.13.3",
+    "memoria_gib": 7.6,
+    "compile": 1
+  },
+  "metricas": {
+    "abt": {
+      "primeira_s": 0.4988,
+      "aquecida_mediana_s": 0.0416,
+      "aquecida_minima_s": 0.0413,
+      "alocado_mib": 34.66
+    }
+  },
+  "trivial": {
+    "abt": {
+      "primeira_s": 0.8154,
+      "aquecida_mediana_s": 0.0001,
+      "aquecida_minima_s": 0.0001,
+      "alocado_mib": 0.02
+    }
+  }
+}
