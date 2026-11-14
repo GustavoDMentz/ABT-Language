@@ -99,6 +99,10 @@ Após as correções, a suíte histórica completa terminou com **46 PASS, 2 PRO
 
 O script de aplicações terminou com **112 PASS, 0 FAIL, 0 TIMEOUT**, incluindo o exemplo de estatística atualizado e casos CSV, DNA, registros e erros nos três modos quando aplicável. O diferencial de bioestatística terminou com **19 PASS, 0 FAIL**, incluindo três aplicações completas nos três modos. O diferencial científico da versão 0.13.0 terminou com **16 PASS, 0 FAIL**, incluindo visualização e arquivo PNG. Os logs produzidos localmente podem conter caminhos do ambiente de teste e não são parte da API nem desta documentação publicada.
 
+### Validação da segunda etapa (operações de lista e conversões)
+
+Ambiente: Linux, Julia 1.13.3, **sem PythonCall** (os testes de ponte Python ficam PARTIAL). Linha de base (commit anterior à etapa): 42 PASS, 2 PROBE, 4 PARTIAL, 0 FAIL, 0 TIMEOUT. Depois: **43 PASS**, 2 PROBE, 4 PARTIAL, 0 FAIL, 0 TIMEOUT; a única diferença entre as execuções é o novo `test_abstraction_lists.jl` (PASS). Script de aplicações: 112 PASS, 0 FAIL. `generate_docs_reference.py --check` sincronizado (70 operações). `validate_docs.py`: 49 PASS e 1 FAIL, o exemplo de `manual/interop.md` que importa `Python.math`, por falta de PythonCall neste ambiente; todos os demais exemplos, inclusive o novo de `collections.md` e `nucleo.abt`, passam. Não foram reexecutados nesta etapa os diferenciais de bioestatística e científico.
+
 ### Reprodução
 
 Na raiz do clone, com `ABT_JULIA` apontando para Julia 1.13.3:
