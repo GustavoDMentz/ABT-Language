@@ -1,0 +1,70 @@
+{
+  "alinhamento_global_1000x1000": {
+    "abt": {
+      "mediana_s": 0.006345499,
+      "minimo_s": 0.006306377,
+      "alocado_mib": 1.3434829711914062
+    },
+    "julia_direta": {
+      "mediana_s": 0.005559757,
+      "minimo_s": 0.005505307,
+      "alocado_mib": 1.0362701416015625
+    }
+  },
+  "alinhamento_global_2000x2000": {
+    "abt": {
+      "mediana_s": 0.023642184,
+      "minimo_s": 0.02346991,
+      "alocado_mib": 4.533470153808594
+    },
+    "julia_direta": {
+      "mediana_s": 0.022593961,
+      "minimo_s": 0.022305193,
+      "alocado_mib": 3.914947509765625
+    }
+  },
+  "fasta_comprimentos_20k_sequencias": {
+    "abt": {
+      "mediana_s": 0.088276109,
+      "minimo_s": 0.086829395,
+      "alocado_mib": 42.591651916503906
+    },
+    "julia_direta": {
+      "mediana_s": 0.007037637,
+      "minimo_s": 0.006885243,
+      "alocado_mib": 13.429428100585938
+    }
+  },
+  "fastq_metricas_20k_leituras_100pb": {
+    "abt": {
+      "mediana_s": 0.083051666,
+      "minimo_s": 0.080453426,
+      "alocado_mib": 48.02046203613281
+    },
+    "julia_direta": {
+      "mediana_s": 0.017396936,
+      "minimo_s": 0.017038629,
+      "alocado_mib": 33.98991394042969
+    }
+  },
+  "fastq_resumo_20k_leituras_100pb": {
+    "abt": {
+      "mediana_s": 0.064326534,
+      "minimo_s": 0.063742619,
+      "alocado_mib": 42.12516784667969
+    }
+  },
+  "gc_motivo_traducao_100kb": {
+    "abt": {
+      "mediana_s": 0.003649119,
+      "minimo_s": 0.003591349,
+      "alocado_mib": 0.5982513427734375
+    }
+  },
+  "maquina": {
+    "cpu": "skylake",
+    "nucleos": 4,
+    "julia": "1.13.3",
+    "memoria_gib": 7.6
+  }
+}

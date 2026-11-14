@@ -102,6 +102,10 @@ ABT alinhar_par: nenhum alinhamento local com pontuação positiva
 ABT FASTQ: arquivo 'leituras.fastq': ABT FASTQ registro 3: esperado DNA maiúsculo, alfabeto ACGT
 ```
 
+## Desempenho e memória
+
+Operações sobre texto (`conteudo_gc`, `subsequencia`, `localizar_motivo`) são imediatas. `resumir_comprimentos`, `resumir_fastq`, `filtrar_fastq` e `exportar_fastq` leem em fluxo; `metricas_leituras` guarda uma linha por leitura (sem as sequências); `registros_fasta` e `registros_fastq` guardam as sequências; `alinhar_par` usa memória proporcional ao produto dos comprimentos. A CLI inicia rápido com `--compile=min`, mas esse modo executa de forma interpretada o código Julia ainda não pré-compilado: para ler arquivos grandes ou alinhar sequências, use `ABT_JULIA_COMPILE=all bin/abt run programa.abt` (custa cerca de 8 s de partida). Números medidos em `docs/BENCHMARK_BIOINFORMATICA_0140.md`.
+
 ## Limitações desta etapa
 
 Sem arquivos FASTA de proteínas (`ler_fasta` aceita DNA e RNA), sem códigos IUPAC em motivos, sem fita reversa nem tabelas genéticas alternativas na tradução, sem alinhamento múltiplo ou de leituras a um genoma, sem tratamento de pares de leituras. Essas capacidades exigiriam contratos próprios e não foram simuladas. Consulte a [referência](../standard-library/bio0140.md) e os programas completos em `applications/bioinformatics_0140/`.
