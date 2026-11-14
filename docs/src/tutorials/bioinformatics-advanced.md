@@ -104,7 +104,7 @@ ABT FASTQ: arquivo 'leituras.fastq': ABT FASTQ registro 3: esperado DNA maiúscu
 
 ## Desempenho e memória
 
-Operações sobre texto (`conteudo_gc`, `subsequencia`, `localizar_motivo`) são imediatas. `resumir_comprimentos`, `resumir_fastq`, `filtrar_fastq` e `exportar_fastq` leem em fluxo; `metricas_leituras` guarda uma linha por leitura (sem as sequências); `registros_fasta` e `registros_fastq` guardam as sequências; `alinhar_par` usa memória proporcional ao produto dos comprimentos. A CLI inicia rápido com `--compile=min`, mas esse modo executa de forma interpretada o código Julia ainda não pré-compilado: para ler arquivos grandes ou alinhar sequências, use `ABT_JULIA_COMPILE=all bin/abt run programa.abt` (custa cerca de 8 s de partida). Números medidos em `docs/BENCHMARK_BIOINFORMATICA_0140.md`.
+Operações sobre texto (`conteudo_gc`, `subsequencia`, `localizar_motivo`) são imediatas. `resumir_comprimentos`, `resumir_fastq`, `filtrar_fastq` e `exportar_fastq` leem em fluxo; `metricas_leituras` guarda uma linha por leitura (sem as sequências); `registros_fasta` e `registros_fastq` guardam as sequências; `alinhar_par` usa memória proporcional ao produto dos comprimentos. Desde a 0.15.0 o perfil padrão da CLI já compila essas operações, sem configuração: não é preciso ajustar nada para ler arquivos grandes ou alinhar sequências. Evite `--perfil rapido` nesses programas, porque ele executa o código científico de forma interpretada. Números medidos em `docs/RELATORIO_DESEMPENHO_0150.md` (e, para a 0.14.0, em `docs/BENCHMARK_BIOINFORMATICA_0140.md`).
 
 ## Limitações desta etapa
 

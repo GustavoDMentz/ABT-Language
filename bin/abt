@@ -2,6 +2,56 @@
 ABT_SCRIPT=$(readlink -f -- "$0") || exit 2
 ABT_ROOT=$(dirname -- "$(dirname -- "$ABT_SCRIPT")") || exit 2
 ABT_RUNTIME=${ABT_JULIA:-julia}
+
+# Perfil de execução: decide o modo de compilação do Julia.
+#   padrao -> --compile=yes  (núcleo da ABT pré-compilado + compilação sob demanda; recomendado)
+#   rapido -> --compile=min  (sem compilação sob demanda; só para programas muito curtos)
+# Precedência: --perfil na linha de comando > ABT_JULIA_COMPILE (min|yes|all|no) > padrao.
+ABT_PERFIL=
+ABT_PERFIL_ORIGEM=
+abt_perfil_invalido() {
+    printf 'ABT: perfil inválido: %s (use padrao ou rapido).\n' "$1" >&2
+    exit 2
+}
+abt_contar=$#
+abt_esperando_perfil=0
+while [ "$abt_contar" -gt 0 ]; do
+    abt_arg=$1
+    shift
+    abt_contar=$((abt_contar - 1))
+    if [ "$abt_esperando_perfil" -eq 1 ]; then
+        ABT_PERFIL=$abt_arg; ABT_PERFIL_ORIGEM=cli; abt_esperando_perfil=0
+        continue
+    fi
+    case "$abt_arg" in
+        --perfil)
+            if [ "$abt_contar" -eq 0 ]; then
+                printf '%s\n' 'ABT: --perfil exige um valor (padrao ou rapido).' >&2
+                exit 2
+            fi
+            abt_esperando_perfil=1 ;;
+        --perfil=*) ABT_PERFIL=${abt_arg#--perfil=}; ABT_PERFIL_ORIGEM=cli ;;
+        *) set -- "$@" "$abt_arg" ;;
+    esac
+done
+if [ -n "$ABT_PERFIL_ORIGEM" ]; then
+    case "$ABT_PERFIL" in
+        padrao) ABT_COMPILE=yes ;;
+        rapido) ABT_COMPILE=min ;;
+        *) abt_perfil_invalido "$ABT_PERFIL" ;;
+    esac
+elif [ -n "${ABT_JULIA_COMPILE:-}" ]; then
+    ABT_COMPILE=$ABT_JULIA_COMPILE
+    ABT_PERFIL_ORIGEM=ABT_JULIA_COMPILE
+    case "$ABT_COMPILE" in
+        min|yes|all|no) ;;
+        *) printf '%s\n' 'ABT: ABT_JULIA_COMPILE deve ser min, yes, all ou no.' >&2; exit 2 ;;
+    esac
+else
+    ABT_COMPILE=yes
+    ABT_PERFIL_ORIGEM=padrao
+fi
+
 if [ "${1:-}" = doctor ] && [ "$#" -eq 1 ]; then
     printf 'ABT: %s\n' "$ABT_ROOT"
     if [ ! -f "$ABT_ROOT/src/CLI.jl" ] || [ ! -f "$ABT_ROOT/src/ABT.jl" ] || [ ! -f "$ABT_ROOT/ABT.packages.toml" ] || [ ! -f "$ABT_ROOT/Project.toml" ]; then
@@ -18,6 +68,7 @@ if [ "${1:-}" = doctor ] && [ "$#" -eq 1 ]; then
         printf '%s\n' 'ABT: versão não homologada; requer Julia 1.13.3.' >&2
         exit 2
     fi
+    printf 'Compilação Julia: --compile=%s (origem: %s)\n' "$ABT_COMPILE" "$ABT_PERFIL_ORIGEM"
     printf '%s\n' 'ABT: arquivos essenciais e runtime disponíveis.'
     exit 0
 fi
@@ -30,9 +81,4 @@ if [ "$ABT_JULIA_VERSION" != 'julia version 1.13.3' ]; then
     printf 'ABT: Julia 1.13.3 necessária; encontrado: %s\n' "$ABT_JULIA_VERSION" >&2
     exit 2
 fi
-ABT_COMPILE=${ABT_JULIA_COMPILE:-min}
-case "$ABT_COMPILE" in
-    min|all|no) ;;
-    *) printf '%s\n' 'ABT: ABT_JULIA_COMPILE deve ser min, all ou no.' >&2; exit 2 ;;
-esac
 exec "$ABT_RUNTIME" --startup-file=no --compile="$ABT_COMPILE" --project="$ABT_ROOT" "$ABT_ROOT/src/CLI.jl" "$@"
