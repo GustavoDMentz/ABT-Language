@@ -39,9 +39,9 @@ Os outros 30 arquivos `.abt` são nativos: `applications/bio/` (2), `application
 | --- | --- | --- |
 | Contagem | `descrever` e resumos tabulares incluem contagens; faltava contar uma lista arbitrária. | Categoria A: `contar(lista)` estrito. |
 | Soma e agregações | `soma de` e resumos existentes. | Reutilizar. |
-| Mínimo e máximo | `descrever` e `resumir_coluna` cobrem amostras/tabelas válidas; não há extremo genérico de lista. | Categoria B: definir vazio, tipo misto e ausentes antes de criar API. |
-| Ordenação e duplicatas | `ordenar_tabela` e `remover_duplicatas` cobrem tabelas; listas exigiriam outra operação. | Categoria B: definir comparação, estabilidade e igualdade. |
-| Conversões | Ponte explícita Julia disponível; não há operação ABT geral. | Categoria B: contratos de parse, faixa e fração primeiro. |
+| Mínimo e máximo | `descrever` e `resumir_coluna` cobriam amostras/tabelas; faltava extremo genérico de lista. | **Implementado (segunda etapa):** `minimo(lista)` e `maximo(lista)`. Lista numérica finita não vazia; vazio, texto, ausente e não finito são erros; o resultado é o próprio elemento (tipo preservado, empate → primeira ocorrência). |
+| Ordenação e duplicatas | `ordenar_tabela` e `remover_duplicatas` cobrem tabelas; listas só tinham `Julia.Base.sort`/`unique`. | **Implementado:** `ordenar(lista[, direcao])` (números ou textos, nunca misturados; estável; `crescente`/`decrescente` como em `ordenar_tabela`) e `sem_duplicatas(lista)` (primeira ocorrência; igualdade `isequal`). Tabelas continuam com as operações próprias. |
+| Conversões | Só pela ponte Julia. | **Implementado:** `para_inteiro`, `para_real`, `para_texto`. Sem arredondamento (real com fração é erro), sem perda de precisão (inteiro inexato em `Float64` é erro), texto estrito (sem espaços, sem separadores), sem coerção de booleano. Arredondar continua sem operação; ver B abaixo. |
 | Listas e registros | Filtro, transformação, limite, criação de registro e acesso a campos. | Reutilizar; não criar mutação implícita. |
 | Ausentes | CSV/tabelas exigem política explícita. | Preservar; não inferir política em operações novas. |
 | Texto | Leitura, linhas, aparar, maiúsculas, prefixo e contagem de caracteres. | Reutilizar. |
@@ -56,12 +56,31 @@ Reprodução antes da correção: `mostrar AVERAGE OF [2, 4]` devolvia `6` (soma
 
 Mensagens de erro ainda combinam textos portugueses da CLI com causas técnicas em inglês emitidas por algumas operações da biblioteca. A revisão global de diagnósticos pertence à categoria B: exige preservar categorias, informação causal e testes existentes, sem trocar mensagens isoladamente para obter uniformidade superficial. A nova operação `contar` identifica o valor inválido como **lista**, sem exigir que o usuário conheça o tipo Julia usado internamente.
 
+## Segunda etapa: operações fundamentais de lista e conversões
+
+Implementadas na categoria B depois que o contrato de cada caso-limite foi decidido. Todas seguem o padrão de `contar`: erro de tipo identifica a operação pública e pede "uma lista"; a validação estática rejeita aridade errada e tipos conhecidos incorretos; o interpretador e a Julia gerada (com e sem otimização) executam a mesma implementação de `src/Stdlib.jl`.
+
+| Operação | Decisão de contrato | Alternativa descartada e motivo |
+| --- | --- | --- |
+| `minimo`, `maximo` | Somente `Int64`/`Float64` finitos; retorna o elemento, não uma cópia convertida; empate → primeira ocorrência. | Promover tudo a `Float64`: perderia precisão em inteiros grandes e tornaria o tipo dependente do conteúdo. Aceitar texto: duplicaria `ordenar` sem um caso de uso. |
+| `ordenar` | Só números ou só textos; estável; direção `crescente`/`decrescente` em texto, como `ordenar_tabela`; segunda posição opcional. | Parâmetro booleano `reverso`: opaco e inconsistente com `ordenar_tabela`. Ordenar listas mistas: exigiria uma ordem total arbitrária entre texto e número. |
+| `sem_duplicatas` | Primeira ocorrência, ordem preservada, igualdade `isequal` (`1` e `1.0` iguais, `0.0` e `-0.0` distintos); aceita qualquer lista, inclusive de listas. | Igualdade por tipo e valor: contradiz `1 == 1.0` da própria linguagem. |
+| `para_inteiro` | Inteiro; real inteiro representável; texto `[+-]?[0-9]+` na faixa. | Truncar ou arredondar reais: o usuário escolheria sem perceber; arredondamento exige operação própria com regra de empate. Tolerar espaços: `aparar` já existe e compõe. |
+| `para_real` | Real; inteiro exato em `Float64`; texto decimal ou científico finito. | Aceitar `NaN`/`Inf`: valores não finitos já são rejeitados pela biblioteca estatística. |
+| `para_texto` | Texto, número e booleano; mesma representação de `mostrar` para escalares. | Converter listas/registros: a apresentação de coleções pertence a `mostrar` e não tem contrato textual estável. |
+
+Cobertura: `tests/test_abstraction_lists.jl` (valores, erros, composição com `filtrar`/`transformar`, paridade nos três modos, estabilidade, nomes de usuário idênticos aos novos nomes, ponte `Julia.Base` intacta).
+
+### Achado novo: listas literais mistas divergem entre backends
+
+Reprodução (já presente em `main`): `mostrar [1, 1.0]` apresenta `[1, 1.0]` no interpretador, onde a lista é `Vector{Any}`, e `[1.0, 1.0]` na Julia gerada, onde o literal é promovido a `Vector{Float64}`. Listas homogêneas não são afetadas. **Não foi corrigido nesta etapa**: emitir `Any[...]` na geração alinharia o tipo observável, mas muda o desempenho e a tipagem do código gerado para todos os programas; a decisão é arquitetural (categoria C) e requer benchmarks. Os testes novos verificam os casos mistos chamando a implementação diretamente, e os casos de lista homogênea nos três modos.
+
 ## Prioridades e decisões
 
 | Categoria | Decisão |
 | --- | --- |
 | A — Correção imediata | Adicionar `contar(lista)` com contrato estrito e paridade entre backends; trocar a chamada Julia desnecessária no programa descritivo; corrigir a interpretação inconsistente de palavras-chave já aceitas. |
-| B — Evolução planejada | Definir contratos de extremos, ordenação/deduplicação de listas e conversões explícitas; avaliar opções nomeadas para `transformar_tabela` e `alinhar_sequencias` com migração aditiva. A política de tipos e os escores científicos permanecem explícitos. |
+| B — Evolução planejada | **Feito:** extremos, ordenação/deduplicação de listas e conversões explícitas (seção seguinte). **Pendente:** opções nomeadas para `transformar_tabela` e `alinhar_sequencias` com migração aditiva (a política de tipos e os escores científicos permanecem explícitos); arredondamento (`arredondar`, `piso`, `teto`) com regra de empate definida; extremos e ordenação por chave de registro; uniformização do idioma dos diagnósticos. |
 | C — Proposta arquitetural | Carregar spans de origem pelo AST/IR para diagnósticos precisos; considerar mudanças de sintaxe somente após definição formal de benefício, gramática, compatibilidade e paridade. |
 
 ## Política de nomes PT/EN

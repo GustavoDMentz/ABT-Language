@@ -24,6 +24,8 @@ Uma função Julia usada internamente não é, por si, vazamento de abstração.
 ## Convenções para operações públicas
 
 - Usar um nome descritivo em português para novas operações comuns. Aliases em inglês existentes continuam válidos; novos aliases só são adicionados quando houver benefício concreto e ausência de colisão.
+- Operações sobre listas aceitam apenas `Vector` e rejeitam texto, registros e tabelas; não coagem tipos em silêncio. Quando uma operação modifica a ordem ou o conjunto, devolve uma nova lista e nunca altera o argumento. Conversões entre tipos são operações próprias e explícitas (`para_*`), nunca efeito colateral de outra operação.
+- Opções com poucas escolhas qualitativas são textos em português (`"crescente"`, `"decrescente"`), na mesma posição e com o mesmo vocabulário das operações de tabela equivalentes. Uma opção que não altera o significado científico pode ser opcional no fim da lista de argumentos.
 - Definir aridade, tipos aceitos, casos vazios, valores ausentes, ordem de avaliação, efeitos e erros antes de implementar.
 - Retornar valores ABT reutilizáveis. Registros e tabelas têm campos e comportamento documentados; detalhes internos de pacotes não integram o contrato público.
 - Preferir composição de operações existentes a uma nova palavra reservada. Uma mudança gramatical requer proposta separada com semântica, impacto no parser, IR, backends e compatibilidade.

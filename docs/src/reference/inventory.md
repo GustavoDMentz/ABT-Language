@@ -4,7 +4,7 @@
 |---|---|---|
 | Implementado | Lexer, parser, AST, IR, validação, interpretador, gerador Julia com otimização conservadora. | `src/ABT.jl`, testes diferenciais. |
 | Implementado | Literais, atribuições, listas, operadores, condicionais, laços, funções de nível superior, registros, agregações e pipelines indentados. | `src/ABT.jl`, `tests/test_pipelines_118.jl`, `tests/test_collections_117.jl`. |
-| Implementado | 63 operações públicas para listas, texto, CSV tipado, tabelas, estatística, bioestatística, DNA/RNA, álgebra, JSON e visualização. | `src/Stdlib*.jl`, `src/ExtensionRegistry.jl`, [referência](../standard-library/index.md). |
+| Implementado | 70 operações públicas para listas, texto, CSV tipado, tabelas, estatística, bioestatística, DNA/RNA, álgebra, JSON e visualização. | `src/Stdlib*.jl`, `src/ExtensionRegistry.jl`, [referência](../standard-library/index.md). |
 | Implementado | CLI, instalador por usuário, extensão VS Code com realce lexical. | `bin/abt`, `src/CLI.jl`, `tools/install.py`, `vscode/`. |
 | Limitado | Imports Julia por manifesto explícito; PythonCall sob demanda; ausência de isolamento de segurança. | `ABT.packages.toml`, `src/Runtime/Bridge.jl`, testes de interoperação. |
 | Limitado | CSV iterável, com materialização em algumas operações; inferência estatística clássica com premissas do usuário. | `src/Stdlib.jl`, `src/StdlibBiostatistics.jl`. |
