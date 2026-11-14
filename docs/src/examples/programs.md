@@ -143,6 +143,16 @@ mostrar comprimento_texto(aparar(" ABT "))
 mostrar maiusculas("abt")
 mostrar inicia_com(texto, "nome")
 mostrar contar_caractere("banana", "a")
+mostrar contar([1, 2, 3])
+amostra = [30, 12, 18, 12, 24]
+mostrar minimo(amostra)
+mostrar maximo(amostra)
+mostrar ordenar(amostra)
+mostrar ordenar(amostra, "decrescente")
+mostrar sem_duplicatas(amostra)
+mostrar para_inteiro("42") + 1
+mostrar para_real("2.5") * 2
+mostrar para_texto(3.5)
 mostrar linhas_texto("a\nb")
 mostrar ambiente("ABT_DOC_NOME", "documentacao")
 mostrar registro("categoria", "exemplo", "n", 2)

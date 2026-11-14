@@ -68,6 +68,109 @@ function abt_std_text_arg(operation, value)
  value isa String || error("ABT $operation: expected text")
  return value
 end
+function abt_std_count(values)
+ values isa Vector || error("ABT contar: esperada uma lista")
+ return Int64(length(values))
+end
+
+# Listas: extremos, ordenação e duplicatas. Contratos estritos e idênticos nos
+# dois backends; nenhuma coerção silenciosa entre texto e número.
+abt_std_is_number(x) = (typeof(x) === Int64 || typeof(x) === Float64) && isfinite(x)
+function abt_std_list_arg(operation, values)
+ values isa Vector || error("ABT $operation: esperada uma lista")
+ return values
+end
+function abt_std_extreme(operation, values, better)
+ values = abt_std_list_arg(operation, values)
+ isempty(values) && error("ABT $operation: lista vazia")
+ all(abt_std_is_number, values) ||
+  error("ABT $operation: esperada uma lista de números finitos (Int64 ou Float64), sem ausentes")
+ best = values[1]
+ for x in values
+  better(x, best) && (best = x)
+ end
+ return best
+end
+abt_std_min(values) = abt_std_extreme("minimo", values, (x, best) -> x < best)
+abt_std_max(values) = abt_std_extreme("maximo", values, (x, best) -> x > best)
+function abt_std_sort(values, direction="crescente")
+ values = abt_std_list_arg("ordenar", values)
+ direction isa String && direction in ("crescente", "decrescente") ||
+  error("ABT ordenar: direção deve ser \"crescente\" ou \"decrescente\"")
+ if all(abt_std_is_number, values) || all(x -> x isa String, values)
+  descending = direction == "decrescente"
+  return sort(values; alg=MergeSort, lt=(a, b) -> descending ? b < a : a < b)
+ end
+ error("ABT ordenar: esperada uma lista só de números finitos ou só de textos")
+end
+# Igualdade de `sem_duplicatas`: a mesma do operador `==` da ABT, tornada utilizável como chave:
+# 1 e 1.0 (e verdadeiro e 1) são iguais; 0.0 e -0.0 são iguais; um NaN nunca é igual a outro
+# (como em `==`), logo nunca é removido; listas e registros comparam elemento a elemento;
+# ausentes (missing) são iguais entre si, como em `remover_duplicatas`. Não usa `isequal`/`hash` de Julia.
+function abt_std_equality_key(x)
+ if x isa Bool
+  return Int64(x)
+ elseif typeof(x) === Float64
+  isnan(x) && return gensym()
+  return isinteger(x) && -9.223372036854775808e18 <= x < 9.223372036854775808e18 ? Int64(x) : x
+ elseif x isa Vector
+  return (:lista, Tuple(map(abt_std_equality_key, x)))
+ elseif x isa NamedTuple
+  return (:registro, keys(x), Tuple(map(abt_std_equality_key, values(x))))
+ end
+ return x
+end
+function abt_std_unique(values)
+ values = abt_std_list_arg("sem_duplicatas", values)
+ seen = Set{Any}()
+ result = empty(values)
+ for x in values
+  key = abt_std_equality_key(x)
+  key in seen && continue
+  push!(seen, key)
+  push!(result, x)
+ end
+ return result
+end
+
+# Conversões explícitas: sem arredondamento, sem perda de precisão, sem espaços tolerados.
+function abt_std_to_integer(value)
+ if typeof(value) === Int64
+  return value
+ elseif typeof(value) === Float64
+  isfinite(value) && isinteger(value) && -9.223372036854775808e18 <= value < 9.223372036854775808e18 ||
+   error("ABT para_inteiro: o real $value não é um inteiro representável")
+  return Int64(value)
+ elseif value isa String
+  occursin(r"^[+-]?[0-9]+$", value) || error("ABT para_inteiro: texto inválido " * repr(value))
+  result = tryparse(Int64, value)
+  result === nothing && error("ABT para_inteiro: texto fora da faixa de Int64: " * repr(value))
+  return result
+ end
+ error("ABT para_inteiro: esperado inteiro, real ou texto")
+end
+function abt_std_to_real(value)
+ if typeof(value) === Float64
+  return value
+ elseif typeof(value) === Int64
+  result = Float64(value)
+  result < 9.223372036854775808e18 && Int64(result) == value ||
+   error("ABT para_real: o inteiro $value não é exato em Float64")
+  return result
+ elseif value isa String
+  occursin(r"^[+-]?([0-9]+(\.[0-9]*)?|\.[0-9]+)([eE][+-]?[0-9]+)?$", value) ||
+   error("ABT para_real: texto inválido " * repr(value))
+  result = tryparse(Float64, value)
+  result !== nothing && isfinite(result) || error("ABT para_real: texto fora da faixa finita: " * repr(value))
+  return result
+ end
+ error("ABT para_real: esperado inteiro, real ou texto")
+end
+function abt_std_to_text(value)
+ (value isa String || value isa Bool || typeof(value) === Int64 || typeof(value) === Float64) ||
+  error("ABT para_texto: esperado texto, número ou booleano")
+ return string(value)
+end
 abt_std_lines(value) = readlines(IOBuffer(abt_std_text_arg("linhas_texto", value)))
 abt_std_strip(value) = String(strip(abt_std_text_arg("aparar", value)))
 abt_std_uppercase(value) = uppercase(abt_std_text_arg("maiusculas", value))

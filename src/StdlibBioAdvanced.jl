@@ -139,7 +139,6 @@ function abt_bio_align_pair(first_text, second_text, mode, scoring)
   abt_bio_nucleic("alinhar_par", first_text); abt_bio_nucleic("alinhar_par", second_text)
   ('T' in first_text * second_text && 'U' in first_text * second_text) &&
    error("ABT alinhar_par: as sequências devem ser ambas DNA ou ambas RNA")
-  'N' in first_text * second_text && error("ABT alinhar_par: bases ambíguas (N) não são alinháveis; remova ou substitua explicitamente")
  else
   for text in (first_text, second_text)
    abt_bio_text("alinhar_par", text)

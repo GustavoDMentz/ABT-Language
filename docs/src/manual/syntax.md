@@ -22,4 +22,4 @@ valor_inicial = valor_inicial + 1
 mostrar valor_inicial
 ```
 
-Saída: `11`. Um nome ainda não definido é erro; a validação do IR detecta leituras definitivamente inválidas. Conversões explícitas podem ser feitas por funções Julia permitidas, como `Julia.Base.Float64`, após `usar Julia.Base`; veja [interoperação](interop.md).
+Saída: `11`. Um nome ainda não definido é erro; a validação do IR detecta leituras definitivamente inválidas. Conversões são sempre explícitas: `para_inteiro`, `para_real` e `para_texto` não arredondam nem perdem precisão em silêncio (`para_inteiro(2.5)` e `para_real("abc")` são erros). Quem precisar de uma função Julia específica ainda pode usá-la pela [interoperação](interop.md), mas isso não é necessário para converter, contar, ordenar ou remover duplicatas.

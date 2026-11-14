@@ -1,10 +1,77 @@
-/* ABT source highlighting works in light and dark Documenter themes. */
+/* ABT: realce de sintaxe e legibilidade para os temas claro e escuro do Documenter.
+   Metas: texto e links >= 7:1 (WCAG AAA), código inline distinguível, tabelas alinhadas à esquerda. */
+
+/* ---- Realce de código ABT ---- */
 pre code.language-abt { border-left: 3px solid #6a5acd; }
-.abt-keyword { color: #7443a9; font-weight: 600; }
-.abt-string { color: #167643; }
-.abt-number { color: #b45721; }
-.abt-comment { color: #667588; font-style: italic; }
-html.theme--documenter-dark .abt-keyword { color: #c4a5ff; }
-html.theme--documenter-dark .abt-string { color: #8bd6a5; }
-html.theme--documenter-dark .abt-number { color: #f4b17e; }
-html.theme--documenter-dark .abt-comment { color: #a8b4c5; }
+.abt-keyword { color: #6a37a3; font-weight: 600; }
+.abt-string { color: #0f5e34; }
+.abt-number { color: #8f3f0c; }
+.abt-comment { color: #4b5a6b; font-style: italic; }
+html.theme--documenter-dark .abt-keyword { color: #d0b4ff; }
+html.theme--documenter-dark .abt-string { color: #9ee0b5; }
+html.theme--documenter-dark .abt-number { color: #f7bd90; }
+html.theme--documenter-dark .abt-comment { color: #b6c1d0; }
+
+/* ---- Tema claro ---- */
+html.theme--documenter-light #documenter .docs-main .content,
+html.theme--documenter-light #documenter .docs-main .content p,
+html.theme--documenter-light #documenter .docs-main .content li { color: #1a1a1a; }
+html.theme--documenter-light #documenter .docs-main .content a:not(.docs-heading-anchor):not(.docs-heading-anchor-permalink),
+html.theme--documenter-light #documenter .docs-main .docs-footer a { color: #1a4a96; }
+html.theme--documenter-light #documenter .docs-main .content code:not(pre code) {
+  color: #111; background: #eceff3; border: 1px solid #d3d9e0;
+}
+html.theme--documenter-light #documenter .docs-search-query::placeholder,
+html.theme--documenter-light #documenter .docs-label { color: #4a4a4a; }
+
+/* ---- Tema escuro ---- */
+html.theme--documenter-dark #documenter .docs-main .content,
+html.theme--documenter-dark #documenter .docs-main .content p,
+html.theme--documenter-dark #documenter .docs-main .content li { color: #e8ecec; }
+html.theme--documenter-dark #documenter .docs-main .content a:not(.docs-heading-anchor):not(.docs-heading-anchor-permalink),
+html.theme--documenter-dark #documenter .docs-main .docs-footer a { color: #5fe0c8; }
+html.theme--documenter-dark #documenter .docs-main .content code:not(pre code) {
+  color: #f1f5f5; background: rgba(255, 255, 255, 0.10); border: 1px solid rgba(255, 255, 255, 0.16);
+}
+html.theme--documenter-dark #documenter .docs-search-query::placeholder { color: #b9c1cc; }
+
+/* Barra superior, busca e links de modais: o tema usa seletores mais específicos; !important é necessário. */
+html.theme--documenter-light #documenter .docs-search-query,
+html.theme--documenter-light #documenter .docs-sidebar .docs-search-query { color: #565656 !important; }
+html.theme--documenter-dark #documenter .docs-search-query,
+html.theme--documenter-dark #documenter .docs-sidebar .docs-search-query { color: #b9c1cc !important; }
+html.theme--documenter-light #documenter .docs-navbar a,
+html.theme--documenter-light #documenter .modal-card-body a { color: #1a4a96 !important; }
+html.theme--documenter-dark #documenter .docs-navbar a,
+html.theme--documenter-dark #documenter .modal-card-body a { color: #5fe0c8 !important; }
+
+/* ---- Comum aos dois temas ---- */
+/* Links no texto corrido: não depender só da cor. */
+#documenter .docs-main .content p a:not(.docs-heading-anchor):not(.docs-heading-anchor-permalink),
+#documenter .docs-main .content li a:not(.docs-heading-anchor):not(.docs-heading-anchor-permalink) {
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+#documenter .docs-main .content p a:hover,
+#documenter .docs-main .content li a:hover { text-decoration-thickness: 2px; }
+
+/* Código inline com tamanho próximo ao do texto e respiro. */
+#documenter .docs-main .content code:not(pre code) {
+  font-size: 0.9em; padding: 0.1em 0.35em; border-radius: 4px;
+}
+
+/* Tabelas: texto à esquerda, linhas separadas, cabeçalho marcado. */
+/* O Documenter alinha colunas à direita com estilo inline; !important é necessário. */
+#documenter .docs-main .content table th,
+#documenter .docs-main .content table td { text-align: left !important; vertical-align: top; padding: 0.6em 0.75em; }
+#documenter .docs-main .content table th { border-bottom-width: 2px; }
+#documenter .docs-main .content table tbody tr:hover { background: rgba(127, 127, 127, 0.08); }
+#documenter .docs-main .content table td code:not(pre code) { white-space: normal; word-break: break-word; border-color: transparent; font-size: 0.86em; }
+
+/* Item ativo da barra lateral e foco de teclado visíveis. */
+#documenter .docs-sidebar .docs-menu li.is-active > a.tocitem { border-left: 3px solid #6a5acd; padding-left: calc(0.75em - 3px); }
+#documenter a:focus-visible, #documenter button:focus-visible, #documenter input:focus-visible {
+  outline: 2px solid #6a5acd; outline-offset: 2px;
+}
+html.theme--documenter-dark #documenter a:focus-visible,
+html.theme--documenter-dark #documenter button:focus-visible,
+html.theme--documenter-dark #documenter input:focus-visible { outline-color: #d0b4ff; }

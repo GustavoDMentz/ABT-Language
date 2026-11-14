@@ -11,6 +11,6 @@ python3 tools/validate_docs.py
 julia --project=docs docs/make.jl
 ```
 
-O gerador mantém as cinco páginas de operações e a página de exemplos sincronizadas com os contratos revisados em `tools/generate_docs_reference.py`; para alterar o conteúdo, edite esse arquivo e rode o gerador sem `--check`. O validador compara os 76 nomes documentados com `ABT.ABT_STDLIB_NAMES`, checa links e arquivos locais, executa exemplos ABT e inspeciona comandos CLI. As páginas manuais e os tutoriais são editados diretamente em `docs/src/`.
+O gerador mantém as cinco páginas de operações e a página de exemplos sincronizadas com os contratos revisados em `tools/generate_docs_reference.py`; para alterar o conteúdo, edite esse arquivo e rode o gerador sem `--check`. O validador compara os 84 nomes documentados com `ABT.ABT_STDLIB_NAMES`, checa links e arquivos locais, executa exemplos ABT e inspeciona comandos CLI. As páginas manuais e os tutoriais são editados diretamente em `docs/src/`.
 
 Documenter.jl usa o ambiente isolado `docs/Project.toml` e `docs/Manifest.toml`; o runtime ABT não depende dele. O workflow publica apenas após validação e build na `main`. GitHub Pages está configurado com **GitHub Actions** como fonte. A PR valida o artifact; o deploy público ocorre após a integração na `main`. Versões futuras podem usar aliases ou tags no site, mas a publicação inicial aponta para o conteúdo da `main`.
