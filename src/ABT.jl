@@ -7,7 +7,7 @@ include("StdlibRender.jl")
 include("Stdlib.jl")
 include("StdlibBio.jl")
 include("ExtensionRegistry.jl")
-const ABT_BIO_NAMES = Set(("ler_fasta", "descrever_sequencias", "registros_fasta", "alinhar_sequencias"))
+const ABT_BIO_NAMES = Set(("ler_fasta", "descrever_sequencias", "registros_fasta", "alinhar_sequencias", "resumir_comprimentos"))
 const ABT_STDLIB_NAMES = union(Set(("descrever", "registro", "falhar", "ambiente", "ler_texto", "linhas_texto", "aparar", "maiusculas", "inicia_com", "comprimento_texto", "contar_caractere", "esquema", "ler_csv", "coluna", "linhas_tabela", "filtrar_tabela", "transformar_tabela", "resumir_coluna")), ABT_BIO_NAMES, Set(String.(keys(ABT_EXTENSION_SPECS))))
 const ABT_STDLIB = Dict{String,Any}(
  "descrever" => (xs -> abt_std_describe(xs, Statistics)),

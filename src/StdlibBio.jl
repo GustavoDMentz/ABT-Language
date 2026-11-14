@@ -10,14 +10,14 @@ function abt_std_fasta(path, alphabet, ambiguity, case_policy)
  return (; __abt_fasta__=true, path, alphabet, ambiguity, case_policy)
 end
 
-function abt_std_fasta_walk(handle, materialize)
+function abt_std_fasta_walk(handle, materialize, on_record=nothing)
  abt_std_isfasta(handle) || error("ABT FASTA: esperado valor produzido por ler_fasta")
  fastx = Base.require(Base.PkgId(Base.UUID("c2308a5c-f048-11e8-3e8a-31650f418d12"), "FASTX"))
  bio = Base.require(Base.PkgId(Base.UUID("7e6ae17a-c86d-528c-b3b9-7f778a29fe59"), "BioSequences"))
- return Base.invokelatest(abt_std_fasta_walk_loaded, handle, materialize, fastx, bio)
+ return Base.invokelatest(abt_std_fasta_walk_loaded, handle, materialize, fastx, bio, on_record)
 end
 
-function abt_std_fasta_walk_loaded(handle, materialize, fastx, bio)
+function abt_std_fasta_walk_loaded(handle, materialize, fastx, bio, on_record=nothing)
  seen = Set{String}()
  rows = NamedTuple[]
  totals = zeros(Int, 6) # A, C, G, T/U, N, bases
@@ -57,6 +57,7 @@ function abt_std_fasta_walk_loaded(handle, materialize, fastx, bio)
      denominator = Base.checked_add(Base.checked_add(counts[1], counts[2]), Base.checked_add(counts[3], counts[4]))
      denominator > 0 || error("registro $count_records '$id': GC indefinido sem bases não ambíguas")
      values = (counts..., length(typed))
+     on_record === nothing || on_record(id, length(typed))
      for i in 1:6
       totals[i] = Base.checked_add(totals[i], values[i])
      end
