@@ -8,7 +8,7 @@ include("Stdlib.jl")
 include("StdlibBio.jl")
 include("ExtensionRegistry.jl")
 const ABT_BIO_NAMES = Set(("ler_fasta", "descrever_sequencias", "registros_fasta", "alinhar_sequencias"))
-const ABT_STDLIB_NAMES = union(Set(("descrever", "registro", "falhar", "ambiente", "ler_texto", "linhas_texto", "aparar", "maiusculas", "inicia_com", "comprimento_texto", "contar_caractere", "esquema", "ler_csv", "coluna", "linhas_tabela", "filtrar_tabela", "transformar_tabela", "resumir_coluna")), ABT_BIO_NAMES, Set(String.(keys(ABT_EXTENSION_SPECS))))
+const ABT_STDLIB_NAMES = union(Set(("descrever", "registro", "falhar", "ambiente", "ler_texto", "linhas_texto", "aparar", "maiusculas", "inicia_com", "comprimento_texto", "contar_caractere", "contar", "minimo", "maximo", "ordenar", "sem_duplicatas", "para_inteiro", "para_real", "para_texto", "esquema", "ler_csv", "coluna", "linhas_tabela", "filtrar_tabela", "transformar_tabela", "resumir_coluna")), ABT_BIO_NAMES, Set(String.(keys(ABT_EXTENSION_SPECS))))
 const ABT_STDLIB = Dict{String,Any}(
  "descrever" => (xs -> abt_std_describe(xs, Statistics)),
  "registro" => abt_std_record,
@@ -21,6 +21,14 @@ const ABT_STDLIB = Dict{String,Any}(
  "inicia_com" => abt_std_startswith,
  "comprimento_texto" => abt_std_text_length,
  "contar_caractere" => abt_std_char_count,
+ "contar" => abt_std_count,
+ "minimo" => abt_std_min,
+ "maximo" => abt_std_max,
+ "ordenar" => abt_std_sort,
+ "sem_duplicatas" => abt_std_unique,
+ "para_inteiro" => abt_std_to_integer,
+ "para_real" => abt_std_to_real,
+ "para_texto" => abt_std_to_text,
  "esquema" => abt_std_schema,
  "ler_csv" => abt_std_csv,
  "coluna" => abt_std_column,
@@ -309,24 +317,24 @@ expr(p) = disjunction(p)
 function disjunction(p)
  n = conjunction(p)
  while at(p, "OR")
-  op = take(p); n = node(:bin, op, n, conjunction(p))
+  op = lowercase(take(p)); n = node(:bin, op, n, conjunction(p))
  end
  n
 end
 function conjunction(p)
  n = compare(p)
  while at(p, "AND")
-  op = take(p); n = node(:bin, op, n, compare(p))
+  op = lowercase(take(p)); n = node(:bin, op, n, compare(p))
  end
  n
 end
 function compare(p)
  n = add(p)
  while at(p, "IS", ">", "<", ">=", "<=", "==", "!=")
-  op = take(p)
+  op = lowercase(take(p))
   if op in ("is", "é")
    if at(p, "ABOVE", "BELOW")
-    direction = take(p)
+    direction = lowercase(take(p))
     if at(p, "THAN"); take(p); end
     op = direction in ("above", "maior") ? ">" : "<"
    else
@@ -398,7 +406,7 @@ function atom(p)
   lowercase(take(p, "IDENT")) == "a" || error("Expected 'a' after collection")
   return node(:limit, source, atom(p))
  elseif at(p, "AVG", "SUM") && p.pos < length(p.tokens) && p.tokens[p.pos+1].kind == "OF"
-  op = take(p); take(p, "OF"); source = atom(p)
+  op = lowercase(take(p)); take(p, "OF"); source = atom(p)
   condition = nothing
   if at(p, "WHERE"); take(p); condition = expr(p); end
   return node(:agg, op in ("average", "media", "média") ? :avg : :sum, source, condition)
@@ -959,6 +967,25 @@ function validate_ir(program::Vector{IR}; initial_names=Dict{String,Symbol}())
       length(a[2]) == 1 || error("Semantic error: descrever expects 1 argument")
       collection = infer(a[2][1], names)
       collection in (:list, :unknown) || error("Semantic error: descrever expects a collection")
+     elseif name == "contar"
+      length(a[2]) == 1 || error("Semantic error: contar expects 1 argument")
+      collection = infer(a[2][1], names)
+      collection in (:list, :unknown) || error("Semantic error: contar expects a list")
+      return :number
+     elseif name in ("minimo", "maximo", "ordenar", "sem_duplicatas")
+      arities = name == "ordenar" ? (1, 2) : (1, 1)
+      arities[1] <= length(a[2]) <= arities[2] ||
+       error("Semantic error: $name expects " * (name == "ordenar" ? "1 or 2" : "1") * " arguments")
+      collection = infer(a[2][1], names)
+      collection in (:list, :unknown) || error("Semantic error: $name expects a list")
+      for extra in a[2][2:end]
+       infer(extra, names) in (:string, :unknown) || error("Semantic error: $name direction must be text")
+      end
+      return name in ("minimo", "maximo") ? :number : :list
+     elseif name in ("para_inteiro", "para_real", "para_texto")
+      length(a[2]) == 1 || error("Semantic error: $name expects 1 argument")
+      infer(a[2][1], names)
+      return name == "para_texto" ? :string : :number
      elseif name in ("registro", "esquema")
       length(a[2]) >= 2 && iseven(length(a[2])) ||
        error("Semantic error: $name expects name/value pairs")
@@ -970,7 +997,7 @@ function validate_ir(program::Vector{IR}; initial_names=Dict{String,Symbol}())
      extension = get(ABT_EXTENSION_SPECS, Symbol(name), nothing)
      expected = extension === nothing ? get(Dict("falhar"=>1, "ambiente"=>2, "ler_texto"=>1, "linhas_texto"=>1,
                          "aparar"=>1, "maiusculas"=>1, "inicia_com"=>2,
-                         "comprimento_texto"=>1, "contar_caractere"=>2,
+                         "comprimento_texto"=>1, "contar_caractere"=>2, "contar"=>1,
                          "ler_csv"=>3, "coluna"=>2, "linhas_tabela"=>1,
                          "filtrar_tabela"=>4, "transformar_tabela"=>6,
                          "resumir_coluna"=>2, "ler_fasta"=>4,
@@ -1228,7 +1255,14 @@ function julia_ir_expr(n::IR)
  elseif n.op == :call
   return "abt_invoke(" * julia_ir_expr(a[1]) * (isempty(a[2]) ? "" : ", " * join(julia_ir_expr.(a[2]), ", ")) * ")"
  elseif n.op == :list
-  return "[" * join(julia_ir_expr.(a[1]), ", ") * "]"
+  # Um literal Julia promove tipos numéricos mistos ([1, 1.0] vira Float64); o
+  # interpretador preserva cada elemento. `abt_list` reproduz o interpretador.
+  # Listas de constantes do mesmo tipo mantêm o literal nativo, idêntico nos dois.
+  items = a[1]
+  uniform = !isempty(items) && all(x -> x.op == :constant, items) &&
+            length(unique(typeof(x.operands[1]) for x in items)) == 1
+  (isempty(items) || uniform) && return "[" * join(julia_ir_expr.(items), ", ") * "]"
+  return "abt_list(" * join(julia_ir_expr.(items), ", ") * ")"
  elseif n.op == :field
   if n.operands[1].op == :load && n.operands[1].operands[1] == "Python"
    return "abt_external_field(Python, " * quotejl(a[2]) * ")"
@@ -1319,7 +1353,11 @@ function _generate_validated_ir(program::Vector{IR})
                        ("linhas_texto", "abt_std_lines"), ("aparar", "abt_std_strip"),
                        ("maiusculas", "abt_std_uppercase"), ("inicia_com", "abt_std_startswith"),
                        ("comprimento_texto", "abt_std_text_length"),
-                       ("contar_caractere", "abt_std_char_count"), ("esquema", "abt_std_schema"),
+                       ("contar_caractere", "abt_std_char_count"), ("contar", "abt_std_count"),
+                       ("minimo", "abt_std_min"), ("maximo", "abt_std_max"), ("ordenar", "abt_std_sort"),
+                       ("sem_duplicatas", "abt_std_unique"), ("para_inteiro", "abt_std_to_integer"),
+                       ("para_real", "abt_std_to_real"), ("para_texto", "abt_std_to_text"),
+                       ("esquema", "abt_std_schema"),
                        ("ler_csv", "abt_std_csv"), ("coluna", "abt_std_column"),
                        ("linhas_tabela", "abt_std_table_rows"),
                        ("filtrar_tabela", "abt_std_filter_table"),
@@ -1337,6 +1375,7 @@ function _generate_validated_ir(program::Vector{IR})
  append!(lines, [
   "function pseudo_sum(xs)", "    total = 0", "    for x in xs", "        total += x", "    end", "    return total", "end",
   "function pseudo_average(xs)", "    total = 0", "    count = 0", "    for x in xs", "        total += x", "        count += 1", "    end", "    count > 0 || error(\"Cannot average an empty selection\")", "    return total / count", "end",
+  "abt_list(xs...) = isempty(xs) ? Any[] : (mapreduce(typeof, typejoin, xs)[xs...])",
   "function abt_filter(xs, predicate)",
   "    xs isa Vector || error(\"Semantic error: collection operation requires a Vector\")",
   "    return filter(xs) do value",

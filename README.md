@@ -10,7 +10,7 @@ Escreva a intenção. O Julia executa.
 ![versão](https://img.shields.io/badge/vers%C3%A3o-0.13.0-6f42c1?style=for-the-badge)
 ![julia](https://img.shields.io/badge/Julia-1.13.3-9558B2?style=for-the-badge&logo=julia&logoColor=white)
 ![status](https://img.shields.io/badge/status-experimental-orange?style=for-the-badge)
-![opera%C3%A7%C3%B5es](https://img.shields.io/badge/opera%C3%A7%C3%B5es-62-2ea44f?style=for-the-badge)
+![opera%C3%A7%C3%B5es](https://img.shields.io/badge/opera%C3%A7%C3%B5es-70-2ea44f?style=for-the-badge)
 
 [**Manual**](https://gustavodmentz.github.io/ABT-Language/) ·
 [Começar](#-começando-em-2-minutos) ·
@@ -156,11 +156,11 @@ O esquema declara os tipos e a política `"erro"` diz o que fazer com campos aus
 
 ## 📦 O que já vem pronto
 
-**62 operações públicas**, organizadas por domínio. Cada uma tem contrato, erros e exemplo executável na [referência](docs/src/standard-library/index.md).
+**70 operações públicas**, organizadas por domínio. Cada uma tem contrato, erros e exemplo executável na [referência](docs/src/standard-library/index.md).
 
 | Domínio | Para quê | Alguns exemplos |
 |---|---|---|
-| 🧰 [**Núcleo e texto**](docs/src/standard-library/core.md) | Registros, resumo numérico, texto, ambiente | `registro` · `descrever` · `aparar` · `linhas_texto` |
+| 🧰 [**Núcleo, listas e texto**](docs/src/standard-library/core.md) | Registros, listas (contar, extremos, ordenar), conversões, texto, ambiente | `registro` · `descrever` · `contar` · `ordenar` · `sem_duplicatas` · `para_real` |
 | 📄 [**CSV e tabelas**](docs/src/standard-library/tables.md) | Ler, filtrar e transformar tabelas tipadas | `ler_csv` · `filtrar_tabela` · `resumir_coluna` |
 | 📊 [**Estatística**](docs/src/standard-library/statistics.md) | Testes, intervalos, regressão, distribuições | `teste_t` · `correlacao` · `regressao_linear` |
 | 🗂️ [**Dados e JSON**](docs/src/standard-library/data.md) | Agrupar, contar categorias, serializar | `agrupar_dados` · `contar_categorias` · `codificar_json` |

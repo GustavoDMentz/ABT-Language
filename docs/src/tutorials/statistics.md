@@ -3,11 +3,10 @@
 **Objetivo:** obter resumo e selecionar observações. **Pré-requisito:** [instalação](../getting-started/install.md). **Arquivo:** `applications/statistics/descritiva.abt`; não usa arquivo de dados externo.
 
 ```abt
-usar Julia.Base
 dados = [12, 15, 18, 21, 24, 30]
 resumo = descrever(dados)
 altos = filtrar dados onde valor >= 18
-resultado = registro("resumo", resumo, "quantidade_maior_igual_18", Julia.Base.length(altos))
+resultado = registro("resumo", resumo, "quantidade_maior_igual_18", contar(altos))
 mostrar resultado
 ```
 

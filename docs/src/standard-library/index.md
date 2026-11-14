@@ -1,10 +1,10 @@
 # Índice da biblioteca padrão
 
-A fonte de verdade dos nomes públicos é `ABT.ABT_STDLIB_NAMES` em `src/ABT.jl`, formada pelas operações básicas, bioinformáticas e por `ABT_EXTENSION_SPECS` em `src/ExtensionRegistry.jl`. Na versão 0.13.0 há **62 operações**. `abt operacoes` mostra as extensões modulares; não lista todas as operações básicas. A validação documental compara o conjunto completo com as seções abaixo.
+A fonte de verdade dos nomes públicos é `ABT.ABT_STDLIB_NAMES` em `src/ABT.jl`, formada pelas operações básicas, bioinformáticas e por `ABT_EXTENSION_SPECS` em `src/ExtensionRegistry.jl`. Esta branch adiciona ao catálogo 0.13.0 as operações fundamentais de lista (`contar`, `minimo`, `maximo`, `ordenar`, `sem_duplicatas`) e as conversões explícitas (`para_inteiro`, `para_real`, `para_texto`), totalizando **70 operações**. `abt operacoes` mostra as extensões modulares; não lista todas as operações básicas. A validação documental compara o conjunto completo com as seções abaixo.
 
 | Domínio | Operações |
 |---|---|
-| [Núcleo, texto e ambiente](core.md) | `registro`, `descrever`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere` |
+| [Núcleo, texto e ambiente](core.md) | `registro`, `descrever`, `contar`, `minimo`, `maximo`, `ordenar`, `sem_duplicatas`, `para_inteiro`, `para_real`, `para_texto`, `falhar`, `ambiente`, `ler_texto`, `linhas_texto`, `aparar`, `maiusculas`, `inicia_com`, `comprimento_texto`, `contar_caractere` |
 | [CSV e tabelas](tables.md) | `esquema`, `ler_csv`, `coluna`, `linhas_tabela`, `filtrar_tabela`, `transformar_tabela`, `resumir_coluna` |
 | [Estatística e bioestatística](statistics.md) | `resumo_estatistico`, `intervalo_confianca_media`, `correlacao`, `teste_t`, `teste_nao_parametrico`, `teste_normalidade`, `teste_proporcoes`, `probabilidade_distribuicao`, `quantil_distribuicao`, `regressao_linear`, `probabilidade_normal` |
 | [Dados, JSON e álgebra](data.md) | `resumir_grupos`, `contar_categorias`, `agrupar_dados`, `testar_grupos`, `categorias`, `codificar_json`, `resolver_sistema_spd` |
