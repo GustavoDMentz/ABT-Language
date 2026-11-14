@@ -1,4 +1,4 @@
-# Gramática da versão 0.14.0
+# Gramática da versão 0.15.0
 
 O resumo abaixo transcreve a estrutura de `tokenize`, `statement`, `expr` e `atom` em `src/ABT.jl`. É uma **EBNF de superfície** com restrições semânticas descritas depois; não substitui o parser para mensagens de erro ou casos de fronteira. `ws` inclui espaços, tabs e quebras de linha, exceto dentro de pipelines. Comentário começa com `#` e termina na quebra de linha.
 
@@ -10,7 +10,8 @@ instrucao     = "mostrar" , expressao
               | "para" , "cada" , nome , "em" , expressao , bloco
               | ("função" | "funcao") , nome , "(" , [ nomes ] , ")" , bloco
               | "retornar" , expressao
-              | "usar" , ("Julia" | "Python") , "." , nome , { "." , nome } ;
+              | "usar" , "Python" , "." , nome , { "." , nome }
+              | "usar" , "Julia" , "." , nome ;
 bloco         = "{" , { ";" | instrucao } , "}" ;
 nomes         = nome , { "," , nome } ;
 expressao     = disjuncao ;
@@ -22,7 +23,7 @@ produto       = unario , { ("*" | "/") , unario } ;
 unario        = ("+" | "-") , unario | potencia ;
 potencia      = atomo , [ "^" , unario ] ;
 atomo         = numero | texto | booleano | lista | "(" , expressao , ")"
-              | nome , { "(" , [ argumentos ] , ")" | "." , nome | "de" , atomo }
+              | ( nome | "valor" ) , { "(" , [ argumentos ] , ")" | "." , nome | "de" , atomo }
               | ("soma" | "media" | "média") , "de" , atomo , [ "onde" , expressao ]
               | "filtrar" , atomo , "onde" , expressao
               | "transformar" , atomo , "com" , expressao
@@ -31,7 +32,7 @@ lista         = "[" , [ argumentos ] , "]" ;
 argumentos    = expressao , { "," , expressao } ;
 ```
 
-`numero` é sequência decimal sem sinal, com parte `.<dígitos>` opcional. O sinal é operador unário. `texto` usa aspas duplas e escapes reconhecidos por `Base.unescape_string`. `nome` começa com letra Unicode e continua com caracteres de palavra; o parser reserva prefixo `__abt_`. As palavras-chave portuguesas e aliases ingleses estão no dicionário `KEYWORDS`; `mostrar/show`, `se/if`, `para/for`, `cada/each`, `em/in`, `retornar/return`, `verdadeiro/true`, `falso/false`, `e/and`, `ou/or`, `onde/where`, `soma/sum`, `media/média/average`, `de/of`, `é/is`, `maior/above`, `menor/below`, `que/than`, `senao/senão/else`, `função/funcao/function` compartilham tokens. `usar` é reservado. As palavras `filtrar`, `transformar`, `limitar`, `com` e `a` são contextuais.
+`numero` é sequência decimal sem sinal, com parte `.<dígitos>` opcional. O sinal é operador unário. `texto` usa aspas duplas e escapes reconhecidos por `Base.unescape_string`. `nome` começa com letra Unicode ou sublinhado (`_`) e continua com caracteres de palavra (letras, dígitos e `_`); o parser reserva prefixo `__abt_`. As palavras-chave portuguesas e aliases ingleses estão no dicionário `KEYWORDS` e **não distinguem maiúsculas de minúsculas**: o lexer compara `lowercase(lexema)`, então `SE`, `Se` e `se` são a mesma palavra; já os nomes de variáveis e funções distinguem (`Total` e `total` são nomes diferentes). `mostrar/show`, `se/if`, `para/for`, `cada/each`, `em/in`, `retornar/return`, `verdadeiro/true`, `falso/false`, `e/and`, `ou/or`, `onde/where`, `soma/sum`, `media/média/average`, `de/of`, `é/is`, `maior/above`, `menor/below`, `que/than`, `senao/senão/else`, `função/funcao/function` compartilham tokens. `valor/value` também são palavras reservadas (token `VALUE`): podem ser lidas como expressão, para o elemento corrente nas operações de lista, mas não podem ser definidas como nome (`valor = 3` é erro de sintaxe). `usar` é reservado. Os nomes `soma`, `sum`, `media`, `média` e `average` são exceção: continuam sendo aceitos como nomes. As palavras `filtrar`, `transformar`, `limitar`, `com` e `a` são contextuais.
 
 `é maior que` e `é menor que` são reconhecidos em comparações como `>` e `<`; `que` é opcional no parser. A forma de propriedade `campo de registro` exige um nome à esquerda. Chamadas de função e acesso a campo associam antes dos operadores da tabela acima. A potência associa à direita; as demais cadeias binárias associam à esquerda.
 

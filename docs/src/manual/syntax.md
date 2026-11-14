@@ -14,7 +14,7 @@ mostrar registro("nome", rotulo, "n", quantidade)
 
 Inteiros são `Int64`; números com ponto são `Float64`; literais booleanos são `verdadeiro`/`falso` (também `true`/`false`); texto usa aspas duplas; listas usam `[...]`. Não há literal `ausente` no parser. Valores ausentes podem surgir de CSV com política explícita ou de bibliotecas externas. `registro` cria um valor estruturado; `esquema` declara tipos de colunas, não um tipo geral de variável.
 
-Identificadores aceitam letras Unicode e dígitos após o primeiro caractere. Nomes que começam com `__abt_` são reservados. As palavras-chave listadas na [gramática](../reference/grammar.md) não devem ser usadas como nomes comuns, salvo os nomes contextuais de agregação aceitos pelo parser. Atribuição usa `nome = expressão`; não há declaração de tipo nem coerção implícita geral.
+Identificadores começam com letra Unicode ou sublinhado (`_`) e continuam com letras Unicode, dígitos e `_`; nomes distinguem maiúsculas de minúsculas, ao contrário das palavras-chave (`SE` equivale a `se`). Nomes que começam com `__abt_` são reservados. As palavras-chave listadas na [gramática](../reference/grammar.md), incluindo `valor`/`value`, não podem ser usadas como nomes comuns, salvo os nomes contextuais de agregação aceitos pelo parser. Atribuição usa `nome = expressão`; não há declaração de tipo nem coerção implícita geral.
 
 ```abt
 valor_inicial = 10
