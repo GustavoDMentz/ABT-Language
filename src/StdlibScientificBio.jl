@@ -2,7 +2,7 @@
 function abt_sc_dna(text, operation; allow_n=false)
  text isa String && !isempty(text) || error("ABT $operation: sequência deve ser texto não vazio")
  allowed = allow_n ? "ACGTN" : "ACGT"
- all(c -> c in allowed, text) || error("ABT $operation: esperado DNA maiúsculo, alfabeto $allowed")
+ all(byte -> byte == 0x41 || byte == 0x43 || byte == 0x47 || byte == 0x54 || (allow_n && byte == 0x4e), codeunits(text)) || error("ABT $operation: esperado DNA maiúsculo, alfabeto $allowed")
  return text
 end
 function abt_sc_fastq(path, alphabet, ambiguity, encoding)
@@ -55,17 +55,22 @@ function abt_sc_fastq_walk(handle, materialize, sink=nothing)
 end
 function abt_sc_fastq_loaded(handle, materialize, fx, sink=nothing)
  rows = NamedTuple[]; counts = zeros(Int,5); records=0; kept=0; bases=0; quality_sum=0; qmin=93; qmax=0
- open(handle.path) do io
+ io = open(handle.path)  # sem do-closure: evita variáveis em caixa (Core.Box) no laço
+ try
   reader=fx.FASTQ.Reader(io)
   try
    for rec in reader
     records=Base.checked_add(records,1)
     id=String(fx.identifier(rec)); isempty(id) && error("registro $records: identificador vazio")
-    seq=fx.sequence(String,rec)
+    seq=fx.sequence(String,rec)::String  # o módulo é carregado dinamicamente: fixar o tipo mantém o laço estável
     abt_sc_dna(seq,"FASTQ registro $records";allow_n=handle.ambiguity=="permitir_N")
-    scores=Int.(collect(fx.quality_scores(rec,fx.FASTQ.SANGER_QUAL_ENCODING)))
+    scores=Int.(collect(fx.quality_scores(rec,fx.FASTQ.SANGER_QUAL_ENCODING)))::Vector{Int}
     length(scores)==length(seq) && all(q -> 0<=q<=93,scores) || error("registro $records: qualidades Phred inválidas")
-    local_counts=[count(==(b),seq) for b in "ACGTN"]
+    local_counts=zeros(Int,5)
+    for byte in codeunits(seq)
+     byte == 0x41 ? (local_counts[1]+=1) : byte == 0x43 ? (local_counts[2]+=1) : byte == 0x47 ? (local_counts[3]+=1) :
+     byte == 0x54 ? (local_counts[4]+=1) : (local_counts[5]+=1)
+    end
     abt_sc_fastq_passes(handle, length(seq), scores, local_counts[5]) || continue
     kept=Base.checked_add(kept,1)
     sink === nothing || sink(id, String(fx.description(rec)), seq, scores)
@@ -83,6 +88,8 @@ function abt_sc_fastq_loaded(handle, materialize, fx, sink=nothing)
   finally
    close(reader)
   end
+ finally
+  close(io)
  end
  records>0 || error("arquivo sem registros")
  if materialize === true || materialize === :metrics
