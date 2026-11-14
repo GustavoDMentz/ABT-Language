@@ -32,19 +32,12 @@ function fails_everywhere(source, fragment)
     end
 end
 
-# Nota: listas literais mistas Int64/Float64 (`[1, 1.0]`) divergem entre backends
-# desde antes desta mudança: o interpretador preserva os tipos, a Julia gerada
-# promove todos a Float64. Por isso os casos mistos acima usam as funções diretamente.
-# O achado está registrado em docs/architecture/ABSTRACTION_AUDIT.md.
 @testset "minimo e maximo" begin
     parity("mostrar minimo([3, 1, 2])\nmostrar maximo([3, 1, 2])", "1\n3")
     parity("mostrar minimo([2.5, 1.5, 3.5])\nmostrar maximo([2.5, 1.5, 3.5])", "1.5\n3.5")
-    # Listas mistas Int64/Float64 (ver nota abaixo): contrato verificado diretamente.
+    parity("mostrar minimo([2, 1.5, 3])\nmostrar maximo([2, 2.5, 1])", "1.5\n2.5")
     # Empate numérico: vence a primeira ocorrência, preservando seu tipo.
-    @test ABT.abt_std_min(Any[2, 1.5, 3]) === 1.5
-    @test ABT.abt_std_max(Any[2, 2.5, 1]) === 2.5
-    @test ABT.abt_std_min(Any[1, 1.0]) === Int64(1)
-    @test ABT.abt_std_max(Any[1.0, 1]) === 1.0
+    parity("mostrar minimo([1, 1.0])\nmostrar maximo([1.0, 1])", "1\n1.0")
     parity("mostrar maximo(filtrar [1, 5, 9] onde valor < 9)", "5")
     fails_everywhere("mostrar minimo([])", "lista vazia")
     fails_everywhere("mostrar maximo([\"a\", \"b\"])", "números finitos")
@@ -58,11 +51,10 @@ end
 @testset "ordenar" begin
     parity("mostrar ordenar([3, 1, 2])\nmostrar ordenar([3, 1, 2], \"decrescente\")", "[1, 2, 3]\n[3, 2, 1]")
     parity("mostrar ordenar([\"b\", \"a\", \"c\"])", "[\"a\", \"b\", \"c\"]")
-    @test ABT.abt_std_sort(Any[2, 1.5, 1]) == Any[1, 1.5, 2]
+    parity("mostrar ordenar([2, 1.5, 1])", "[1, 1.5, 2]")
     # Estabilidade: valores iguais de tipos distintos mantêm a ordem original.
-    @test ABT.abt_std_sort(Any[1.0, 1, 0]) == Any[0, 1.0, 1]
-    @test typeof.(ABT.abt_std_sort(Any[1.0, 1, 0])) == [Int64, Float64, Int64]
-    @test typeof.(ABT.abt_std_sort(Any[1, 1.0], "decrescente")) == [Int64, Float64]
+    parity("mostrar ordenar([1.0, 1, 0])", "[0, 1.0, 1]")
+    parity("mostrar ordenar([1, 1.0], \"decrescente\")", "[1, 1.0]")
     parity("mostrar ordenar([])", "[]")
     parity("mostrar contar(ordenar(filtrar [3, 1, 2] onde valor > 1))", "2")
     fails_everywhere("mostrar ordenar([1, \"a\"])", "só de números")
@@ -79,9 +71,9 @@ end
     parity("mostrar sem_duplicatas([3, 1, 3, 2, 1])", "[3, 1, 2]")
     parity("mostrar sem_duplicatas([\"a\", \"b\", \"a\"])", "[\"a\", \"b\"]")
     # Igualdade `isequal`: 1 e 1.0 são iguais (vence a primeira ocorrência); 0.0 e -0.0 são distintos.
-    @test ABT.abt_std_unique(Any[1, 1.0, 1]) == Any[1]
-    @test typeof.(ABT.abt_std_unique(Any[1.0, 1])) == [Float64]
-    @test ABT.abt_std_unique(Any[0.0, -0.0]) == Any[0.0, -0.0]
+    parity("mostrar sem_duplicatas([1, 1.0, 1])", "[1]")
+    parity("mostrar sem_duplicatas([1.0, 1])", "[1.0]")
+    parity("mostrar sem_duplicatas([0.0, -0.0])", "[0.0, -0.0]")
     parity("mostrar sem_duplicatas([[1], [1], [2]])", "[[1], [2]]")
     parity("mostrar sem_duplicatas([])", "[]")
     fails_everywhere("mostrar sem_duplicatas(ambiente(\"ABT_VARIAVEL_INEXISTENTE\", \"aab\"))", "esperada uma lista")

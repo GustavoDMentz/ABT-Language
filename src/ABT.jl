@@ -1255,7 +1255,14 @@ function julia_ir_expr(n::IR)
  elseif n.op == :call
   return "abt_invoke(" * julia_ir_expr(a[1]) * (isempty(a[2]) ? "" : ", " * join(julia_ir_expr.(a[2]), ", ")) * ")"
  elseif n.op == :list
-  return "[" * join(julia_ir_expr.(a[1]), ", ") * "]"
+  # Um literal Julia promove tipos numéricos mistos ([1, 1.0] vira Float64); o
+  # interpretador preserva cada elemento. `abt_list` reproduz o interpretador.
+  # Listas de constantes do mesmo tipo mantêm o literal nativo, idêntico nos dois.
+  items = a[1]
+  uniform = !isempty(items) && all(x -> x.op == :constant, items) &&
+            length(unique(typeof(x.operands[1]) for x in items)) == 1
+  (isempty(items) || uniform) && return "[" * join(julia_ir_expr.(items), ", ") * "]"
+  return "abt_list(" * join(julia_ir_expr.(items), ", ") * ")"
  elseif n.op == :field
   if n.operands[1].op == :load && n.operands[1].operands[1] == "Python"
    return "abt_external_field(Python, " * quotejl(a[2]) * ")"
@@ -1368,6 +1375,7 @@ function _generate_validated_ir(program::Vector{IR})
  append!(lines, [
   "function pseudo_sum(xs)", "    total = 0", "    for x in xs", "        total += x", "    end", "    return total", "end",
   "function pseudo_average(xs)", "    total = 0", "    count = 0", "    for x in xs", "        total += x", "        count += 1", "    end", "    count > 0 || error(\"Cannot average an empty selection\")", "    return total / count", "end",
+  "abt_list(xs...) = isempty(xs) ? Any[] : (mapreduce(typeof, typejoin, xs)[xs...])",
   "function abt_filter(xs, predicate)",
   "    xs isa Vector || error(\"Semantic error: collection operation requires a Vector\")",
   "    return filter(xs) do value",
