@@ -87,7 +87,7 @@ printf 'mostrar "Olá, mundo!"\n' > ola.abt
 | `abt --help` · `abt --version` | Ajuda e versão |
 
 Códigos de saída: `0` sucesso · `1` erro no programa · `2` uso ou ambiente.
-A CLI usa `--compile=min` por padrão; `ABT_JULIA_COMPILE=all` ativa a compilação Julia completa.
+O perfil `padrao` serve a programas curtos e a análises científicas; `--perfil rapido` existe para casos especiais. Veja [perfis de execução](docs/src/getting-started/install.md#perfis-de-execução).
 
 ---
 
