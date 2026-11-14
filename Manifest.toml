@@ -8,7 +8,7 @@ project_hash = "1f31cf59144627a4113383696ff3e2eefe1084ea"
 deps = ["BioAlignments", "BioSequences", "CSV", "Cairo", "CategoricalArrays", "DataFrames", "Distributions", "FASTX", "GLM", "HypothesisTests", "JSON", "LinearAlgebra", "MultipleTesting", "Optim", "Statistics", "StatsBase", "TOML", "Tables"]
 path = "."
 uuid = "d2be09ca-9509-4f94-b386-c1bd8c5c641c"
-version = "0.13.0"
+version = "0.14.0"
 
 [[deps.ADTypes]]
 deps = ["PrecompileTools"]

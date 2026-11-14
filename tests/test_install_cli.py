@@ -42,7 +42,7 @@ class InstalledCLI(unittest.TestCase):
         link = self.home / ".local/bin/abt"
         self.assertTrue(link.is_symlink())
         self.install()
-        self.assertEqual(self.call("abt", "--version").stdout.strip(), "ABT 0.13.0")
+        self.assertEqual(self.call("abt", "--version").stdout.strip(), "ABT 0.14.0")
         installed = self.home / ".local/share/abt/src/CLI.jl"
         installed.write_text(installed.read_text() + "\n# user modification\n")
         blocked = self.call(sys.executable, str(ROOT / "tools/install.py"))

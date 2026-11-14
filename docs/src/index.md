@@ -1,6 +1,6 @@
 # ABT — manual oficial
 
-ABT 0.13.0 é uma linguagem experimental de alto nível executada sobre Julia. Ela oferece sintaxe curta para controle de fluxo, coleções e operações científicas, com contratos explícitos para dados e pacotes. PythonCall é uma ponte opcional. Esta branch documenta a versão candidata 0.13.0; a publicação depende de revisão e integração da PR.
+ABT 0.14.0 é uma linguagem experimental de alto nível executada sobre Julia. Ela oferece sintaxe curta para controle de fluxo, coleções e operações científicas, com contratos explícitos para dados e pacotes. PythonCall é uma ponte opcional. Esta branch documenta a versão candidata 0.13.0; a publicação depende de revisão e integração da PR.
 
 ```abt
 dados = [1, 2, 3, 4, 5]
