@@ -69,11 +69,13 @@ Implementadas na categoria B depois que o contrato de cada caso-limite foi decid
 | `para_real` | Real; inteiro exato em `Float64`; texto decimal ou científico finito. | Aceitar `NaN`/`Inf`: valores não finitos já são rejeitados pela biblioteca estatística. |
 | `para_texto` | Texto, número e booleano; mesma representação de `mostrar` para escalares. | Converter listas/registros: a apresentação de coleções pertence a `mostrar` e não tem contrato textual estável. |
 
-Cobertura: `tests/test_abstraction_lists.jl` (valores, erros, composição com `filtrar`/`transformar`, paridade nos três modos, estabilidade, nomes de usuário idênticos aos novos nomes, ponte `Julia.Base` intacta).
+Cobertura: `tests/test_abstraction_lists.jl` (valores, erros, composição com `filtrar`/`transformar`, paridade nos três modos, inclusive listas mistas, estabilidade, nomes de usuário idênticos aos novos nomes, ponte `Julia.Base` intacta).
 
-### Achado novo: listas literais mistas divergem entre backends
+### Achado corrigido: listas literais mistas divergiam entre backends
 
-Reprodução (já presente em `main`): `mostrar [1, 1.0]` apresenta `[1, 1.0]` no interpretador, onde a lista é `Vector{Any}`, e `[1.0, 1.0]` na Julia gerada, onde o literal é promovido a `Vector{Float64}`. Listas homogêneas não são afetadas. **Não foi corrigido nesta etapa**: emitir `Any[...]` na geração alinharia o tipo observável, mas muda o desempenho e a tipagem do código gerado para todos os programas; a decisão é arquitetural (categoria C) e requer benchmarks. Os testes novos verificam os casos mistos chamando a implementação diretamente, e os casos de lista homogênea nos três modos.
+Reprodução (presente em `main`): `mostrar [1, 1.0]` apresentava `[1, 1.0]` no interpretador e `[1.0, 1.0]` na Julia gerada, onde o literal Julia promovia os elementos a `Float64`. Listas homogêneas não eram afetadas.
+
+**Correção:** o gerador passa a emitir `abt_list(...)` para literais cujos itens não sejam constantes de um único tipo; a função usa `typejoin` dos tipos dos elementos, como o interpretador (`[1, 1.0]` é `Vector{Real}` em ambos, cada elemento mantém seu tipo). Literais vazios e listas de constantes do mesmo tipo continuam sendo literais Julia nativos, de modo que o código gerado para programas numéricos homogêneos é idêntico ao anterior. Cobertura: `tests/test_list_literal_parity.jl` e os casos mistos de `tests/test_abstraction_lists.jl` nos três modos. Impacto de compatibilidade: o único comportamento que muda é o da Julia gerada com listas mistas, que passa a coincidir com o interpretador e com a documentação (o interpretador é a referência de comportamento da CLI).
 
 ## Prioridades e decisões
 
@@ -101,7 +103,7 @@ O script de aplicações terminou com **112 PASS, 0 FAIL, 0 TIMEOUT**, incluindo
 
 ### Validação da segunda etapa (operações de lista e conversões)
 
-Ambiente: Linux, Julia 1.13.3, **sem PythonCall** (os testes de ponte Python ficam PARTIAL). Linha de base (commit anterior à etapa): 42 PASS, 2 PROBE, 4 PARTIAL, 0 FAIL, 0 TIMEOUT. Depois: **43 PASS**, 2 PROBE, 4 PARTIAL, 0 FAIL, 0 TIMEOUT; a única diferença entre as execuções é o novo `test_abstraction_lists.jl` (PASS). Script de aplicações: 112 PASS, 0 FAIL. `generate_docs_reference.py --check` sincronizado (70 operações). `validate_docs.py`: 49 PASS e 1 FAIL, o exemplo de `manual/interop.md` que importa `Python.math`, por falta de PythonCall neste ambiente; todos os demais exemplos, inclusive o novo de `collections.md` e `nucleo.abt`, passam. Não foram reexecutados nesta etapa os diferenciais de bioestatística e científico.
+Ambiente: Linux, Julia 1.13.3, **sem PythonCall** (os testes de ponte Python ficam PARTIAL). Linha de base (commit anterior à etapa): 42 PASS, 2 PROBE, 4 PARTIAL, 0 FAIL, 0 TIMEOUT. Depois (incluindo a correção das listas literais mistas): **44 PASS**, 2 PROBE, 4 PARTIAL, 0 FAIL, 0 TIMEOUT; as únicas diferenças entre as execuções são os novos `test_abstraction_lists.jl` e `test_list_literal_parity.jl` (PASS). Script de aplicações, repetido após a correção do gerador: 112 PASS, 0 FAIL (executado em 4 grupos paralelos por causa do tempo). `generate_docs_reference.py --check` sincronizado (70 operações). `validate_docs.py`: 49 PASS e 1 FAIL, o exemplo de `manual/interop.md` que importa `Python.math`, por falta de PythonCall neste ambiente; todos os demais exemplos, inclusive o novo de `collections.md` e `nucleo.abt`, passam. Não foram reexecutados nesta etapa os diferenciais de bioestatística e científico.
 
 ### Reprodução
 
