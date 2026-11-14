@@ -1,0 +1,6 @@
+saldo = 100.0
+taxa = 0.05
+para cada mes em [1, 2, 3] {
+    saldo = saldo + saldo * taxa
+    mostrar saldo
+}

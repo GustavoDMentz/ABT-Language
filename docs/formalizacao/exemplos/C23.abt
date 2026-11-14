@@ -1,0 +1,4 @@
+para cada i em [1, 2] {
+    se i == 2 { y = 7 } senao { y = 8 }
+    mostrar y
+}

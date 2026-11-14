@@ -1,0 +1,7 @@
+x = 1
+mostrar x
+x = x + 1
+mostrar x
+y = x
+x = 5
+mostrar y

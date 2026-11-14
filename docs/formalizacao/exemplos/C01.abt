@@ -1,0 +1,6 @@
+x = 1
+se x > 0 { mostrar 1 } senao { mostrar 2 }
+se x < 0 { mostrar 3 }
+se x > 0 {
+    se x > 5 { mostrar 100 } senao { mostrar 10 }
+} senao { mostrar 0 }

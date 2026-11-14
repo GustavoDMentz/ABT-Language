@@ -1,0 +1,4 @@
+mostrar -2 ^ 2
+mostrar (-2) ^ 2
+mostrar 2 ^ 3 ^ 2
+mostrar (2 ^ 3) ^ 2

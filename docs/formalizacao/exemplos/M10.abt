@@ -1,0 +1,3 @@
+x = 1
+x = verdadeiro
+se x { mostrar 1 }

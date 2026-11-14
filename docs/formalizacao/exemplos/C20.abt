@@ -1,0 +1,2 @@
+função f() { retornar 3 }
+se f() { mostrar 1 }

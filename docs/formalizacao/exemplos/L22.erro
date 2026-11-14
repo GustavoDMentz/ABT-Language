@@ -1,0 +1,3 @@
+Erro ABT[E000] — erro de compilação ou execução
+
+ArgumentError: invalid base 10 digit '٣' in "٣"

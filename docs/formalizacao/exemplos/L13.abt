@@ -1,0 +1,5 @@
+soma = 3
+media = 2
+com = 1
+filtrar = 4
+mostrar soma + media + com + filtrar

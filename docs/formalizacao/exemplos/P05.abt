@@ -1,0 +1,5 @@
+dados = [1, 2, 3, 4, 5]
+dados
+    filtrar onde valor > 2
+    limitar a 2
+    mostrar

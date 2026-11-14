@@ -1,0 +1,5 @@
+total = 0
+para cada i em [1, 2, 3, 4] {
+    total = total + i
+}
+mostrar total

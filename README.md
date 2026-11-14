@@ -197,6 +197,7 @@ O mesmo front-end alimenta dois caminhos de execução com resultados equivalent
 |---|---|
 | Aprender do zero | [Primeiro programa](docs/src/tutorials/first-program.md) |
 | Entender a linguagem | [Sintaxe](docs/src/manual/syntax.md) · [Coleções e pipelines](docs/src/manual/collections.md) · [Gramática](docs/src/reference/grammar.md) |
+| Estudar a linguagem formalmente | [Especificação formal da ABT 0.15.0](docs/formalizacao/ESPECIFICACAO_ABT_0.15.0.md): regras léxicas, EBNF, semântica e 123 exemplos executáveis |
 | Consultar operações | [Referência da biblioteca](docs/src/standard-library/index.md) |
 | Ver programas completos | [Exemplos](docs/src/examples/programs.md) · [`applications/`](applications/README.md) |
 | Usar ciência de dados | [Estatística](docs/src/tutorials/statistics.md) · [Bioestatística](docs/src/tutorials/biostatistics.md) · [Bioinformática](docs/src/tutorials/bioinformatics.md) · [Bioinformática avançada](docs/src/tutorials/bioinformatics-advanced.md) |
@@ -212,6 +213,7 @@ O site publicado está em **<https://gustavodmentz.github.io/ABT-Language/>**.
 ```bash
 python3 tests/run_all_tests.py --julia "$ABT_JULIA" --timeout 180   # suíte de testes
 python3 tools/validate_docs.py                                      # documentação e exemplos
+python3 docs/formalizacao/tools/verificar_exemplos.py --abt bin/abt # exemplos da especificação formal
 julia --project=docs docs/make.jl                                   # build do site
 ```
 

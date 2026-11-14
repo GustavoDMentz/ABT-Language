@@ -1,0 +1,10 @@
+temperatura = 27.5
+se temperatura < 15 {
+    mostrar "frio"
+} senao {
+    se temperatura >= 15 e temperatura < 25 {
+        mostrar "ameno"
+    } senao {
+        mostrar "quente"
+    }
+}

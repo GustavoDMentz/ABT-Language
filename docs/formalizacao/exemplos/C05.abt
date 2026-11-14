@@ -1,0 +1,3 @@
+x = 1
+se x > 0 { mostrar 1 }
+senao { mostrar 2 }

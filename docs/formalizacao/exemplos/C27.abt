@@ -1,0 +1,5 @@
+contador = 0
+para cada passo em [1, 2, 3, 4, 5] {
+    contador = contador + passo
+}
+mostrar contador

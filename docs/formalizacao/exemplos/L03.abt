@@ -1,0 +1,6 @@
+ação = 4
+preço = 5
+mostrar ação + preço
+a_b = 1
+_a = 2
+mostrar a_b + _a
