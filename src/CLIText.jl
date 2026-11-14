@@ -20,9 +20,5 @@ Opções:
   --depurar         Exibe também a exceção técnica completa; use antes do comando.
   --perfil NOME     Perfil de execução: padrao (recomendado) ou rapido.
 
-Ambiente:
-  ABT_JULIA          Caminho do Julia 1.13.3.
-  ABT_JULIA_COMPILE  Modo de compilação Julia (min, yes, all, no); --perfil tem precedência.
-
 Códigos de saída: 0 sucesso, 1 erro no programa, 2 uso incorreto ou arquivo ausente.
 """
