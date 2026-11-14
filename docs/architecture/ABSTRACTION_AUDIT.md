@@ -40,7 +40,7 @@ Os outros 30 arquivos `.abt` são nativos: `applications/bio/` (2), `application
 | Contagem | `descrever` e resumos tabulares incluem contagens; faltava contar uma lista arbitrária. | Categoria A: `contar(lista)` estrito. |
 | Soma e agregações | `soma de` e resumos existentes. | Reutilizar. |
 | Mínimo e máximo | `descrever` e `resumir_coluna` cobriam amostras/tabelas; faltava extremo genérico de lista. | **Implementado (segunda etapa):** `minimo(lista)` e `maximo(lista)`. Lista numérica finita não vazia; vazio, texto, ausente e não finito são erros; o resultado é o próprio elemento (tipo preservado, empate → primeira ocorrência). |
-| Ordenação e duplicatas | `ordenar_tabela` e `remover_duplicatas` cobrem tabelas; listas só tinham `Julia.Base.sort`/`unique`. | **Implementado:** `ordenar(lista[, direcao])` (números ou textos, nunca misturados; estável; `crescente`/`decrescente` como em `ordenar_tabela`) e `sem_duplicatas(lista)` (primeira ocorrência; igualdade `isequal`). Tabelas continuam com as operações próprias. |
+| Ordenação e duplicatas | `ordenar_tabela` e `remover_duplicatas` cobrem tabelas; listas só tinham `Julia.Base.sort`/`unique`. | **Implementado:** `ordenar(lista[, direcao])` (números ou textos, nunca misturados; estável; `crescente`/`decrescente` como em `ordenar_tabela`) e `sem_duplicatas(lista)` (primeira ocorrência; igualdade = operador `==` da ABT). Tabelas continuam com as operações próprias. |
 | Conversões | Só pela ponte Julia. | **Implementado:** `para_inteiro`, `para_real`, `para_texto`. Sem arredondamento (real com fração é erro), sem perda de precisão (inteiro inexato em `Float64` é erro), texto estrito (sem espaços, sem separadores), sem coerção de booleano. Arredondar continua sem operação; ver B abaixo. |
 | Listas e registros | Filtro, transformação, limite, criação de registro e acesso a campos. | Reutilizar; não criar mutação implícita. |
 | Ausentes | CSV/tabelas exigem política explícita. | Preservar; não inferir política em operações novas. |
@@ -64,12 +64,30 @@ Implementadas na categoria B depois que o contrato de cada caso-limite foi decid
 | --- | --- | --- |
 | `minimo`, `maximo` | Somente `Int64`/`Float64` finitos; retorna o elemento, não uma cópia convertida; empate → primeira ocorrência. | Promover tudo a `Float64`: perderia precisão em inteiros grandes e tornaria o tipo dependente do conteúdo. Aceitar texto: duplicaria `ordenar` sem um caso de uso. |
 | `ordenar` | Só números ou só textos; estável; direção `crescente`/`decrescente` em texto, como `ordenar_tabela`; segunda posição opcional. | Parâmetro booleano `reverso`: opaco e inconsistente com `ordenar_tabela`. Ordenar listas mistas: exigiria uma ordem total arbitrária entre texto e número. |
-| `sem_duplicatas` | Primeira ocorrência, ordem preservada, igualdade `isequal` (`1` e `1.0` iguais, `0.0` e `-0.0` distintos); aceita qualquer lista, inclusive de listas. | Igualdade por tipo e valor: contradiz `1 == 1.0` da própria linguagem. |
+| `sem_duplicatas` | Primeira ocorrência, ordem preservada. Dois elementos são duplicados quando são iguais segundo o `==` da ABT: `1` e `1.0` iguais, `0.0` e `-0.0` iguais, `NaN` nunca igual a outro (nenhum é removido), listas e registros elemento a elemento, ausentes iguais entre si. Aceita qualquer lista. | `isequal`/`hash` de Julia (versão anterior desta etapa): é um conceito de Julia e divergia do `==` da ABT em `0.0`/`-0.0` (distintos) e `NaN` (colapsados). Igualdade por tipo e valor: contradiz `1 == 1.0`. |
 | `para_inteiro` | Inteiro; real inteiro representável; texto `[+-]?[0-9]+` na faixa. | Truncar ou arredondar reais: o usuário escolheria sem perceber; arredondamento exige operação própria com regra de empate. Tolerar espaços: `aparar` já existe e compõe. |
 | `para_real` | Real; inteiro exato em `Float64`; texto decimal ou científico finito. | Aceitar `NaN`/`Inf`: valores não finitos já são rejeitados pela biblioteca estatística. |
 | `para_texto` | Texto, número e booleano; mesma representação de `mostrar` para escalares. | Converter listas/registros: a apresentação de coleções pertence a `mostrar` e não tem contrato textual estável. |
 
 Cobertura: `tests/test_abstraction_lists.jl` (valores, erros, composição com `filtrar`/`transformar`, paridade nos três modos, inclusive listas mistas, estabilidade, nomes de usuário idênticos aos novos nomes, ponte `Julia.Base` intacta).
+
+### Achado corrigido: igualdade de `sem_duplicatas`
+
+Revisão antes do merge. A primeira versão documentava a igualdade como `isequal` de Julia, o que vazava um conceito de Julia para o contrato público e divergia do operador `==` da ABT. Comparação real, medida em Julia, interpretador e Julia gerada (sem e com otimização; `tests/test_unique_equality.jl`):
+
+| Par | `==` da ABT | `isequal` (Julia) | `sem_duplicatas` antes | `sem_duplicatas` agora |
+| --- | --- | --- | --- | --- |
+| `1`, `1.0` | verdadeiro | verdadeiro | 1 elemento | 1 elemento |
+| `0.0`, `-0.0` | verdadeiro | **falso** | 2 (divergia) | 1 |
+| `NaN`, `NaN` | **falso** | **verdadeiro** | 1 (divergia) | 2 (NaN nunca é duplicado) |
+| `[0.0]`, `[-0.0]` | verdadeiro | **falso** | 2 (divergia) | 1 |
+| `9007199254740993`, `9007199254740992.0` | falso (exato) | falso | 2 | 2 |
+| `registro("a", 1)`, `registro("a", 1.0)` | verdadeiro | verdadeiro | 1 | 1 |
+| `verdadeiro`, `1` | verdadeiro | verdadeiro | 1 | 1 |
+
+A afirmação sobre `isequal(1, 1.0)` estava correta (é verdadeiro e `1` e `1.0` colapsam), mas a regra geral estava errada. Agora o contrato é o `==` da ABT, implementado por normalização de chaves (sem `isequal`/`hash` de Julia no contrato) e verificado contra um oráculo de varredura quadrática com `==` em 400 listas aleatórias e nos três backends.
+
+**Pendência registrada (não corrigida aqui):** `verdadeiro == 1` é verdadeiro na ABT por herança do `==` de Julia (também `falso == 0`). É uma coerção entre booleano e número no operador, anterior a esta etapa; `sem_duplicatas` apenas a respeita. Decidir se `==` deve rejeitar ou distinguir booleano de número é uma mudança de semântica da linguagem (categoria C).
 
 ### Achado corrigido: listas literais mistas divergiam entre backends
 

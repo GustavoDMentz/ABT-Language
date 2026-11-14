@@ -70,10 +70,10 @@ end
 @testset "sem_duplicatas" begin
     parity("mostrar sem_duplicatas([3, 1, 3, 2, 1])", "[3, 1, 2]")
     parity("mostrar sem_duplicatas([\"a\", \"b\", \"a\"])", "[\"a\", \"b\"]")
-    # Igualdade `isequal`: 1 e 1.0 são iguais (vence a primeira ocorrência); 0.0 e -0.0 são distintos.
+    # Igualdade do operador `==` da ABT (vence a primeira ocorrência); ver tests/test_unique_equality.jl.
     parity("mostrar sem_duplicatas([1, 1.0, 1])", "[1]")
     parity("mostrar sem_duplicatas([1.0, 1])", "[1.0]")
-    parity("mostrar sem_duplicatas([0.0, -0.0])", "[0.0, -0.0]")
+    parity("mostrar sem_duplicatas([0.0, -0.0])", "[0.0]")        # 0.0 == -0.0 na ABT
     parity("mostrar sem_duplicatas([[1], [1], [2]])", "[[1], [2]]")
     parity("mostrar sem_duplicatas([])", "[]")
     fails_everywhere("mostrar sem_duplicatas(ambiente(\"ABT_VARIAVEL_INEXISTENTE\", \"aab\"))", "esperada uma lista")

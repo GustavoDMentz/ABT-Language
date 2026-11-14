@@ -93,7 +93,7 @@ Ordena uma lista sem alterar a original.
 Remove elementos repetidos preservando a primeira ocorrência.
 
 - **Parâmetros e padrões:** Uma lista ABT; sem padrão.
-- **Retorno:** Nova lista na ordem original; dois elementos são iguais segundo `isequal` da Julia (`1` e `1.0` são iguais; `0.0` e `-0.0` não).
+- **Retorno:** Nova lista na ordem original, mantendo a primeira ocorrência. Dois elementos são duplicados quando são iguais segundo o operador `==` da ABT: `1` e `1.0` são iguais, `0.0` e `-0.0` são iguais, um `NaN` nunca é igual a outro (nenhum NaN é removido), listas e registros comparam elemento a elemento, e valores ausentes são iguais entre si.
 - **Pré-condições, ausentes, erros e limites:** Rejeita qualquer valor que não seja lista; lista vazia retorna lista vazia.
 - **Efeitos:** Nenhum.
 - **Dependência Julia:** Base Julia.

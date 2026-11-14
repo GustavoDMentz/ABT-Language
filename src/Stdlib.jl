@@ -103,13 +103,31 @@ function abt_std_sort(values, direction="crescente")
  end
  error("ABT ordenar: esperada uma lista só de números finitos ou só de textos")
 end
+# Igualdade de `sem_duplicatas`: a mesma do operador `==` da ABT, tornada utilizável como chave:
+# 1 e 1.0 (e verdadeiro e 1) são iguais; 0.0 e -0.0 são iguais; um NaN nunca é igual a outro
+# (como em `==`), logo nunca é removido; listas e registros comparam elemento a elemento;
+# ausentes (missing) são iguais entre si, como em `remover_duplicatas`. Não usa `isequal`/`hash` de Julia.
+function abt_std_equality_key(x)
+ if x isa Bool
+  return Int64(x)
+ elseif typeof(x) === Float64
+  isnan(x) && return gensym()
+  return isinteger(x) && -9.223372036854775808e18 <= x < 9.223372036854775808e18 ? Int64(x) : x
+ elseif x isa Vector
+  return (:lista, Tuple(map(abt_std_equality_key, x)))
+ elseif x isa NamedTuple
+  return (:registro, keys(x), Tuple(map(abt_std_equality_key, values(x))))
+ end
+ return x
+end
 function abt_std_unique(values)
  values = abt_std_list_arg("sem_duplicatas", values)
  seen = Set{Any}()
  result = empty(values)
  for x in values
-  x in seen && continue
-  push!(seen, x)
+  key = abt_std_equality_key(x)
+  key in seen && continue
+  push!(seen, key)
   push!(result, x)
  end
  return result
