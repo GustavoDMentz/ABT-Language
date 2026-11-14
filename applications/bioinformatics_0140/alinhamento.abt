@@ -1,0 +1,30 @@
+# Aplicação B: alinhamento par a par. Esquemas de pontuação explícitos; dados sintéticos.
+dna = pontuacao_dna(2, -1, -3, -1)
+referencia = "ATGGCCATTGTAATGGGCCGCTGA"
+variante = "ATGGCCATTGAATGGGCCGCTGA"
+
+global_dna = alinhar_par(referencia, variante, "global", dna)
+mostrar global_dna
+mostrar global_dna.alinhamento_a
+mostrar global_dna.alinhamento_b
+
+local_dna = alinhar_par("TTACGTAAGG", "CCACGTCC", "local", dna)
+mostrar registro("pontuacao", local_dna.pontuacao, "trecho", local_dna.alinhamento_a, "identidade", local_dna.identidade_percentual)
+
+# Proteínas: a matriz é uma escolha científica, por isso explícita.
+a = "HEAGAWGHEE"
+b = "PAWHEAE"
+para cada matriz em ["BLOSUM62", "PAM250"] {
+    resultado = alinhar_par(a, b, "global", pontuacao_proteina(matriz, -10, -1))
+    mostrar registro("matriz", matriz, "pontuacao", resultado.pontuacao, "identidade", resultado.identidade_percentual, "similaridade", resultado.similaridade_percentual, "gaps", resultado.aberturas_gap)
+}
+
+# Comparação de cada gene com a referência.
+caminho = ambiente("ABT_FASTA_PATH", "applications/bioinformatics_0140/data/genes.fasta")
+genes = registros_fasta(ler_fasta(caminho, "DNA", "permitir_N", "exigir_maiusculas"))
+para cada gene em genes {
+    se validar_sequencia(gene.sequencia, "DNA", "rejeitar") {
+        r = alinhar_par(referencia, gene.sequencia, "local", dna)
+        mostrar registro("gene", gene.identificador, "pontuacao", r.pontuacao, "identidade", r.identidade_percentual)
+    }
+}

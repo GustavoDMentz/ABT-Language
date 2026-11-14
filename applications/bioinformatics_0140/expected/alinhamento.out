@@ -1,0 +1,11 @@
+(modo = "global", pontuacao = 42, comprimento_alinhamento = 24, correspondencias = 23, substituicoes = 0, insercoes = 1, delecoes = 0, aberturas_gap = 1, extensoes_gap = 0, identidade_percentual = 95.83333333333333, similaridade_percentual = 95.83333333333333, inicio_a = 1, fim_a = 24, inicio_b = 1, fim_b = 23, alinhamento_a = "ATGGCCATTGTAATGGGCCGCTGA", alinhamento_b = "ATGGCCATTG-AATGGGCCGCTGA")
+ATGGCCATTGTAATGGGCCGCTGA
+ATGGCCATTG-AATGGGCCGCTGA
+(pontuacao = 8, trecho = "ACGT", identidade = 100.0)
+(matriz = "BLOSUM62", pontuacao = 2, identidade = 30.0, similaridade = 30.0, gaps = 1)
+(matriz = "PAM250", pontuacao = 9, identidade = 30.0, similaridade = 40.0, gaps = 1)
+(gene = "gene_a", pontuacao = 48, identidade = 100.0)
+(gene = "gene_b", pontuacao = 11, identidade = 70.0)
+(gene = "gene_c", pontuacao = 12, identidade = 77.77777777777777)
+(gene = "gene_e", pontuacao = 16, identidade = 71.42857142857143)
+(gene = "gene_f", pontuacao = 9, identidade = 66.66666666666667)

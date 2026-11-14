@@ -1,0 +1,21 @@
+# Aplicação A: análise de sequências. Dados sintéticos, sem significado biológico.
+caminho = ambiente("ABT_FASTA_PATH", "applications/bioinformatics_0140/data/genes.fasta")
+genes = ler_fasta(caminho, "DNA", "permitir_N", "exigir_maiusculas")
+
+mostrar descrever_sequencias(genes)
+mostrar resumir_comprimentos(genes)
+
+registros = registros_fasta(genes)
+ricos_em_gc = filtrar registros onde valor.GC_percentual >= 50
+mostrar transformar ricos_em_gc com valor.identificador
+
+para cada gene em registros {
+    mostrar registro("id", gene.identificador, "comprimento", gene.comprimento, "inicios_ATG", localizar_motivo(gene.sequencia, "ATG"))
+}
+
+# Tradução e RNA apenas para sequências sem base ambígua.
+para cada gene em registros {
+    se validar_sequencia(gene.sequencia, "DNA", "rejeitar") {
+        mostrar registro("id", gene.identificador, "rna", transcrever_dna(subsequencia(gene.sequencia, 1, 12)), "proteina", traduzir_quadro(gene.sequencia, 1))
+    }
+}

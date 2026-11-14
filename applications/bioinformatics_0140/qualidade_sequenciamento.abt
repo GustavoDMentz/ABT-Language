@@ -1,0 +1,21 @@
+# Aplicação C: qualidade de sequenciamento. Dados sintéticos; Phred+33 explícito.
+caminho = ambiente("ABT_FASTQ_PATH", "applications/bioinformatics_0140/data/leituras.fastq")
+saida = ambiente("ABT_FASTQ_SAIDA", "/tmp/abt-014-leituras-aprovadas.fastq")
+leituras = ler_fastq(caminho, "DNA", "permitir_N", "phred33")
+
+mostrar resumir_fastq(leituras)
+metricas = metricas_leituras(leituras)
+mostrar metricas
+
+# Critérios explícitos: comprimento >= 24, Phred médio >= 30, no máximo 1 N.
+aprovadas = filtrar_fastq(leituras, 24, 30, 1)
+mostrar resumir_fastq(aprovadas)
+mostrar transformar (metricas_leituras(aprovadas)) com valor.identificador
+
+exportada = exportar_fastq(aprovadas, saida)
+mostrar registro("leituras_escritas", exportada.leituras_escritas)
+conferencia = ler_fastq(saida, "DNA", "permitir_N", "phred33")
+mostrar resumir_fastq(conferencia)
+
+excelentes = filtrar metricas onde valor.percentual_q30 >= 90
+mostrar soma de transformar excelentes com 1
