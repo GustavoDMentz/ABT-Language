@@ -1,0 +1,5 @@
+Erro ABT[E000] — erro de compilação ou execução
+
+DomainError with -8.0:
+Exponentiation yielding a complex result requires a complex argument.
+Replace x^y with (x+0im)^y, Complex(x)^y, or similar.

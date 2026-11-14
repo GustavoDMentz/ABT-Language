@@ -1,0 +1,17 @@
+notas = [7.5, 4.0, 9.0, 6.0]
+soma_notas = 0
+aprovados = 0
+para cada nota em notas {
+    soma_notas = soma_notas + nota
+    se nota >= 6 {
+        aprovados = aprovados + 1
+    }
+}
+media_turma = soma_notas / 4
+mostrar media_turma
+mostrar aprovados
+se media_turma >= 6 {
+    mostrar "turma aprovada"
+} senao {
+    mostrar "turma reprovada"
+}

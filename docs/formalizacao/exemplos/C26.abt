@@ -1,0 +1,2 @@
+mostrar f(2)
+função f(a) { retornar a * 2 }

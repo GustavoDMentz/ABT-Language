@@ -1,0 +1,6 @@
+função fatorial(n) {
+    se n <= 1 { retornar 1 } senao { retornar n * fatorial(n - 1) }
+}
+mostrar fatorial(5)
+mostrar fatorial(20)
+mostrar fatorial(21)

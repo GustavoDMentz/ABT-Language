@@ -1,0 +1,2 @@
+função f(a, b) { retornar a + b }
+mostrar f(2, 3)

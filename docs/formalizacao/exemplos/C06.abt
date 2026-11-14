@@ -1,0 +1,2 @@
+se verdadeiro { a = 1 } senao { a = 2 }
+mostrar a

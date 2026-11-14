@@ -1,0 +1,2 @@
+para cada i em [1, 2, 3] { x = i * 2 }
+mostrar x

@@ -1,0 +1,5 @@
+Erro ABT[E000] — erro de compilação ou execução
+
+DomainError with -1:
+Cannot raise an integer x to a negative power -1.
+Make x or -1 a float by adding a zero decimal (e.g., 2.0^-1 or 2^-1.0 instead of 2^-1) or write 1/x^1, float(x)^-1, x^float(-1) or (x//1)^-1.

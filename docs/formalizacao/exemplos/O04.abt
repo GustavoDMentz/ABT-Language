@@ -1,0 +1,7 @@
+x = 5
+mostrar x > 3
+mostrar x < 3
+mostrar x >= 5
+mostrar x <= 4
+mostrar x == 5
+mostrar x != 5

@@ -1,0 +1,4 @@
+x = -9223372036854775807 - 1
+mostrar x
+mostrar -x
+mostrar x - 1

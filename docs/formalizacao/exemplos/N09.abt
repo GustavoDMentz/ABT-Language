@@ -1,0 +1,6 @@
+mostrar 0.1 + 0.2
+mostrar 1 + 2.0 * 3
+mostrar 3 * 2.0
+mostrar 4 / 2
+mostrar 2 ^ 3
+mostrar 2.0 ^ 3

@@ -1,0 +1,8 @@
+x1 = 1
+a1b2 = 2
+r2d2 = 3
+mostrar x1 + a1b2 + r2d2
+Total = 10
+total = 20
+mostrar Total
+mostrar total

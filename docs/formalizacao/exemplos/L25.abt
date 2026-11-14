@@ -1,0 +1,3 @@
+mostrar "texto"
+mostrar "a\nb"
+mostrar ["x", 1]

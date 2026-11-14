@@ -1,0 +1,1112 @@
+{
+ "implementacao": "ABT 0.15.0",
+ "exemplos": [
+  {
+   "id": "L02",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "6\n10\n20\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "L03",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "9\n3\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "L04",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \"1\" at 1:1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L05",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado =, mas foi encontrado \"\" at 2:1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L06",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado =, mas foi encontrado \"b\" at 1:3.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L07",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '$' at 1:2\n",
+   "conferiu": true
+  },
+  {
+   "id": "L08",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado =, mas foi encontrado \"-\" at 1:2.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L09",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nReserved ABT internal identifier: __abt_x\n",
+   "conferiu": true
+  },
+  {
+   "id": "L10",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \"valor\" at 1:1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L11",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \"maior\" at 1:1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L12",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \"de\" at 1:1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L13",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "10\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "V01",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n2\n2\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "V02",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "texto\n2\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "V03",
+   "comando": "abt",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'y' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "V04",
+   "comando": "abt",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'x' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "V05",
+   "comando": "abt",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'x' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "V06",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "5\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "V07",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: reserved namespace 'Julia'\n",
+   "conferiu": true
+  },
+  {
+   "id": "V08",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "3\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N01",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "3.5\n2.0\n3.5\n6\n4.5\n7.0\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N02",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "Inf\n-Inf\nNaN\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N03",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "9223372036854775807\n-9223372036854775808\n-2\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N04",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "-9223372036854775808\n-9223372036854775808\n9223372036854775807\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N05",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nOverflowError: overflow parsing \"9223372036854775808\"\n",
+   "conferiu": true
+  },
+  {
+   "id": "N06",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1024\n0.5\n1.4142135623730951\n-9223372036854775808\n0\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N07",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nDomainError with -1:\nCannot raise an integer x to a negative power -1.\nMake x or -1 a float by adding a zero decimal (e.g., 2.0^-1 or 2^-1.0 instead of 2^-1) or write 1/x^1, float(x)^-1, x^float(-1) or (x//1)^-1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "N08",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nDomainError with -8.0:\nExponentiation yielding a complex result requires a complex argument.\nReplace x^y with (x+0im)^y, Complex(x)^y, or similar.\n",
+   "conferiu": true
+  },
+  {
+   "id": "N09",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "0.30000000000000004\n7.0\n6.0\n2.0\n8\n8.0\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N11",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "true\nfalse\ntrue\n9.007199254740992e15\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N10",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n1.0\n100000.0\n1.0e6\n0.0001\n1.0e-5\n1.23456789123e8\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "N12",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: arithmetic '+' requires numbers\n",
+   "conferiu": true
+  },
+  {
+   "id": "N13",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: arithmetic '+' requires numbers\n",
+   "conferiu": true
+  },
+  {
+   "id": "N14",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: unary '-' requires a number\n",
+   "conferiu": true
+  },
+  {
+   "id": "O01",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "14\n20\n3\n2.0\n2\n-6\n3\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O02",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "-4\n4\n512\n64\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O03",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "-8.0\n-8.0\n0.125\n-6.0\n10.0\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O04",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "true\nfalse\ntrue\nfalse\ntrue\nfalse\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O05",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "true\nfalse\ntrue\nfalse\ntrue\ntrue\ntrue\ntrue\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O06",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "true\ntrue\nfalse\ntrue\ntrue\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O07",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "true\ntrue\ntrue\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O14",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: comparison '<' requires numbers\n",
+   "conferiu": true
+  },
+  {
+   "id": "O08",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "false\ntrue\nfalse\ntrue\ntrue\nfalse\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O09",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "false\ntrue\ntrue\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O10",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: logical '&&' requires booleans\n",
+   "conferiu": true
+  },
+  {
+   "id": "O11",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \"verdadeiro\" at 1:13.\n",
+   "conferiu": true
+  },
+  {
+   "id": "O15",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\ntrue\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "O12",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: comparison '<' requires numbers\n",
+   "conferiu": true
+  },
+  {
+   "id": "O13",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "true\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "S15",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "4\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C01",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n10\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C02",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: IF condition must be boolean\n",
+   "conferiu": true
+  },
+  {
+   "id": "C03",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado {, mas foi encontrado \"mostrar\" at 1:15.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C04",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado {, mas foi encontrado \"se\" at 2:30.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C05",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "S18",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C20",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nTypeError: non-boolean (Int64) used in boolean context\n",
+   "conferiu": true
+  },
+  {
+   "id": "C09",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "10\n20\n30\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C10",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "10\n20\n20\n40\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C11",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "10\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C12",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "0\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C27",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "15\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C15",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: FOR requires a collection\n",
+   "conferiu": true
+  },
+  {
+   "id": "C16",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: FOR requires a collection\n",
+   "conferiu": true
+  },
+  {
+   "id": "C17",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado =, mas foi encontrado \"verdadeiro\" at 1:10.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C18",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado =, mas foi encontrado \"x\" at 2:10.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C19",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado {, mas foi encontrado \"mostrar\" at 1:23.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C06",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C07",
+   "comando": "abt",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'a' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C08",
+   "comando": "abt",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'a' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C13",
+   "comando": "abt",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'x' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C14",
+   "comando": "abt",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'n' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "C22",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "6\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C23",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "8\n7\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C21",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n2\n99\n3\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C24",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: loop variable shadows function 'dobro'\n",
+   "conferiu": true
+  },
+  {
+   "id": "C25",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "120\n2432902008176640000\n-4249290049419214848\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "C26",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "4\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "S01",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '%' at 1:11\n",
+   "conferiu": true
+  },
+  {
+   "id": "S02",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '!' at 1:9\n",
+   "conferiu": true
+  },
+  {
+   "id": "S03",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '&' at 1:11\n",
+   "conferiu": true
+  },
+  {
+   "id": "S04",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '|' at 1:11\n",
+   "conferiu": true
+  },
+  {
+   "id": "S05",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '\\'' at 1:9\n",
+   "conferiu": true
+  },
+  {
+   "id": "S06",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character ':' at 1:11\n",
+   "conferiu": true
+  },
+  {
+   "id": "S07",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '?' at 1:11\n",
+   "conferiu": true
+  },
+  {
+   "id": "S08",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '$' at 1:7\n",
+   "conferiu": true
+  },
+  {
+   "id": "S09",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nUnexpected token \"*\" at 1:12\n",
+   "conferiu": true
+  },
+  {
+   "id": "S10",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nUnexpected token \"/\" at 1:12\n",
+   "conferiu": true
+  },
+  {
+   "id": "S11",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nUnexpected token \">\" at 1:12\n",
+   "conferiu": true
+  },
+  {
+   "id": "S12",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \"=\" at 1:11.\n",
+   "conferiu": true
+  },
+  {
+   "id": "S13",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "3\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "S14",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "3\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "S16",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n2\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "L01",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\ntrue\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "L14",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "8\n3.14\n0.5\n10.5\n7.5\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "L15",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \".\" at 1:10.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L16",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nUnexpected token \".\" at 1:9\n",
+   "conferiu": true
+  },
+  {
+   "id": "L17",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \".\" at 1:12.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L18",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado =, mas foi encontrado \"\" at 2:1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L19",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado =, mas foi encontrado \"\" at 2:1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L20",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado =, mas foi encontrado \"\" at 2:1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "L21",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nOverflowError: overflow parsing \"99999999999999999999\"\n",
+   "conferiu": true
+  },
+  {
+   "id": "L22",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nArgumentError: invalid base 10 digit '٣' in \"٣\"\n",
+   "conferiu": true
+  },
+  {
+   "id": "L23",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "-5\n5\n-5\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "L24",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "L25",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "texto\na\nb\n[\"x\", 1]\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "L26",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nUnterminated string at 1:9\n",
+   "conferiu": true
+  },
+  {
+   "id": "P05",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "[3, 4]\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "U01",
+   "comando": "abt",
+   "esperado": "E010",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E010] — erro de sintaxe\n\nEra esperado IDENT, mas foi encontrado \".\" at 1:22.\n",
+   "conferiu": true
+  },
+  {
+   "id": "M03",
+   "comando": "abt",
+   "esperado": "E052",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E052] — quantidade incorreta de argumentos\n\nA função 'f' espera 1 argumentos, mas recebeu 2.\n",
+   "conferiu": true
+  },
+  {
+   "id": "M04",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: duplicate function 'f'\n",
+   "conferiu": true
+  },
+  {
+   "id": "M05",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: cannot reassign function 'f'\n",
+   "conferiu": true
+  },
+  {
+   "id": "M06",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nErro semântico: RETURN outside function\n",
+   "conferiu": true
+  },
+  {
+   "id": "M07",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "nothing\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "M10",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "1\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "M01",
+   "comando": "abt",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'y' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "M02",
+   "comando": "abt",
+   "esperado": "E000",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E000] — erro de compilação ou execução\n\nDomainError with -1:\nCannot raise an integer x to a negative power -1.\nMake x or -1 a float by adding a zero decimal (e.g., 2.0^-1 or 2^-1.0 instead of 2^-1) or write 1/x^1, float(x)^-1, x^float(-1) or (x//1)^-1.\n",
+   "conferiu": true
+  },
+  {
+   "id": "M08",
+   "comando": "abt-check",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "Programa ABT válido.\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "M09",
+   "comando": "abt-check",
+   "esperado": "E021",
+   "codigo_saida": 1,
+   "saida": "",
+   "erro": "Erro ABT[E021] — variável não definida\n\nA variável 'y' não foi definida.\n",
+   "conferiu": true
+  },
+  {
+   "id": "P01",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "6.625\n3\nturma aprovada\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "P02",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "30\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "P03",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "quente\n",
+   "erro": "",
+   "conferiu": true
+  },
+  {
+   "id": "P04",
+   "comando": "abt",
+   "esperado": "ok",
+   "codigo_saida": 0,
+   "saida": "105.0\n110.25\n115.7625\n",
+   "erro": "",
+   "conferiu": true
+  }
+ ]
+}

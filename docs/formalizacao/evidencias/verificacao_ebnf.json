@@ -1,0 +1,16 @@
+{
+ "abt": "ABT importada",
+ "semente": 15,
+ "programas_gerados": 500,
+ "aceitos_pelo_analisador_real": 500,
+ "recusados": 0,
+ "mutantes": 483,
+ "mutantes_rejeitados": 483,
+ "amostra_de_recusados": [],
+ "tamanho_medio_em_caracteres": 537,
+ "exemplos": [
+  ";\npara cada x em dados ( - verdadeiro ) { dados = \"x\\ny\" ; total = valor / soma de y onde falso / - verdadeiro total = - 4260 + 4178 e 7574 ; }\nfunction i2 ( dados , x , i2 ) { mostrar transformar ( falso ) com 4112 e ( verdadeiro ) se valor ^ 7568 { usar Python . os . path } else { if resultado (  ) / 59.89 * 86.9 ou 94.21 { resultado = [ b_2 + falso - falso ] ^ \"a b\" <= ( falso ) and 3595 é menor que a1 ou falso / falso } senão { total = a1 - 32.63 dados = valor ^ 45.50 / [ falso , falso , y ] * - verdadeiro / total ^ 66 + valor } usar Python . math for cada y em limitar [ verdadeiro , x ] a 2 {  } } a1 = 6027 / 7894 * filtrar y onde dados é menor que dados * falso }\n",
+  "se + 9.55 / [ 2 , 18 , dados ] { x = - \"a b\" funcao b_2 ( i2 , b_2 , y ) { dados = a1 + limitar x a 5 + 2182 ^ dados - transformar x com x ^ a1 e x ^ i2 - total >= x a1 = 878 * falso ^ b_2 é - verdadeiro * verdadeiro } mostrar dados ( \"a b\" é menor que 77 é falso , transformar b_2 com a1 * verdadeiro é maior verdadeiro or x or verdadeiro ) ou a1 (  ) ^ 65 != verdadeiro or a1 de y / verdadeiro + i2 é total >= falso } for cada dados in - 72.20 / filtrar x onde resultado / ( 77 ) + 2350 * 68 { resultado = 3637 * valor ; mostrar 4829 * - verdadeiro - ( falso ) + ( dados ) } mostrar resultado ( - 1 ou verdadeiro , resultado . total * verdadeiro - x , media de a1 onde 56 é menor que 33 and b_2 )\n",
+  "mostrar x * 5953 * total (  )\nfuncao total ( x , b_2 , y ) { b_2 = ( ( 44 ) / a1 + verdadeiro ou verdadeiro ) * b_2 * 4562 / - b_2 ; total = ( - 49 + 41 - falso ) - dados ( falso , 93 , 60 ) * verdadeiro or [ falso ] + verdadeiro + verdadeiro or total ( dados , falso ) / b_2 ou 9788 }\nfunção i2 ( x , resultado , i2 ) { for cada b_2 in soma de total onde - falso - 44 é maior verdadeiro é maior que 45 >= i2 {  } }\ndados = 4546 - resultado . b_2 * verdadeiro and falso ^ falso * falso and \"a b\" + resultado\nshow - resultado ( verdadeiro , 1 , verdadeiro ) * - 27 + 78.14 or ( b_2 ) ^ 38 * y / 16 * falso or [ total , falso , 52 ]\n"
+ ]
+}

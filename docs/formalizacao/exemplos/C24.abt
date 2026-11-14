@@ -1,0 +1,2 @@
+função dobro(x) { retornar x * 2 }
+para cada dobro em [1] { mostrar 1 }

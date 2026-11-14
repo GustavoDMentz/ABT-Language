@@ -1,0 +1,3 @@
+para cada i em [10, 20, 30] {
+    mostrar i
+}

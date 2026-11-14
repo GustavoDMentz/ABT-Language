@@ -1,0 +1,3 @@
+x = 3
+função f() { retornar x }
+mostrar f()

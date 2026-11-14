@@ -1,0 +1,8 @@
+mostrar 1 == 1.0
+mostrar 1 != 1.0
+mostrar 2 > 1.5
+mostrar 1 == "1"
+mostrar 1 != "1"
+mostrar "a" != "b"
+mostrar verdadeiro == verdadeiro
+mostrar [1, 2] == [1, 2]
