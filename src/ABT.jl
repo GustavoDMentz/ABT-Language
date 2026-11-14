@@ -8,7 +8,7 @@ include("Stdlib.jl")
 include("StdlibBio.jl")
 include("ExtensionRegistry.jl")
 const ABT_BIO_NAMES = Set(("ler_fasta", "descrever_sequencias", "registros_fasta", "alinhar_sequencias"))
-const ABT_STDLIB_NAMES = union(Set(("descrever", "registro", "falhar", "ambiente", "ler_texto", "linhas_texto", "aparar", "maiusculas", "inicia_com", "comprimento_texto", "contar_caractere", "contar", "esquema", "ler_csv", "coluna", "linhas_tabela", "filtrar_tabela", "transformar_tabela", "resumir_coluna")), ABT_BIO_NAMES, Set(String.(keys(ABT_EXTENSION_SPECS))))
+const ABT_STDLIB_NAMES = union(Set(("descrever", "registro", "falhar", "ambiente", "ler_texto", "linhas_texto", "aparar", "maiusculas", "inicia_com", "comprimento_texto", "contar_caractere", "contar", "minimo", "maximo", "ordenar", "sem_duplicatas", "para_inteiro", "para_real", "para_texto", "esquema", "ler_csv", "coluna", "linhas_tabela", "filtrar_tabela", "transformar_tabela", "resumir_coluna")), ABT_BIO_NAMES, Set(String.(keys(ABT_EXTENSION_SPECS))))
 const ABT_STDLIB = Dict{String,Any}(
  "descrever" => (xs -> abt_std_describe(xs, Statistics)),
  "registro" => abt_std_record,
@@ -22,6 +22,13 @@ const ABT_STDLIB = Dict{String,Any}(
  "comprimento_texto" => abt_std_text_length,
  "contar_caractere" => abt_std_char_count,
  "contar" => abt_std_count,
+ "minimo" => abt_std_min,
+ "maximo" => abt_std_max,
+ "ordenar" => abt_std_sort,
+ "sem_duplicatas" => abt_std_unique,
+ "para_inteiro" => abt_std_to_integer,
+ "para_real" => abt_std_to_real,
+ "para_texto" => abt_std_to_text,
  "esquema" => abt_std_schema,
  "ler_csv" => abt_std_csv,
  "coluna" => abt_std_column,
@@ -965,6 +972,20 @@ function validate_ir(program::Vector{IR}; initial_names=Dict{String,Symbol}())
       collection = infer(a[2][1], names)
       collection in (:list, :unknown) || error("Semantic error: contar expects a list")
       return :number
+     elseif name in ("minimo", "maximo", "ordenar", "sem_duplicatas")
+      arities = name == "ordenar" ? (1, 2) : (1, 1)
+      arities[1] <= length(a[2]) <= arities[2] ||
+       error("Semantic error: $name expects " * (name == "ordenar" ? "1 or 2" : "1") * " arguments")
+      collection = infer(a[2][1], names)
+      collection in (:list, :unknown) || error("Semantic error: $name expects a list")
+      for extra in a[2][2:end]
+       infer(extra, names) in (:string, :unknown) || error("Semantic error: $name direction must be text")
+      end
+      return name in ("minimo", "maximo") ? :number : :list
+     elseif name in ("para_inteiro", "para_real", "para_texto")
+      length(a[2]) == 1 || error("Semantic error: $name expects 1 argument")
+      infer(a[2][1], names)
+      return name == "para_texto" ? :string : :number
      elseif name in ("registro", "esquema")
       length(a[2]) >= 2 && iseven(length(a[2])) ||
        error("Semantic error: $name expects name/value pairs")
@@ -1326,6 +1347,9 @@ function _generate_validated_ir(program::Vector{IR})
                        ("maiusculas", "abt_std_uppercase"), ("inicia_com", "abt_std_startswith"),
                        ("comprimento_texto", "abt_std_text_length"),
                        ("contar_caractere", "abt_std_char_count"), ("contar", "abt_std_count"),
+                       ("minimo", "abt_std_min"), ("maximo", "abt_std_max"), ("ordenar", "abt_std_sort"),
+                       ("sem_duplicatas", "abt_std_unique"), ("para_inteiro", "abt_std_to_integer"),
+                       ("para_real", "abt_std_to_real"), ("para_texto", "abt_std_to_text"),
                        ("esquema", "abt_std_schema"),
                        ("ler_csv", "abt_std_csv"), ("coluna", "abt_std_column"),
                        ("linhas_tabela", "abt_std_table_rows"),
