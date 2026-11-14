@@ -59,32 +59,10 @@ function abt_sc_fastq_loaded(handle, materialize, fx, sink=nothing)
  try
   reader=fx.FASTQ.Reader(io)
   try
-   for rec in reader
-    records=Base.checked_add(records,1)
-    id=String(fx.identifier(rec)); isempty(id) && error("registro $records: identificador vazio")
-    seq=fx.sequence(String,rec)::String  # o módulo é carregado dinamicamente: fixar o tipo mantém o laço estável
-    abt_sc_dna(seq,"FASTQ registro $records";allow_n=handle.ambiguity=="permitir_N")
-    scores=Int.(collect(fx.quality_scores(rec,fx.FASTQ.SANGER_QUAL_ENCODING)))::Vector{Int}
-    length(scores)==length(seq) && all(q -> 0<=q<=93,scores) || error("registro $records: qualidades Phred inválidas")
-    local_counts=zeros(Int,5)
-    for byte in codeunits(seq)
-     byte == 0x41 ? (local_counts[1]+=1) : byte == 0x43 ? (local_counts[2]+=1) : byte == 0x47 ? (local_counts[3]+=1) :
-     byte == 0x54 ? (local_counts[4]+=1) : (local_counts[5]+=1)
-    end
-    abt_sc_fastq_passes(handle, length(seq), scores, local_counts[5]) || continue
-    kept=Base.checked_add(kept,1)
-    sink === nothing || sink(id, String(fx.description(rec)), seq, scores)
-    for i in eachindex(counts); counts[i]=Base.checked_add(counts[i],local_counts[i]); end
-    bases=Base.checked_add(bases,length(seq)); quality_sum=Base.checked_add(quality_sum,sum(scores))
-    qmin=min(qmin,minimum(scores)); qmax=max(qmax,maximum(scores))
-    if materialize === true
-     push!(rows,(; identificador=id,sequencia=seq,comprimento=length(seq),A=local_counts[1],C=local_counts[2],G=local_counts[3],T=local_counts[4],N=local_counts[5],phred_minimo=minimum(scores),phred_maximo=maximum(scores),phred_medio=sum(scores)/length(scores)))
-    elseif materialize === :metrics
-     acgt = local_counts[1]+local_counts[2]+local_counts[3]+local_counts[4]
-     acgt > 0 || error("registro $records '$id': GC indefinido sem bases A, C, G ou T")
-     push!(rows,(; identificador=id,comprimento=length(seq),GC_percentual=100.0*(local_counts[2]+local_counts[3])/acgt,N=local_counts[5],phred_medio=sum(scores)/length(scores),phred_minimo=minimum(scores),percentual_q20=100.0*count(>=(20),scores)/length(scores),percentual_q30=100.0*count(>=(30),scores)/length(scores)))
-    end
-   end
+   # Barreira de função: o FASTX é carregado em tempo de execução e o tipo do leitor é desconhecido
+   # aqui; abt_sc_fastq_scan é especializada para o tipo concreto (laço estável em tipos).
+   records, kept, bases, quality_sum, qmin, qmax = abt_sc_fastq_scan(reader, fx.identifier, fx.sequence, fx.quality_scores,
+       fx.FASTQ.SANGER_QUAL_ENCODING, fx.description, handle, materialize, sink, rows, counts)
   finally
    close(reader)
   end
@@ -98,6 +76,41 @@ function abt_sc_fastq_loaded(handle, materialize, fx, sink=nothing)
  materialize === :stream && return kept
  kept>0 || error("nenhuma leitura satisfaz os filtros de filtrar_fastq")
  return (; registros=kept,bases,A=counts[1],C=counts[2],G=counts[3],T=counts[4],N=counts[5],phred_minimo=qmin,phred_maximo=qmax,phred_medio=quality_sum/bases)
+end
+# Laço de leitura FASTQ (ver a barreira de função em abt_sc_fastq_loaded).
+# Mensagens de erro e resultados idênticos aos da versão em linha.
+function abt_sc_fastq_scan(reader, identifier_of, sequence_of, scores_of, encoding, description_of, handle, materialize, sink, rows, counts)
+ records=0; kept=0; bases=0; quality_sum=0; qmin=93; qmax=0
+ for rec in reader
+  records=Base.checked_add(records,1)
+  id=String(identifier_of(rec)); isempty(id) && error("registro $records: identificador vazio")
+  seq=sequence_of(String,rec)::String
+  # Validação sem montar a mensagem a cada leitura; em caso de erro, abt_sc_dna gera a mesma mensagem de antes.
+  allow_n = handle.ambiguity=="permitir_N"
+  (!isempty(seq) && all(byte -> byte == 0x41 || byte == 0x43 || byte == 0x47 || byte == 0x54 || (allow_n && byte == 0x4e), codeunits(seq))) ||
+   abt_sc_dna(seq,"FASTQ registro $records";allow_n=allow_n)
+  scores=Int.(collect(scores_of(rec,encoding)))::Vector{Int}
+  length(scores)==length(seq) && all(q -> 0<=q<=93,scores) || error("registro $records: qualidades Phred inválidas")
+  ca=0; cc=0; cg=0; ct=0; cn=0
+  for byte in codeunits(seq)
+   byte == 0x41 ? (ca+=1) : byte == 0x43 ? (cc+=1) : byte == 0x47 ? (cg+=1) : byte == 0x54 ? (ct+=1) : (cn+=1)
+  end
+  local_counts=(ca, cc, cg, ct, cn)  # tupla: sem alocação por leitura
+  abt_sc_fastq_passes(handle, length(seq), scores, local_counts[5]) || continue
+  kept=Base.checked_add(kept,1)
+  sink === nothing || sink(id, String(description_of(rec)), seq, scores)
+  for i in eachindex(counts); counts[i]=Base.checked_add(counts[i],local_counts[i]); end
+  bases=Base.checked_add(bases,length(seq)); quality_sum=Base.checked_add(quality_sum,sum(scores))
+  qmin=min(qmin,minimum(scores)); qmax=max(qmax,maximum(scores))
+  if materialize === true
+   push!(rows,(; identificador=id,sequencia=seq,comprimento=length(seq),A=local_counts[1],C=local_counts[2],G=local_counts[3],T=local_counts[4],N=local_counts[5],phred_minimo=minimum(scores),phred_maximo=maximum(scores),phred_medio=sum(scores)/length(scores)))
+  elseif materialize === :metrics
+   acgt = local_counts[1]+local_counts[2]+local_counts[3]+local_counts[4]
+   acgt > 0 || error("registro $records '$id': GC indefinido sem bases A, C, G ou T")
+   push!(rows,(; identificador=id,comprimento=length(seq),GC_percentual=100.0*(local_counts[2]+local_counts[3])/acgt,N=local_counts[5],phred_medio=sum(scores)/length(scores),phred_minimo=minimum(scores),percentual_q20=100.0*count(>=(20),scores)/length(scores),percentual_q30=100.0*count(>=(30),scores)/length(scores)))
+  end
+ end
+ return records, kept, bases, quality_sum, qmin, qmax
 end
 abt_sc_fastq_summary(x)=abt_sc_fastq_walk(x,false)
 abt_sc_fastq_records(x)=abt_sc_fastq_walk(x,true)
