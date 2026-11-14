@@ -24,7 +24,10 @@ PREVIOUS_FILES = LEGACY_FILES + (
     "src/StdlibLinear.jl", "src/StdlibBatch.jl", "src/ExtensionRegistry.jl",
 )
 V0120_FILES = PREVIOUS_FILES + ("src/StdlibBiostatistics.jl",)
-FILES = V0120_FILES + ("src/StdlibScientificBio.jl", "src/StdlibScientificNumerics.jl", "src/StdlibScientificTables.jl")
+V0130_FILES = V0120_FILES + ("src/StdlibScientificBio.jl", "src/StdlibScientificNumerics.jl", "src/StdlibScientificTables.jl")
+# 0.14.0 acrescentou StdlibBioAdvanced.jl, mas a lista do instalador não foi atualizada (instalação quebrada);
+# 0.15.0 corrige e acrescenta a CLI pré-compilada.
+FILES = V0130_FILES + ("src/StdlibBioAdvanced.jl", "src/CLIText.jl", "src/CLIMain.jl", "src/Precompile.jl")
 
 
 def digest(path):
@@ -46,7 +49,7 @@ def existing():
     except (OSError, ValueError) as exc:
         fail(f"marcador de instalação inválido: {exc}")
     saved_files = set(marker.get("files", {}))
-    if marker.get("application") != "ABT" or marker.get("schema") != 1 or saved_files not in (set(FILES), set(V0120_FILES), set(PREVIOUS_FILES), set(LEGACY_FILES)):
+    if marker.get("application") != "ABT" or marker.get("schema") != 1 or saved_files not in (set(FILES), set(V0130_FILES), set(V0120_FILES), set(PREVIOUS_FILES), set(LEGACY_FILES)):
         fail("marcador de instalação incompatível")
     allowed = saved_files | {MARKER, "bin", "src", "src/Runtime"}
     found = {str(p.relative_to(TARGET)) for p in TARGET.rglob("*")}

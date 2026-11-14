@@ -37,12 +37,23 @@ class InstalledCLI(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         return result
 
+    def test_installed_copy_runs_programs(self):
+        # Regressão 0.14.0: StdlibBioAdvanced.jl faltava na lista do instalador e a cópia
+        # instalada não carregava a ABT; --version não detectava porque não carrega o pacote.
+        self.install()
+        program = self.other / "programa.abt"
+        program.write_text('mostrar soma de [1, 2]\nmostrar conteudo_gc("GGCC")\nmostrar contar([1, 2, 3])\n', encoding="utf-8")
+        result = subprocess.run(["abt", "run", str(program)], cwd=self.other, env=self.env,
+                                capture_output=True, text=True, timeout=300)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout, "3\n100.0\n3\n")
+
     def test_install_reinstall_update_and_uninstall(self):
         self.install()
         link = self.home / ".local/bin/abt"
         self.assertTrue(link.is_symlink())
         self.install()
-        self.assertEqual(self.call("abt", "--version").stdout.strip(), "ABT 0.14.0")
+        self.assertEqual(self.call("abt", "--version").stdout.strip(), "ABT 0.15.0")
         installed = self.home / ".local/share/abt/src/CLI.jl"
         installed.write_text(installed.read_text() + "\n# user modification\n")
         blocked = self.call(sys.executable, str(ROOT / "tools/install.py"))
