@@ -90,7 +90,7 @@ A [trilha de aprendizado](trilha.md) leva da instalação até a análise de dad
 
 - [Instale e rode](getting-started/install.md)
 
-  Julia 1.13.3, a CLI e o comando `abt`.
+  Um comando instala a ABT com a Julia embutida (Linux).
 
 - [Escreva o primeiro programa](tutorials/first-program.md)
 
@@ -147,7 +147,7 @@ aprovado
 
 - [Instalar e executar](getting-started/install.md)
 
-  Julia 1.13.3, CLI e primeiro programa.
+  Um comando instala a ABT com a Julia embutida (Linux).
 
 - [Aprender a linguagem](manual/syntax.md)
 
@@ -174,4 +174,4 @@ aprovado
 ```
 
 !!! note "Estado do projeto"
-    ABT é experimental. A CLI homologada exige Julia 1.13.3, e PythonCall é uma ponte opcional. Os exemplos deste site são verificados por `python3 tools/validate_docs.py`; o [inventário](reference/inventory.md) distingue o que funciona do que ainda é limitado.
+    ABT é experimental. A CLI usa Julia 1.13.3 (embutida na instalação integrada) e PythonCall é uma ponte opcional. Os exemplos deste site são verificados por `python3 tools/validate_docs.py`; o [inventário](reference/inventory.md) distingue o que funciona do que ainda é limitado.

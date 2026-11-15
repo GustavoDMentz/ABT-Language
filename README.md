@@ -7,7 +7,7 @@ Escreva a intenção. O Julia executa.
 
 <br>
 
-![versão](https://img.shields.io/badge/vers%C3%A3o-0.14.0-6f42c1?style=for-the-badge)
+![versão](https://img.shields.io/badge/vers%C3%A3o-0.15.0-6f42c1?style=for-the-badge)
 ![julia](https://img.shields.io/badge/Julia-1.13.3-9558B2?style=for-the-badge&logo=julia&logoColor=white)
 ![status](https://img.shields.io/badge/status-experimental-orange?style=for-the-badge)
 ![opera%C3%A7%C3%B5es](https://img.shields.io/badge/opera%C3%A7%C3%B5es-84-2ea44f?style=for-the-badge)
@@ -55,6 +55,25 @@ dados
 
 ## 🚀 Começando em 2 minutos
 
+**Linux x86_64, um comando** (a Julia 1.13.3 e os pacotes vêm junto; sem `sudo`, sem Python):
+
+```bash
+curl -fsSL https://github.com/GustavoDMentz/ABT-Language/releases/latest/download/instalar.sh | sh
+```
+
+A primeira instalação leva alguns minutos (pré-compilação, uma única vez). Depois:
+
+```bash
+abt doctor                                   # confere a instalação
+printf 'mostrar "Olá, mundo!"\n' > ola.abt   # seu primeiro programa
+abt run ola.abt
+```
+
+`abt atualizar` atualiza, `abt reparar` refaz a pré-compilação (se a pasta foi movida) e `abt desinstalar` remove tudo. Detalhes e limites: [instalação e CLI](docs/src/getting-started/install.md) e [`docs/RELATORIO_INSTALADOR_INTEGRADO.md`](docs/RELATORIO_INSTALADOR_INTEGRADO.md).
+
+<details>
+<summary>Instalar a partir do código-fonte (desenvolvimento)</summary>
+
 **Requisitos:** Julia 1.13.3 e Python 3 (só para os scripts de instalação).
 
 ```bash
@@ -68,13 +87,9 @@ python3 tools/install.py
 ~/.local/bin/abt doctor
 ```
 
-```bash
-# 4. Seu primeiro programa
-printf 'mostrar "Olá, mundo!"\n' > ola.abt
-~/.local/bin/abt run ola.abt
-```
-
 > Sem instalar? Use `bin/abt` direto da raiz do clone. Para atualizar, rode `python3 tools/install.py` de novo; para remover, `python3 tools/uninstall.py`.
+
+</details>
 
 ### Comandos da CLI
 
@@ -84,6 +99,7 @@ printf 'mostrar "Olá, mundo!"\n' > ola.abt
 | `abt check arquivo.abt` | Valida sem executar |
 | `abt operacoes` | Lista as extensões modulares |
 | `abt doctor` | Verifica instalação e ambiente |
+| `abt atualizar` · `abt reparar` · `abt desinstalar` | Manutenção (instalação integrada) |
 | `abt --help` · `abt --version` | Ajuda e versão |
 
 Códigos de saída: `0` sucesso · `1` erro no programa · `2` uso ou ambiente.
@@ -233,6 +249,6 @@ julia --project=docs docs/make.jl                                   # build do s
 
 <div align="center">
 
-<sub>ABT 0.14.0 · feita para ser lida como o que ela faz</sub>
+<sub>ABT 0.15.0 · feita para ser lida como o que ela faz</sub>
 
 </div>

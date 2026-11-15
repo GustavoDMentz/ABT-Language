@@ -88,12 +88,19 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      id-token: write
+      attestations: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           name: pacote-linux-x86_64
           path: dist
+      - name: Atestar a origem do pacote (verificável com gh attestation verify)
+        uses: actions/attest-build-provenance@v2
+        continue-on-error: true
+        with:
+          subject-path: dist/abt-*-linux-x86_64.tar.xz
       - name: Criar a release
         env:
           GH_TOKEN: ${{ github.token }}

@@ -9,7 +9,7 @@ Sete etapas, da instalação à análise científica. Siga a ordem: cada etapa u
 
 ## Instalar e rodar o primeiro comando
 
-Prepare o ambiente e veja a ABT executando. Você vai entender o que é a linguagem, o que ela exige (Julia 1.13.3) e como usar a CLI.
+Prepare o ambiente e veja a ABT executando. Você vai entender o que é a linguagem e instalar tudo com um comando (a Julia 1.13.3 vem junto, no Linux).
 
 - [O que é ABT](getting-started/overview.md)
 - [Instalação, atualização e CLI](getting-started/install.md)
@@ -18,7 +18,7 @@ Prepare o ambiente e veja a ABT executando. Você vai entender o que é a lingua
 <div class="abt-check">
 ```
 
-**Checkpoint.** `bin/abt --version` imprime `ABT 0.15.0` e `abt doctor` confirma o ambiente.
+**Checkpoint.** `abt --version` imprime `ABT 0.15.0` e `abt doctor` confirma o ambiente.
 
 ```@raw html
 </div>
