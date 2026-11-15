@@ -3,6 +3,28 @@ ABT_SCRIPT=$(readlink -f -- "$0") || exit 2
 ABT_ROOT=$(dirname -- "$(dirname -- "$ABT_SCRIPT")") || exit 2
 ABT_RUNTIME=${ABT_JULIA:-julia}
 
+# Instalação integrada (tools/instalar.sh): Julia e depot de pacotes vêm dentro da pasta da ABT.
+# Têm prioridade, exceto quando o usuário define ABT_JULIA explicitamente.
+ABT_EMBUTIDO=0
+if [ -z "${ABT_JULIA:-}" ] && [ -x "$ABT_ROOT/runtime/julia/bin/julia" ]; then
+    ABT_EMBUTIDO=1
+    ABT_RUNTIME=$ABT_ROOT/runtime/julia/bin/julia
+    JULIA_DEPOT_PATH=$ABT_ROOT/depot
+    JULIA_PKG_OFFLINE=true
+    export JULIA_DEPOT_PATH JULIA_PKG_OFFLINE
+fi
+# Os caches pré-compilados só valem no caminho em que foram gerados.
+abt_aviso_movida() {
+    if [ "$ABT_EMBUTIDO" -eq 1 ] && [ -f "$ABT_ROOT/.abt-prefixo" ]; then
+        abt_prefixo=$(cat "$ABT_ROOT/.abt-prefixo")
+        if [ "$abt_prefixo" != "$ABT_ROOT" ]; then
+            printf 'ABT: a instalação foi movida de %s; execute "abt reparar" (a primeira execução será lenta).\n' "$abt_prefixo" >&2
+            return 1
+        fi
+    fi
+    return 0
+}
+
 # Perfil de execução: decide o modo de compilação do Julia.
 #   padrao -> --compile=yes  (núcleo da ABT pré-compilado + compilação sob demanda; recomendado)
 #   rapido -> --compile=min  (sem compilação sob demanda; só para programas muito curtos)
@@ -52,6 +74,20 @@ else
     ABT_PERFIL_ORIGEM=padrao
 fi
 
+case "${1:-}" in
+    atualizar|reparar|desinstalar)
+        if [ "$ABT_EMBUTIDO" -ne 1 ] || [ ! -f "$ABT_ROOT/libexec/instalar.sh" ]; then
+            printf 'ABT: "%s" só existe na instalação integrada (tools/instalar.sh).\n' "$1" >&2
+            exit 2
+        fi
+        # Copia o script: a instalação pode ser substituída enquanto ele roda.
+        abt_tmp=$(mktemp "${TMPDIR:-/tmp}/abt-instalar.XXXXXX") || exit 2
+        cp "$ABT_ROOT/libexec/instalar.sh" "$abt_tmp" || exit 2
+        abt_cmd=$1
+        shift
+        ABT_PREFIXO_ATUAL=$ABT_ROOT exec sh "$abt_tmp" "--$abt_cmd" "$@" ;;
+esac
+
 if [ "${1:-}" = doctor ] && [ "$#" -eq 1 ]; then
     printf 'ABT: %s\n' "$ABT_ROOT"
     if [ ! -f "$ABT_ROOT/src/CLI.jl" ] || [ ! -f "$ABT_ROOT/src/ABT.jl" ] || [ ! -f "$ABT_ROOT/ABT.packages.toml" ] || [ ! -f "$ABT_ROOT/Project.toml" ]; then
@@ -63,7 +99,12 @@ if [ "${1:-}" = doctor ] && [ "$#" -eq 1 ]; then
         exit 2
     fi
     ABT_JULIA_VERSION=$("$ABT_RUNTIME" --version 2>&1) || exit 2
-    printf 'Julia: %s\n' "$ABT_JULIA_VERSION"
+    if [ "$ABT_EMBUTIDO" -eq 1 ]; then
+        printf 'Julia: %s (embutida em %s)\n' "$ABT_JULIA_VERSION" "$ABT_ROOT/runtime/julia"
+    else
+        printf 'Julia: %s (externa)\n' "$ABT_JULIA_VERSION"
+    fi
+    abt_aviso_movida || exit 2
     if [ "$ABT_JULIA_VERSION" != 'julia version 1.13.3' ]; then
         printf '%s\n' 'ABT: versão não homologada; requer Julia 1.13.3.' >&2
         exit 2
@@ -81,4 +122,5 @@ if [ "$ABT_JULIA_VERSION" != 'julia version 1.13.3' ]; then
     printf 'ABT: Julia 1.13.3 necessária; encontrado: %s\n' "$ABT_JULIA_VERSION" >&2
     exit 2
 fi
+abt_aviso_movida || true
 exec "$ABT_RUNTIME" --startup-file=no --compile="$ABT_COMPILE" --project="$ABT_ROOT" "$ABT_ROOT/src/CLI.jl" "$@"

@@ -105,7 +105,7 @@ def warm_cache(runtime):
     try:
         result = subprocess.run([runtime, "--startup-file=no", "--compile=min",
                                  f"--project={TARGET}", "-e", "import Pkg; Pkg.instantiate(); using ABT"],
-                                capture_output=True, text=True, timeout=300, check=False)
+                                capture_output=True, text=True, timeout=1800, check=False)
     except (OSError, subprocess.TimeoutExpired) as exc:
         fail(f"pré-compilação ABT não concluiu: {exc}")
     if result.returncode:
