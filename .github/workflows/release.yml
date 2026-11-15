@@ -59,14 +59,15 @@ jobs:
       - name: Instalar como usuário comum, offline
         run: |
           useradd -m aluno
-          cp -r . /home/aluno/repo && chown -R aluno /home/aluno/repo dist
+          casa=$(getent passwd aluno | cut -d: -f6)
+          cp -r . "$casa/repo" && chown -R aluno "$casa/repo" dist
           chmod -R a+rX dist
-          su aluno -c "sh /home/aluno/repo/tools/instalar.sh --arquivo $PWD/dist/abt-*-linux-x86_64.tar.xz"
+          su aluno -c "sh $casa/repo/tools/instalar.sh --arquivo $PWD/dist/abt-*-linux-x86_64.tar.xz"
       - name: Executar os exemplos da documentação com a Julia embutida
         run: |
           cat > /tmp/exemplos.sh <<'EOF'
           export PATH="$HOME/.local/bin:$PATH" ABT_FIGURA_PATH=/tmp/figura.png ABT_DOC_FIGURE_PATH=/tmp/figura2.png
-          cd /home/aluno/repo
+          cd "$HOME/repo"
           abt doctor
           falhas=0
           for f in docs/examples/*.abt; do
