@@ -27,6 +27,24 @@ abt doctor
 
 Esses três comandos só existem na instalação integrada. Detalhes de arquitetura, medições e limites: `docs/RELATORIO_INSTALADOR_INTEGRADO.md`.
 
+## Instalação em um comando (Windows 10/11 x64)
+
+No PowerShell (não precisa ser administrador):
+
+```powershell
+irm https://raw.githubusercontent.com/GustavoDMentz/ABT-Language/main/tools/instalar.ps1 | iex
+```
+
+Como no Linux, o pacote traz a Julia 1.13.3 e todos os pacotes: **não é preciso instalar Julia nem Python**. O instalador confere a soma SHA-256, instala em `%LOCALAPPDATA%\ABT`, adiciona a pasta `bin` ao `PATH` do **usuário** (abra um novo terminal depois) e não toca em nenhuma Julia que você já tenha.
+
+- **Requisitos:** Windows 10 (1803) ou 11 de 64 bits e alguns GB livres. O download tem cerca de 330 MB.
+- **Primeira instalação:** leva alguns minutos, porque os pacotes são pré-compilados para o seu computador (uma única vez).
+- **Sem alterar o PATH:** defina `$env:ABT_SEM_PATH = '1'` antes do comando; o instalador diz qual pasta você deve adicionar.
+- **Sem internet:** baixe `abt-X.Y.Z-windows-x86_64.zip` e o `.sha256` da página de releases e use `$env:ABT_ARQUIVO = 'C:\caminho\abt-X.Y.Z-windows-x86_64.zip'` antes do comando.
+- **Outro lugar:** `$env:ABT_PREFIXO = 'D:\ferramentas\abt'`.
+
+Os comandos `abt`, `abt doctor`, `abt atualizar`, `abt reparar` e `abt desinstalar` funcionam como no Linux. Diferenças no Windows: `--perfil` só é reconhecido como **primeiro** argumento (`abt --perfil rapido run arquivo.abt`), as mensagens do lançador saem sem acentos, e `abt desinstalar` termina a remoção da pasta alguns segundos depois de devolver o prompt. Dois exemplos da documentação gravam em `/tmp/...`; no Windows isso vira a pasta `\tmp` da unidade atual, que precisa existir (`mkdir \tmp`).
+
 ## Instalação a partir do código-fonte
 
 Para desenvolver a ABT, use um clone do repositório com uma Julia instalada por você:
