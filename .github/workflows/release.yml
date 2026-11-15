@@ -48,7 +48,7 @@ jobs:
           if command -v apt-get >/dev/null; then
             apt-get update -qq && apt-get install -y -qq xz-utils ca-certificates fontconfig fonts-dejavu-core
           else
-            dnf install -y -q xz tar which fontconfig dejavu-sans-fonts
+            dnf install -y -q xz tar which util-linux shadow-utils fontconfig dejavu-sans-fonts
           fi
           ! command -v julia
       - uses: actions/checkout@v4
