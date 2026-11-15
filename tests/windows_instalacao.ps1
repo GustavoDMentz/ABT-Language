@@ -138,6 +138,8 @@ Write-Host '== desinstalar'
 $r = Executa $abt @('desinstalar', '--sim')
 Write-Host $r.Texto
 Verifica ($r.Codigo -eq 0) 'abt desinstalar terminou com codigo 0'
+# O abt.cmd em execucao so pode ser apagado depois que o cmd.exe termina: a remocao final e adiada por alguns segundos.
+for ($i = 0; $i -lt 30 -and (Test-Path $Prefixo); $i++) { Start-Sleep -Seconds 1 }
 Verifica (-not (Test-Path $Prefixo)) 'pasta da instalacao removida'
 Verifica (-not ((PathUsuario) -like "*$Prefixo\bin*")) 'bin removido do PATH do usuario'
 

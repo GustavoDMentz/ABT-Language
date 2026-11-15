@@ -137,8 +137,19 @@ function Invoke-InstaladorAbt {
             if ($r -notmatch '^(s|sim)$') { Info 'cancelado.'; return }
         }
         RemovePath (Join-Path $prefixo 'bin')
-        Remover $prefixo
-        if (Test-Path -LiteralPath $prefixo) { Falha "nao foi possivel remover $prefixo por completo (arquivo em uso?). Feche programas que usam a ABT e repita." }
+        # O abt.cmd que chamou este script ainda esta em execucao: se ele for apagado agora, o cmd.exe nao
+        # consegue ler a linha seguinte e termina com erro. Apaga tudo menos ele e remove o resto logo depois.
+        $lancador = (Join-Path $prefixo 'bin\abt.cmd').ToLowerInvariant()
+        Get-ChildItem -LiteralPath $prefixo -Force | Where-Object { $_.Name -ne 'bin' } | ForEach-Object { Remover $_.FullName }
+        $binDir = Join-Path $prefixo 'bin'
+        if (Test-Path -LiteralPath $binDir) {
+            Get-ChildItem -LiteralPath $binDir -Force | Where-Object { $_.FullName.ToLowerInvariant() -ne $lancador } | ForEach-Object { Remover $_.FullName }
+        }
+        if (Test-Path -LiteralPath $lancador) {
+            Start-Process -FilePath 'cmd.exe' -ArgumentList ('/c ping -n 3 127.0.0.1 >nul & rmdir /s /q "' + $prefixo + '"') -WindowStyle Hidden
+        } else {
+            Remover $prefixo
+        }
         Info 'ABT removida. O seu .julia (se existir) nao foi tocado.'
         return
     }
