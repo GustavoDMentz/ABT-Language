@@ -18,6 +18,10 @@ on:
         description: 'Windows: teste reduzido (instala, roda dois exemplos e desinstala)'
         type: boolean
         default: false
+      so_mover:
+        description: 'Windows: só instala, move a pasta, repara e desinstala'
+        type: boolean
+        default: false
       publicar_em:
         description: 'Windows: tag de uma release existente que receberá os arquivos (ex.: v0.15.0)'
         type: string
@@ -136,6 +140,7 @@ jobs:
         run: |
           $parametros = @{ Pacote = (Get-ChildItem dist\abt-*-windows-x86_64.zip).FullName }
           if ('${{ inputs.rapido }}' -eq 'true') { $parametros.Rapido = $true }
+          if ('${{ inputs.so_mover }}' -eq 'true') { $parametros.SoMover = $true }
           & ./tests/windows_instalacao.ps1 @parametros
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 

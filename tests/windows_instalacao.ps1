@@ -4,10 +4,12 @@
 #
 # Usa o Windows PowerShell 5.1, o mesmo que o usuario final tem. Sem Julia instalada.
 # -Rapido: instala, roda um exemplo e desinstala (para iterar no CI).
+# -SoMover: instala, move a pasta, repara e desinstala (para iterar no CI).
 # (ASCII de proposito: o Windows PowerShell 5.1 le arquivos sem BOM como ANSI.)
 param(
     [Parameter(Mandatory = $true)][string]$Pacote,
-    [switch]$Rapido
+    [switch]$Rapido,
+    [switch]$SoMover
 )
 $ErrorActionPreference = 'Stop'
 $Raiz = Split-Path -Parent $PSScriptRoot
@@ -70,10 +72,12 @@ Verifica ($r.Codigo -eq 0 -and $r.Texto -match 'ABT \d+\.\d+\.\d+') "abt --versi
 Write-Host '== exemplos da documentacao'
 $env:ABT_FIGURA_PATH = Join-Path $Temp 'figura.png'
 $env:ABT_DOC_FIGURE_PATH = Join-Path $Temp 'figura2.png'
+# Dois exemplos gravam em /tmp/... (caminho Unix): no Windows isso vira \tmp na unidade atual.
+New-Item -ItemType Directory -Path (Join-Path ([IO.Path]::GetPathRoot($Raiz)) 'tmp') -Force | Out-Null
 Push-Location $Raiz
 try {
     $exemplos = Get-ChildItem 'docs\examples\*.abt' | Sort-Object Name
-    if ($Rapido) { $exemplos = $exemplos | Where-Object { $_.Name -in 'nucleo.abt', 'falhar.abt' } }
+    if ($Rapido -or $SoMover) { $exemplos = $exemplos | Where-Object { $_.Name -in 'nucleo.abt', 'falhar.abt' } }
     foreach ($e in $exemplos) {
         $r = Executa $abt @('run', $e.FullName)
         $esperado = if ($e.Name -eq 'falhar.abt') { 1 } else { 0 }
@@ -97,6 +101,7 @@ $r = Executa $abt @('--perfil', 'invalido', 'run', $prog)
 Verifica ($r.Codigo -eq 2) 'perfil invalido devolve codigo 2'
 
 if (-not $Rapido) {
+  if (-not $SoMover) {
     # ---------------------------------------------------------------- atualizar (reinstala por cima, via file://)
     Write-Host '== atualizar (forcado) a partir de um servidor local'
     $versao = (Get-Content (Join-Path $Raiz 'Project.toml') -Raw | Select-String '(?m)^version\s*=\s*"([^"]+)"').Matches[0].Groups[1].Value
@@ -115,6 +120,7 @@ if (-not $Rapido) {
     Verifica ($leftovers.Count -eq 0) 'nenhuma sobra de pasta temporaria ou antiga'
     $r = Executa $abt @('run', $prog)
     Verifica ($r.Codigo -eq 0) 'abt continua funcionando depois de atualizar'
+  }
 
     # ---------------------------------------------------------------- mover e reparar
     Write-Host '== mover a pasta e reparar'
@@ -128,6 +134,8 @@ if (-not $Rapido) {
     Verifica ($r.Codigo -eq 0) 'abt reparar terminou com codigo 0'
     $r = Executa $abtMovido @('run', $prog)
     Verifica ($r.Codigo -eq 0 -and $r.Texto.Trim() -eq $textoAcentuado) 'abt funciona depois de reparar, sem avisos'
+    $entradasAbt = (PathUsuario).Split(';') | Where-Object { $_ -like '*abt*' }
+    Write-Host ('entradas do PATH com abt: ' + ($entradasAbt -join ' | '))
     Verifica ((PathUsuario) -like "*$Movido\bin*" -and -not ((PathUsuario) -like "*$Prefixo\bin*")) 'PATH aponta para a nova pasta'
     $Prefixo = $Movido
     $abt = $abtMovido

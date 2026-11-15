@@ -61,6 +61,12 @@ dados
 curl -fsSL https://github.com/GustavoDMentz/ABT-Language/releases/latest/download/instalar.sh | sh
 ```
 
+**Windows 10/11 x64** (PowerShell, sem administrador; adiciona `bin` ao `PATH` do usuário):
+
+```powershell
+irm https://raw.githubusercontent.com/GustavoDMentz/ABT-Language/main/tools/instalar.ps1 | iex
+```
+
 A primeira instalação leva alguns minutos (pré-compilação, uma única vez). Depois:
 
 ```bash

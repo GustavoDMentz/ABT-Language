@@ -1,4 +1,4 @@
-# Instalador integrado da ABT (Linux x86_64)
+# Instalador integrado da ABT (Linux x86_64 e Windows x64)
 
 Objetivo: instalar a ABT **sem** que a pessoa baixe a Julia separadamente.
 
@@ -70,6 +70,22 @@ Instalação somente leitura não funciona sem caches válidos: a Julia grava ar
 
 - O pacote inclui `THIRD_PARTY_NOTICES.md`, gerado a partir do `Manifest.toml`: lista a Julia e os pacotes com versão e indica onde está o texto de cada licença (`runtime/julia/LICENSE.md`, `depot/packages/*/*/LICENSE*` e `depot/artifacts/*/share/licenses`).
 - O workflow de release gera um atestado de procedência do pacote (`actions/attest-build-provenance`), verificável com `gh attestation verify <arquivo> --repo GustavoDMentz/ABT-Language`. Esse passo ainda não foi exercitado (depende da primeira release) e não bloqueia a publicação se falhar. A integridade do download continua garantida pelo SHA-256.
+
+## Windows
+
+```powershell
+irm https://raw.githubusercontent.com/GustavoDMentz/ABT-Language/main/tools/instalar.ps1 | iex
+```
+
+- `bin/abt.cmd` é o lançador (Julia e depot embutidos, `--perfil`, `doctor`, `atualizar`, `reparar`, `desinstalar`). `tools/instalar.ps1` instala, atualiza, repara e desinstala; `tools/construir_bundle.ps1` monta o `.zip`.
+- Instala em `%LOCALAPPDATA%\ABT` e acrescenta `bin` ao `PATH` **do usuário** (não é preciso administrador). Sem `-ExecutionPolicy`: o comando de instalação baixa texto e o executa em memória, e o `abt.cmd` chama o PowerShell com `-ExecutionPolicy Bypass` só para manutenção.
+- Os arquivos `.ps1` e `.cmd` são ASCII de propósito: o Windows PowerShell 5.1 e o `cmd` leem arquivos sem BOM na página de código local. O `abt.cmd` põe o console em UTF-8 enquanto roda e restaura a página de código ao sair.
+- O instalador baixa com `curl.exe` (incluído no Windows 10 1803+) e extrai com o `tar.exe` do sistema (bsdtar), por isso não usa `Expand-Archive`, que é lento para 1,5 GB.
+- Medidas no runner `windows-latest`: pacote de cerca de 300 MB; construção do pacote em cerca de 4 min; pré-compilação no destino em cerca de 4 min.
+- O `abt.cmd` em execução não pode ser apagado por `abt desinstalar` (o `cmd.exe` leria a linha seguinte de um arquivo inexistente); o script apaga todo o resto e agenda a remoção final da pasta para poucos segundos depois.
+- Limites: `--perfil` só como primeiro argumento; mensagens do lançador sem acentos; Windows ARM roda o pacote x64 por emulação (não testado); caminhos muito longos dependem do suporte do Windows (a instalação em `%LOCALAPPDATA%\ABT` cabe com folga no limite de 260 caracteres); antivírus podem examinar a pré-compilação e deixá-la mais lenta.
+- **macOS:** não é suportado por enquanto. Binários sem assinatura e notarização são bloqueados pelo Gatekeeper, e assinar exige conta paga da Apple.
+- Teste: `tests/windows_instalacao.ps1` (Windows PowerShell 5.1, sem Julia no `PATH`) instala o pacote em uma pasta com espaço e acentos, roda os exemplos de `docs/examples`, confere saída em UTF-8, perfis, atualização forçada por cima, mover a pasta e `abt reparar`, e desinstalação com limpeza do `PATH`. O workflow `release.yml` o executa a cada tag e sob demanda (`plataforma=windows`; com `publicar_em=vX.Y.Z` anexa os arquivos a uma release existente).
 
 ## Limites conhecidos
 
