@@ -1,11 +1,27 @@
 name: ABT release
 
-# Gera o pacote do instalador integrado (Julia + ABT + pacotes), testa a instalação em
-# distribuições limpas, sem Julia, e publica o pacote ao criar uma tag vX.Y.Z.
+# Gera os pacotes do instalador integrado (Julia + ABT + pacotes) para Linux e Windows,
+# testa a instalação em sistemas limpos, sem Julia, e publica ao criar uma tag vX.Y.Z.
+# Execução manual: escolha a plataforma; com plataforma=windows e publicar_em=vX.Y.Z, os
+# arquivos do Windows são anexados a uma release que já existe.
 on:
   push:
     tags: ['v*']
   workflow_dispatch:
+    inputs:
+      plataforma:
+        description: 'Plataforma a construir e testar'
+        type: choice
+        options: [todas, linux, windows]
+        default: todas
+      rapido:
+        description: 'Windows: teste reduzido (instala, roda dois exemplos e desinstala)'
+        type: boolean
+        default: false
+      publicar_em:
+        description: 'Windows: tag de uma release existente que receberá os arquivos (ex.: v0.15.0)'
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -16,6 +32,7 @@ concurrency:
 
 jobs:
   bundle:
+    if: github.event_name != 'workflow_dispatch' || inputs.plataforma != 'windows'
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -82,8 +99,77 @@ jobs:
           EOF
           su aluno -c "sh /tmp/exemplos.sh"
 
+  bundle-windows:
+    if: github.event_name != 'workflow_dispatch' || inputs.plataforma != 'linux'
+    runs-on: windows-latest
+    steps:
+      # Sem conversão de fim de linha: os dados de exemplo (CSV, FASTA) devem chegar como no repositório.
+      - run: git config --global core.autocrlf false
+      - uses: actions/checkout@v4
+      - name: A tag deve corresponder à versão de Project.toml
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: bash
+        run: |
+          versao=$(sed -n 's/^version *= *"\(.*\)"/\1/p' Project.toml | head -n 1)
+          test "v$versao" = "$GITHUB_REF_NAME" || { echo "tag $GITHUB_REF_NAME != Project.toml v$versao"; exit 1; }
+      - name: Construir o pacote
+        shell: powershell
+        run: ./tools/construir_bundle.ps1 -Saida dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pacote-windows-x86_64
+          path: dist/*
+          if-no-files-found: error
+
+  instalacao-windows:
+    needs: bundle-windows
+    runs-on: windows-latest
+    steps:
+      - run: git config --global core.autocrlf false
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: pacote-windows-x86_64
+          path: dist
+      - name: Instalar, executar e desinstalar (Windows PowerShell 5.1, sem Julia)
+        shell: powershell
+        run: |
+          $parametros = @('-Pacote', (Get-ChildItem dist\abt-*-windows-x86_64.zip).FullName)
+          if ('${{ inputs.rapido }}' -eq 'true') { $parametros += '-Rapido' }
+          & ./tests/windows_instalacao.ps1 @parametros
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+  publicar-windows:
+    needs: instalacao-windows
+    if: github.event_name == 'workflow_dispatch' && inputs.plataforma == 'windows' && inputs.publicar_em != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: pacote-windows-x86_64
+          path: dist
+      - name: Atestar a origem do pacote
+        uses: actions/attest-build-provenance@v2
+        continue-on-error: true
+        with:
+          subject-path: dist/abt-*-windows-x86_64.zip
+      - name: Anexar à release existente
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.publicar_em }}
+        run: |
+          cp tools/instalar.ps1 dist/instalar.ps1
+          (cd dist && sha256sum -c abt-*-windows-x86_64.zip.sha256)
+          rm -f dist/VERSION
+          gh release upload "$TAG" dist/* --clobber
+
   publicar:
-    needs: instalacao-limpa
+    needs: [instalacao-limpa, instalacao-windows]
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     permissions:
@@ -94,19 +180,22 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
-          name: pacote-linux-x86_64
+          pattern: pacote-*
           path: dist
-      - name: Atestar a origem do pacote (verificável com gh attestation verify)
+          merge-multiple: true
+      - name: Atestar a origem dos pacotes (verificável com gh attestation verify)
         uses: actions/attest-build-provenance@v2
         continue-on-error: true
         with:
-          subject-path: dist/abt-*-linux-x86_64.tar.xz
+          subject-path: |
+            dist/abt-*-linux-x86_64.tar.xz
+            dist/abt-*-windows-x86_64.zip
       - name: Criar a release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cp tools/instalar.sh dist/instalar.sh
-          (cd dist && sha256sum -c abt-*-linux-x86_64.tar.xz.sha256)
+          cp tools/instalar.sh tools/instalar.ps1 dist/
+          (cd dist && for f in abt-*.sha256; do sha256sum -c "$f"; done)
           gh release create "$GITHUB_REF_NAME" dist/* \
             --title "ABT ${GITHUB_REF_NAME#v}" \
-            --notes "Instalação em um comando (Linux x86_64), com a Julia incluída: \`curl -fsSL https://github.com/${GITHUB_REPOSITORY}/releases/latest/download/instalar.sh | sh\`"
+            --notes "Instalação em um comando, com a Julia incluída. Linux x86_64: \`curl -fsSL https://github.com/${GITHUB_REPOSITORY}/releases/latest/download/instalar.sh | sh\`. Windows x64 (PowerShell): \`irm https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/tools/instalar.ps1 | iex\`"
