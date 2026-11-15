@@ -63,7 +63,7 @@ function Invoke-InstaladorAbt {
     }
     function LerMarcador() {
         if (-not (Test-Path -LiteralPath $marcador)) { return $null }
-        try { return (Get-Content -LiteralPath $marcador -Raw | ConvertFrom-Json) } catch { return $null }
+        try { return ([IO.File]::ReadAllText($marcador, $utf8) | ConvertFrom-Json) } catch { return $null }
     }
     function EntradasPath() {
         $p = [Environment]::GetEnvironmentVariable('Path', 'User')
