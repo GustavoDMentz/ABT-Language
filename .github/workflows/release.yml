@@ -134,8 +134,8 @@ jobs:
       - name: Instalar, executar e desinstalar (Windows PowerShell 5.1, sem Julia)
         shell: powershell
         run: |
-          $parametros = @('-Pacote', (Get-ChildItem dist\abt-*-windows-x86_64.zip).FullName)
-          if ('${{ inputs.rapido }}' -eq 'true') { $parametros += '-Rapido' }
+          $parametros = @{ Pacote = (Get-ChildItem dist\abt-*-windows-x86_64.zip).FullName }
+          if ('${{ inputs.rapido }}' -eq 'true') { $parametros.Rapido = $true }
           & ./tests/windows_instalacao.ps1 @parametros
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
