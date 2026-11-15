@@ -65,6 +65,18 @@ JULIA_DEPOT_PATH="$BUNDLE/depot" JULIA_PKG_PRECOMPILE_AUTO=0 \
 rm -rf "$BUNDLE/depot/compiled" "$BUNDLE/depot/registries" "$BUNDLE/depot/logs" "$BUNDLE/depot/scratchspaces"
 [ -d "$BUNDLE/depot/packages" ] && [ -d "$BUNDLE/depot/artifacts" ] || erro "depot incompleto"
 
+printf '==> Avisos de terceiros\n'
+{
+    printf '# Componentes de terceiros incluídos neste pacote\n\n'
+    printf 'A ABT é distribuída junto com os componentes abaixo, cada um sob a sua própria licença.\n\n'
+    printf -- '- **Julia 1.13.3**: `runtime/julia/LICENSE.md` (MIT, mais as licenças das bibliotecas que ela inclui).\n'
+    printf -- '- **Pacotes Julia** (versões fixadas em `Manifest.toml`): o texto de cada licença está no arquivo `LICENSE*` dentro de `depot/packages/<Pacote>/<hash>/`.\n'
+    printf -- '- **Bibliotecas binárias** (artefatos JLL, como o Cairo): licenças em `depot/artifacts/<hash>/share/licenses/`.\n\n'
+    printf '## Pacotes Julia\n\n| Pacote | Versão |\n|---|---|\n'
+    awk '/^\[\[deps\./ {gsub(/^\[\[deps\.|\]\]$/, ""); n = $0}
+         /^version = / {gsub(/version = |"/, ""); if (n != "") { printf "| %s | %s |\n", n, $0; n = "" }}' "$BUNDLE/Manifest.toml"
+} >"$BUNDLE/THIRD_PARTY_NOTICES.md"
+
 printf '==> Empacotando\n'
 NOME=abt-$VERSAO-$PLATAFORMA.tar.xz
 EPOCA=$(cd "$RAIZ" && git log -1 --format=%ct HEAD)

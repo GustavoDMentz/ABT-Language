@@ -1,6 +1,35 @@
 # Instalação, atualização e CLI
 
-## Requisitos
+## Instalação em um comando (Linux x86_64)
+
+```bash
+curl -fsSL https://github.com/GustavoDMentz/ABT-Language/releases/latest/download/instalar.sh | sh
+```
+
+O pacote já traz a Julia 1.13.3 e todos os pacotes: **não é preciso instalar Julia nem Python, nem usar `sudo`**. O instalador confere a soma SHA-256, coloca a ABT em `~/.local/share/abt`, cria `~/.local/bin/abt` e não toca no seu `~/.julia`.
+
+- **Requisitos:** Linux x86_64, `tar`, `xz`, `sha256sum`, `curl` ou `wget` e cerca de 2 GB livres. O download tem cerca de 200 MB.
+- **Primeira instalação:** leva alguns minutos, porque os pacotes são pré-compilados para o seu computador (uma única vez).
+- **PATH:** o instalador não altera o `PATH`. Se `~/.local/bin` não estiver nele, o instalador avisa como incluir.
+- **Sem internet:** baixe o pacote `abt-X.Y.Z-linux-x86_64.tar.xz` e o `.sha256` da página de releases e execute `sh instalar.sh --arquivo abt-X.Y.Z-linux-x86_64.tar.xz`.
+
+```bash
+abt doctor
+```
+
+`abt doctor` informa que a Julia usada é a embutida. Quem define `ABT_JULIA` continua usando a própria Julia.
+
+| Comando | Efeito |
+|---|---|
+| `abt atualizar` | Baixa e instala a versão mais recente; se algo falhar, a instalação anterior é restaurada. |
+| `abt reparar` | Pré-compila de novo. Use se a pasta da instalação foi movida (o `abt` avisa). |
+| `abt desinstalar` | Remove a ABT e o comando `abt`, após confirmação (`--sim` dispensa). |
+
+Esses três comandos só existem na instalação integrada. Detalhes de arquitetura, medições e limites: `docs/RELATORIO_INSTALADOR_INTEGRADO.md`.
+
+## Instalação a partir do código-fonte
+
+Para desenvolver a ABT, use um clone do repositório com uma Julia instalada por você:
 
 - Ubuntu/Linux x86_64 com Julia **1.13.3** instalada separadamente.
 - Python 3 para executar `tools/install.py` e `tools/uninstall.py`; PythonCall só é necessário se o programa importar Python.
@@ -14,7 +43,7 @@ python3 tools/install.py
 ~/.local/bin/abt doctor
 ```
 
-O instalador coloca ABT em `~/.local/share/abt` e cria `~/.local/bin/abt`. Use `python3 tools/install.py` novamente para atualizar. Para remover, execute `python3 tools/uninstall.py` a partir de uma cópia do repositório. O instalador não altera o `PATH`; inclua `~/.local/bin` manualmente se necessário. Sem instalação, use `bin/abt` na raiz do clone.
+O instalador coloca ABT em `~/.local/share/abt` e cria `~/.local/bin/abt`. Use `python3 tools/install.py` novamente para atualizar. Para remover, execute `python3 tools/uninstall.py` a partir de uma cópia do repositório. O instalador não altera o `PATH`; inclua `~/.local/bin` manualmente se necessário. Sem instalação, use `bin/abt` na raiz do clone. Não misture os dois instaladores na mesma pasta: o integrado recusa uma instalação feita por `tools/install.py` e explica como removê-la.
 
 ## Primeiro programa
 
@@ -52,4 +81,4 @@ A opção pode vir em qualquer posição (`abt run arquivo.abt --perfil rapido` 
 
 Até a 0.14.0 o padrão era `--compile=min`. A mudança é só de desempenho: quem definia `ABT_JULIA_COMPILE=min` continua com o comportamento anterior. Medições e metodologia: `docs/RELATORIO_DESEMPENHO_0150.md`.
 
-Se `doctor` disser que Julia não foi encontrada, ajuste `ABT_JULIA` ou o `PATH`. Se indicar versão incompatível, selecione exatamente Julia 1.13.3. Para falhas de pacote, resolva as dependências Julia no ambiente do projeto; a mensagem com `--depurar` inclui a causa técnica.
+Na instalação integrada a Julia vem junto. Na instalação a partir do código, se `doctor` disser que Julia não foi encontrada, ajuste `ABT_JULIA` ou o `PATH`. Se indicar versão incompatível, selecione exatamente Julia 1.13.3. Para falhas de pacote, resolva as dependências Julia no ambiente do projeto; a mensagem com `--depurar` inclui a causa técnica.

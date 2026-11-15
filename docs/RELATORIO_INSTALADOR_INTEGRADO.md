@@ -66,6 +66,11 @@ Instalação somente leitura não funciona sem caches válidos: a Julia grava ar
 - `.github/workflows/release.yml`, ao criar a tag `vX.Y.Z` (igual à versão de `Project.toml`): roda `tests/test_bundle_installer.py`, constrói o pacote, instala em contêineres limpos (Ubuntu 22.04 e 24.04, Debian 12, Fedora 40) como usuário comum, executa os exemplos de `docs/examples` e publica o pacote, o `.sha256`, `VERSION` e `instalar.sh` na release.
 - `tests/test_bundle_installer.py` usa uma Julia falsa e cobre integridade, troca atômica com rollback, conflitos de link, atualização, reparo e desinstalação.
 
+## Licenças e verificação de origem
+
+- O pacote inclui `THIRD_PARTY_NOTICES.md`, gerado a partir do `Manifest.toml`: lista a Julia e os pacotes com versão e indica onde está o texto de cada licença (`runtime/julia/LICENSE.md`, `depot/packages/*/*/LICENSE*` e `depot/artifacts/*/share/licenses`).
+- O workflow de release gera um atestado de procedência do pacote (`actions/attest-build-provenance`), verificável com `gh attestation verify <arquivo> --repo GustavoDMentz/ABT-Language`. Esse passo ainda não foi exercitado (depende da primeira release) e não bloqueia a publicação se falhar. A integridade do download continua garantida pelo SHA-256.
+
 ## Limites conhecidos
 
 - Só Linux x86_64. macOS e Windows ficam para a Fase 2.
