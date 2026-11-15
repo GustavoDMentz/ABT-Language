@@ -12,7 +12,7 @@ on:
       plataforma:
         description: 'Plataforma a construir e testar'
         type: choice
-        options: [todas, linux, windows]
+        options: [todas, linux, windows, depurar]
         default: todas
       rapido:
         description: 'Windows: teste reduzido (instala, roda dois exemplos e desinstala)'
@@ -32,7 +32,7 @@ concurrency:
 
 jobs:
   bundle:
-    if: github.event_name != 'workflow_dispatch' || inputs.plataforma != 'windows'
+    if: github.event_name != 'workflow_dispatch' || contains(fromJSON('["todas","linux"]'), inputs.plataforma)
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -100,7 +100,7 @@ jobs:
           su aluno -c "sh /tmp/exemplos.sh"
 
   bundle-windows:
-    if: github.event_name != 'workflow_dispatch' || inputs.plataforma != 'linux'
+    if: github.event_name != 'workflow_dispatch' || contains(fromJSON('["todas","windows"]'), inputs.plataforma)
     runs-on: windows-latest
     steps:
       # Sem conversão de fim de linha: os dados de exemplo (CSV, FASTA) devem chegar como no repositório.
@@ -138,6 +138,39 @@ jobs:
           if ('${{ inputs.rapido }}' -eq 'true') { $parametros.Rapido = $true }
           & ./tests/windows_instalacao.ps1 @parametros
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+  depurar-windows:
+    if: github.event_name == 'workflow_dispatch' && inputs.plataforma == 'depurar'
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - shell: powershell
+        run: |
+          $p = Join-Path $env:RUNNER_TEMP ('abt instala' + [char]0xE7 + [char]0xE3 + 'o')
+          New-Item -ItemType Directory $p | Out-Null
+          [IO.File]::WriteAllText("$p\.abt-prefixo", $p + "`r`n", (New-Object Text.UTF8Encoding($false)))
+          Get-Content "$p\.abt-prefixo" -Raw | Out-String | Write-Host
+          [BitConverter]::ToString([IO.File]::ReadAllBytes("$p\.abt-prefixo")) | Write-Host
+          $bat = Join-Path $env:RUNNER_TEMP 'dbg.cmd'
+          $linhas = @(
+            '@echo off',
+            'setlocal',
+            'set "P=%~1"',
+            'echo A: [%P%]',
+            'set "X="',
+            'set /p X=<"%P%\.abt-prefixo"',
+            'echo sem chcp: [%X%]',
+            'chcp 65001 >nul',
+            'set "X="',
+            'set /p X=<"%P%\.abt-prefixo"',
+            'echo com chcp: [%X%]',
+            'set "X="',
+            'for /f "usebackq delims=" %%L in ("%P%\.abt-prefixo") do set "X=%%L"',
+            'echo com for: [%X%]',
+            'type "%P%\.abt-prefixo"'
+          )
+          [IO.File]::WriteAllLines($bat, $linhas, [Text.Encoding]::ASCII)
+          & cmd.exe /c "`"$bat`" `"$p`"" 2>&1 | Out-String | Write-Host
 
   publicar-windows:
     needs: instalacao-windows
