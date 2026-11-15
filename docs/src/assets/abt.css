@@ -423,3 +423,35 @@ html[class] #documenter .docs-sidebar ul.docs-menu .tocitem { background: transp
 html[class] #documenter .docs-sidebar ul.docs-menu a.tocitem:hover { background: var(--abt-accent-soft); }
 html[class] #documenter .docs-sidebar ul.docs-menu li.is-active > a.tocitem { background: var(--abt-accent-soft); box-shadow: inset 3px 0 0 var(--abt-accent); }
 html[class] #documenter .docs-sidebar ul.docs-menu ul { border-top: 0; border-bottom: 0; }
+
+/* Espaçamento: respiro nas bordas da barra lateral e da barra superior. */
+html[class] #documenter .docs-sidebar ul.docs-menu { padding: 0.2rem 1rem 1.6rem; }
+html[class] #documenter .docs-sidebar ul.docs-menu .tocitem { padding: 0.45rem 0.85rem; border-radius: 8px; line-height: 1.35; }
+html[class] #documenter .docs-sidebar ul.docs-menu > li { margin-bottom: 0.1rem; }
+html[class] #documenter .docs-sidebar ul.docs-menu > li > span.tocitem,
+html[class] #documenter .docs-sidebar ul.docs-menu > li > .tocitem:has(+ ul) { padding-top: 1rem; padding-bottom: 0.35rem; }
+html[class] #documenter .docs-sidebar ul.docs-menu ul { padding-left: 0.5rem; margin-bottom: 0.3rem; }
+html[class] #documenter .docs-sidebar ul.docs-menu ul.internal { margin-left: 0.9rem; }
+html[class] #documenter .docs-sidebar ul.docs-menu ul.internal a.tocitem { padding: 0.25rem 0.7rem; }
+html[class] #documenter .docs-main header.docs-navbar { padding: 0 1.6rem; }
+html[class] #documenter .docs-navbar .breadcrumb { margin: 0; align-self: center; }
+html[class] #documenter .docs-navbar .docs-right { gap: 0.2rem; }
+html[class] #documenter .docs-navbar .docs-right a { padding: 0 0.55rem; }
+
+/* Espaçamento do herói e das seções. */
+html[class] #documenter .docs-main .content .abt-hero { padding: 3rem 2.6rem 2.6rem; margin-bottom: 3rem; }
+html[class] #documenter .docs-main .content .abt-hero .abt-eyebrow { margin-bottom: 1.4rem; }
+html[class] #documenter .docs-main .content .abt-hero h1 { margin-bottom: 1.2rem; }
+html[class] #documenter .docs-main .content .abt-cta { margin-top: 2rem; gap: 0.8rem; }
+html[class] #documenter .docs-main .content .abt-demo { margin-top: 2.4rem; gap: 1.2rem; }
+html[class] #documenter .abt-stats { margin-top: 2.2rem; padding-top: 1.6rem; border-top: 1px solid var(--abt-line); gap: 1.2rem 2rem; }
+html[class] #documenter .docs-main .content .abt-cards > ul { gap: 1.2rem; margin-top: 1.4rem !important; }
+html[class] #documenter .docs-main .content .abt-cards > ul > li { padding: 1.3rem 1.4rem; }
+html[class] #documenter .docs-main .content h2 { margin-top: 3.2rem; }
+html[class] #documenter .docs-main .content .abt-meta { margin-bottom: 2rem; }
+@media (max-width: 720px) { html[class] #documenter .docs-main .content .abt-hero { padding: 2rem 1.3rem 1.8rem; } }
+html[class] #documenter .docs-main .content ul.abt-stats { margin: 2.4rem 0 0; padding: 1.6rem 0 0; border-top: 1px solid var(--abt-line); grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem 1.6rem; }
+html[class] #documenter .docs-main .content ul.abt-stats li { margin: 0; }
+@media (max-width: 720px) { html[class] #documenter .docs-main .content ul.abt-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+html[class] #documenter .docs-main .content .abt-path .abt-check { margin-top: 1.2rem !important; margin-bottom: 0.6rem !important; }
+html[class] #documenter .docs-main .content .abt-path > ul { margin-top: 0.8rem; }
