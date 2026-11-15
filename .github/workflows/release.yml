@@ -1,0 +1,104 @@
+name: ABT release
+
+# Gera o pacote do instalador integrado (Julia + ABT + pacotes), testa a instalação em
+# distribuições limpas, sem Julia, e publica o pacote ao criar uma tag vX.Y.Z.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  bundle:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: A tag deve corresponder à versão de Project.toml
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          versao=$(sed -n 's/^version *= *"\(.*\)"/\1/p' Project.toml | head -n 1)
+          test "v$versao" = "$GITHUB_REF_NAME" || { echo "tag $GITHUB_REF_NAME != Project.toml v$versao"; exit 1; }
+      - name: Testes do instalador (Julia falsa)
+        run: python3 -I tests/test_bundle_installer.py
+      - name: Construir o pacote
+        run: tools/construir_bundle.sh --saida dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pacote-linux-x86_64
+          path: dist/*
+          if-no-files-found: error
+
+  instalacao-limpa:
+    needs: bundle
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        imagem: ['ubuntu:22.04', 'ubuntu:24.04', 'debian:12', 'fedora:40']
+    container: ${{ matrix.imagem }}
+    steps:
+      - name: Dependências mínimas (sem Julia)
+        run: |
+          if command -v apt-get >/dev/null; then
+            apt-get update -qq && apt-get install -y -qq xz-utils ca-certificates fontconfig fonts-dejavu-core
+          else
+            dnf install -y -q xz tar which fontconfig dejavu-sans-fonts
+          fi
+          ! command -v julia
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: pacote-linux-x86_64
+          path: dist
+      - name: Instalar como usuário comum, offline
+        run: |
+          useradd -m aluno
+          cp -r . /home/aluno/repo && chown -R aluno /home/aluno/repo dist
+          chmod -R a+rX dist
+          su aluno -c "sh /home/aluno/repo/tools/instalar.sh --arquivo $PWD/dist/abt-*-linux-x86_64.tar.xz"
+      - name: Executar os exemplos da documentação com a Julia embutida
+        run: |
+          cat > /tmp/exemplos.sh <<'EOF'
+          export PATH="$HOME/.local/bin:$PATH" ABT_FIGURA_PATH=/tmp/figura.png ABT_DOC_FIGURE_PATH=/tmp/figura2.png
+          cd /home/aluno/repo
+          abt doctor
+          falhas=0
+          for f in docs/examples/*.abt; do
+            n=$(basename "$f")
+            abt run "$f" >/dev/null 2>/tmp/erro.txt; rc=$?
+            if [ "$n" = falhar.abt ]; then esperado=1; else esperado=0; fi
+            if [ "$rc" -ne "$esperado" ]; then echo "FALHA $n (rc=$rc)"; head -3 /tmp/erro.txt; falhas=$((falhas+1)); else echo "ok $n"; fi
+          done
+          test "$falhas" -eq 0
+          abt desinstalar --sim
+          test ! -e "$HOME/.local/share/abt"
+          EOF
+          su aluno -c "sh /tmp/exemplos.sh"
+
+  publicar:
+    needs: instalacao-limpa
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: pacote-linux-x86_64
+          path: dist
+      - name: Criar a release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp tools/instalar.sh dist/instalar.sh
+          (cd dist && sha256sum -c abt-*-linux-x86_64.tar.xz.sha256)
+          gh release create "$GITHUB_REF_NAME" dist/* \
+            --title "ABT ${GITHUB_REF_NAME#v}" \
+            --notes "Instalação em um comando (Linux x86_64), com a Julia incluída: \`curl -fsSL https://github.com/${GITHUB_REPOSITORY}/releases/latest/download/instalar.sh | sh\`"
