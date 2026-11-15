@@ -78,19 +78,6 @@ if /i "%~1"=="doctor" if "%~2"=="" goto :doctor
 rem ---- execucao normal
 call :verificar_julia || goto :sair
 call :aviso_movida
-if not "%ABT_EMBUTIDO%"=="1" exit /b 0
-if not exist "%ABT_ROOT%\.abt-prefixo" exit /b 0
-set "ABT_PREFIXO_GRAVADO="
-set /p ABT_PREFIXO_GRAVADO=<"%ABT_ROOT%\.abt-prefixo"
-if /i "%ABT_PREFIXO_GRAVADO%"=="%ABT_ROOT%" exit /b 0
-echo ABT: a instalacao foi movida de %ABT_PREFIXO_GRAVADO%; execute "abt reparar" ^(a primeira execucao sera lenta^). 1>&2
-exit /b 1
-
-:doctor
-
-rem ---- execucao normal
-call :verificar_julia || goto :sair
-call :aviso_movida
 if "%ABT_SHIFT%"=="2" goto :executar2
 if "%ABT_SHIFT%"=="1" goto :executar1
 "%ABT_RUNTIME%" --startup-file=no --compile=%ABT_COMPILE% --project="%ABT_ROOT%" "%ABT_ROOT%\src\CLI.jl" %*
@@ -119,15 +106,14 @@ if not "%ABT_JV%"=="julia version 1.13.3" (
 exit /b 0
 
 :aviso_movida
-if "%ABT_EMBUTIDO%"=="1" if exist "%ABT_ROOT%\.abt-prefixo" (
-    set "ABT_PREFIXO_GRAVADO="
-    set /p ABT_PREFIXO_GRAVADO=<"%ABT_ROOT%\.abt-prefixo"
-    if /i not "%ABT_PREFIXO_GRAVADO%"=="%ABT_ROOT%" (
-        echo ABT: a instalacao foi movida de %ABT_PREFIXO_GRAVADO%; execute "abt reparar" ^(a primeira execucao sera lenta^). 1>&2
-        exit /b 1
-    )
-)
-exit /b 0
+if not "%ABT_EMBUTIDO%"=="1" exit /b 0
+if not exist "%ABT_ROOT%\.abt-prefixo" exit /b 0
+set "ABT_PREFIXO_GRAVADO="
+set /p ABT_PREFIXO_GRAVADO=<"%ABT_ROOT%\.abt-prefixo"
+if /i "%ABT_PREFIXO_GRAVADO%"=="%ABT_ROOT%" exit /b 0
+echo ABT: a instalacao foi movida de %ABT_PREFIXO_GRAVADO%; execute "abt reparar" ^(a primeira execucao sera lenta^). 1>&2
+exit /b 1
+
 
 :doctor
 echo ABT: %ABT_ROOT%

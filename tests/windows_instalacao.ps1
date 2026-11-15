@@ -45,6 +45,9 @@ function Instalador($acao, $variaveis) {
 }
 function PathUsuario() { [Environment]::GetEnvironmentVariable('Path', 'User') }
 
+# Os runners do GitHub trazem uma Julia no PATH; o teste simula uma maquina sem Julia.
+$env:Path = (($env:Path -split ';') | Where-Object { $_ -and -not (Test-Path (Join-Path $_ 'julia.exe')) }) -join ';'
+Remove-Item Env:ABT_JULIA -ErrorAction SilentlyContinue
 Verifica (-not (Get-Command julia -ErrorAction SilentlyContinue)) 'nao ha Julia no PATH (ambiente limpo)'
 
 # ---------------------------------------------------------------- instalacao
