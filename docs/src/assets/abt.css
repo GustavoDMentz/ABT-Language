@@ -401,3 +401,25 @@ html[class] #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal,
 html[class] #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal li,
 html[class] #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal a.tocitem { background: transparent; }
 html[class] #documenter .docs-sidebar ul.docs-menu li.is-active ul.internal a.tocitem:hover { background: var(--abt-accent-soft); }
+
+/* Os temas do Documenter usam seletores `html.theme--* #documenter ...`; o prefixo `html[class]`
+   empata em especificidade e, vindo depois, prevalece. Garante as cores do tema ABT em todos os temas. */
+html[class] #documenter .docs-sidebar { background: var(--abt-side); border-right: 1px solid var(--abt-line); }
+html[class] #documenter .docs-sidebar ul.docs-menu .tocitem { color: var(--abt-ink); }
+html[class] #documenter .docs-sidebar ul.docs-menu > li > span.tocitem,
+html[class] #documenter .docs-sidebar ul.docs-menu > li > .tocitem:has(+ ul) { color: var(--abt-muted); }
+html[class] #documenter .docs-sidebar ul.docs-menu ul.internal a.tocitem { color: var(--abt-muted); }
+html[class] #documenter .docs-sidebar ul.docs-menu li.is-active > a.tocitem { background: var(--abt-accent-soft); color: var(--abt-accent); }
+html[class] #documenter .docs-main header.docs-navbar {
+  background: color-mix(in srgb, var(--abt-bg) 85%, transparent); border-bottom: 1px solid var(--abt-line); box-shadow: none; height: 3.4rem;
+}
+html[class] #documenter .docs-navbar .breadcrumb li + li::before { color: var(--abt-muted); opacity: .7; }
+html[class] #documenter .docs-navbar .breadcrumb a.is-disabled { color: var(--abt-muted) !important; }
+html[class] #documenter .docs-navbar .docs-right a { color: var(--abt-muted) !important; }
+html[class] #documenter .docs-navbar .docs-right a:hover { color: var(--abt-accent) !important; }
+html[class] #documenter .docs-sidebar ul.docs-menu li,
+html[class] #documenter .docs-sidebar ul.docs-menu ul,
+html[class] #documenter .docs-sidebar ul.docs-menu .tocitem { background: transparent; box-shadow: none; }
+html[class] #documenter .docs-sidebar ul.docs-menu a.tocitem:hover { background: var(--abt-accent-soft); }
+html[class] #documenter .docs-sidebar ul.docs-menu li.is-active > a.tocitem { background: var(--abt-accent-soft); box-shadow: inset 3px 0 0 var(--abt-accent); }
+html[class] #documenter .docs-sidebar ul.docs-menu ul { border-top: 0; border-bottom: 0; }
