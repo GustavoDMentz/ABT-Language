@@ -81,7 +81,7 @@ irm https://raw.githubusercontent.com/GustavoDMentz/ABT-Language/main/tools/inst
 - Instala em `%LOCALAPPDATA%\ABT` e acrescenta `bin` ao `PATH` **do usuário** (não é preciso administrador). Sem `-ExecutionPolicy`: o comando de instalação baixa texto e o executa em memória, e o `abt.cmd` chama o PowerShell com `-ExecutionPolicy Bypass` só para manutenção.
 - Os arquivos `.ps1` e `.cmd` são ASCII de propósito: o Windows PowerShell 5.1 e o `cmd` leem arquivos sem BOM na página de código local. O `abt.cmd` põe o console em UTF-8 enquanto roda e restaura a página de código ao sair.
 - O instalador baixa com `curl.exe` (incluído no Windows 10 1803+) e extrai com o `tar.exe` do sistema (bsdtar), por isso não usa `Expand-Archive`, que é lento para 1,5 GB.
-- Medidas no runner `windows-latest`: pacote de cerca de 300 MB; construção do pacote em cerca de 4 min; pré-compilação no destino em cerca de 4 min.
+- Medidas no runner `windows-latest`: pacote de 331 MB; construção do pacote em cerca de 4 min; pré-compilação no destino em cerca de 4 min.
 - O `abt.cmd` em execução não pode ser apagado por `abt desinstalar` (o `cmd.exe` leria a linha seguinte de um arquivo inexistente); o script apaga todo o resto e agenda a remoção final da pasta para poucos segundos depois.
 - Limites: `--perfil` só como primeiro argumento; mensagens do lançador sem acentos; Windows ARM roda o pacote x64 por emulação (não testado); caminhos muito longos dependem do suporte do Windows (a instalação em `%LOCALAPPDATA%\ABT` cabe com folga no limite de 260 caracteres); antivírus podem examinar a pré-compilação e deixá-la mais lenta.
 - **macOS:** não é suportado por enquanto. Binários sem assinatura e notarização são bloqueados pelo Gatekeeper, e assinar exige conta paga da Apple.
@@ -89,10 +89,11 @@ irm https://raw.githubusercontent.com/GustavoDMentz/ABT-Language/main/tools/inst
 
 ## Limites conhecidos
 
-- Só Linux x86_64. macOS e Windows ficam para a Fase 2.
+- Linux x86_64 e Windows x64. macOS não é suportado (ver acima).
 - O instalador exige `tar`, `xz`, `sha256sum` e `curl` ou `wget`.
 - A pré-compilação exige espaço em disco (cerca de 2 GB) e alguns minutos; sem rede, use `--arquivo`.
 - Gráficos (Cairo) precisam de fontes no sistema para desenhar texto; os contêineres do workflow instalam `fontconfig` e uma fonte, e essa dependência ainda não foi verificada em uma máquina sem fontes.
 - PythonCall continua opcional e não faz parte do pacote.
 - O `tools/install.py` (instalação a partir do código-fonte, exige Julia externa) continua disponível para desenvolvimento.
-- O workflow de release ainda não foi executado no GitHub; o fluxo foi validado localmente com a Julia real num ambiente isolado.
+- No Windows, dois exemplos (`/tmp/...`) exigem a pasta `\tmp` na unidade atual; o teste do CI a cria.
+- O passo de atestado de procedência só será exercitado na próxima release por tag.
