@@ -94,8 +94,12 @@ goto :sair
 
 :verificar_julia
 set "ABT_JV="
-rem O par de aspas extra evita que o cmd /c descarte as aspas de um caminho com e comercial.
-for /f "delims=" %%V in ('""%ABT_RUNTIME%" --version 2^>^&1"') do set "ABT_JV=%%V"
+rem A saida vai para um arquivo temporario (e nao para for /f): o for /f passa o comando por cmd /c,
+rem que quebra caminhos com e comercial mesmo entre aspas.
+set "ABT_JVF=%TEMP%\abt-jv-%RANDOM%%RANDOM%.txt"
+"%ABT_RUNTIME%" --version >"%ABT_JVF%" 2>&1
+if exist "%ABT_JVF%" set /p ABT_JV=<"%ABT_JVF%"
+del "%ABT_JVF%" >nul 2>nul
 if not defined ABT_JV (
     echo ABT: Julia nao encontrada. Execute abt doctor para detalhes. 1>&2
     set "ABT_RC=2" & exit /b 2
