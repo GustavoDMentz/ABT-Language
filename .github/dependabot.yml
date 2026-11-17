@@ -1,0 +1,9 @@
+# Mantém as actions dos workflows atualizadas (elas estão fixadas por SHA de commit).
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "ci"
