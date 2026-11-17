@@ -2,7 +2,7 @@
 
 ABT expressa programas pequenos e operações de dados de maneira declarativa. Julia executa cálculos e fornece bibliotecas consolidadas. A linguagem mantém um interpretador e um gerador Julia que consomem a mesma representação intermediária validada. O objetivo é escrever intenção de alto nível sem inferir silenciosamente esquemas, métodos estatísticos ou políticas científicas.
 
-ABT ainda é experimental. A CLI homologada exige Julia 1.13.3; o projeto não distribui Julia embutida. Funções científicas têm pré-condições explícitas, e chamadas a bibliotecas externas pressupõem código confiável. ABT não é um sandbox.
+ABT ainda é experimental. A CLI homologada usa Julia 1.13.3, que o instalador integrado já traz embutida. Funções científicas têm pré-condições explícitas, e chamadas a bibliotecas externas pressupõem código confiável. ABT não é um sandbox: um programa roda com os seus privilégios. Para executar um programa de origem desconhecida, use `abt --seguro run programa.abt` (veja [Interoperabilidade](../manual/interop.md)).
 
 ```abt
 medidas = [12, 15, 19, 20]

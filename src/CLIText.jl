@@ -19,6 +19,11 @@ Uso:
 Opções:
   --depurar         Exibe também a exceção técnica completa; use antes do comando.
   --perfil NOME     Perfil de execução: padrao (recomendado) ou rapido.
+  --seguro          Bloqueia 'usar Python', 'ambiente' e arquivos fora da pasta do programa.
+  --permitir-python Libera qualquer módulo Python em 'usar Python' (só para programas de confiança).
+
+Segurança: um programa ABT roda com os seus privilégios; a ABT não é um sandbox.
+Não execute programas de origem desconhecida sem --seguro.
 
 Códigos de saída: 0 sucesso, 1 erro no programa, 2 uso incorreto ou arquivo ausente.
 """

@@ -3,6 +3,7 @@ module ABT
 import Statistics
 import LinearAlgebra
 import TOML
+include("Seguranca.jl")
 include("StdlibRender.jl")
 include("Stdlib.jl")
 include("StdlibBio.jl")
@@ -586,7 +587,7 @@ function execute_unchecked(nodes::Vector{Node}; env=Dict{String,Any}(), output=S
   elseif n.kind == :show
    push!(output, Base.invokelatest(abt_std_render, evalnode(a[1], env)))
   elseif n.kind == :import_python
-   path = checked_python_path(a[1]); py = python_runtime()
+   path = checked_python_path(a[1]); abt_verificar_modulo_python(path); py = python_runtime()
    # Keep Python objects on the Python side, without eager array conversions.
    modules = get!(env, "Python") do
     ABTPythonNamespace()
@@ -624,7 +625,7 @@ function execute(nodes::Vector{Node}; env=Dict{String,Any}(), output=String[])
  any(startswith(k, "__abt_") for k in keys(env)) &&
   error("Semantic error: reserved internal environment key")
  declarations = Set(n.args[1] for n in nodes if n.kind == :function)
- runtime_env = Dict{String,Any}(k => v for (k,v) in ABT_STDLIB if !(k in declarations))
+ runtime_env = Dict{String,Any}(k => abt_proteger_funcao(k, v) for (k,v) in ABT_STDLIB if !(k in declarations))
  merge!(runtime_env, env)
  validate_ir(lower_ir(nodes); initial_names=Dict{String,Symbol}(k => :unknown for k in keys(env)))
  return execute_unchecked(nodes; env=runtime_env, output)
@@ -1434,6 +1435,8 @@ function _generate_validated_ir(program::Vector{IR})
    "function abt_import_python!(ns, path, pyimport)",
    "    occursin(r\"^[A-Za-z][A-Za-z_0-9]*(\\.[A-Za-z][A-Za-z_0-9]*)*\$\", path) || error(\"ABT interop: caminho de módulo inválido: \$path\")",
    "    any(startswith(part, \"_\") for part in split(path, '.')) && error(\"ABT interop: componente privado: \$path\")",
+   "    raiz = String(first(split(path, '.')))",
+   "    raiz in " * repr(sort(collect(ABT_PYTHON_PERMITIDOS))) * " || get(ENV, \"ABT_PERMITIR_PYTHON\", \"\") == \"1\" || error(\"ABT segurança: o módulo Python '\$raiz' não está na lista de permitidos; defina ABT_PERMITIR_PYTHON=1 se confia neste programa\")",
    "    obj = Base.invokelatest(pyimport, path)",
    "    ns.modules[path] = obj",
    "    nothing",

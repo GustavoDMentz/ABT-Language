@@ -3,6 +3,12 @@
 function cli_main(args::Vector{String})
     debug = !isempty(args) && first(args) == "--depurar"
     debug && (args = args[2:end])
+    # Opções de segurança (ver src/Seguranca.jl); aceitas antes do comando, em qualquer ordem.
+    seguro = false; permitir_python = false
+    while !isempty(args) && first(args) in ("--seguro", "--permitir-python")
+        first(args) == "--seguro" ? (seguro = true) : (permitir_python = true)
+        args = args[2:end]
+    end
     if !debug && length(args) == 1 && args[1] in ("--ajuda", "--help", "-h")
         print(ABT_HELP)
         return 0
@@ -29,6 +35,7 @@ function cli_main(args::Vector{String})
         println(stderr, "ABT: arquivo não encontrado: ", path)
         return 2
     end
+    abt_configurar_seguranca!(; seguro, permitir_python, arquivo=path)
     try
         source = read(path, String)
         ast = parse_program(tokenize(source))
