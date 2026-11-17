@@ -18,7 +18,8 @@ $Instalador = Join-Path $Raiz 'tools\instalar.ps1'
 $Temp = if ($env:RUNNER_TEMP) { $env:RUNNER_TEMP } else { [IO.Path]::GetTempPath() }
 # Caminho com espaco e acentos (instalacao + c cedilha + a til + o)
 $Prefixo = Join-Path $Temp ('abt instala' + [char]0x00E7 + [char]0x00E3 + 'o')
-$Movido = Join-Path $Temp ('abt movido ' + [char]0x00E9)
+# O nome do destino tem '&' de proposito: o abt.cmd nao pode tratar o que vem depois dele como comando.
+$Movido = Join-Path $Temp ('abt movido & ' + [char]0x00E9)
 $Falhas = 0
 
 function Ok($m) { Write-Host "ok    $m" -ForegroundColor Green }
@@ -99,6 +100,8 @@ $r = Executa $abt @('--perfil', 'rapido', 'run', $prog)
 Verifica ($r.Codigo -eq 0 -and $r.Texto.Trim() -eq $textoAcentuado) '--perfil rapido executa'
 $r = Executa $abt @('--perfil', 'invalido', 'run', $prog)
 Verifica ($r.Codigo -eq 2) 'perfil invalido devolve codigo 2'
+$r = Executa $abt @('--perfil', 'x&echo INJETADO_ABT', 'run', $prog)
+Verifica ($r.Codigo -eq 2 -and $r.Texto -notmatch 'INJETADO_ABT') 'perfil com & nao executa comando injetado'
 
 if (-not $Rapido) {
   if (-not $SoMover) {
