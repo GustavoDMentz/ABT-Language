@@ -138,6 +138,33 @@ class Instalacao(Base):
         self.assertFalse((self.bin / "abt").exists())
         self.assertEqual(self.sobras(), [])
 
+    def test_pacote_sem_soma_exige_confirmacao_explicita(self):
+        pacote = construir_pacote(self.pacotes, "0.15.0")
+        solto = self.t / "sem-soma"
+        solto.mkdir()
+        copia = shutil.copy2(pacote, solto)  # sem o .sha256 ao lado
+        r = self.instalar(copia)
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("sem soma SHA-256", r.stderr)
+        self.assertFalse(self.prefixo.exists())
+        r = self.instalar(copia, "--sem-verificacao")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("SEM verificação", r.stderr)
+
+    def test_recusa_endereco_que_nao_seja_https(self):
+        for base in ("http://exemplo.invalid/releases", "ftp://exemplo.invalid/releases", "http://127.0.0.1.exemplo.invalid/x"):
+            r = self.instalador("--prefixo", str(self.prefixo), "--bin", str(self.bin), env={"ABT_BASE_URL": base})
+            self.assertNotEqual(r.returncode, 0, base)
+            self.assertIn("use https://", r.stderr, base)
+            self.assertFalse(self.prefixo.exists(), base)
+
+    def test_atestacao_exige_gh_ou_pacote_baixado(self):
+        pacote = construir_pacote(self.pacotes, "0.15.0")
+        r = self.instalar(pacote, "--verificar-atestacao")
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("só vale para pacotes baixados", r.stderr)
+        self.assertFalse(self.prefixo.exists())
+
     def test_pacote_sem_a_julia_esperada_e_recusado(self):
         pacote = construir_pacote(self.pacotes, "0.15.0", com_julia=False)
         r = self.instalar(pacote)

@@ -45,11 +45,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: julia-actions/setup-julia@v2
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: julia-actions/setup-julia@4c0cb0fce8556fdb04a90347310e5db8b1f98fb9 # v2
         with:
           version: '1.13.3'
-      - uses: julia-actions/cache@v2
+      - uses: julia-actions/cache@d10a6fd8f31b12404a54613ebad242900567f2b9 # v2
       - name: Install ABT dependencies
         run: julia --project=. -e 'import Pkg; Pkg.instantiate()'
       - name: Install documentation dependencies
@@ -70,7 +70,7 @@ jobs:
         run: python3 tools/check_privacy.py
       - name: Build site
         run: julia --project=docs docs/make.jl
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: docs/build
 
@@ -86,7 +86,7 @@ jobs:
     steps:
       - name: Download and verify Pages artifact on PR
         if: github.ref != 'refs/heads/main'
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           name: github-pages
           path: pages-artifact
@@ -98,4 +98,4 @@ jobs:
           tar -tf pages-artifact/artifact.tar | grep -Eq '(^|/)search_index\.js$'
       - id: deployment
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4

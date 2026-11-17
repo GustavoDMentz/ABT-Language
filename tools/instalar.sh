@@ -24,6 +24,8 @@ SHA256_ESPERADO=
 FORCAR=0
 CONFIRMADO=0
 BIN_EXPLICITO=0
+SEM_VERIFICACAO=0
+VERIFICAR_ATESTACAO=${ABT_VERIFICAR_ATESTACAO:-0}
 
 uso() {
     cat <<'EOF'
@@ -34,13 +36,16 @@ Uso: instalar.sh [opções]
   --versao X.Y.Z     versão a instalar (padrão: a mais recente)
   --arquivo ARQ      usa um pacote já baixado (instalação sem internet)
   --sha256 HEX       soma SHA-256 esperada de --arquivo
+  --sem-verificacao  permite instalar --arquivo sem soma SHA-256 (não recomendado)
+  --verificar-atestacao  confere a procedência do pacote baixado com `gh attestation verify`
   --forcar           reinstala mesmo que a versão já esteja instalada
   --atualizar        atualiza a instalação existente
   --reparar          pré-compila de novo (use se a pasta foi movida)
   --desinstalar      remove a ABT (use --sim para não pedir confirmação)
   --ajuda            mostra esta mensagem
 
-Variáveis: ABT_PREFIXO, ABT_BIN_DIR, ABT_REPO, ABT_BASE_URL.
+Variáveis: ABT_PREFIXO, ABT_BIN_DIR, ABT_REPO, ABT_BASE_URL (só https://; http:// apenas em
+localhost), ABT_VERIFICAR_ATESTACAO=1.
 EOF
 }
 
@@ -58,6 +63,8 @@ while [ "$#" -gt 0 ]; do
         --versao) [ "$#" -ge 2 ] || erro "--versao exige um valor"; VERSAO=${2#v}; shift ;;
         --arquivo) [ "$#" -ge 2 ] || erro "--arquivo exige um valor"; ARQUIVO=$2; shift ;;
         --sha256) [ "$#" -ge 2 ] || erro "--sha256 exige um valor"; SHA256_ESPERADO=$2; shift ;;
+        --sem-verificacao) SEM_VERIFICACAO=1 ;;
+        --verificar-atestacao) VERIFICAR_ATESTACAO=1 ;;
         --forcar) FORCAR=1 ;;
         --sim) CONFIRMADO=1 ;;
         --instalar|--atualizar|--reparar|--desinstalar) ACAO=${1#--} ;;
@@ -87,11 +94,26 @@ precisa() {
     command -v "$1" >/dev/null 2>&1 || erro "comando necessário não encontrado: $1 ($2)"
 }
 
+# Só baixa por HTTPS; http:// e file:// são aceitos apenas para servidores locais de teste.
 baixar() {
+    seguro=0
+    case "$1" in
+        https://*) seguro=1 ;;
+        http://127.0.0.1:*|http://127.0.0.1/*|http://localhost:*|http://localhost/*) ;;
+        *) erro "endereço recusado (use https://): $1" ;;
+    esac
     if command -v curl >/dev/null 2>&1; then
-        curl -fL --retry 3 --progress-bar -o "$2" "$1" || erro "falha ao baixar $1"
+        if [ "$seguro" -eq 1 ]; then
+            curl -fL --retry 3 --progress-bar --proto '=https' --proto-redir '=https' --tlsv1.2 -o "$2" "$1" || erro "falha ao baixar $1"
+        else
+            curl -fL --retry 3 --progress-bar -o "$2" "$1" || erro "falha ao baixar $1"
+        fi
     elif command -v wget >/dev/null 2>&1; then
-        wget -q --show-progress -O "$2" "$1" || erro "falha ao baixar $1"
+        if [ "$seguro" -eq 1 ]; then
+            wget -q --show-progress --https-only -O "$2" "$1" || erro "falha ao baixar $1"
+        else
+            wget -q --show-progress -O "$2" "$1" || erro "falha ao baixar $1"
+        fi
     else
         erro "é preciso ter curl ou wget para baixar o pacote (ou use --arquivo)"
     fi
@@ -213,7 +235,10 @@ acao_instalar() {
         if [ -z "$SHA256_ESPERADO" ] && [ -f "$ARQUIVO.sha256" ]; then
             SHA256_ESPERADO=$(cut -d' ' -f1 <"$ARQUIVO.sha256")
         fi
-        [ -n "$SHA256_ESPERADO" ] || aviso "sem soma SHA-256 para conferir; instalando sem verificação de integridade."
+        if [ -z "$SHA256_ESPERADO" ] && [ "$SEM_VERIFICACAO" -ne 1 ]; then
+            erro "sem soma SHA-256 para conferir $ARQUIVO; coloque o arquivo .sha256 ao lado dele, use --sha256, ou --sem-verificacao se aceita o risco."
+        fi
+        [ -n "$SHA256_ESPERADO" ] || aviso "instalando SEM verificação de integridade (--sem-verificacao)."
         NOVA_VERSAO=${VERSAO}
         [ "$NOVA_VERSAO" != latest ] || NOVA_VERSAO=local
     else
@@ -242,6 +267,14 @@ acao_instalar() {
         real=$(soma_sha256 "$PACOTE")
         [ "$real" = "$SHA256_ESPERADO" ] || erro "soma SHA-256 diferente da esperada (esperada $SHA256_ESPERADO, obtida $real); nada foi instalado"
         info "integridade do pacote verificada (SHA-256)."
+    fi
+    # A soma vem da mesma origem do pacote; a atestação prova que ele foi construído pelo workflow do repositório.
+    if [ "$VERIFICAR_ATESTACAO" = 1 ]; then
+        [ -z "$ARQUIVO" ] || erro "--verificar-atestacao só vale para pacotes baixados"
+        command -v gh >/dev/null 2>&1 || erro "--verificar-atestacao exige o GitHub CLI (gh)"
+        gh attestation verify "$PACOTE" --repo "$REPO" >/dev/null 2>&1 \
+            || erro "a atestação de procedência do pacote não foi confirmada; nada foi instalado"
+        info "procedência do pacote confirmada (atestação do GitHub)."
     fi
 
     info "extraindo"

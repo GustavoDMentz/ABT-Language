@@ -11,7 +11,9 @@
 #   ABT_SEM_PATH  1 = nao altera o PATH do usuario
 #   ABT_FORCAR    1 = reinstala mesmo que a versao ja esteja instalada
 #   ABT_SIM       1 = nao pede confirmacao ao desinstalar
-#   ABT_REPO, ABT_BASE_URL  origem dos pacotes (testes)
+#   ABT_REPO, ABT_BASE_URL  origem dos pacotes (testes); so https:// (http apenas em localhost)
+#   ABT_SEM_VERIFICACAO  1 = permite ABT_ARQUIVO sem soma SHA-256 (nao recomendado)
+#   ABT_VERIFICAR_ATESTACAO  1 = confere a procedencia do pacote baixado (exige o gh)
 #
 # O pacote traz a Julia e os pacotes, mas sem os caches pre-compilados: eles so valem no
 # caminho exato onde a Julia estava quando foram gerados, entao sao gerados no destino.
@@ -44,10 +46,17 @@ function Invoke-InstaladorAbt {
     if ($prefixo.Contains('"')) { Falha 'o caminho da instalacao nao pode conter aspas.' }
 
     # ------------------------------------------------------------ utilidades
+    # So baixa por HTTPS; http (apenas localhost) e file:// servem a servidores locais de teste.
     function Baixar($url, $destino) {
+        $https = $url -like 'https://*'
+        if (-not ($https -or $url -like 'file:///*' -or $url -match '^http://(127\.0\.0\.1|localhost)([:/]|$)')) {
+            Falha "endereco recusado (use https://): $url"
+        }
         $curl = Join-Path $env:SystemRoot 'System32\curl.exe'
         if (Test-Path $curl) {
-            & $curl -fL --retry 3 --progress-bar -o $destino $url
+            $extra = @()
+            if ($https) { $extra = @('--proto', '=https', '--proto-redir', '=https', '--tlsv1.2') }
+            & $curl -fL --retry 3 --progress-bar @extra -o $destino $url
             if ($LASTEXITCODE -ne 0) { Falha "falha ao baixar $url" }
         } else {
             Invoke-WebRequest -UseBasicParsing -Uri $url -OutFile $destino
@@ -177,7 +186,10 @@ function Invoke-InstaladorAbt {
             if (-not $somaEsperada -and (Test-Path -LiteralPath "$arquivo.sha256")) {
                 $somaEsperada = ((Get-Content -LiteralPath "$arquivo.sha256" -Raw).Trim() -split '\s+')[0]
             }
-            if (-not $somaEsperada) { Aviso 'sem soma SHA-256 para conferir; instalando sem verificacao de integridade.' }
+            if (-not $somaEsperada -and $env:ABT_SEM_VERIFICACAO -ne '1') {
+                Falha "sem soma SHA-256 para conferir $arquivo; coloque o arquivo .sha256 ao lado dele, defina ABT_SHA256, ou ABT_SEM_VERIFICACAO=1 se aceita o risco."
+            }
+            if (-not $somaEsperada) { Aviso 'instalando SEM verificacao de integridade (ABT_SEM_VERIFICACAO=1).' }
         } else {
             if (-not $versao) {
                 Info 'procurando a versao mais recente'
@@ -203,6 +215,14 @@ function Invoke-InstaladorAbt {
             $real = Soma $pacote
             if ($real -ne $somaEsperada.ToLowerInvariant()) { Falha "soma SHA-256 diferente da esperada (esperada $somaEsperada, obtida $real); nada foi instalado" }
             Info 'integridade do pacote verificada (SHA-256).'
+        }
+        # A soma vem da mesma origem do pacote; a atestacao prova que ele foi construido pelo workflow do repositorio.
+        if ($env:ABT_VERIFICAR_ATESTACAO -eq '1') {
+            if ($arquivo) { Falha 'ABT_VERIFICAR_ATESTACAO so vale para pacotes baixados' }
+            if (-not (Get-Command gh -ErrorAction SilentlyContinue)) { Falha 'ABT_VERIFICAR_ATESTACAO exige o GitHub CLI (gh)' }
+            & gh attestation verify $pacote --repo $repo *> $null
+            if ($LASTEXITCODE -ne 0) { Falha 'a atestacao de procedencia do pacote nao foi confirmada; nada foi instalado' }
+            Info 'procedencia do pacote confirmada (atestacao do GitHub).'
         }
 
         Info 'extraindo (alguns minutos)'

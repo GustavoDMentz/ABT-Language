@@ -54,7 +54,7 @@ if "%ABT_PERFIL_ORIGEM%"=="cli" (
     ) else if /i "%ABT_PERFIL%"=="rapido" (
         set "ABT_COMPILE=min"
     ) else (
-        echo ABT: perfil invalido: %ABT_PERFIL% ^(use padrao ou rapido^). 1>&2
+        echo ABT: perfil invalido ^(use padrao ou rapido^). 1>&2
         set "ABT_RC=2" & goto :sair
     )
 ) else if defined ABT_JULIA_COMPILE (
@@ -94,13 +94,18 @@ goto :sair
 
 :verificar_julia
 set "ABT_JV="
-for /f "delims=" %%V in ('"%ABT_RUNTIME%" --version 2^>^&1') do set "ABT_JV=%%V"
+rem A saida vai para um arquivo temporario (e nao para for /f): o for /f passa o comando por cmd /c,
+rem que quebra caminhos com e comercial mesmo entre aspas.
+set "ABT_JVF=%TEMP%\abt-jv-%RANDOM%%RANDOM%.txt"
+"%ABT_RUNTIME%" --version >"%ABT_JVF%" 2>&1
+if exist "%ABT_JVF%" set /p ABT_JV=<"%ABT_JVF%"
+del "%ABT_JVF%" >nul 2>nul
 if not defined ABT_JV (
     echo ABT: Julia nao encontrada. Execute abt doctor para detalhes. 1>&2
     set "ABT_RC=2" & exit /b 2
 )
 if not "%ABT_JV%"=="julia version 1.13.3" (
-    echo ABT: Julia 1.13.3 necessaria; encontrado: %ABT_JV% 1>&2
+    echo ABT: Julia 1.13.3 necessaria; a versao encontrada e diferente. 1>&2
     set "ABT_RC=2" & exit /b 2
 )
 exit /b 0
@@ -110,23 +115,40 @@ if not "%ABT_EMBUTIDO%"=="1" exit /b 0
 if not exist "%ABT_ROOT%\.abt-prefixo" exit /b 0
 set "ABT_PREFIXO_GRAVADO="
 set /p ABT_PREFIXO_GRAVADO=<"%ABT_ROOT%\.abt-prefixo"
-if /i "%ABT_PREFIXO_GRAVADO%"=="%ABT_ROOT%" exit /b 0
-echo ABT: a instalacao foi movida de %ABT_PREFIXO_GRAVADO%; execute "abt reparar" ^(a primeira execucao sera lenta^). 1>&2
+setlocal EnableDelayedExpansion
+if /i "!ABT_PREFIXO_GRAVADO!"=="!ABT_ROOT!" (endlocal & exit /b 0)
+endlocal
+call :eco_movida
 exit /b 1
+
+rem Os valores abaixo vem do disco ou do ambiente e podem ter caracteres especiais: nunca entram em um
+rem echo por porcentagem (a expansao acontece antes da analise da linha e executaria o que vier depois
+rem do e comercial). Com expansao atrasada (pontos de exclamacao) o valor e apenas texto.
+:eco_movida
+setlocal EnableDelayedExpansion
+echo ABT: a instalacao foi movida de !ABT_PREFIXO_GRAVADO!; execute "abt reparar" (a primeira execucao sera lenta). 1>&2
+endlocal & exit /b 0
+
+:eco_raiz
+setlocal EnableDelayedExpansion
+echo ABT: !ABT_ROOT!
+endlocal & exit /b 0
+
+:eco_julia
+setlocal EnableDelayedExpansion
+if "%ABT_EMBUTIDO%"=="1" echo Julia: !ABT_JV! [embutida em !ABT_ROOT!\runtime\julia]
+if not "%ABT_EMBUTIDO%"=="1" echo Julia: !ABT_JV! [externa]
+endlocal & exit /b 0
 
 
 :doctor
-echo ABT: %ABT_ROOT%
+call :eco_raiz
 if not exist "%ABT_ROOT%\src\CLI.jl" goto :incompleta
 if not exist "%ABT_ROOT%\src\ABT.jl" goto :incompleta
 if not exist "%ABT_ROOT%\ABT.packages.toml" goto :incompleta
 if not exist "%ABT_ROOT%\Project.toml" goto :incompleta
 call :verificar_julia || goto :sair
-if "%ABT_EMBUTIDO%"=="1" (
-    echo Julia: %ABT_JV% ^(embutida em %ABT_ROOT%\runtime\julia^)
-) else (
-    echo Julia: %ABT_JV% ^(externa^)
-)
+call :eco_julia
 call :aviso_movida || ( set "ABT_RC=2" & goto :sair )
 echo Compilacao Julia: --compile=%ABT_COMPILE% ^(origem: %ABT_PERFIL_ORIGEM%^)
 echo ABT: arquivos essenciais e runtime disponiveis.
