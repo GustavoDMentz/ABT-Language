@@ -132,6 +132,14 @@ if (-not $Rapido) {
     $abtMovido = Join-Path $Movido 'bin\abt.cmd'
     $r = Executa $abtMovido @('doctor')
     Verifica ($r.Codigo -ne 0 -and $r.Texto -match 'abt reparar') 'doctor avisa que a instalacao foi movida'
+if (-not ($r.Codigo -ne 0 -and $r.Texto -match 'abt reparar')) {
+    # Diagnostico: roda uma copia do launcher com eco ligado para ver qual linha falha.
+    Write-Host "--- saida do doctor (codigo $($r.Codigo)):"; Write-Host $r.Texto
+    $dbg = Join-Path $Movido 'bin\abt-dbg.cmd'
+    [IO.File]::WriteAllText($dbg, ("@echo on`r`n" + ([IO.File]::ReadAllText($abtMovido) -replace '^@echo off\s*', '')), (New-Object Text.ASCIIEncoding))
+    $d = Executa $dbg @('doctor')
+    Write-Host '--- doctor com eco ligado:'; Write-Host $d.Texto
+}
     $r = Executa 'powershell.exe' @('-NoProfile', '-Command', "`$env:ABT_SIM='1'; & '$abtMovido' reparar")
     Write-Host $r.Texto
     Verifica ($r.Codigo -eq 0) 'abt reparar terminou com codigo 0'
