@@ -164,7 +164,11 @@ goto :sair
 if not "%ABT_EMBUTIDO%"=="1" goto :sem_integrada
 if not exist "%ABT_ROOT%\libexec\instalar.ps1" goto :sem_integrada
 rem Copia o script: a instalacao pode ser substituida ou removida enquanto ele roda.
-set "ABT_TMP_PS=%TEMP%\abt-instalar-%RANDOM%%RANDOM%.ps1"
+rem Pasta propria com nome imprevisivel: mkdir falha se ela ja existir (ninguem a cria antes de nos).
+set "ABT_TMP_DIR=%TEMP%\abt-%RANDOM%%RANDOM%%RANDOM%"
+mkdir "%ABT_TMP_DIR%" >nul 2>nul
+if errorlevel 1 set "ABT_RC=2" & goto :sair
+set "ABT_TMP_PS=%ABT_TMP_DIR%\instalar.ps1"
 copy /y "%ABT_ROOT%\libexec\instalar.ps1" "%ABT_TMP_PS%" >nul || ( set "ABT_RC=2" & goto :sair )
 set "ABT_ACAO=%ABT_MANUT%"
 set "ABT_PREFIXO_ATUAL=%ABT_ROOT%"
@@ -172,7 +176,7 @@ if /i "%~2"=="--sim" set "ABT_SIM=1"
 if /i "%~2"=="--forcar" set "ABT_FORCAR=1"
 powershell -NoProfile -ExecutionPolicy Bypass -File "%ABT_TMP_PS%"
 set "ABT_RC=%ERRORLEVEL%"
-del "%ABT_TMP_PS%" >nul 2>nul
+rmdir /s /q "%ABT_TMP_DIR%" >nul 2>nul
 goto :sair
 
 :sem_integrada

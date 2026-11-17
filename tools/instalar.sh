@@ -86,6 +86,17 @@ if [ "$ACAO" != instalar ] && [ "$BIN_EXPLICITO" -ne 1 ] && [ -z "${ABT_BIN_DIR:
 fi
 case "$PREFIXO$BIN_DIR" in *\"*|*\\*) erro "os caminhos não podem conter aspas nem barra invertida" ;; esac
 case "$PREFIXO" in /*) ;; *) erro "--prefixo deve ser um caminho absoluto" ;; esac
+# O prefixo é apagado por inteiro na troca e na desinstalação: recusa raízes do sistema, o HOME
+# e caminhos rasos, e caracteres de controle (que quebrariam o marcador de uma linha só).
+[ "$(printf '%s%s' "$PREFIXO" "$BIN_DIR" | LC_ALL=C tr -cd '\000-\037\177' | wc -c)" -eq 0 ] \
+    || erro "os caminhos não podem conter caracteres de controle"
+prefixo_limpo=$(printf '%s' "$PREFIXO" | sed 's|/\{2,\}|/|g; s|/$||')
+case "$prefixo_limpo" in
+    ""|/bin|/boot|/dev|/etc|/home|/lib|/lib32|/lib64|/media|/mnt|/opt|/proc|/root|/run|/sbin|/srv|/sys|/tmp|/usr|/var)
+        erro "--prefixo não pode ser uma pasta do sistema ($PREFIXO); use uma pasta própria, como $HOME/.local/share/abt" ;;
+esac
+[ -z "${HOME:-}" ] || [ "$prefixo_limpo" != "${HOME%/}" ] || erro "--prefixo não pode ser a sua pasta pessoal"
+[ "$(printf '%s' "$prefixo_limpo" | tr -cd / | wc -c)" -ge 2 ] || erro "--prefixo é raso demais ($PREFIXO); use uma pasta própria dentro de outra"
 case "$BIN_DIR" in /*) ;; *) erro "--bin deve ser um caminho absoluto" ;; esac
 LINK=$BIN_DIR/abt
 MARCADOR=$PREFIXO/.abt-install.json
@@ -216,6 +227,8 @@ acao_instalar() {
     BACKUP=
     TROCADO=0
     CONCLUIDO=0
+    TRAVA=$PREFIXO.trava
+    TRAVA_MINHA=0
     limpar() {
         if [ "$CONCLUIDO" -ne 1 ]; then
             if [ "$TROCADO" -eq 1 ]; then
@@ -225,9 +238,14 @@ acao_instalar() {
             fi
         fi
         rm -rf "$TRABALHO"
+        [ "$TRAVA_MINHA" -ne 1 ] || rmdir "$TRAVA" 2>/dev/null || true
     }
     trap limpar EXIT
     trap 'exit 130' INT TERM
+    # mkdir é atômico: impede duas instalações simultâneas no mesmo prefixo.
+    mkdir "$TRAVA" 2>/dev/null \
+        || erro "outra instalação parece estar em andamento ($TRAVA existe); se não houver nenhuma, remova essa pasta e tente de novo"
+    TRAVA_MINHA=1
 
     if [ -n "$ARQUIVO" ]; then
         [ -f "$ARQUIVO" ] || erro "arquivo não encontrado: $ARQUIVO"
@@ -279,7 +297,16 @@ acao_instalar() {
 
     info "extraindo"
     mkdir "$TRABALHO/novo"
-    tar -xJf "$PACOTE" -C "$TRABALHO/novo" --strip-components=1 || erro "falha ao extrair o pacote"
+    tar -tJf "$PACOTE" >"$TRABALHO/lista" 2>/dev/null || erro "não foi possível ler o pacote"
+    while IFS= read -r entrada; do
+        case "$entrada" in
+            /*|..|../*|*/..|*/../*) erro "pacote inválido: caminho suspeito ($entrada); nada foi instalado" ;;
+        esac
+    done <"$TRABALHO/lista"
+    extra=
+    if tar --version 2>/dev/null | grep -qi 'gnu tar'; then extra="--no-same-owner --no-same-permissions"; fi
+    # shellcheck disable=SC2086
+    tar -xJf "$PACOTE" -C "$TRABALHO/novo" --strip-components=1 $extra || erro "falha ao extrair o pacote"
     for arq in bin/abt src/CLI.jl Project.toml Manifest.toml runtime/julia/bin/julia; do
         [ -e "$TRABALHO/novo/$arq" ] || erro "pacote inválido: falta $arq"
     done
@@ -291,7 +318,8 @@ acao_instalar() {
     NOVA_VERSAO=$versao_pacote
 
     if [ -e "$PREFIXO" ]; then
-        BACKUP=$PREFIXO.antiga.$$
+        # O backup fica dentro da pasta temporária privada (nome imprevisível, mesmo sistema de arquivos).
+        BACKUP=$TRABALHO/antiga
         mv "$PREFIXO" "$BACKUP"
     fi
     mv "$TRABALHO/novo" "$PREFIXO"

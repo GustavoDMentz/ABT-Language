@@ -53,7 +53,28 @@ $env:Path = (($env:Path -split ';') | Where-Object { $_ -and -not (Test-Path (Jo
 Remove-Item Env:ABT_JULIA -ErrorAction SilentlyContinue
 Verifica (-not (Get-Command julia -ErrorAction SilentlyContinue)) 'nao ha Julia no PATH (ambiente limpo)'
 
+# ---------------------------------------------------------------- recusas de seguranca
+Write-Host '== instalador recusa destinos perigosos e pacotes suspeitos'
+foreach ($ruim in @($env:USERPROFILE, [IO.Path]::GetPathRoot($Temp), (Join-Path $Temp 'x%TEMP%y'), $env:SystemRoot)) {
+    $r = Instalador 'instalar' @{ ABT_PREFIXO = $ruim; ABT_ARQUIVO = $Pacote }
+    Verifica ($r.Codigo -ne 0 -and $r.Texto -match 'nao pode') "destino recusado: $ruim"
+}
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$zipRuim = Join-Path $Temp 'abt-0.0.1-windows-x86_64.zip'
+if (Test-Path $zipRuim) { Remove-Item $zipRuim -Force }
+$z = [IO.Compression.ZipFile]::Open($zipRuim, 'Create')
+$e = $z.CreateEntry('abt/../fugiu.txt'); $w = New-Object IO.StreamWriter($e.Open()); $w.Write('x'); $w.Dispose()
+$z.Dispose()
+$r = Instalador 'instalar' @{ ABT_PREFIXO = (Join-Path $Temp 'abt-suspeito'); ABT_ARQUIVO = $zipRuim; ABT_SHA256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $zipRuim).Hash.ToLowerInvariant() }
+Verifica ($r.Codigo -ne 0 -and $r.Texto -match 'caminho suspeito') 'pacote com ".." e recusado'
+Verifica (-not (Test-Path (Join-Path $Temp 'abt-suspeito'))) 'nada foi instalado a partir do pacote suspeito'
+Verifica (-not (Test-Path (Join-Path $Temp 'fugiu.txt'))) 'nada foi gravado fora do destino'
+
 # ---------------------------------------------------------------- instalacao
+# O PATH do usuario tem uma entrada com %VAR% (REG_EXPAND_SZ): a instalacao nao pode expandi-la nem mudar o tipo.
+$chaveEnv = [Microsoft.Win32.Registry]::CurrentUser.OpenSubKey('Environment', $true)
+$pathOriginal = $chaveEnv.GetValue('Path', '', [Microsoft.Win32.RegistryValueOptions]::DoNotExpandEnvironmentNames)
+$chaveEnv.SetValue('Path', ($pathOriginal + ';%USERPROFILE%\abt-sentinela'), [Microsoft.Win32.RegistryValueKind]::ExpandString)
 Write-Host "== instalacao em $Prefixo"
 $r = Instalador 'instalar' @{ ABT_PREFIXO = $Prefixo; ABT_ARQUIVO = $Pacote }
 Verifica ($r.Codigo -eq 0) 'instalacao terminou com codigo 0'
@@ -61,6 +82,9 @@ $abt = Join-Path $Prefixo 'bin\abt.cmd'
 Verifica (Test-Path $abt) 'bin\abt.cmd existe'
 Verifica (Test-Path (Join-Path $Prefixo '.abt-install.json')) 'marcador gravado'
 Verifica ((PathUsuario) -like "*$Prefixo\bin*") 'bin foi adicionado ao PATH do usuario'
+$pathBruto = $chaveEnv.GetValue('Path', '', [Microsoft.Win32.RegistryValueOptions]::DoNotExpandEnvironmentNames)
+Verifica ($pathBruto -like '*%USERPROFILE%\abt-sentinela*') 'PATH manteve a entrada com %VAR% sem expandir'
+Verifica ($chaveEnv.GetValueKind('Path') -eq [Microsoft.Win32.RegistryValueKind]::ExpandString) 'PATH continua REG_EXPAND_SZ'
 if ($Falhas -gt 0) { throw 'instalacao falhou; abortando' }
 
 $r = Executa $abt @('doctor')
@@ -161,6 +185,9 @@ Verifica ($r.Codigo -eq 0) 'abt desinstalar terminou com codigo 0'
 for ($i = 0; $i -lt 30 -and (Test-Path $Prefixo); $i++) { Start-Sleep -Seconds 1 }
 Verifica (-not (Test-Path $Prefixo)) 'pasta da instalacao removida'
 Verifica (-not ((PathUsuario) -like "*$Prefixo\bin*")) 'bin removido do PATH do usuario'
+$pathFinal = $chaveEnv.GetValue('Path', '', [Microsoft.Win32.RegistryValueOptions]::DoNotExpandEnvironmentNames)
+Verifica ($pathFinal -like '*%USERPROFILE%\abt-sentinela*') 'a desinstalacao tambem preservou a entrada com %VAR%'
+$chaveEnv.SetValue('Path', $pathOriginal, [Microsoft.Win32.RegistryValueKind]::ExpandString)
 
 if ($Falhas -gt 0) { Write-Host "$Falhas verificacao(oes) falharam" -ForegroundColor Red; exit 1 }
 Write-Host 'todas as verificacoes passaram' -ForegroundColor Green

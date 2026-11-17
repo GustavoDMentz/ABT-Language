@@ -85,7 +85,11 @@ case "${1:-}" in
         cp "$ABT_ROOT/libexec/instalar.sh" "$abt_tmp" || exit 2
         abt_cmd=$1
         shift
-        ABT_PREFIXO_ATUAL=$ABT_ROOT exec sh "$abt_tmp" "--$abt_cmd" "$@" ;;
+        # Sem exec: a cópia temporária é apagada depois, mesmo que o script a substitua ou remova a instalação.
+        ABT_PREFIXO_ATUAL=$ABT_ROOT sh "$abt_tmp" "--$abt_cmd" "$@"
+        abt_rc=$?
+        rm -f "$abt_tmp"
+        exit "$abt_rc" ;;
 esac
 
 if [ "${1:-}" = doctor ] && [ "$#" -eq 1 ]; then

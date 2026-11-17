@@ -44,6 +44,14 @@ function Invoke-InstaladorAbt {
     if ($env:OS -ne 'Windows_NT') { Falha 'este instalador e para Windows. No Linux use tools/instalar.sh.' }
     if (-not [Environment]::Is64BitOperatingSystem) { Falha 'e preciso um Windows de 64 bits.' }
     if ($prefixo.Contains('"')) { Falha 'o caminho da instalacao nao pode conter aspas.' }
+    # O prefixo e apagado por inteiro (cmd /c rmdir): recusa %VAR% (o cmd expandiria), caracteres de controle,
+    # a raiz de uma unidade e pastas do sistema ou pessoais.
+    if ($prefixo.Contains('%')) { Falha 'o caminho da instalacao nao pode conter o caractere %.' }
+    if ($prefixo -match '[\x00-\x1f]') { Falha 'o caminho da instalacao nao pode conter caracteres de controle.' }
+    $protegidas = @([IO.Path]::GetPathRoot($prefixo), $env:USERPROFILE, $env:SystemRoot, $env:ProgramFiles, ${env:ProgramFiles(x86)}, $env:ProgramData, $env:LOCALAPPDATA, $env:APPDATA, $env:TEMP, $env:PUBLIC, (Join-Path $env:SystemDrive 'Users'))
+    foreach ($p in $protegidas) {
+        if ($p -and ($p.TrimEnd('\').ToLowerInvariant() -eq $prefixo.ToLowerInvariant())) { Falha "o caminho da instalacao nao pode ser uma pasta do sistema ou pessoal ($prefixo); use uma pasta propria, como $env:LOCALAPPDATA\ABT." }
+    }
 
     # ------------------------------------------------------------ utilidades
     # So baixa por HTTPS; http (apenas localhost) e file:// servem a servidores locais de teste.
@@ -74,13 +82,19 @@ function Invoke-InstaladorAbt {
         if (-not (Test-Path -LiteralPath $marcador)) { return $null }
         try { return ([IO.File]::ReadAllText($marcador, $utf8) | ConvertFrom-Json) } catch { return $null }
     }
+    # O PATH do usuario e lido e gravado direto no registro, sem expandir %VAR%, e mantem o tipo
+    # REG_EXPAND_SZ: SetEnvironmentVariable regravaria tudo como REG_SZ ja expandido.
     function EntradasPath() {
-        $p = [Environment]::GetEnvironmentVariable('Path', 'User')
+        $chave = [Microsoft.Win32.Registry]::CurrentUser.OpenSubKey('Environment', $false)
+        try { $p = $chave.GetValue('Path', '', [Microsoft.Win32.RegistryValueOptions]::DoNotExpandEnvironmentNames) } finally { $chave.Close() }
         if (-not $p) { return @() }
         return @($p.Split(';') | Where-Object { $_ -ne '' })
     }
     function GravarPath($entradas) {
-        [Environment]::SetEnvironmentVariable('Path', ($entradas -join ';'), 'User')
+        $chave = [Microsoft.Win32.Registry]::CurrentUser.OpenSubKey('Environment', $true)
+        try { $chave.SetValue('Path', ($entradas -join ';'), [Microsoft.Win32.RegistryValueKind]::ExpandString) } finally { $chave.Close() }
+        # Apagar uma variavel que nao existe nao muda nada, mas o .NET avisa o Explorer (WM_SETTINGCHANGE).
+        [Environment]::SetEnvironmentVariable('ABT_AVISO_AMBIENTE', $null, 'User')
     }
     function NormalizaDir($d) { return $d.TrimEnd('\').ToLowerInvariant() }
     function AdicionaPath($dir) {
@@ -229,10 +243,24 @@ function Invoke-InstaladorAbt {
         $novo = Join-Path $trabalho 'novo'
         New-Item -ItemType Directory -Path $novo | Out-Null
         $tar = Join-Path $env:SystemRoot 'System32\tar.exe'
+        # Nenhuma entrada do pacote pode sair da pasta de destino (caminho absoluto, unidade ou "..").
+        function ConferirEntradas($nomes) {
+            foreach ($n in $nomes) {
+                if ($n -and (($n -match '^[\\/]') -or ($n -match '^[A-Za-z]:') -or ($n -match '(^|[\\/])\.\.([\\/]|$)'))) {
+                    Falha "pacote invalido: caminho suspeito ($n); nada foi instalado"
+                }
+            }
+        }
         if (Test-Path $tar) {
+            $lista = @(& $tar -tf $pacote)
+            if ($LASTEXITCODE -ne 0) { Falha 'nao foi possivel ler o pacote' }
+            ConferirEntradas $lista
             & $tar -xf $pacote -C $novo --strip-components=1
             if ($LASTEXITCODE -ne 0) { Falha 'falha ao extrair o pacote' }
         } else {
+            Add-Type -AssemblyName System.IO.Compression.FileSystem
+            $zip = [IO.Compression.ZipFile]::OpenRead($pacote)
+            try { ConferirEntradas @($zip.Entries | ForEach-Object { $_.FullName }) } finally { $zip.Dispose() }
             $tmp = Join-Path $trabalho 'extraido'
             Expand-Archive -LiteralPath $pacote -DestinationPath $tmp -Force
             Get-ChildItem -LiteralPath (Join-Path $tmp 'abt') | Move-Item -Destination $novo
@@ -277,9 +305,16 @@ function Invoke-InstaladorAbt {
 }
 
 $codigoSaidaAbt = 0
+$protocoloAbt = [Net.ServicePointManager]::SecurityProtocol
 try { Invoke-InstaladorAbt } catch {
     Write-Host $_.Exception.Message -ForegroundColor Red
     $codigoSaidaAbt = 1
+} finally {
+    # Via `| iex` o script roda na sessao do usuario: devolve o TLS e nao deixa nomes para tras.
+    try { [Net.ServicePointManager]::SecurityProtocol = $protocoloAbt } catch { }
+    Remove-Variable protocoloAbt -ErrorAction SilentlyContinue
 }
 # Executado como arquivo (-File): devolve o codigo de saida. Via `| iex` nao fecha a janela do usuario.
 if ($MyInvocation.MyCommand.Path) { exit $codigoSaidaAbt }
+Remove-Item Function:\Invoke-InstaladorAbt -ErrorAction SilentlyContinue
+Remove-Variable codigoSaidaAbt -ErrorAction SilentlyContinue

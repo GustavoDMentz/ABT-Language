@@ -151,6 +151,46 @@ class Instalacao(Base):
         self.assertEqual(r.returncode, 0, r.stderr)
         self.assertIn("SEM verificação", r.stderr)
 
+    def test_recusa_prefixo_perigoso(self):
+        pacote = construir_pacote(self.pacotes, "0.15.0")
+        for prefixo in ("/", "/usr", "/tmp", "/etc/", "/raso", str(self.home), str(self.home) + "/"):
+            r = self.instalar(pacote, "--prefixo", prefixo)
+            self.assertNotEqual(r.returncode, 0, prefixo)
+            self.assertRegex(r.stderr, "pasta do sistema|pessoal|raso", prefixo)
+        r = self.instalar(pacote, "--prefixo", str(self.home) + "/com\nquebra")
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("caracteres de controle", r.stderr)
+
+    def test_trava_impede_duas_instalacoes_no_mesmo_prefixo(self):
+        pacote = construir_pacote(self.pacotes, "0.15.0")
+        trava = Path(str(self.prefixo) + ".trava")
+        trava.mkdir()
+        r = self.instalar(pacote)
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("outra instalação", r.stderr)
+        self.assertTrue(trava.is_dir(), "a trava de outra instalação não pode ser removida")
+        self.assertFalse(self.prefixo.exists())
+        trava.rmdir()
+        self.assertEqual(self.instalar(pacote).returncode, 0)
+        self.assertFalse(trava.exists(), "a trava própria é removida ao terminar")
+
+    def test_pacote_com_caminho_fora_da_pasta_e_recusado(self):
+        import tarfile
+        nome = "abt-0.15.0-linux-x86_64.tar.xz"
+        pasta = self.t / "malicioso"
+        pasta.mkdir()
+        pacote = pasta / nome
+        with tarfile.open(pacote, "w:xz") as tar:
+            dado = self.t / "x.txt"
+            dado.write_text("x")
+            tar.add(dado, arcname="abt/../fugiu.txt")
+        (pasta / f"{nome}.sha256").write_text(f"{sha256(pacote)}  {nome}\n")
+        r = self.instalar(pacote)
+        self.assertNotEqual(r.returncode, 0)
+        self.assertIn("caminho suspeito", r.stderr)
+        self.assertFalse(self.prefixo.exists())
+        self.assertFalse((self.t / "fugiu.txt").exists())
+
     def test_recusa_endereco_que_nao_seja_https(self):
         for base in ("http://exemplo.invalid/releases", "ftp://exemplo.invalid/releases", "http://127.0.0.1.exemplo.invalid/x"):
             r = self.instalador("--prefixo", str(self.prefixo), "--bin", str(self.bin), env={"ABT_BASE_URL": base})
@@ -313,6 +353,11 @@ class Atualizacao(Base):
 
     def publicar(self, versao):
         (self.servidor / "latest" / "download" / "VERSION").write_text(versao + "\n")
+
+    def test_manutencao_nao_deixa_copia_temporaria(self):
+        self.assertEqual(self.instalador("--prefixo", str(self.prefixo), "--bin", str(self.bin)).returncode, 0)
+        self.assertEqual(self.abt("atualizar").returncode, 0)
+        self.assertEqual([p.name for p in self.t.iterdir() if p.name.startswith("abt-instalar.")], [])
 
     def test_instala_da_rede_e_atualiza(self):
         r = self.instalador("--prefixo", str(self.prefixo), "--bin", str(self.bin))
