@@ -12,6 +12,7 @@ O pacote já traz a Julia 1.13.3 e todos os pacotes: **não é preciso instalar 
 - **Primeira instalação:** leva alguns minutos, porque os pacotes são pré-compilados para o seu computador (uma única vez).
 - **PATH:** o instalador não altera o `PATH`. Se `~/.local/bin` não estiver nele, o instalador avisa como incluir.
 - **Sem internet:** baixe o pacote `abt-X.Y.Z-linux-x86_64.tar.xz` e o `.sha256` da página de releases e execute `sh instalar.sh --arquivo abt-X.Y.Z-linux-x86_64.tar.xz`.
+- **Integridade e procedência:** o instalador só baixa por HTTPS e confere a soma SHA-256. Um `--arquivo` sem o `.sha256` ao lado é recusado (use `--sha256 HEX`, ou `--sem-verificacao` se aceita o risco). A soma vem da mesma release do pacote; para confirmar também que ele foi construído pelo workflow do repositório, use `--verificar-atestacao` (exige o GitHub CLI, `gh`).
 
 ```bash
 abt doctor
@@ -41,6 +42,7 @@ Como no Linux, o pacote traz a Julia 1.13.3 e todos os pacotes: **não é precis
 - **Primeira instalação:** leva alguns minutos, porque os pacotes são pré-compilados para o seu computador (uma única vez).
 - **Sem alterar o PATH:** defina `$env:ABT_SEM_PATH = '1'` antes do comando; o instalador diz qual pasta você deve adicionar.
 - **Sem internet:** baixe `abt-X.Y.Z-windows-x86_64.zip` e o `.sha256` da página de releases e use `$env:ABT_ARQUIVO = 'C:\caminho\abt-X.Y.Z-windows-x86_64.zip'` antes do comando.
+- **Integridade e procedência:** o instalador só baixa por HTTPS e confere a soma SHA-256. Um `ABT_ARQUIVO` sem o `.sha256` ao lado é recusado (defina `$env:ABT_SHA256`, ou `$env:ABT_SEM_VERIFICACAO = '1'` se aceita o risco). Para confirmar também que o pacote foi construído pelo workflow do repositório, defina `$env:ABT_VERIFICAR_ATESTACAO = '1'` (exige o GitHub CLI, `gh`). O `abt.cmd` não deve ser chamado por outros programas com argumentos vindos de fontes não confiáveis.
 - **Outro lugar:** `$env:ABT_PREFIXO = 'D:\ferramentas\abt'`.
 
 Os comandos `abt`, `abt doctor`, `abt atualizar`, `abt reparar` e `abt desinstalar` funcionam como no Linux. Diferenças no Windows: `--perfil` só é reconhecido como **primeiro** argumento (`abt --perfil rapido run arquivo.abt`), as mensagens do lançador saem sem acentos, e `abt desinstalar` termina a remoção da pasta alguns segundos depois de devolver o prompt. Dois exemplos da documentação gravam em `/tmp/...`; no Windows isso vira a pasta `\tmp` da unidade atual, que precisa existir (`mkdir \tmp`).
