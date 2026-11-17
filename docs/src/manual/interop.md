@@ -34,6 +34,8 @@ abt --permitir-python run programa_confiavel.abt
 
 As bibliotecas da lista, como `pandas` e `numpy`, ainda podem ler e gravar arquivos: a lista reduz o risco, não o elimina. Para programas desconhecidos, use `--seguro`.
 
+As variáveis `ABT_JULIA` (qual Julia executar) e `ABT_PERMITIR_PYTHON` vêm do ambiente: quem controla o ambiente já controla a execução. Não as defina em ambientes compartilhados nem herdadas de fontes que você não controla. Na instalação integrada, `ABT_JULIA` não é necessária: o `abt` usa a Julia embutida.
+
 ```abt
 usar Python.math
 mostrar Python.math.sqrt(9)

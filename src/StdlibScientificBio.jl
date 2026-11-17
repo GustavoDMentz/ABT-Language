@@ -118,7 +118,11 @@ abt_sc_fastq_metrics(x)=abt_sc_fastq_walk(x,:metrics)
 function abt_sc_fastq_export(handle, path)
  abt_sc_isfastq(handle) || error("ABT exportar_fastq: esperado valor produzido por ler_fastq ou filtrar_fastq")
  path isa String && !isempty(path) || error("ABT exportar_fastq: caminho deve ser texto não vazio")
- abspath(path) == abspath(handle.path) && error("ABT exportar_fastq: o destino não pode ser o próprio arquivo de entrada")
+ # realpath resolve links simbólicos e samefile pega links físicos: nenhum deles pode truncar a entrada.
+ let a = ispath(path) ? realpath(path) : abspath(path), b = ispath(handle.path) ? realpath(handle.path) : abspath(handle.path)
+  (a == b || (ispath(path) && ispath(handle.path) && Base.Filesystem.samefile(path, handle.path))) &&
+   error("ABT exportar_fastq: o destino não pode ser o próprio arquivo de entrada")
+ end
  written = Ref(0)
  try
   open(path, "w") do out
