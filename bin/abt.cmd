@@ -94,7 +94,8 @@ goto :sair
 
 :verificar_julia
 set "ABT_JV="
-for /f "delims=" %%V in ('"%ABT_RUNTIME%" --version 2^>^&1') do set "ABT_JV=%%V"
+rem O par de aspas extra evita que o cmd /c descarte as aspas de um caminho com e comercial.
+for /f "delims=" %%V in ('""%ABT_RUNTIME%" --version 2^>^&1"') do set "ABT_JV=%%V"
 if not defined ABT_JV (
     echo ABT: Julia nao encontrada. Execute abt doctor para detalhes. 1>&2
     set "ABT_RC=2" & exit /b 2
@@ -116,9 +117,9 @@ endlocal
 call :eco_movida
 exit /b 1
 
-rem Os valores abaixo vem do disco ou do ambiente e podem ter & ou ^ ou aspas: nunca entram em um
-rem echo por %VAR% (a expansao acontece antes da analise da linha e executaria o que vier depois
-rem do &). Com expansao atrasada (!VAR!) o valor e apenas texto.
+rem Os valores abaixo vem do disco ou do ambiente e podem ter caracteres especiais: nunca entram em um
+rem echo por porcentagem (a expansao acontece antes da analise da linha e executaria o que vier depois
+rem do e comercial). Com expansao atrasada (pontos de exclamacao) o valor e apenas texto.
 :eco_movida
 setlocal EnableDelayedExpansion
 echo ABT: a instalacao foi movida de !ABT_PREFIXO_GRAVADO!; execute "abt reparar" (a primeira execucao sera lenta). 1>&2
