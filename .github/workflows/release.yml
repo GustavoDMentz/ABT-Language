@@ -166,7 +166,7 @@ jobs:
           name: pacote-windows-x86_64
           path: dist
       - name: Atestar a origem do pacote
-        uses: actions/attest-build-provenance@e8998f949152b193b063cb0ec769d69d929409be # v2
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
         with:
           subject-path: dist/abt-*-windows-x86_64.zip
       - name: Anexar à release existente
@@ -197,7 +197,7 @@ jobs:
           path: dist
           merge-multiple: true
       - name: Atestar a origem dos pacotes (verificável com gh attestation verify)
-        uses: actions/attest-build-provenance@e8998f949152b193b063cb0ec769d69d929409be # v2
+        uses: actions/attest-build-provenance@4d101475d8b20a2381f78447822ac1eab6504dd8 # v4.2.2
         with:
           subject-path: |
             dist/abt-*-linux-x86_64.tar.xz
