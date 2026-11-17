@@ -19,6 +19,21 @@ O import deve estar no nível superior. Um caminho `Julia.Módulo.função(...)`
 
 `usar Python.modulo` importa PythonCall sob demanda. Os objetos Python permanecem na ponte e não são convertidos automaticamente em listas ABT. Caminhos de import têm validação de formato e componentes privados são rejeitados; o acesso a atributos iniciados por `_` também é rejeitado. A ponte usa `pygetattr` para atributos de objetos Python e só publica o namespace após import bem-sucedido. O runtime PythonCall e eventuais pacotes Python precisam ser configurados separadamente. A ponte não é sandbox: bibliotecas importadas podem ter efeitos externos.
 
+## Segurança de execução
+
+Um programa ABT roda com os privilégios de quem o executa: pode ler e gravar arquivos (`ler_texto`, `exportar_csv`, `salvar_figura`), consultar variáveis de ambiente (`ambiente`) e, com Python, chamar o sistema. Por isso a CLI aplica estas regras:
+
+- **Módulos Python permitidos por padrão:** `numpy`, `scipy`, `pandas`, `math`, `cmath`, `statistics`, `random`, `json`, `re`, `datetime`, `decimal`, `fractions`, `itertools`, `collections`, `string`, `textwrap`, `operator`, `functools`, `Bio`, `sklearn` e `matplotlib`. Qualquer outro (como `os` ou `subprocess`) é recusado com um erro de segurança.
+- **`--permitir-python`** (ou `ABT_PERMITIR_PYTHON=1`) libera qualquer módulo: use só em programas em que você confia.
+- **`--seguro`** bloqueia `usar Python`, `ambiente` e qualquer leitura ou escrita fora da pasta do programa (links simbólicos são resolvidos). Prevalece sobre `--permitir-python`.
+
+```bash
+abt --seguro run programa.abt
+abt --permitir-python run programa_confiavel.abt
+```
+
+As bibliotecas da lista, como `pandas` e `numpy`, ainda podem ler e gravar arquivos: a lista reduz o risco, não o elimina. Para programas desconhecidos, use `--seguro`.
+
 ```abt
 usar Python.math
 mostrar Python.math.sqrt(9)
