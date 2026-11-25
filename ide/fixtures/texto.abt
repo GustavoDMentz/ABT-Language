@@ -1,0 +1,4 @@
+café = 2
+nome = "total 3 x"
+mostrar café
+mostrar nome

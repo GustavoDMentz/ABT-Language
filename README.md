@@ -113,7 +113,7 @@ O perfil `padrao` serve a programas curtos e a análises científicas; `--perfil
 
 ### IDE no navegador
 
-Prefere escrever e executar sem digitar comandos? A pasta [`ide/`](ide/) traz uma IDE mínima, com editor colorido, botões **Executar** e **Verificar**, erros que levam direto à linha, 13 exemplos prontos e **Baixar .txt** para guardar a saída do programa. Funciona em Windows, Linux e macOS, abre no navegador e só atende no seu próprio computador (`http://127.0.0.1:8765`).
+Prefere escrever e executar sem digitar comandos? A pasta [`ide/`](ide/) traz uma IDE mínima, com editor colorido, botões **Executar** e **Verificar**, erros que levam direto à linha, 13 exemplos prontos, **Baixar .txt** para guardar a saída do programa e o modo **Inspecionar**, que mostra cada etapa do compilador (tokens, símbolos, gramática G2 e tabela M, AST, IR, otimizações, código Julia e tempos; veja [`ide/INSPECAO.md`](ide/INSPECAO.md)). Funciona em Windows, Linux e macOS, abre no navegador e só atende no seu próprio computador (`http://127.0.0.1:8765`).
 
 **Precisa de:** a ABT instalada (acima) e o [Python](https://www.python.org/downloads/) 3.8 ou mais novo. A IDE fica na pasta `ide/` do repositório, não na instalação da ABT: baixe o repositório em **Code → Download ZIP** (ou use `git clone`).
 

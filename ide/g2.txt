@@ -1,0 +1,18 @@
+# G2: G1 depois de (T1) eliminar a recursão à esquerda e (T2) fatorar os prefixos comuns.
+Programa   -> Instrucoes
+Instrucoes -> Instrucao Instrucoes | ; Instrucoes | ε
+Instrucao  -> id = Expr | mostrar Expr | se Expr Bloco Senao | para cada id em Expr Bloco
+Senao      -> senao Bloco | ε
+Bloco      -> { Instrucoes }
+Expr       -> Soma ExprR
+ExprR      -> OpRel Soma ExprR | ε
+OpRel      -> > | < | >= | <= | == | !=
+Soma       -> Prod SomaR
+SomaR      -> + Prod SomaR | - Prod SomaR | ε
+Prod       -> Fator ProdR
+ProdR      -> * Fator ProdR | / Fator ProdR | ε
+Fator      -> id | num | ( Expr ) | Lista
+Lista      -> [ ListaFim
+ListaFim   -> ] | Elems ]
+Elems      -> Expr ElemsR
+ElemsR     -> , Expr ElemsR | ε

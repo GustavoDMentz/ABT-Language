@@ -1,0 +1,6 @@
+função fat(n) {
+    se n <= 1 { retornar 1 }
+    retornar n * fat(n - 1)
+}
+resultado = fat(5)
+mostrar resultado

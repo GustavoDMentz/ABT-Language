@@ -10,6 +10,7 @@ para ele). O servidor escuta apenas em 127.0.0.1 e exige um token gerado a cada 
 porque executar um programa ABT roda código na sua máquina.
 """
 import argparse
+import base64
 import json
 import os
 import secrets
@@ -29,49 +30,13 @@ TOKEN = secrets.token_urlsafe(24)
 PADRAO = '# Programa de exemplo\nnotas = [7.5, 4.0, 9.0, 6.5]\ntotal = 0.0\npara cada nota em notas {\n    total = total + nota\n}\nmostrar total / 4\n'
 
 
-WINDOWS = os.name == "nt"
+from processos import WINDOWS, achar_abt, encerrar, iniciar  # noqa: E402,F401
+import exportar  # noqa: E402
+import inspecao  # noqa: E402
 
 
-def achar_abt():
-    """Localiza o comando abt: ABT_BIN, o PATH ou a pasta padrão da instalação (Linux/macOS e Windows)."""
-    candidatos = [os.environ.get("ABT_BIN"), shutil.which("abt")]
-    if WINDOWS:
-        local = os.environ.get("LOCALAPPDATA")
-        candidatos.append(str(Path(local) / "ABT" / "bin" / "abt.cmd") if local else None)
-    else:
-        candidatos.append(str(Path.home() / ".local/bin/abt"))
-    for candidato in candidatos:
-        if candidato and Path(candidato).exists():
-            return candidato
-    return None
-
-
-def iniciar(abt, argumentos, pasta):
-    """Inicia o abt. No Windows o lançador é um .cmd: o comando vai como texto único, com aspas
-    no caminho (pode ter espaços), e o processo ganha um grupo próprio para poder ser encerrado."""
-    opcoes = dict(cwd=pasta, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.DEVNULL)
-    if WINDOWS:
-        if abt.lower().endswith((".cmd", ".bat")):
-            if '"' in abt or "%" in abt:
-                raise OSError("o caminho do abt não pode conter aspas nem %")
-            return subprocess.Popen(f'cmd /d /s /c ""{abt}" {" ".join(argumentos)}"',
-                                    creationflags=subprocess.CREATE_NEW_PROCESS_GROUP, **opcoes)
-        return subprocess.Popen([abt, *argumentos], creationflags=subprocess.CREATE_NEW_PROCESS_GROUP, **opcoes)
-    return subprocess.Popen([abt, *argumentos], start_new_session=True, **opcoes)
-
-
-def encerrar(proc):
-    """Encerra o abt e os processos filhos (a Julia roda como filha do lançador)."""
-    try:
-        if WINDOWS:
-            subprocess.run(["taskkill", "/F", "/T", "/PID", str(proc.pid)], capture_output=True)
-        else:
-            import signal
-            os.killpg(proc.pid, signal.SIGKILL)
-    except OSError:
-        proc.kill()
-
-
+ESTATICOS = {"/inspecao.js": ("inspecao.js", "text/javascript; charset=utf-8"),
+             "/inspecao.css": ("inspecao.css", "text/css; charset=utf-8")}
 PASTA_EXEMPLOS = Path(__file__).resolve().parent / "exemplos"
 
 
@@ -88,6 +53,12 @@ def exemplos():
             titulo = primeira.lstrip("# ").strip() if primeira.startswith("#") else arq.stem
             achados[f"{len(achados) + 1}. {titulo}"] = codigo
     return achados
+
+
+def referencia():
+    """Programa acadêmico de referência (média de uma turma e classificação): o exemplo 02."""
+    achados = sorted(PASTA_EXEMPLOS.glob("02_*.abt"))
+    return achados[0].read_text(encoding="utf-8") if achados else ""
 
 
 def executar(codigo, modo):
@@ -157,14 +128,19 @@ class Manipulador(BaseHTTPRequestHandler):
                         encerrar(proc)
                 except OSError:
                     pass
-            config = json.dumps({"token": TOKEN, "versao": versao, "exemplos": exemplos(), "padrao": PADRAO}).replace("</", "<\\/")
+            config = json.dumps({"token": TOKEN, "versao": versao, "exemplos": exemplos(), "padrao": PADRAO, "referencia": referencia()}).replace("</", "<\\/")
             return self.responder(200, PAGINA.replace("__CONFIG__", config), "text/html; charset=utf-8")
+        if self.path in ESTATICOS:
+            arquivo, tipo = ESTATICOS[self.path]
+            return self.responder(200, (Path(__file__).resolve().parent / arquivo).read_bytes(), tipo)
         self.responder(404, "Não encontrado", "text/plain; charset=utf-8")
 
     def do_POST(self):
         if not self.host_valido() or self.headers.get("X-IDE-Token") != TOKEN:
             return self.responder(403, "Não autorizado", "text/plain; charset=utf-8")
-        if self.path != "/api/executar":
+        rotas = {"/api/executar": self.api_executar, "/api/inspecionar": self.api_inspecionar,
+                 "/api/executar_caminho": self.api_executar_caminho, "/api/exportar": self.api_exportar}
+        if self.path not in rotas:
             return self.responder(404, "Não encontrado", "text/plain; charset=utf-8")
         try:
             tamanho = int(self.headers.get("Content-Length", "0"))
@@ -174,10 +150,39 @@ class Manipulador(BaseHTTPRequestHandler):
             return self.responder(413, "Corpo inválido ou grande demais", "text/plain; charset=utf-8")
         try:
             dados = json.loads(self.rfile.read(tamanho))
-            codigo, modo = str(dados["codigo"]), str(dados.get("modo", "run"))
-        except (ValueError, KeyError):
+            if not isinstance(dados, dict):
+                raise ValueError
+        except ValueError:
             return self.responder(400, "Requisição inválida", "text/plain; charset=utf-8")
-        self.responder(200, json.dumps(executar(codigo, modo)), "application/json; charset=utf-8")
+        try:
+            resposta = rotas[self.path](dados)
+        except (KeyError, TypeError):
+            return self.responder(400, "Requisição inválida", "text/plain; charset=utf-8")
+        except inspecao.ErroInspecao as e:
+            return self.responder(200, json.dumps({"erro_inspecao": str(e)}), "application/json; charset=utf-8")
+        self.responder(200, json.dumps(resposta), "application/json; charset=utf-8")
+
+    def api_executar(self, dados):
+        return executar(str(dados["codigo"]), str(dados.get("modo", "run")))
+
+    def api_inspecionar(self, dados):
+        """Só compila (nenhum código do programa é executado)."""
+        return inspecao.inspecionar(str(dados["codigo"]), bool(dados.get("instrumentar", False)))
+
+    def api_executar_caminho(self, dados):
+        """Execução EXPLÍCITA de um caminho (interpretador, Julia gerada ou Julia otimizada). O código Julia
+        sai do pacote inspecionado no servidor, nunca do cliente."""
+        return inspecao.executar_caminho(str(dados["codigo"]), str(dados["caminho"]), executar)
+
+    def api_exportar(self, dados):
+        pacote = inspecao.obter(str(dados["hash"]))
+        if pacote is None:
+            raise inspecao.ErroInspecao("Inspeção expirada no servidor: inspecione novamente.")
+        try:
+            nome, mime, conteudo = exportar.exportar(pacote, str(dados["item"]))
+        except KeyError:
+            raise TypeError("item desconhecido")
+        return {"nome": nome, "mime": mime, "b64": base64.b64encode(conteudo).decode("ascii")}
 
 
 def main():
@@ -204,6 +209,7 @@ PAGINA = r"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ABT IDE</title>
+<link rel="stylesheet" href="/inspecao.css">
 <style>
 :root{--bg:#fafaf8;--painel:#fff;--borda:#d9d7d0;--txt:#1f2328;--suave:#6b7075;--acento:#0b6b57;--erro:#b42318;--ok:#0b6b57;
 --kw:#7a3e9d;--num:#b35900;--str:#1a7f37;--com:#8a8f94;--op:#0b5cad;--linha:#f0efe9}
@@ -379,6 +385,7 @@ ed.addEventListener("keydown", e => {
 definir(ler("abt-ide-codigo") ?? CFG.padrao, ler("abt-ide-nome") || "sem título");
 ed.focus();
 </script>
+<script src="/inspecao.js"></script>
 </body>
 </html>
 """

@@ -23,6 +23,7 @@ O navegador abre em `http://127.0.0.1:8765`. Opções: `--porta N` e `--sem-nave
 
 - Editor com destaque de sintaxe, números de linha e indentação automática.
 - **Executar** (`Ctrl+Enter`, `abt run`) e **Verificar** (`Ctrl+Shift+Enter`, `abt check`). Erros com posição (`linha:coluna`) viram links para a linha.
+- **🔍 Inspecionar** (`Ctrl+I`): mostra o que o compilador faz em cada etapa (tokens, símbolos, código normalizado, gramática G2 e tabela M, análise sintática passo a passo, AST, IR, semântica, otimizações, código Julia e tempos), com exportação em TXT/CSV/JSON/HTML. Detalhes, matriz de requisitos e limitações em [`INSPECAO.md`](INSPECAO.md).
 - Novo, Abrir…, Salvar (baixa o `.abt`) e **Baixar .txt** (salva a saída do programa; `# arquivo: nome.txt` na primeira linha define o nome).
 - Menu de exemplos (`ide/exemplos/*.abt`): núcleo da linguagem, estatística, tabelas, ensaio clínico, regressão, DNA/proteína, FASTQ e uma ficha para preencher e baixar como `.txt`. Os dados usados ficam em `ide/exemplos/dados/` e aparecem para o programa como `dados/arquivo`.
 
@@ -38,4 +39,4 @@ Executar um programa ABT roda código na sua máquina, com os seus privilégios.
 python3 -m unittest discover -s ide -p "test_*.py"
 ```
 
-Rodam no CI em Linux e Windows (`.github/workflows/ide.yml`) e não precisam da ABT instalada: usam um `abt` de mentira.
+Rodam no CI em Linux e Windows (`.github/workflows/ide.yml`) e não precisam da ABT instalada: usam um `abt` de mentira e as *fixtures* de `ide/fixtures/` (saída real do compilador, geradas por `python3 ide/gerar_fixtures.py`). Com a ABT instalada, os testes de integração da inspeção também rodam (e os três caminhos de execução são comparados).
