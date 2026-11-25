@@ -1,0 +1,8 @@
+se 1 < 2 {
+    mostrar 10
+} senao {
+    mostrar 20
+}
+mostrar 3 >= 2
+x = 5
+mostrar x

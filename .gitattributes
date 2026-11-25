@@ -3,3 +3,5 @@
 *.sh text eol=lf
 bin/abt text eol=lf
 *.bat text eol=crlf
+ide/fixtures/* text eol=lf
+ide/g2.txt text eol=lf

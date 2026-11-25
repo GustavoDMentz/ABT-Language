@@ -1,0 +1,10 @@
+# palavras em inglês, e/ou, listas, comentários
+total = 0
+for each n in [1, 2, 3] {
+    if n >= 2 and n != 3 {
+        total = total + n
+    } else {
+        show "pequeno"
+    }
+}
+show total # fim

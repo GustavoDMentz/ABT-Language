@@ -1,0 +1,6 @@
+função dobro(n) {
+    retornar n * 2
+}
+nome = "ABT"
+mostrar dobro(4) ^ 2
+mostrar nome

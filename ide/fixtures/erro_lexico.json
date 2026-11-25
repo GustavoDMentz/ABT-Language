@@ -1,0 +1,349 @@
+{
+ "etapas": {
+  "geracao": {
+   "nao_executada": true,
+   "ok": false
+  },
+  "geracao_otimizada": {
+   "nao_executada": true,
+   "ok": false
+  },
+  "ir": {
+   "nao_executada": true,
+   "ok": false
+  },
+  "lexica": {
+   "codigo": "E000",
+   "diagnostico": "Erro ABT[E000] — erro de compilação ou execução\n\nUnexpected character '@' at 2:7",
+   "erro": "Unexpected character '@' at 2:7",
+   "ms": 15.007,
+   "ok": false,
+   "tokens_antes_do_erro": [
+    {
+     "coluna": 1,
+     "lexema": "x",
+     "linha": 1,
+     "tipo": "IDENT"
+    },
+    {
+     "coluna": 3,
+     "lexema": "=",
+     "linha": 1,
+     "tipo": "="
+    },
+    {
+     "coluna": 5,
+     "lexema": "3",
+     "linha": 1,
+     "tipo": "NUMBER"
+    },
+    {
+     "coluna": 1,
+     "lexema": "y",
+     "linha": 2,
+     "tipo": "IDENT"
+    },
+    {
+     "coluna": 3,
+     "lexema": "=",
+     "linha": 2,
+     "tipo": "="
+    },
+    {
+     "coluna": 5,
+     "lexema": "x",
+     "linha": 2,
+     "tipo": "IDENT"
+    }
+   ]
+  },
+  "otimizacao": {
+   "nao_executada": true,
+   "ok": false
+  },
+  "semantica": {
+   "nao_executada": true,
+   "ok": false
+  },
+  "sintatica": {
+   "nao_executada": true,
+   "ok": false
+  }
+ },
+ "instrumentado": false,
+ "julia": "1.13.3",
+ "ms_carga_pacote": 147.532,
+ "nomes_embutidos": [
+  "agrupar_dados",
+  "ajustar_valores_p",
+  "alinhar_par",
+  "alinhar_sequencias",
+  "ambiente",
+  "aparar",
+  "categorias",
+  "codificar_json",
+  "coluna",
+  "complemento_reverso",
+  "composicao_sequencia",
+  "comprimento_texto",
+  "contar",
+  "contar_caractere",
+  "contar_categorias",
+  "conteudo_gc",
+  "correlacao",
+  "decompor_matriz",
+  "descrever",
+  "descrever_sequencias",
+  "determinante_matriz",
+  "esquema",
+  "exportar_csv",
+  "exportar_fastq",
+  "falhar",
+  "filtrar_fastq",
+  "filtrar_tabela",
+  "frequencias_kmers",
+  "grafico",
+  "inicia_com",
+  "intervalo_confianca_media",
+  "juntar_tabelas",
+  "ler_csv",
+  "ler_fasta",
+  "ler_fastq",
+  "ler_texto",
+  "linhas_tabela",
+  "linhas_texto",
+  "localizar_motivo",
+  "maiusculas",
+  "maximo",
+  "metricas_leituras",
+  "minimizar_polinomio",
+  "minimo",
+  "ordenar",
+  "ordenar_tabela",
+  "para_inteiro",
+  "para_real",
+  "para_texto",
+  "pontuacao_dna",
+  "pontuacao_proteina",
+  "posto_matriz",
+  "probabilidade_distribuicao",
+  "probabilidade_normal",
+  "produto_matricial",
+  "quantil_distribuicao",
+  "registro",
+  "registros_fasta",
+  "registros_fastq",
+  "regressao_linear",
+  "remover_duplicatas",
+  "renomear_colunas",
+  "resolver_sistema",
+  "resolver_sistema_spd",
+  "resumir_coluna",
+  "resumir_comprimentos",
+  "resumir_fastq",
+  "resumir_grupos",
+  "resumo_estatistico",
+  "salvar_figura",
+  "selecionar_colunas",
+  "sem_duplicatas",
+  "subsequencia",
+  "testar_grupos",
+  "teste_nao_parametrico",
+  "teste_normalidade",
+  "teste_proporcoes",
+  "teste_t",
+  "traduzir_dna",
+  "traduzir_quadro",
+  "transcrever_dna",
+  "transformar_tabela",
+  "transpor_matriz",
+  "validar_sequencia"
+ ],
+ "palavras_reservadas": [
+  {
+   "lexema": "above",
+   "token": "ABOVE"
+  },
+  {
+   "lexema": "and",
+   "token": "AND"
+  },
+  {
+   "lexema": "average",
+   "token": "AVG"
+  },
+  {
+   "lexema": "below",
+   "token": "BELOW"
+  },
+  {
+   "lexema": "cada",
+   "token": "EACH"
+  },
+  {
+   "lexema": "de",
+   "token": "OF"
+  },
+  {
+   "lexema": "e",
+   "token": "AND"
+  },
+  {
+   "lexema": "each",
+   "token": "EACH"
+  },
+  {
+   "lexema": "else",
+   "token": "ELSE"
+  },
+  {
+   "lexema": "em",
+   "token": "IN"
+  },
+  {
+   "lexema": "false",
+   "token": "FALSE"
+  },
+  {
+   "lexema": "falso",
+   "token": "FALSE"
+  },
+  {
+   "lexema": "for",
+   "token": "FOR"
+  },
+  {
+   "lexema": "funcao",
+   "token": "FUNCTION"
+  },
+  {
+   "lexema": "function",
+   "token": "FUNCTION"
+  },
+  {
+   "lexema": "função",
+   "token": "FUNCTION"
+  },
+  {
+   "lexema": "if",
+   "token": "IF"
+  },
+  {
+   "lexema": "in",
+   "token": "IN"
+  },
+  {
+   "lexema": "is",
+   "token": "IS"
+  },
+  {
+   "lexema": "maior",
+   "token": "ABOVE"
+  },
+  {
+   "lexema": "media",
+   "token": "AVG"
+  },
+  {
+   "lexema": "menor",
+   "token": "BELOW"
+  },
+  {
+   "lexema": "mostrar",
+   "token": "SHOW"
+  },
+  {
+   "lexema": "média",
+   "token": "AVG"
+  },
+  {
+   "lexema": "of",
+   "token": "OF"
+  },
+  {
+   "lexema": "onde",
+   "token": "WHERE"
+  },
+  {
+   "lexema": "or",
+   "token": "OR"
+  },
+  {
+   "lexema": "ou",
+   "token": "OR"
+  },
+  {
+   "lexema": "para",
+   "token": "FOR"
+  },
+  {
+   "lexema": "que",
+   "token": "THAN"
+  },
+  {
+   "lexema": "retornar",
+   "token": "RETURN"
+  },
+  {
+   "lexema": "return",
+   "token": "RETURN"
+  },
+  {
+   "lexema": "se",
+   "token": "IF"
+  },
+  {
+   "lexema": "senao",
+   "token": "ELSE"
+  },
+  {
+   "lexema": "senão",
+   "token": "ELSE"
+  },
+  {
+   "lexema": "show",
+   "token": "SHOW"
+  },
+  {
+   "lexema": "soma",
+   "token": "SUM"
+  },
+  {
+   "lexema": "sum",
+   "token": "SUM"
+  },
+  {
+   "lexema": "than",
+   "token": "THAN"
+  },
+  {
+   "lexema": "true",
+   "token": "TRUE"
+  },
+  {
+   "lexema": "usar",
+   "token": "USE"
+  },
+  {
+   "lexema": "valor",
+   "token": "VALUE"
+  },
+  {
+   "lexema": "value",
+   "token": "VALUE"
+  },
+  {
+   "lexema": "verdadeiro",
+   "token": "TRUE"
+  },
+  {
+   "lexema": "where",
+   "token": "WHERE"
+  },
+  {
+   "lexema": "é",
+   "token": "IS"
+  }
+ ],
+ "versao": "0.15.0"
+}
