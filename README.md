@@ -111,6 +111,16 @@ python3 tools/install.py
 Códigos de saída: `0` sucesso · `1` erro no programa · `2` uso ou ambiente.
 O perfil `padrao` serve a programas curtos e a análises científicas; `--perfil rapido` existe para casos especiais. Veja [perfis de execução](docs/src/getting-started/install.md#perfis-de-execução).
 
+### IDE no navegador
+
+Prefere escrever e executar sem terminal? A pasta [`ide/`](ide/) traz uma IDE mínima para **Linux, macOS e Windows**, com editor colorido, botões Executar e Verificar, erros que levam à linha, 13 exemplos prontos e **Baixar .txt** para a saída do programa. Só precisa do Python 3.8+ e da ABT instalada:
+
+```bash
+python3 ide/abt_ide.py        # Windows: dois cliques em ide\abrir_ide.bat
+```
+
+Ela abre em `http://127.0.0.1:8765` e só atende no seu computador. Detalhes em [`ide/README.md`](ide/README.md).
+
 ---
 
 ## 👀 Um gostinho de ABT
