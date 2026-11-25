@@ -1,0 +1,13 @@
+# Textos, números e registros
+mostrar comprimento_texto(aparar(" ABT "))
+mostrar maiusculas("abt")
+mostrar contar_caractere("banana", "a")
+amostra = [30, 12, 18, 12, 24]
+mostrar minimo(amostra)
+mostrar maximo(amostra)
+mostrar ordenar(amostra, "decrescente")
+mostrar sem_duplicatas(amostra)
+mostrar para_inteiro("42") + 1
+mostrar para_real("2.5") * 2
+mostrar registro("categoria", "exemplo", "n", 2)
+mostrar descrever([1, 2, 3, 4])

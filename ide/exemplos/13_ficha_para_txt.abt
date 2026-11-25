@@ -1,0 +1,53 @@
+# Ficha para .txt: preencha os campos e baixe o resultado
+# arquivo: ficha.txt
+# ---------- PREENCHA AQUI ----------
+nome = "Maria Silva"
+curso = "Biomedicina"
+turma = "2026/2"
+notas = [8.5, 7.0, 9.2, 6.8]
+observacao = "Participou de todas as aulas práticas."
+# -----------------------------------
+
+media_final = média de notas
+maior_nota = maximo(notas)
+menor_nota = minimo(notas)
+
+mostrar "=========================================="
+mostrar "             FICHA DO ALUNO"
+mostrar "=========================================="
+mostrar ""
+mostrar "Nome"
+mostrar nome
+mostrar ""
+mostrar "Curso"
+mostrar curso
+mostrar ""
+mostrar "Turma"
+mostrar turma
+mostrar ""
+mostrar "------------- DESEMPENHO -------------"
+mostrar ""
+mostrar "Notas"
+mostrar notas
+mostrar ""
+mostrar "Média"
+mostrar media_final
+mostrar ""
+mostrar "Maior nota"
+mostrar maior_nota
+mostrar ""
+mostrar "Menor nota"
+mostrar menor_nota
+mostrar ""
+mostrar "Situação"
+se media_final >= 7 {
+    mostrar "Aprovado(a)"
+} senao {
+    mostrar "Em recuperação"
+}
+mostrar ""
+mostrar "------------ OBSERVAÇÕES ------------"
+mostrar ""
+mostrar observacao
+mostrar ""
+mostrar "=========================================="

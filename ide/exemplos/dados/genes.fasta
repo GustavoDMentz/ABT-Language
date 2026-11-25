@@ -1,0 +1,12 @@
+>gene_a sintetico codificante curto
+ATGGCCATTGTAATGGGCCGCTGA
+>gene_b sintetico rico em A/T
+ATGAAAAAATTTAAATAGATATATATAT
+>gene_c sintetico rico em GC
+GCGCGCGCGCATATGCGCGGCC
+>gene_d sintetico com N
+ATGCGTACGTAGCTAGCTAGNATCCATG
+>gene_e sintetico longo
+ATGACCGGTAAACCCTTTGGGATGCGCGATATCGGCTAA
+>gene_f sintetico curto
+ATGTGGTTTTAA

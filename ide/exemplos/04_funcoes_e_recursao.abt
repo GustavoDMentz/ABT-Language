@@ -1,0 +1,22 @@
+# Funções e recursão
+função fatorial(n) {
+    se n <= 1 {
+        retornar 1
+    }
+    retornar n * fatorial(n - 1)
+}
+
+função fibonacci(n) {
+    se n < 2 {
+        retornar n
+    }
+    retornar fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+função maiores_dobrados(xs, limite) {
+    retornar limitar (transformar (filtrar xs onde valor > 2) com valor * 2) a limite
+}
+
+mostrar fatorial(10)
+mostrar fibonacci(15)
+mostrar maiores_dobrados([1, 2, 3, 4], 2)

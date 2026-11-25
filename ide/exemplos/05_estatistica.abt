@@ -1,0 +1,10 @@
+# Estatística: resumo, intervalo de confiança, correlação e testes
+amostra = [1, 2, 3, 4, 5]
+mostrar resumo_estatistico(amostra)
+mostrar intervalo_confianca_media(amostra, 0.95)
+mostrar correlacao([1, 2, 3, 4], [2, 4, 5, 8], "pearson")
+mostrar teste_t([1, 2, 3, 4], [2, 3, 5, 7], "welch", "bilateral", 0)
+mostrar teste_nao_parametrico([1, 2, 3], [4, 5, 6], "mann_whitney", "bilateral")
+mostrar teste_normalidade(amostra)
+mostrar teste_proporcoes(8, 10, 3, 10, "bilateral")
+mostrar quantil_distribuicao("normal", [0, 1], 0.975)

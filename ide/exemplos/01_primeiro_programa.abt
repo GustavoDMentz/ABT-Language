@@ -1,0 +1,10 @@
+# Primeiro programa: função, laço e condição
+função dobro(x) {
+    retornar x * 2
+}
+numeros = [1, 2, 3]
+para cada n em numeros {
+    se n > 1 {
+        mostrar dobro(n)
+    }
+}
