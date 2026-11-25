@@ -33,7 +33,7 @@ const CAMPOS = {
 };
 const OPERADORES = new Set(["bin", "binary", "unary"]);
 let P = null, aba = "fonte", selTokens = new Set(), selInstr = null, ocupado = false, passo = 0, timer = null, velocidade = 150, instrumentar = false;
-let raiz, corpo, fasesEl, abasEl, avisoEl, tituloEl;
+let raiz, corpo, abasEl, avisoEl, tituloEl;
 let temas = ["auto", "claro", "escuro"], tema = "auto";
 
 // ───────────── comunicação ─────────────
@@ -54,7 +54,9 @@ async function exportar(item) {
   try { const r = await api("/api/exportar", { hash: P.hash, item }); baixar(r.nome, r.mime, r.b64); }
   catch (e) { alert("Não foi possível exportar: " + e.message); }
 }
-const botaoExp = (rotulo, item) => btn("⬇ " + rotulo, () => exportar(item), { title: "Exporta os dados reais desta inspeção" });
+let expPainel = [], notasPainel = [], expMenuEl;
+const botaoExp = (rotulo, item) => { expPainel.push([rotulo, item]); return null; };   // vira item do menu Exportar
+const menu = (rotulo, ...kids) => h("details", { class: "menu" }, h("summary", {}, rotulo), h("div", { class: "pop" }, kids));
 function copiar(texto, el) {
   const ok = () => { const t = el.textContent; el.textContent = "Copiado ✓"; setTimeout(() => (el.textContent = t), 1200); };
   if (navigator.clipboard && window.isSecureContext !== false) navigator.clipboard.writeText(texto).then(ok, () => alert("Não foi possível copiar."));
@@ -73,7 +75,10 @@ function tabela(cab, linhas, opc = {}) {
   t.append(tb);
   return h("div", { class: "tabela" }, t);
 }
-const nota = (txt, cls) => h("p", { class: "nota " + (cls || "") }, txt);
+const nota = (txt, cls) => {          // avisos importantes ficam à vista; explicações vão para "Sobre esta aba"
+  if (cls && cls.includes("alerta")) return h("p", { class: "nota alerta" }, txt);
+  notasPainel.push(txt); return null;
+};
 
 function textoPre(txt) { return h("pre", {}, txt || ""); }
 
@@ -183,6 +188,7 @@ function infoCelula(g, c) {
     h("div", { class: "nota" }, c.origem.map(o => o === "FIRST" ? `origem: ${c.terminal} ∈ FIRST do lado direito da produção` : `origem: lado direito anulável e ${c.terminal} ∈ FOLLOW(${c.nt})`).join("; ")));
 }
 
+const curto = (xs, n) => xs.slice(0, n).join(" ") + (xs.length > n ? " …" : "");
 function codigoComNumeros(txt) {
   const caixa = h("div", { class: "fonte" });
   (txt || "").replace(/\n$/, "").split("\n").forEach((l, i) => caixa.append(h("div", { class: "fl" }, h("span", { class: "ln" }, i + 1), h("span", { class: "cd" }, l))));
@@ -285,7 +291,7 @@ const PAINEIS = {
       range = h("input", { type: "range", min: 1, max: nPassos, value: passo + 1, "aria-label": "Passo" }), numEl = h("b", {}),
       tb = h("tbody"), M = matrizM(g), linhasEl = [];
     a.passos.forEach((p, i) => {
-      const tr = h("tr", { class: "clic", on: { click: () => ir(i) } }, h("td", {}, p.n), h("td", { class: "mono" }, p.pilha.join(" ")), h("td", { class: "mono" }, p.entrada.join(" ")),
+      const tr = h("tr", { class: "clic", on: { click: () => ir(i) } }, h("td", {}, p.n), h("td", { class: "mono", title: p.pilha.join(" ") }, curto(p.pilha, 8)), h("td", { class: "mono", title: p.entrada.join(" ") }, curto(p.entrada, 10)),
         h("td", { class: "mono" }, p.consulta ? `M[${p.consulta.nt}, ${p.consulta.terminal}]` + (p.consulta.producoes.length ? " = " + p.consulta.producoes.join(",") : " vazia") : "—"), h("td", {}, p.acao));
       linhasEl.push(tr); tb.append(tr);
     });
@@ -296,7 +302,7 @@ const PAINEIS = {
       const p = a.passos[passo];
       range.value = passo + 1; numEl.textContent = `Passo ${p.n} de ${nPassos}`;
       subst(pilhaEl, h("span", { class: "nota" }, "pilha:"), ...p.pilha.map((s_, k) => h("span", { class: "cx" + (k === 0 ? " topo" : ""), title: k === 0 ? "topo da pilha" : "" }, s_)));
-      subst(entradaEl, h("span", { class: "nota" }, "entrada:"), ...p.entrada.map((s_, k) => h("span", { class: "cx" + (k === 0 ? " atual" : "") + (s_ === "$" ? " fim" : ""), title: k === 0 ? "símbolo atual" : "" }, s_)));
+      subst(entradaEl, h("span", { class: "nota" }, "entrada:"), ...p.entrada.slice(0, 14).map((s_, k) => h("span", { class: "cx" + (k === 0 ? " atual" : "") + (s_ === "$" ? " fim" : ""), title: k === 0 ? "símbolo atual" : "" }, s_)), p.entrada.length > 14 ? h("span", { class: "nota", title: p.entrada.slice(14).join(" ") }, `… +${p.entrada.length - 14}`) : null);
       const c = p.consulta;
       acaoEl.className = "cartao " + (p.tipo === "erro" ? "falhou" : p.tipo === "aceita" ? "ok" : "");
       subst(acaoEl, h("div", {}, h("b", {}, "Símbolo atual: "), h("span", { class: "mono" }, p.atual), "   ", h("b", {}, "Topo: "), h("span", { class: "mono" }, p.pilha[0] || "—")),
@@ -324,7 +330,7 @@ const PAINEIS = {
       playBtn, vel, range, numEl);
     const arv = h("details", {}, h("summary", {}, `Árvore de derivação de G2 (${a.nos} nós) — não é a AST`), nota("A árvore de derivação mostra cada produção da gramática aplicada; a AST (aba AST) é a estrutura abstrata que o compilador realmente constrói."), arvore([convDeriv(a.arvore)], { nivel: 2 }));
     const out = h("div", {}, topo, h("h3", {}, "Passo a passo (análise preditiva tabular de G2)"), ctl, contEl, pilhaEl, entradaEl, acaoEl,
-      h("h3", {}, "Tabela M (a célula consultada fica em destaque)"), M.el, h("h3", {}, "Todos os passos"), tabPassos, h("div", {}, arv));
+      h("h3", {}, "Tabela M (a célula consultada fica em destaque)"), M.el, h("h3", {}, "Todos os passos (passe o mouse para ver a pilha e a entrada completas)"), tabPassos, h("div", {}, arv));
     ir(Math.min(passo, nPassos - 1), false);
     return out;
   },
@@ -437,8 +443,12 @@ function atualizar() {
     const est = etapa && P ? (P.estados.find(x => x.id === etapa) || {}).estado : null;
     return h("button", { class: "aba" + (id === aba ? " ativa" : ""), on: { click: () => trocar(id) } }, est ? h("span", { class: "pt " + (est === "ok" ? "ok" : est === "falhou" ? "falhou" : "") }) : null, rot);
   }));
-  subst(fasesEl, h("b", {}, "Pipeline: "), ...P.estados.flatMap((e, i) => [i ? h("span", { class: "seta" }, "→") : null, h("span", { class: "fase " + e.estado, title: e.estado === "ok" ? "concluída" : e.estado === "falhou" ? "falhou" : "não executada", on: { click: () => trocar(({ lexica: "lexica", sintatica: "sintatica", ir: "ir", semantica: "semantica", otimizacao: "otimizacao", geracao: "julia", geracao_otimizada: "julia_o" })[e.id]) } }, e.rotulo.replace("Geração de código Julia otimizado", "Julia otimizado").replace("Geração de código Julia", "Julia").replace("Análise sintática (parser real)", "Sintática"))]));
-  subst(corpo, PAINEIS[aba]());
+  expPainel = []; notasPainel = [];
+  const painel = PAINEIS[aba]();
+  subst(corpo, notasPainel.length ? h("details", { class: "info" }, h("summary", {}, "ⓘ Sobre esta aba"), notasPainel.map(t => h("p", {}, t))) : null, painel);
+  const comuns = [["Relatório HTML", "relatorio_html"], ["Tudo (ZIP)", "relatorio_zip"], ["Inspeção completa (JSON)", "inspecao_json"]];
+  const item = ([r, i]) => h("button", { on: { click: e => { e.target.closest("details").open = false; exportar(i); } } }, r);
+  subst(expMenuEl, expPainel.map(item), expPainel.length ? h("hr") : null, comuns.map(item));
   verObsoleto();
 }
 function verObsoleto() {
@@ -472,17 +482,19 @@ function montar() {
   const medir = h("input", { type: "checkbox", id: "insp-medir" }); medir.addEventListener("change", () => (instrumentar = medir.checked));
   const temaBtn = btn("Tema: auto", () => { tema = temas[(temas.indexOf(tema) + 1) % 3]; temaBtn.textContent = "Tema: " + tema; ativarTema(); guardar("abt-ide-tema", tema); });
   const fonte = (d) => () => { const v = Math.max(10, Math.min(30, (parseFloat(getComputedStyle(raiz).getPropertyValue("--insp-fs")) || 14) + d)); raiz.style.setProperty("--insp-fs", v); guardar("abt-ide-fonte", String(v)); };
-  const exp = h("select", { "aria-label": "Exportar" }, h("option", { value: "" }, "Exportar…"), [["relatorio_html", "Relatório HTML"], ["relatorio_zip", "Tudo (ZIP)"], ["inspecao_json", "Inspeção completa (JSON)"], ["tokens_simbolos", "Tokens e símbolos (TXT)"], ["normalizado", "Código normalizado (TXT)"], ["passos", "Passo a passo sintático (TXT)"], ["resultado_sintatico", "Resultado sintático (TXT)"], ["gramatica", "Gramática G2 (TXT)"], ["ast_json", "AST (JSON)"], ["ir_json", "IR (JSON)"], ["julia", "Julia (.jl)"], ["julia_otimizado", "Julia otimizado (.jl)"]].map(([v, t]) => h("option", { value: v }, t)));
-  exp.addEventListener("change", () => { if (exp.value && P) exportar(exp.value); exp.value = ""; });
   const ref = btn("Programa de referência", () => { if (!ed.value.trim() || ed.value === CFG.referencia || confirm("Substituir o código atual pelo programa de referência (média da turma)?")) { definir(CFG.referencia, "referência (média da turma)"); inspecionar(); } }, { title: "Carrega e inspeciona o programa acadêmico de referência" });
   avisoEl = h("div", { class: "aviso", hidden: true }, "O código no editor mudou: estes resultados estão DESATUALIZADOS (refletem a versão inspecionada).", btn("Inspecionar a versão atual", () => inspecionar()));
-  fasesEl = h("div", { class: "fases" }); abasEl = h("div", { class: "abas" }); corpo = h("div", { class: "corpo" });
+  abasEl = h("div", { class: "abas" }); corpo = h("div", { class: "corpo" });
+  expMenuEl = h("div", { class: "pop" });
+  const expMenu = h("details", { class: "menu" }, h("summary", {}, "⬇ Exportar"), expMenuEl);
+  const cfg = menu("⚙", ref, h("label", { title: "Repete cada etapa 5 vezes para medir também o tempo sem compilação JIT" }, medir, "medir tempos (instrumentação)"),
+    h("div", { class: "linha" }, btn("A−", fonte(-1), { title: "Diminuir a fonte" }), btn("A+", fonte(1), { title: "Aumentar a fonte" }), temaBtn),
+    btn("⛶ Tela cheia", () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); }));
+  document.addEventListener("click", e => document.querySelectorAll(".insp details.menu[open]").forEach(d => { if (!d.contains(e.target)) d.open = false; }));
   raiz = h("div", { class: "insp", hidden: true, role: "dialog", "aria-label": "Inspeção do compilador" },
-    h("div", { class: "topo" }, tituloEl, btn("← Voltar ao editor", () => fechar(true)), btn("↻ Inspecionar de novo", () => inspecionar(), { class: "principal" }), ref,
-      h("label", { title: "Repete cada etapa 5 vezes para medir também o tempo sem compilação JIT" }, medir, "medir tempos"),
-      h("span", { class: "esp" }), btn("A−", fonte(-1), { title: "Diminuir a fonte" }), btn("A+", fonte(1), { title: "Aumentar a fonte" }), temaBtn,
-      btn("⛶ Tela cheia", () => { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen && document.documentElement.requestFullscreen(); }), exp),
-    avisoEl, fasesEl, abasEl, corpo);
+    h("div", { class: "topo" }, btn("← Editor", () => fechar(true), { title: "Voltar ao editor (Esc)" }), tituloEl, h("span", { class: "esp" }),
+      btn("↻ Inspecionar de novo", () => inspecionar(), { class: "principal" }), expMenu, cfg),
+    avisoEl, abasEl, corpo);
   document.body.append(raiz);
   const t = ler("abt-ide-tema"); if (temas.includes(t)) { tema = t; temaBtn.textContent = "Tema: " + tema; ativarTema(); }
   const f = parseFloat(ler("abt-ide-fonte")); if (f >= 10 && f <= 30) raiz.style.setProperty("--insp-fs", f);
