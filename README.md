@@ -113,13 +113,50 @@ O perfil `padrao` serve a programas curtos e a análises científicas; `--perfil
 
 ### IDE no navegador
 
-Prefere escrever e executar sem terminal? A pasta [`ide/`](ide/) traz uma IDE mínima para **Linux, macOS e Windows**, com editor colorido, botões Executar e Verificar, erros que levam à linha, 13 exemplos prontos e **Baixar .txt** para a saída do programa. Só precisa do Python 3.8+ e da ABT instalada:
+Prefere escrever e executar sem digitar comandos? A pasta [`ide/`](ide/) traz uma IDE mínima, com editor colorido, botões **Executar** e **Verificar**, erros que levam direto à linha, 13 exemplos prontos e **Baixar .txt** para guardar a saída do programa. Funciona em Windows, Linux e macOS, abre no navegador e só atende no seu próprio computador (`http://127.0.0.1:8765`).
+
+**Precisa de:** a ABT instalada (acima) e o [Python](https://www.python.org/downloads/) 3.8 ou mais novo. A IDE fica na pasta `ide/` do repositório, não na instalação da ABT: baixe o repositório em **Code → Download ZIP** (ou use `git clone`).
+
+<table>
+<tr>
+<td valign="top" width="50%">
+
+**🪟 Windows**
+
+1. Instale o Python; na primeira tela do instalador, marque **Add python.exe to PATH**.
+2. Extraia o ZIP do repositório.
+3. Abra a pasta `ide` e dê dois cliques em **`abrir_ide.bat`**.
+4. O navegador abre sozinho. Para encerrar, feche a janela preta.
+
+</td>
+<td valign="top" width="50%">
+
+**🐧 Linux e 🍎 macOS**
+
+No terminal, na raiz do repositório:
 
 ```bash
-python3 ide/abt_ide.py        # Windows: dois cliques em ide\abrir_ide.bat
+python3 ide/abt_ide.py
 ```
 
-Ela abre em `http://127.0.0.1:8765` e só atende no seu computador. Detalhes em [`ide/README.md`](ide/README.md).
+O navegador abre sozinho. Para encerrar, `Ctrl+C`.
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary>Problemas comuns no Windows</summary>
+
+- **"O Windows protegeu o computador"** ao abrir o `.bat`: clique em **Mais informações → Executar assim mesmo**. O arquivo só inicia a IDE.
+- **Pergunta do Firewall:** pode clicar em **Cancelar**; a IDE usa só o seu computador e não precisa de acesso à rede.
+- **"Python não encontrado":** instale o Python marcando *Add python.exe to PATH* e abra o `abrir_ide.bat` de novo.
+- **O navegador não abriu:** acesse `http://127.0.0.1:8765` manualmente.
+- **"ABT não encontrada" no canto da tela:** confirme que a instalação terminou (`abt --version` em um terminal novo). Se a ABT estiver em outra pasta, defina a variável de ambiente `ABT_BIN` com o caminho do `abt.cmd`.
+
+</details>
+
+Mais detalhes, atalhos do editor e a política de segurança em [`ide/README.md`](ide/README.md).
 
 ---
 
