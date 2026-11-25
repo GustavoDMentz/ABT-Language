@@ -1,0 +1,3 @@
+# Regressão linear: resposta em função de idade e exposição
+dados = ler_csv("dados/regressao.csv", esquema("resposta", "real", "idade", "inteiro", "exposicao", "inteiro"), "erro")
+mostrar regressao_linear(dados, "resposta", ["idade", "exposicao"])

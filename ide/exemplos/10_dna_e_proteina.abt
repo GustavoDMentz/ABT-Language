@@ -1,0 +1,14 @@
+# Bioinformática: GC, transcrição, tradução, motivos e alinhamento
+sequencia = "ATGGCCATTGTAATGGGCCGCTGA"
+mostrar conteudo_gc(sequencia)
+mostrar composicao_sequencia(sequencia)
+mostrar transcrever_dna(subsequencia(sequencia, 1, 12))
+mostrar traduzir_quadro(sequencia, 1)
+mostrar localizar_motivo(sequencia, "ATG")
+mostrar validar_sequencia(sequencia, "DNA", "rejeitar")
+
+dna = pontuacao_dna(2, -1, -3, -1)
+alinhamento = alinhar_par(sequencia, "ATGGCCATTGAATGGGCCGCTGA", "global", dna)
+mostrar alinhamento.pontuacao
+mostrar alinhamento.alinhamento_b
+mostrar alinhar_par("HEAGAWGHEE", "PAWHEAE", "global", pontuacao_proteina("BLOSUM62", -10, -1)).pontuacao

@@ -1,0 +1,6 @@
+# Vendas: CSV tipado, agrupamento e JSON
+vendas = ler_csv("dados/vendas.csv", esquema("produto", "texto", "regiao", "texto", "unidades", "inteiro", "preco", "real"), "erro")
+mostrar resumir_grupos(vendas, "regiao", "unidades", "erro")
+mostrar contar_categorias(vendas, "regiao", "erro")
+mostrar agrupar_dados(vendas, "regiao", "preco", "erro")
+mostrar codificar_json(registro("regioes", coluna(vendas, "regiao")), "erro")

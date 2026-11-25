@@ -1,0 +1,4 @@
+# Ensaio clínico: o tratamento muda o biomarcador? (teste t de Welch)
+dados = ler_csv("dados/ensaio.csv", esquema("grupo", "texto", "biomarcador", "real"), "erro")
+grupos = agrupar_dados(dados, "grupo", "biomarcador", "erro")
+mostrar testar_grupos(grupos, "controle", "tratamento", "welch")

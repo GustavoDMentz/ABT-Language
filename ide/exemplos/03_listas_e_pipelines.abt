@@ -1,0 +1,16 @@
+# Listas e pipelines: filtrar, transformar e limitar
+dados = [1, 2, 3, 4, 5]
+
+# Em uma só expressão
+mostrar limitar (transformar (filtrar dados onde valor > 2) com valor * 10) a 2
+
+# Como pipeline indentado, terminado por mostrar
+dados
+    filtrar onde valor > 2
+    transformar com valor * 10
+    limitar a 2
+    mostrar
+
+medidas = [10, 20, 30, 40]
+selecionadas = filtrar medidas onde valor >= 20
+mostrar média de (transformar selecionadas com valor * 2)

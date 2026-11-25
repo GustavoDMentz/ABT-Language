@@ -1,0 +1,9 @@
+# Sequenciamento: leituras FASTQ, filtro de qualidade e FASTA
+genes = ler_fasta("dados/genes.fasta", "DNA", "permitir_N", "exigir_maiusculas")
+mostrar resumir_comprimentos(genes)
+
+leituras = ler_fastq("dados/leituras.fastq", "DNA", "permitir_N", "phred33")
+mostrar resumir_fastq(leituras)
+aprovadas = filtrar_fastq(leituras, 24, 30, 1)
+mostrar resumir_fastq(aprovadas)
+mostrar transformar (metricas_leituras(aprovadas)) com valor.GC_percentual

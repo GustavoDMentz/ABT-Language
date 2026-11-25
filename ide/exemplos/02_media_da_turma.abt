@@ -1,0 +1,28 @@
+# Programa de referência: média de uma turma e classificação
+total = 0.0
+contador = 0
+baixas = 0
+limite1 = 6.5
+para cada nota em [7.5, 4.0, 9.0, 6.5] {
+    total = total + nota;
+    contador = contador + 1;
+    se nota < limite1 {
+        baixas = baixas + 1
+    }
+}
+media_turma = total / contador
+ajuste = (media_turma - limite1) * 2
+se (media_turma - limite1) * 2 >= 0 {
+    situacao = 1
+} senao {
+    situacao = 0
+}
+se contador != 4 {
+    mostrar contador
+}
+mostrar media_turma
+mostrar ajuste
+mostrar situacao
+mostrar media_turma > limite1
+mostrar contador == 4
+mostrar baixas <= 1
